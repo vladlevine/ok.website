@@ -1299,7 +1299,7 @@ textarea:focus {
 }
 
 /* ============================================
-   CUSTOM CURSOR (Optional Premium Touch)
+   MAGNETIC CURSOR EFFECT - PREMIUM 2025
    ============================================ */
 
 @media (hover: hover) and (pointer: fine) {
@@ -1307,5 +1307,14 @@ textarea:focus {
   .btn,
   a {
     cursor: pointer;
+  }
+
+  /* Elements with magnetic effect */
+  .magnetic {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .magnetic-strong {
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
