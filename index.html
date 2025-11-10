@@ -5,22 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO Meta Tags -->
-  <title>Corporate Photographer NYC | Event & Video | LIGHTROOM NYC</title>
+  <title>Corporate Photographer NYC | Event & Video | Core Visuals NYC</title>
   <meta name="description" content="NYC corporate photography and video production. Events, conferences, brand content. Fixed pricing, professional results. Book your project today.">
   <meta name="keywords" content="corporate photographer NYC, NYC corporate photography, corporate event photographer new york, event photography NYC, corporate video production NYC">
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Corporate Photographer NYC | Event & Video | LIGHTROOM NYC">
+  <meta property="og:title" content="Corporate Photographer NYC | Event & Video | Core Visuals NYC">
   <meta property="og:description" content="NYC corporate photography and video production. Events, conferences, brand content. Fixed pricing, professional results.">
-  <meta property="og:url" content="https://lightroomnyc.com">
+  <meta property="og:url" content="https://corevisuals.nyc">
 
   <!-- Local Business Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "The Lightroom Studios",
+    "name": "Core Visuals NYC",
     "description": "Corporate photography and video production in NYC",
     "address": {
       "@type": "PostalAddress",
@@ -32,7 +32,7 @@
     },
     "telephone": "+19294450603",
     "priceRange": "$$",
-    "url": "https://lightroomnyc.com",
+    "url": "https://corevisuals.nyc",
     "serviceArea": {
       "@type": "GeoCircle",
       "geoMidpoint": {
@@ -46,7 +46,7 @@
   </script>
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://lightroomnyc.com">
+  <link rel="canonical" href="https://corevisuals.nyc">
 
   <!-- Fonts - Updated to include 800 weight -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,7 +65,7 @@
   <div id="loading-screen" class="loading-screen">
     <div class="loading-content">
       <div class="loading-percentage" id="loading-percentage">0%</div>
-      <div class="loading-adjective" id="loading-adjective">Loading</div>
+      <div class="loading-word" id="loading-word"></div>
     </div>
   </div>
 
@@ -78,7 +78,7 @@
   <!-- Header & Navigation -->
   <header class="header" id="header">
     <div class="container header-container">
-      <a href="/" class="logo">LIGHTROOM NYC</a>
+      <a href="/" class="logo">CORE VISUALS NYC</a>
       <nav class="nav" id="nav">
         <a href="#services">Services</a>
         <a href="#work">Work</a>
@@ -303,7 +303,7 @@
 
           <!-- Testimonial 2 -->
           <div class="testimonial-card fade-in" style="animation-delay: 0.15s;">
-            <p>"No runaround, clear pricing, professional results. We've used The Lightroom Studios for three events now and they're our go-to photographer in NYC."</p>
+            <p>"No runaround, clear pricing, professional results. We've used Core Visuals NYC for three events now and they're our go-to photographer in NYC."</p>
             <div class="testimonial-author">— Events Manager, Financial Services</div>
           </div>
 
@@ -324,7 +324,7 @@
           <span class="eyebrow eyebrow-no-line" style="color: var(--color-gold); margin-bottom: 24px;">GET IN TOUCH</span>
           <h2>Tell us what you need.</h2>
           <p style="max-width: 700px; margin: 0 auto 48px; font-size: 22px;">No sales pitch. No mystery pricing.<br>Send us the details, we'll send you options.</p>
-          <a href="mailto:contact@lightroomnyc.com" class="btn btn-white">Get in Touch</a>
+          <a href="mailto:contact@corevisuals.nyc" class="btn btn-white">Get in Touch</a>
           <p style="font-size: 16px; color: rgba(255, 255, 255, 0.6); margin-top: 32px; margin-bottom: 0;">
             Or call: <a href="tel:+19294450603" style="color: var(--color-gold); text-decoration: underline; font-weight: 600;">(929) 445-0603</a>
           </p>
@@ -341,7 +341,7 @@
 
         <!-- Column 1: About -->
         <div>
-          <h4>Lightroom NYC</h4>
+          <h4>Core Visuals NYC</h4>
           <p style="max-width: 320px; line-height: 1.8;">Corporate photography and video production for NYC businesses. Professional, transparent, reliable.</p>
           <p style="margin-top: 32px;">
             <strong style="color: #0A0A0A; font-weight: 700;">99 Wall Street #1751</strong><br>
@@ -364,7 +364,7 @@
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
           <a href="tel:+19294450603">(929) 445-0603</a>
-          <a href="mailto:contact@lightroomnyc.com">Email Us</a>
+          <a href="mailto:contact@corevisuals.nyc">Email Us</a>
         </div>
 
         <!-- Column 4: Connect -->
@@ -397,7 +397,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 The Lightroom Studios. All Rights Reserved.</p>
+        <p>&copy; 2025 Core Visuals NYC. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
@@ -405,70 +405,77 @@
   <!-- JavaScript -->
   <script>
     // ============================================
-    // Loading Screen Animation
+    // Loading Screen Animation - Core Visuals NYC
     // ============================================
     (function() {
       const loadingScreen = document.getElementById('loading-screen');
       const percentageEl = document.getElementById('loading-percentage');
-      const adjectiveEl = document.getElementById('loading-adjective');
+      const wordEl = document.getElementById('loading-word');
 
       // Check if this is a first visit or refresh
       const isFirstVisit = !sessionStorage.getItem('visited');
       sessionStorage.setItem('visited', 'true');
 
-      // Shorter animation on refresh
-      const loadingDuration = isFirstVisit ? 3000 : 600;
-      const updateInterval = isFirstVisit ? 80 : 30;
+      const brandWords = ['CORE', 'VISUALS', 'NYC'];
 
-      // Adjectives that fit your brand personality
-      const adjectives = [
-        'Professional', 'Creative', 'Modern', 'Reliable',
-        'Bold', 'Sharp', 'Polished', 'Premium',
-        'Clean', 'Swift', 'Refined', 'Dynamic',
-        'Precise', 'Elegant', 'Sleek', 'Sophisticated'
-      ];
+      if (isFirstVisit) {
+        // FIRST VISIT: Show percentage, then brand words
+        let currentPercentage = 0;
 
-      let currentPercentage = 0;
-      let adjectiveIndex = 0;
+        // Animate percentage from 0 to 100
+        const percentageInterval = setInterval(() => {
+          currentPercentage += Math.random() * 8 + 2; // Random increment 2-10
+          if (currentPercentage >= 100) {
+            currentPercentage = 100;
+            percentageEl.textContent = '100%';
+            clearInterval(percentageInterval);
 
-      // Animate percentage from 0 to 100
-      const percentageInterval = setInterval(() => {
-        currentPercentage += Math.random() * 8 + 2; // Random increment 2-10
-        if (currentPercentage >= 100) {
-          currentPercentage = 100;
-          percentageEl.textContent = '100%';
-          clearInterval(percentageInterval);
-          clearInterval(adjectiveInterval);
+            // After 100%, show brand words
+            setTimeout(() => {
+              percentageEl.style.opacity = '0';
+              setTimeout(() => {
+                percentageEl.style.display = 'none';
+                showBrandWords();
+              }, 300);
+            }, 300);
+          } else {
+            percentageEl.textContent = Math.floor(currentPercentage) + '%';
+          }
+        }, 80);
 
-          // Hide loading screen after reaching 100%
-          setTimeout(() => {
-            loadingScreen.classList.add('hidden');
-          }, 200);
-        } else {
-          percentageEl.textContent = Math.floor(currentPercentage) + '%';
+      } else {
+        // REFRESH: Skip percentage, show only brand words
+        percentageEl.style.display = 'none';
+        showBrandWords();
+      }
+
+      function showBrandWords() {
+        let wordIndex = 0;
+
+        function showNextWord() {
+          if (wordIndex < brandWords.length) {
+            wordEl.textContent = brandWords[wordIndex];
+            wordEl.style.opacity = '1';
+
+            setTimeout(() => {
+              wordEl.style.opacity = '0';
+              setTimeout(() => {
+                wordIndex++;
+                if (wordIndex < brandWords.length) {
+                  showNextWord();
+                } else {
+                  // All words shown, hide loading screen
+                  setTimeout(() => {
+                    loadingScreen.classList.add('hidden');
+                  }, 300);
+                }
+              }, 200);
+            }, isFirstVisit ? 400 : 250);
+          }
         }
-      }, updateInterval);
 
-      // Rotate adjectives (only on first visit for full effect)
-      const adjectiveInterval = isFirstVisit ? setInterval(() => {
-        adjectiveEl.style.opacity = '0';
-        setTimeout(() => {
-          adjectiveIndex = (adjectiveIndex + 1) % adjectives.length;
-          adjectiveEl.textContent = adjectives[adjectiveIndex];
-          adjectiveEl.style.opacity = '1';
-        }, 100);
-      }, Math.random() * 200 + 150) : null;
-
-      // Ensure loading screen hides after max duration
-      setTimeout(() => {
-        currentPercentage = 100;
-        percentageEl.textContent = '100%';
-        clearInterval(percentageInterval);
-        if (adjectiveInterval) clearInterval(adjectiveInterval);
-        setTimeout(() => {
-          loadingScreen.classList.add('hidden');
-        }, 200);
-      }, loadingDuration);
+        showNextWord();
+      }
     })();
 
     // ============================================
