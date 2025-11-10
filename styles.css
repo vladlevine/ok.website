@@ -92,6 +92,14 @@ body {
   --color-gold-dark: #B8941F;
   --color-champagne: #F7E7CE;
 
+  /* Bold Accent Colors - 2025 Creative */
+  --color-cyan: #06B6D4; /* Modern teal - creative energy */
+  --color-cyan-light: #22D3EE;
+  --color-cyan-dark: #0891B2;
+  --color-magenta: #EC4899; /* Bold pink - unforgettable */
+  --color-magenta-light: #F472B6;
+  --color-magenta-dark: #DB2777;
+
   /* Grays */
   --color-gray-50: #F9FAFB;
   --color-gray-100: #F3F4F6;
@@ -102,8 +110,10 @@ body {
   --color-gray-800: #1F2937;
   --color-gray-900: #111827;
 
-  /* Gradients - Premium Gold */
+  /* Gradients - Multi-color Bold */
   --gradient-primary: linear-gradient(135deg, #D4AF37 0%, #E8C547 50%, #D4AF37 100%);
+  --gradient-bold: linear-gradient(135deg, #06B6D4 0%, #EC4899 100%);
+  --gradient-cyber: linear-gradient(135deg, #D4AF37 0%, #06B6D4 50%, #EC4899 100%);
   --gradient-gold-shine: linear-gradient(90deg,
     rgba(212, 175, 55, 0) 0%,
     rgba(232, 197, 71, 0.4) 50%,
@@ -267,19 +277,20 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  background: var(--color-white);
+  border-bottom: 3px solid transparent;
+  border-image: var(--gradient-cyber) 1;
   z-index: 1000;
-  padding: 32px 0;
+  padding: 16px 0;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header.scrolled {
-  padding: 20px 0;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: var(--shadow-sm);
+  padding: 12px 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .header-container {
@@ -323,8 +334,8 @@ a {
   left: 50%;
   transform: translateX(-50%) scaleX(0);
   width: 100%;
-  height: 2px;
-  background: var(--gradient-primary);
+  height: 3px;
+  background: var(--gradient-cyber);
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -370,7 +381,7 @@ a {
 
 @media (max-width: 768px) {
   .header {
-    padding: 24px 0;
+    padding: 16px 0;
   }
 
   .nav {
@@ -413,6 +424,7 @@ a {
   color: var(--color-white);
   overflow: hidden;
   margin-top: 0;
+  padding-top: 60px; /* Account for fixed header */
 }
 
 /* Video background support */
@@ -613,6 +625,19 @@ a {
   border-color: var(--color-white);
 }
 
+/* Bold gradient button variant */
+.btn-bold {
+  background: var(--gradient-cyber);
+  color: var(--color-black);
+  font-weight: 700;
+  box-shadow: 0 8px 32px rgba(6, 182, 212, 0.25);
+}
+
+.btn-bold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(236, 72, 153, 0.3);
+}
+
 /* ============================================
    BENTO BOX GRID - ASYMMETRIC LAYOUTS
    ============================================ */
@@ -657,7 +682,7 @@ a {
   left: 0;
   width: 100%;
   height: 4px;
-  background: var(--gradient-primary);
+  background: var(--gradient-cyber);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -763,10 +788,23 @@ a {
   left: 0;
   width: 100%;
   height: 5px;
-  background: var(--gradient-primary);
+  background: var(--gradient-cyber);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Alternate top border colors */
+.service-card:nth-child(1)::before {
+  background: var(--gradient-primary);
+}
+
+.service-card:nth-child(2)::before {
+  background: var(--gradient-bold);
+}
+
+.service-card:nth-child(3)::before {
+  background: var(--gradient-cyber);
 }
 
 .service-card:hover::before {
@@ -784,14 +822,30 @@ a {
   width: 72px;
   height: 72px;
   border-radius: var(--radius-md);
-  background: var(--gradient-primary);
+  background: var(--gradient-cyber);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 32px;
   font-size: 32px;
   animation: float 4s ease-in-out infinite;
+  box-shadow: 0 8px 32px rgba(6, 182, 212, 0.3);
+}
+
+/* Alternate icon colors for visual variety */
+.service-card:nth-child(1) .service-icon {
+  background: var(--gradient-primary);
   box-shadow: var(--shadow-gold);
+}
+
+.service-card:nth-child(2) .service-icon {
+  background: var(--gradient-bold);
+  box-shadow: 0 8px 32px rgba(236, 72, 153, 0.3);
+}
+
+.service-card:nth-child(3) .service-icon {
+  background: var(--gradient-cyber);
+  box-shadow: 0 8px 32px rgba(6, 182, 212, 0.3);
 }
 
 @keyframes float {
@@ -815,16 +869,42 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: var(--color-gold);
+  color: var(--color-cyan);
   font-weight: 700;
   font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  transition: gap 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .service-card-link:hover {
   gap: 18px;
+  color: var(--color-magenta);
+}
+
+/* Alternate link colors per card */
+.service-card:nth-child(1) .service-card-link {
+  color: var(--color-gold);
+}
+
+.service-card:nth-child(1) .service-card-link:hover {
+  color: var(--color-gold-dark);
+}
+
+.service-card:nth-child(2) .service-card-link {
+  color: var(--color-cyan);
+}
+
+.service-card:nth-child(2) .service-card-link:hover {
+  color: var(--color-magenta);
+}
+
+.service-card:nth-child(3) .service-card-link {
+  color: var(--color-magenta);
+}
+
+.service-card:nth-child(3) .service-card-link:hover {
+  color: var(--color-cyan);
 }
 
 @media (max-width: 1024px) {
@@ -898,10 +978,15 @@ a {
 
 .work-item-type {
   font-size: 13px;
-  color: var(--color-gold);
+  color: var(--color-cyan);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+}
+
+/* Alternate work item type colors */
+.work-item:nth-child(even) .work-item-type {
+  color: var(--color-magenta);
 }
 
 @media (max-width: 768px) {
@@ -926,10 +1011,15 @@ a {
   background: var(--color-white);
   border-radius: var(--radius-lg);
   padding: 48px;
-  border-left: 5px solid var(--color-gold);
+  border-left: 5px solid var(--color-cyan);
   box-shadow: var(--shadow-md);
   transition: all 0.4s ease;
   position: relative;
+}
+
+/* Alternate testimonial border colors */
+.testimonial-card:nth-child(even) {
+  border-left-color: var(--color-magenta);
 }
 
 .testimonial-card::before {
