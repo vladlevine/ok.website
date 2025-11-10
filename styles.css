@@ -526,6 +526,7 @@ a {
 @media (max-width: 768px) {
   .hero {
     min-height: 90vh;
+    padding-top: 80px; /* Increased padding to clear fixed header on mobile */
     padding-bottom: 100px; /* Extra padding for mobile Safari UI */
   }
 
