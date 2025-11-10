@@ -324,9 +324,9 @@
       </div>
 
       <!-- Sitemap -->
-      <div style="border-top: 1px solid #E5E7EB; padding-top: 40px; margin-top: 60px;">
-        <h4 style="font-size: 13px; font-weight: 700; color: #0A0A0A; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.1em; text-align: center;">Site Map</h4>
-        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; font-size: 14px;">
+      <div style="border-top: 1px solid #E5E7EB; padding-top: 32px; margin-top: 48px;">
+        <h4 style="font-size: 12px; font-weight: 700; color: #0A0A0A; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.1em; text-align: center;">Site Map</h4>
+        <div style="display: flex; justify-content: center; flex-wrap: nowrap; gap: 12px; font-size: 13px;">
           <a href="/" style="color: #6B7280;">Home</a>
           <span style="color: #D1D5DB;">|</span>
           <a href="#services" style="color: #6B7280;">Services</a>
@@ -355,6 +355,14 @@
       const percentageEl = document.getElementById('loading-percentage');
       const adjectiveEl = document.getElementById('loading-adjective');
 
+      // Check if this is a first visit or refresh
+      const isFirstVisit = !sessionStorage.getItem('visited');
+      sessionStorage.setItem('visited', 'true');
+
+      // Shorter animation on refresh
+      const loadingDuration = isFirstVisit ? 3000 : 600;
+      const updateInterval = isFirstVisit ? 80 : 30;
+
       // Adjectives that fit your brand personality
       const adjectives = [
         'Professional', 'Creative', 'Modern', 'Reliable',
@@ -378,32 +386,32 @@
           // Hide loading screen after reaching 100%
           setTimeout(() => {
             loadingScreen.classList.add('hidden');
-          }, 400);
+          }, 200);
         } else {
           percentageEl.textContent = Math.floor(currentPercentage) + '%';
         }
-      }, 80); // Update every 80ms
+      }, updateInterval);
 
-      // Rotate adjectives quickly with variable timing
-      const adjectiveInterval = setInterval(() => {
+      // Rotate adjectives (only on first visit for full effect)
+      const adjectiveInterval = isFirstVisit ? setInterval(() => {
         adjectiveEl.style.opacity = '0';
         setTimeout(() => {
           adjectiveIndex = (adjectiveIndex + 1) % adjectives.length;
           adjectiveEl.textContent = adjectives[adjectiveIndex];
           adjectiveEl.style.opacity = '1';
         }, 100);
-      }, Math.random() * 200 + 150); // Random timing 150-350ms
+      }, Math.random() * 200 + 150) : null;
 
-      // Ensure loading screen hides after max 3 seconds regardless
+      // Ensure loading screen hides after max duration
       setTimeout(() => {
         currentPercentage = 100;
         percentageEl.textContent = '100%';
         clearInterval(percentageInterval);
-        clearInterval(adjectiveInterval);
+        if (adjectiveInterval) clearInterval(adjectiveInterval);
         setTimeout(() => {
           loadingScreen.classList.add('hidden');
-        }, 400);
-      }, 3000);
+        }, 200);
+      }, loadingDuration);
     })();
 
     // ============================================
