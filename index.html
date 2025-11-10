@@ -72,6 +72,9 @@
   <!-- Skip to content for accessibility -->
   <a href="#main-content" class="skip-to-content">Skip to content</a>
 
+  <!-- Floating Call Button - Mobile Only -->
+  <a href="tel:+19294450603" class="floating-call-button" aria-label="Call us now">📞</a>
+
   <!-- Header & Navigation -->
   <header class="header" id="header">
     <div class="container header-container">
@@ -247,6 +250,12 @@
             <div class="testimonial-author">— Events Manager, Financial Services</div>
           </div>
 
+        </div>
+
+        <!-- Testimonial Dots Indicator - Mobile Only -->
+        <div class="testimonial-dots">
+          <div class="testimonial-dot active"></div>
+          <div class="testimonial-dot"></div>
         </div>
       </div>
     </section>
@@ -573,6 +582,173 @@
         heroVideo.style.opacity = '0.4';
       });
     }
+
+    // ============================================
+    // MOBILE-SPECIFIC FEATURES
+    // ============================================
+
+    // Touch Ripple Effect
+    function createRipple(event) {
+      const element = event.currentTarget;
+      const ripple = document.createElement('span');
+      const rect = element.getBoundingClientRect();
+
+      const size = Math.max(rect.width, rect.height);
+      const x = event.clientX - rect.left - size / 2;
+      const y = event.clientY - rect.top - size / 2;
+
+      ripple.style.width = ripple.style.height = size + 'px';
+      ripple.style.left = x + 'px';
+      ripple.style.top = y + 'px';
+      ripple.classList.add('ripple');
+
+      element.appendChild(ripple);
+
+      setTimeout(() => ripple.remove(), 600);
+    }
+
+    // Add ripple to interactive elements
+    const rippleElements = document.querySelectorAll('.btn, .service-card, .work-item, .testimonial-card');
+    rippleElements.forEach(element => {
+      element.addEventListener('click', createRipple);
+    });
+
+    // ============================================
+    // Swipeable Testimonials with Dot Indicators - Mobile Only
+    // ============================================
+    if (window.innerWidth <= 768) {
+      const testimonialGrid = document.querySelector('.testimonial-grid');
+      const testimonialDots = document.querySelectorAll('.testimonial-dot');
+
+      if (testimonialGrid && testimonialDots.length > 0) {
+        testimonialGrid.addEventListener('scroll', () => {
+          const scrollLeft = testimonialGrid.scrollLeft;
+          const cardWidth = testimonialGrid.querySelector('.testimonial-card').offsetWidth;
+          const gap = 24;
+          const activeIndex = Math.round(scrollLeft / (cardWidth + gap));
+
+          testimonialDots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === activeIndex);
+          });
+        });
+      }
+    }
+
+    // ============================================
+    // Device Tilt Parallax - Mobile Only
+    // ============================================
+    if (window.DeviceOrientationEvent && /Mobi|Android/i.test(navigator.userAgent)) {
+      const heroSection = document.querySelector('.hero');
+      let isParallaxActive = false;
+
+      window.addEventListener('deviceorientation', (event) => {
+        if (!isParallaxActive || !heroSection) return;
+
+        const gamma = event.gamma; // Left-right tilt (-90 to 90)
+        const beta = event.beta;   // Front-back tilt (-180 to 180)
+
+        // Normalize and limit the values
+        const x = Math.max(-10, Math.min(10, gamma / 9));
+        const y = Math.max(-10, Math.min(10, (beta - 90) / 9));
+
+        heroSection.style.transform = `translate(${x}px, ${y}px)`;
+      });
+
+      // Activate parallax after a delay (don't do it immediately on page load)
+      setTimeout(() => {
+        isParallaxActive = true;
+      }, 2000);
+    }
+
+    // ============================================
+    // Haptic Feedback (Vibration) - Mobile Only
+    // ============================================
+    function triggerHaptic(intensity = 'light') {
+      if (!navigator.vibrate) return;
+
+      const patterns = {
+        light: 10,
+        medium: 20,
+        strong: 30
+      };
+
+      navigator.vibrate(patterns[intensity] || 10);
+    }
+
+    // Add haptic feedback to buttons
+    document.querySelectorAll('.btn').forEach(button => {
+      button.addEventListener('click', () => triggerHaptic('medium'));
+    });
+
+    // Add haptic to floating call button
+    const floatingCallButton = document.querySelector('.floating-call-button');
+    if (floatingCallButton) {
+      floatingCallButton.addEventListener('click', () => triggerHaptic('strong'));
+    }
+
+    // Add haptic to swipe gestures on testimonials
+    if (window.innerWidth <= 768) {
+      const testimonialGrid = document.querySelector('.testimonial-grid');
+      if (testimonialGrid) {
+        let isScrolling = false;
+
+        testimonialGrid.addEventListener('touchstart', () => {
+          isScrolling = true;
+        });
+
+        testimonialGrid.addEventListener('touchend', () => {
+          if (isScrolling) {
+            triggerHaptic('light');
+            isScrolling = false;
+          }
+        });
+      }
+    }
+
+    // ============================================
+    // Elastic Scroll Bounce Effect
+    // ============================================
+    (function() {
+      let startY = 0;
+      let isOverscrolling = false;
+
+      document.addEventListener('touchstart', (e) => {
+        startY = e.touches[0].pageY;
+      }, { passive: true });
+
+      document.addEventListener('touchmove', (e) => {
+        const currentY = e.touches[0].pageY;
+        const scrollTop = window.pageYOffset;
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+
+        // At top of page
+        if (scrollTop === 0 && currentY > startY) {
+          isOverscrolling = true;
+          document.body.style.transform = `translateY(${Math.min((currentY - startY) * 0.3, 50)}px)`;
+        }
+
+        // At bottom of page
+        if (scrollTop + clientHeight >= scrollHeight && currentY < startY) {
+          isOverscrolling = true;
+          document.body.style.transform = `translateY(${Math.max((currentY - startY) * 0.3, -50)}px)`;
+        }
+      }, { passive: true });
+
+      document.addEventListener('touchend', () => {
+        if (isOverscrolling) {
+          document.body.style.transition = 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+          document.body.style.transform = 'translateY(0)';
+
+          setTimeout(() => {
+            document.body.style.transition = '';
+            isOverscrolling = false;
+          }, 400);
+
+          triggerHaptic('light');
+        }
+      }, { passive: true });
+    })();
   </script>
 
 </body>

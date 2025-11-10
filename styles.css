@@ -985,6 +985,14 @@ a {
   opacity: 1;
 }
 
+/* Show overlay on mobile always */
+@media (max-width: 768px) {
+  .work-item-overlay {
+    opacity: 1;
+    padding: 32px;
+  }
+}
+
 .work-item-title {
   font-size: 28px;
   font-weight: 700;
@@ -1362,4 +1370,130 @@ textarea:focus {
   a {
     cursor: pointer;
   }
+}
+
+/* ============================================
+   MOBILE-SPECIFIC FEATURES
+   ============================================ */
+
+/* Floating Call Button - Mobile Only */
+.floating-call-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 64px;
+  height: 64px;
+  background: var(--gradient-cyber);
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(6, 182, 212, 0.4);
+  z-index: 9998;
+  text-decoration: none;
+  font-size: 28px;
+  animation: pulse 2s infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.floating-call-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 16px rgba(6, 182, 212, 0.5);
+}
+
+@media (max-width: 768px) {
+  .floating-call-button {
+    display: flex;
+  }
+}
+
+/* Touch Ripple Effect */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(0);
+  animation: ripple-animation 0.6s ease-out;
+  pointer-events: none;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.btn,
+.service-card,
+.work-item,
+.testimonial-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Swipeable Testimonials - Mobile Only */
+@media (max-width: 768px) {
+  .testimonial-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 24px;
+    margin-top: 60px;
+    padding-bottom: 20px;
+  }
+
+  .testimonial-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .testimonial-card {
+    min-width: 85%;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
+}
+
+/* Testimonial Dots Indicator */
+.testimonial-dots {
+  display: none;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.testimonial-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-gray-300);
+  transition: all 0.3s ease;
+}
+
+.testimonial-dot.active {
+  background: var(--gradient-cyber);
+  width: 24px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .testimonial-dots {
+    display: flex;
+  }
+}
+
+/* Elastic Scroll Bounce */
+html {
+  overscroll-behavior-y: contain;
+}
+
+body {
+  overscroll-behavior-y: contain;
 }
