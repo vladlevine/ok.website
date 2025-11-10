@@ -1,405 +1,382 @@
-# LIGHTROOM NYC - Project Changelog & Documentation
-**Version 3.0 | Premium Gold Redesign**
+# CORE VISUALS NYC - Project Changelog & Documentation
+**Version 4.0 | Video-First Event Production**
 **Last Updated:** November 10, 2025
 
 ---
 
 ## 📱 CONTACT INFORMATION
 
+**Brand:** Core Visuals NYC
 **Phone:** (929) 445-0603
-**Email:** contact@lightroomnyc.com
+**Email:** contact@corevisuals.nyc
+**Domain:** corevisuals.nyc
 **Address:** 99 Wall Street #1751, New York, NY 10005
+
+---
+
+## 🎬 MAJOR REBRAND & PIVOT (November 2025)
+
+### Business Focus Change: Event-First, Video-Primary
+
+**OLD:** Corporate photography with events as secondary
+**NEW:** Event video & photography - video leads, events primary
+
+**Key Strategic Shifts:**
+1. **Video becomes hero service** (was tertiary)
+2. **Events become primary focus** (was equal with corporate)
+3. **Corporate/headshots secondary** (still important, not lead)
+4. **Name change:** Lightroom NYC → Core Visuals NYC
+
+**Why This Works:**
+- "Core Visuals" = flexible, not limiting
+- "NYC" = geographic SEO signal
+- Modern, brandable, professional
+- Doesn't pigeonhole into one service
+
+---
+
+## 🎯 NEW SEO STRATEGY - EVENT & VIDEO FIRST
+
+### PRIMARY KEYWORDS (Event Video - 60% focus):
+```
+event videographer NYC
+NYC event video production
+corporate event videography
+conference video coverage NYC
+event photographer NYC
+NYC event photography
+gala videographer NYC
+```
+
+### SECONDARY KEYWORDS (Corporate - 30% focus):
+```
+corporate photographer NYC
+business photography NYC
+corporate headshots NYC
+office video production NYC
+```
+
+### LONG-TAIL KEYWORDS (High Intent):
+```
+event videographer for corporate events NYC
+how much does event videography cost NYC
+best event videographer manhattan
+corporate event video and photo packages
+```
+
+### TARGET RANKINGS (6-Month Goals):
+- "event videographer NYC" → Page 1
+- "corporate event video NYC" → Top 5
+- "NYC event photography" → Page 1
+
+---
+
+## 📝 COPYWRITING STRATEGY - PAIN POINT FOCUSED
+
+### Client Pain Points We Address:
+
+**1. Agency Bloat**
+- **Pain:** Too many layers, can't reach actual creator
+- **Solution:** Direct access to the person shooting your event
+
+**2. Hidden Costs**
+- **Pain:** Surprise fees, unclear pricing
+- **Solution:** Fixed packages, transparent pricing upfront
+
+**3. Slow Turnaround**
+- **Pain:** Content arrives weeks later when event is old news
+- **Solution:** REMOVED "48 hours" emphasis per client request
+
+**4. One-Size-Fits-All Packages**
+- **Pain:** Pay for services you don't need
+- **Solution:** Video + photo bundles, or separate - you choose
+
+**5. Unreliable Freelancers**
+- **Pain:** Different person every time, inconsistent quality
+- **Solution:** Boutique company, same team every event
+
+### Copywriting Principles:
+- **Punchy & conversational** - No corporate jargon
+- **Scannable** - Short paragraphs, bullet points
+- **Benefit-focused** - "So you get X" not "We do Y"
+- **Problem-aware** - Show we understand their world
+- **Action-oriented** - Clear next steps
 
 ---
 
 ## 🎨 DESIGN EVOLUTION
 
-### Version 3.0 - Premium Gold Redesign (Current)
-**Accent Color:** Sophisticated Gold (#D4AF37)
-- Rich, elegant gold palette with champagne tones
-- Gold gradients and glow effects
-- Premium feel while staying professional
+### Version 4.0 - Video-First Event Production (Current)
+**Major Changes:**
+- Rebrand to Core Visuals NYC
+- Loading animation: CORE → VISUALS → NYC (brand reveal)
+- Video-first service hierarchy
+- Boutique agency positioning section
+- Bold accent colors: Gold + Cyan (#06B6D4) + Magenta (#EC4899)
+- Mobile features: haptic feedback, swipe testimonials, floating call button
+
+**Accent Colors:**
+- Primary: Gold (#D4AF37) - Premium, professional
+- Accent 1: Cyan (#06B6D4) - Modern, creative energy
+- Accent 2: Magenta (#EC4899) - Bold, unforgettable
 
 **Typography:**
-- Maximum H1: 128px
-- Font: Inter (weights 400, 500, 600, 700, 800)
-- Tight letter-spacing (-0.03em)
-- Text gradient effects on key headlines
+- Maximum H1: 128px (ultra-bold headlines)
+- Font: Inter (weights 400-800)
+- Tight letter-spacing for modern feel
 
-**Layout:**
-- Max container width: 1600px
-- Section spacing: 200px desktop / 120px mobile
-- Generous padding: 80px desktop / 32px mobile
-- Full-width cinematic hero
+### Version 3.0 - Premium Gold Redesign
+- Gold-focused palette
+- 128px max typography
+- Video background support
+- Glassmorphism effects
 
-**Key Features:**
-- Video background support in hero (HTML5 <video> tag)
-- Gold shine sweep effect on buttons
-- Floating service icons (4s animation cycle)
-- Staggered scroll animations
-- Testimonial cards with decorative quote marks
-- Premium glassmorphism effects
+### Version 2.0 - Modern Indigo
+- Indigo accent color
+- Scroll animations
+- Modern 2025 aesthetic
 
-### Version 2.0 - Modern Indigo Redesign
-**Accent Color:** Vibrant Indigo (#6366F1)
-- Modern, energetic purple/blue gradient
-- Glassmorphism service cards
-- Scroll-triggered animations
-
-### Version 1.0 - Initial Minimalist Design
-**Accent Color:** Muted Gold (#D4A574)
-- Clean, minimal, classic approach
+### Version 1.0 - Initial Minimal
+- Muted gold
 - Basic responsive layout
 
 ---
 
-## 🎯 SEO KEYWORD STRATEGY
+## 📄 PAGE STRUCTURE - EVENT & VIDEO FIRST
 
-### HOME PAGE
-**Primary Keywords:**
-- corporate photographer NYC
-- NYC corporate photography and video
-- corporate event photographer new york
+### HOME PAGE (index.html)
+**Hero Section:**
+- Headline: Video & photo production focused
+- Video emphasized FIRST, then photography
+- Pain-point driven copy
+- Direct CTAs
 
-**Meta Title:** Corporate Photographer NYC | Event & Video | LIGHTROOM NYC
-**Meta Description:** NYC corporate photography and video production. Events, conferences, brand content. Fixed pricing, professional results. Book your project today.
+**Services Section (Order matters for SEO):**
+1. **Event Coverage** (PRIMARY - most prominent)
+   - Video + photo packages
+   - Corporate events, galas, conferences
+2. **Corporate Content** (SECONDARY)
+   - Headshots, team photos, brand videos
+3. **Video Production** (INTEGRATED throughout)
+   - Not separate service, part of event packages
 
-### SERVICES PAGE (Planned)
-**Section 1 - Corporate Photography:**
-- corporate photography NYC
-- corporate event photography pricing
-- office photography NYC
-- business photography services NYC
-- conference photographer NYC
+**About/Philosophy:**
+- "Boutique by Design" section
+- Explains what boutique means in concrete terms
+- 4 key benefits (no mystery pricing, direct access, no bloat, fast delivery)
 
-**Section 2 - Event Coverage:**
-- event photographer NYC
-- corporate event photographer NYC
-- NYC event photography
-- gala photographer NYC
-- conference photography new york
+**Portfolio:**
+- 60% event work (galas, conferences, networking)
+- 30% corporate (headshots, office, teams)
+- 10% specialized video projects
 
-**Section 3 - Video Production:**
-- corporate video production NYC
-- brand video production
-- testimonial video company NYC
-- corporate videographer NYC
-- video production services manhattan
-
-### WORK/PORTFOLIO PAGE (Planned)
-**Primary:** corporate photography portfolio
-**Purpose:** Conversion, not discovery
-
-### ABOUT PAGE (Planned)
-**Primary:** LIGHTROOM NYC
-**Secondary:** Vlad Levine photographer
-**Purpose:** Brand searches
-
-### CONTACT PAGE (Planned)
-**Primary Keywords:**
-- hire corporate photographer NYC
-- book event photographer manhattan
-- corporate photography quote
+**Testimonials:**
+- Client quotes emphasizing reliability + value
+- Swipeable on mobile (CORE → VISUALS → NYC)
 
 ---
 
-## 💡 DESIGN TIPS & TRICKS USED
+## 🎬 VIDEO & PHOTO FILE NAMING
 
-### Color Psychology
-- **Gold (#D4AF37):** Luxury, quality, professionalism
-- **Black (#0A0A0A):** Sophistication, authority
-- **White (#FFFFFF):** Cleanliness, simplicity
-- Gold works for creative/photography industry - stands out from competitors using blue
+### Smart File Naming (For Auto-Placement):
 
-### Typography Hierarchy
-- Use `clamp()` for responsive font sizes: `clamp(56px, 10vw, 128px)`
-- Negative letter-spacing for modern feel: `-0.03em`
-- Limit line length to 70 characters for readability
-- Text gradients for visual interest without being tacky
-
-### Animation Performance
-- Use `cubic-bezier(0.4, 0, 0.2, 1)` for smooth, premium feel
-- IntersectionObserver for scroll animations (better than scroll events)
-- Stagger animation delays by 0.15s for cascading effect
-- `transform` and `opacity` only for 60fps performance
-
-### Glassmorphism Done Right
-- `backdrop-filter: blur(24px) saturate(180%)`
-- Subtle background opacity (0.6-0.7)
-- Light border with accent color
-- Use sparingly for premium feel
-
-### Accessibility
-- 4.5:1 color contrast minimum
-- 3px outline on focus states
-- Keyboard navigation support
-- Reduced motion media query
-- Semantic HTML structure
-
----
-
-## 📂 FILE STRUCTURE
-
+**Hero Section:**
 ```
-ok.website/
-├── index.html              (Homepage - live)
-├── styles.css              (All CSS - modular design system)
-├── images/                 (To be added)
-│   ├── hero-background.jpg
-│   ├── work-1.jpg
-│   ├── work-2.jpg
-│   ├── work-3.jpg
-│   └── work-4.jpg
-├── videos/                 (Optional - for video backgrounds)
-│   └── hero-background.mp4
-└── CHANGELOG.md           (This file)
+videos/hero-background.mp4
+videos/hero-background-v2.mp4
+images/hero-overlay.jpg
 ```
 
+**Event Portfolio:**
+```
+images/event-corporate-gala.jpg
+images/event-conference.jpg
+images/event-networking.jpg
+images/event-product-launch.jpg
+videos/event-highlight-reel.mp4
+```
+
+**Corporate:**
+```
+images/corporate-headshots.jpg
+images/corporate-team-photo.jpg
+images/corporate-office.jpg
+```
+
+**I scan files and place automatically based on naming convention!**
+
 ---
 
-## 🎬 VIDEO IMPLEMENTATION NOTES
+## 💡 SEO IDEAS (FUTURE - NOT IMPLEMENTING YET)
 
-### GitHub Hosting (Current Setup)
-**Limits:**
-- 1GB total repository storage
-- 100MB per file (soft limit)
-- 1GB/month bandwidth on GitHub Pages
+### Content Hub: "NYC Event Videography Guide"
+**Purpose:** SEO content magnet + lead generation
 
-**Calculation:**
-- 50MB video × 20 page loads = 1GB bandwidth used
-- Fine for new site, might need upgrade if popular
+**Potential Topics:**
+- "10 Best NYC Event Venues for Video"
+- "Corporate Event Video Pricing Guide NYC"
+- "How to Prepare Your Event for Professional Video"
+- "Behind the Scenes: Filming a 500-Person Gala"
+- "Conference Video Best Practices"
+- "Event Video vs. Photography: What Do You Need?"
 
-### Recommended: External Video Hosting
+**SEO Benefit:**
+- Targets long-tail keywords
+- Backlink magnet (venues might link)
+- Establishes authority
+- Ranks for "how to" queries
 
-**Option 1: Cloudinary (Best)**
-- Free tier: 25GB bandwidth/month
-- Automatic optimization
-- Fast global CDN
-- Setup: Upload video → get URL → paste in code
+**Status:** Noted for future, not building now
 
-**Option 2: Vimeo**
-- Professional video player
-- Clean embeds
-- Good for demo reels
+---
 
-**Option 3: Host on Netlify**
-- Better bandwidth than GitHub
-- Faster loading
-- No strict limits on free tier
+## 🚀 TECHNICAL FEATURES (Current)
 
-### How to Add Video Background
-1. Upload video to chosen host
-2. In `index.html` line 90-96, uncomment the video tag
-3. Update `src` attribute with your video URL
-4. Refresh - video plays automatically
+### Desktop Features:
+- Scroll progress bar (tri-color gradient)
+- Service card hover animations
+- Bento grid layout for philosophy section
+- Smooth scroll animations
+- Video background support (ready, commented out)
 
-**Video Specs:**
-- Format: MP4 (H.264 codec)
-- Resolution: 1920x1080 (1080p)
+### Mobile-Specific Features:
+1. **Floating Call Button** - Tap to dial (929) 445-0603
+2. **Touch Ripple Effects** - Material Design feedback
+3. **Swipeable Testimonials** - Horizontal scroll, snap-to-card
+4. **Device Tilt Parallax** - Gyroscope-based hero movement
+5. **Haptic Feedback** - Vibration on interactions
+6. **Elastic Scroll Bounce** - iOS-style overscroll
+
+### Loading Screen:
+- **First visit:** Percentage counter → CORE → VISUALS → NYC
+- **Refresh:** Just CORE → VISUALS → NYC (~1 second)
+- Background: Color flicker (gold → cyan → magenta)
+
+---
+
+## 📊 IMPORTANT NOTES (For Quick Reference)
+
+### Domain Strategy:
+✅ **`corevisuals.nyc` is PERFECT - Don't change it!**
+
+**Why?**
+- Modern SEO prioritizes content over keyword domains (since 2013)
+- Brandable > keyword-stuffed
+- "NYC" provides geographic signal
+- Flexible as business evolves
+- Professional and memorable
+
+**What matters MORE than domain:**
+1. Page titles & H1 headings with keywords
+2. Content quality & keyword density
+3. Backlinks from NYC venues/event sites
+4. Google Business Profile optimization
+5. Local citations (Yelp, Eventective, etc.)
+
+### Event-First Doesn't Mean Ignore Corporate:
+- Keep existing corporate content (don't delete!)
+- Just reorder to make events PRIMARY
+- Think of it as expanding pyramid, not replacing base
+```
+     EVENTS (60%)         ← New focus, most prominent
+   Corporate (30%)        ← Existing strength, keep it
+  Specialized (10%)       ← Supporting services
+```
+
+### File Size Guidelines:
+**Images (JPG):**
+- Portfolio: 1920x1200px, 200-400 KB (80-85% quality)
+- Optimize at TinyJPG.com or Squoosh.app
+
+**Video (MP4):**
+- Hero background: 1920x1080 or 1280x720
 - Length: 10-30 seconds (loops)
-- File size: Under 20MB ideal (compress with HandBrake)
+- File size: 2-5 MB max
+- Compress with HandBrake or CloudConvert.com
+- Format: H.264 codec, 24-30fps
 
 ---
 
-## 🚀 DEPLOYMENT STATUS
+## 📱 DEPLOYMENT
 
 ### Current: GitHub Pages
-- URL: https://vladlevine.github.io/ok.website/
-- Branch: `claude/home-page-draft-011CUuUyyGhKB79ZcvTiwL3j`
-- Auto-deploys on push (1-2 minute delay)
+- Repo: vladlevine/ok.website
+- Branch: main (protected - requires PR to update)
+- Auto-deploys on merge (1-2 minutes)
 
 ### Planned: Netlify
-- Better performance
-- Custom domain support
+- Better bandwidth (100GB vs 1GB)
+- Faster CDN
+- Custom domain: corevisuals.nyc
 - Automatic HTTPS
-- Form handling
-- Better bandwidth limits
-- Build previews
+- Branch previews
+
+**To Merge Changes:**
+1. Create PR from `claude/*` branch → `main`
+2. Review changes
+3. Merge PR
+4. Auto-deploys to live site
 
 ---
 
-## 🔧 TECHNICAL SPECIFICATIONS
+## 🎯 SUCCESS METRICS
 
-### Browser Support
-- Chrome/Edge: Last 2 versions
-- Firefox: Last 2 versions
-- Safari: Last 2 versions
-- Mobile Safari: iOS 14+
+### Track These:
+- **Google Search Console:** Impressions for "event videographer NYC"
+- **Google Analytics:** Event inquiry conversion rate
+- **Rankings:** Position for primary keywords
+- **Calls:** Phone calls from floating button (mobile)
+- **Forms:** Contact form submissions
 
-### Performance Targets
-- Mobile PageSpeed: 90+
-- Desktop PageSpeed: 95+
-- First Contentful Paint: <1.5s
-- Time to Interactive: <3s
-
-### Responsive Breakpoints
-- Mobile: 320px - 767px
-- Tablet: 768px - 1023px
-- Desktop: 1024px+
-- Large Desktop: 1440px+
+### 6-Month Targets:
+- Page 1 for "event videographer NYC"
+- Top 5 for "corporate event video NYC"
+- 50+ organic visits/month
+- 10+ event inquiries/month
 
 ---
 
-## 📋 PLANNED PAGES
+## 💼 BUSINESS POSITIONING
 
-### Phase 1 (Current)
-- ✅ Home Page (live)
+### "Boutique by Design"
+What boutique ACTUALLY means for clients:
 
-### Phase 2 (Next)
-- [ ] Services Page (single page, 3 sections)
-- [ ] Contact Page (form + info)
+**1. No Mystery Pricing**
+- Fixed packages
+- Clear deliverables
+- No surprise fees
 
-### Phase 3
-- [ ] Work/Portfolio Page
-- [ ] Individual project case studies
+**2. Direct Access**
+- Text, call, email
+- Same person from inquiry to delivery
+- No layers, no runaround
 
-### Phase 4
-- [ ] About Page
-- [ ] Blog migration (100+ existing posts)
+**3. Fast Turnaround**
+- (Removed specific timeframes per client request)
+- Content delivered while event is still relevant
 
----
-
-## 🎨 COMPONENT LIBRARY
-
-### Buttons
-```css
-.btn-primary        /* Gold gradient, for main CTAs */
-.btn-secondary      /* Gold outline, for secondary actions */
-.btn-white          /* White bg, for dark backgrounds */
-.btn-outline-white  /* White outline, for dark backgrounds */
-```
-
-### Cards
-```css
-.service-card       /* Glassmorphism cards with floating icons */
-.work-item          /* Portfolio items with hover overlays */
-.testimonial-card   /* Quote cards with decorative marks */
-.bento-item         /* Asymmetric grid items */
-```
-
-### Animations
-```css
-.fade-in            /* Fade up on scroll */
-.slide-in-left      /* Slide from left */
-.slide-in-right     /* Slide from right */
-.scale-in           /* Scale up on scroll */
-```
+**4. No Bloat**
+- Small team, low overhead
+- Better rates than agencies
+- Not funding corporate retreats
 
 ---
 
-## 💼 BUSINESS STRATEGY
+## 🔄 RECENT CHANGES LOG
 
-### Target Audience
-- NYC corporate clients
-- Event planners
-- Marketing managers
-- Startups and tech companies
-- Financial services firms
-
-### Positioning
-- Professional without being stuffy
-- Transparent pricing (no mystery quotes)
-- Fast turnaround (48 hours for events)
-- One photographer they can trust
-
-### Competitive Advantages
-1. **Price Transparency** - Fixed packages, clear pricing
-2. **Speed** - Faster delivery than agencies
-3. **Package Deals** - Photo + video bundles
-4. **Availability** - Last-minute bookings accepted
-
----
-
-## 📈 SUCCESS METRICS TO TRACK
-
-### Traffic
-- Organic search traffic
-- Direct traffic (brand searches)
-- Referral traffic
-
-### Conversions
-- Contact form submissions
-- Phone calls from site
-- Email inquiries
-- Quote requests
-
-### SEO Rankings
-- "corporate photographer NYC"
-- "event photographer manhattan"
-- "corporate video production NYC"
-
-### Engagement
-- Time on site
-- Pages per session
-- Scroll depth
-- Video play rate (when added)
-
----
-
-## 🔐 SECURITY & COMPLIANCE
-
-### Current (GitHub Pages)
-- ✅ HTTPS enabled
-- ✅ DDoS protection (GitHub CDN)
-- ⚠️ No form submissions (links to email)
-- ⚠️ No business email hosting
-
-### Planned (Netlify)
-- ✅ Automatic HTTPS
-- ✅ DDoS protection
-- ✅ Form handling with spam protection
-- ✅ Better security headers
-- ⚠️ Business email requires separate service
-
-### For Business Email
-**Recommended:** Google Workspace ($6/user/month)
-- Professional email: contact@lightroomnyc.com
-- Calendar, Drive, Meet
-- 30GB storage
-- 24/7 support
-
-**Alternative:** Zoho Mail (Free tier available)
-
----
-
-## 🎯 NEXT STEPS
-
-### Immediate (This Week)
-1. [ ] Add loading screen animation
-2. [ ] Fix header hover readability
-3. [ ] Remove strikethrough on "GET"
-4. [ ] Update phone number throughout site
-5. [ ] Add sitemap to footer
-
-### Short Term (This Month)
-1. [ ] Upload real photos (10-12 images)
-2. [ ] Add video background (optional)
-3. [ ] Build Services page
-4. [ ] Build Contact page
-5. [ ] Deploy to Netlify
-
-### Medium Term (Next 2 Months)
-1. [ ] Build Work/Portfolio page
-2. [ ] Create 4-6 case studies
-3. [ ] Build About page
-4. [ ] Set up business email
-5. [ ] Migrate existing blog posts
-
----
-
-## 🆘 COMMON ISSUES & SOLUTIONS
-
-### "Changes not showing on live site"
-**Solution:** Hard refresh browser (Cmd/Ctrl + Shift + R)
-
-### "Video not loading"
-**Solution:** Check file size (<50MB), format (MP4), and path
-
-### "Animations not working on mobile"
-**Solution:** Ensure `playsinline` attribute on videos
-
-### "Site loading slowly"
-**Solution:** Optimize images (WebP format, lazy loading)
+**November 10, 2025:**
+- ✅ Rebrand: Lightroom NYC → Core Visuals NYC
+- ✅ New loading animation (CORE → VISUALS → NYC)
+- ✅ Added boutique agency philosophy section
+- ✅ Updated all branding (emails, schema, meta tags)
+- ✅ Removed "48 hours" emphasis from copy
+- ✅ Reordered services: Events first, video primary
+- ✅ Rewrote hero + all main page copy (pain-point focused)
+- ✅ Mobile features: floating call, haptics, swipe testimonials
+- ✅ Bold accent colors (gold + cyan + magenta)
+- ✅ Fixed mobile Safari header overlap
+- ✅ Compact sitemap (one line)
+- ✅ Shortened refresh loading screen
 
 ---
 
@@ -407,27 +384,30 @@ ok.website/
 
 - **GitHub Docs:** https://docs.github.com/pages
 - **Netlify Docs:** https://docs.netlify.com
-- **Web.dev Performance:** https://web.dev/measure
-- **Can I Use (Browser Support):** https://caniuse.com
+- **Google Search Console:** https://search.google.com/search-console
+- **PageSpeed Insights:** https://pagespeed.web.dev
+- **TinyJPG (Image Optimization):** https://tinyjpg.com
+- **HandBrake (Video Compression):** https://handbrake.fr
 
 ---
 
-## 🎨 DESIGN PHILOSOPHY SUMMARY
+## 🎨 DESIGN PHILOSOPHY
 
-**"The Art of Asking"**
+**"The Art of Asking" + Pain-Point Awareness**
 
-Every design decision removes friction from potential clients asking for help:
-- Clear hierarchy = Easy to scan
-- Generous whitespace = Reduces cognitive load
-- Conversational copy = Lowers intimidation
-- Transparent pricing = Removes biggest objection
-- Simple navigation = No one gets lost
-- Fast loading = Respect their time
+Every design decision removes friction AND addresses a pain point:
 
-**The best design gets out of the way and lets clients ask for what they need.**
+- **Clear hierarchy** = Easy to scan → Busy client finds info fast
+- **Generous whitespace** = Reduces cognitive load → Not overwhelming
+- **Punchy copy** = Gets to the point → Respects their time
+- **Transparent pricing** = Removes biggest objection → No fear of surprise costs
+- **Video-first messaging** = Matches modern needs → "Finally, someone gets it"
+- **Boutique positioning** = Explains difference → "Not another agency!"
+
+**The best design gets out of the way and lets clients say "This is exactly what I need."**
 
 ---
 
 **Document maintained by:** Claude Code
-**Project owner:** Vlad Levine, The Lightroom Studios
-**Status:** Active Development
+**Project owner:** Vlad Levine, Core Visuals NYC
+**Status:** Active Development | Event & Video Focus
