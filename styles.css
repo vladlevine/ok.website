@@ -50,16 +50,19 @@
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.loading-adjective {
-  font-size: clamp(16px, 3vw, 24px);
-  font-weight: 600;
+.loading-word {
+  font-size: clamp(32px, 6vw, 72px);
+  font-weight: 800;
   color: var(--color-white);
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   font-family: 'Inter', sans-serif;
-  min-height: 30px;
-  transition: opacity 0.15s ease;
-  opacity: 0.9;
+  min-height: 80px;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ============================================
