@@ -434,7 +434,7 @@ a {
   color: var(--color-white);
   overflow: hidden;
   margin-top: 0;
-  padding-top: 60px; /* Account for fixed header */
+  padding-top: 120px; /* Increased spacing between header and hero content */
   padding-bottom: 120px; /* Prevent next section from overlapping buttons */
 }
 
@@ -527,7 +527,7 @@ a {
 @media (max-width: 768px) {
   .hero {
     min-height: 90vh;
-    padding-top: 80px; /* Increased padding to clear fixed header on mobile */
+    padding-top: 120px; /* More space between header and hero text on mobile */
     padding-bottom: 140px; /* Extra padding for mobile Safari UI */
   }
 
