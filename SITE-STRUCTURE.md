@@ -1,540 +1,753 @@
 # SITE STRUCTURE - Core Visuals NYC
-## Planned Pages & Information Architecture
+## Final Website Architecture
 
 **Last Updated:** November 2025
-**Status:** Phase 1 (Home Page) Complete | Phases 2-4 Planned
+**Status:** Home page live | Full site planned below
 
 ---
 
-## 🎯 CURRENT SITE (Phase 1 - LIVE)
-
-### Home Page (`/` or `/index.html`)
-**Status:** ✅ COMPLETE
-**Primary Keywords:** event videographer nyc, nyc event photographer, video + photo packages
-
-**Sections:**
-1. **Hero Section**
-   - H1: "Your event needs to live beyond the room"
-   - H2: "No mystery pricing"
-   - Lead: Boutique video and photography for NYC events
-   - CTAs: View Services, Get Quote
-
-2. **Services Section** (#services)
-   - Service 1: Video + Photo Packages (Event Coverage)
-   - Service 2: Headshots & Brand Videos (Corporate Content)
-   - Service 3: Product Launches & More (Custom Projects)
-
-3. **Recent Work Section** (#work)
-   - Portfolio grid (4 placeholder items)
-   - CTA: View Full Portfolio
-
-4. **About Section** (#about)
-   - Boutique production company positioning
-   - Direct access messaging
-
-5. **Testimonials Section**
-   - 2 client testimonials
-   - Swipeable on mobile
-
-6. **CTA Section** (#contact)
-   - Email: contact@corevisuals.nyc
-   - Phone: (929) 445-0603
-
-7. **Footer**
-   - Company info, services links, sitemap
-
-**Technical Features:**
-- Loading screen (CORE → VISUALS → NYC animation)
-- Scroll progress bar
-- Mobile haptic feedback
-- Touch ripple effects
-- Device tilt parallax
-- Swipeable testimonials
-- Floating call button (mobile)
-
----
-
-## 📋 PLANNED PAGES (Phase 2-4)
-
-### Phase 2: Core Service Pages (Priority: HIGH)
-
-#### `/services` - Services Overview
-**Purpose:** Main services landing page
-**Primary Keywords:** event video production nyc, corporate event coverage, video photo packages
-**Estimated Timeline:** Next phase
-
-**Sections:**
-1. **Hero**
-   - H1: "Event Video & Photography Packages"
-   - Lead: Service overview with video-first positioning
-
-2. **Detailed Service Breakdown**
-   - Event Coverage (Video + Photo)
-     - Corporate events
-     - Conferences
-     - Galas
-     - Product launches
-   - Corporate Content
-     - Headshots
-     - Office photography
-     - Brand videos
-   - Custom Projects
-     - Multi-day events
-     - Special requests
-
-3. **Package Comparison Table**
-   - Video Only, Photo Only, Video + Photo Combo
-   - Clear pricing tiers (when ready to publish pricing)
-
-4. **Process Overview**
-   - How booking works
-   - What to expect
-   - Turnaround times
-
-5. **FAQ Section**
-   - Common questions about services
-   - Pricing transparency messaging
-
-6. **CTA**
-   - Book a call, Get custom quote
-
----
-
-#### `/services/event-video-photography` - Event Coverage Detail Page
-**Purpose:** Deep dive into primary service
-**Primary Keywords:** event videographer nyc, event photographer nyc, corporate event coverage
-**Estimated Timeline:** Phase 2
-
-**Sections:**
-1. Hero with service-specific messaging
-2. What's Included
-   - Video deliverables (highlight reel, full coverage, social clips)
-   - Photo deliverables (edited gallery, high-res downloads)
-3. Package Options
-4. Sample Work / Gallery
-5. Industries Served
-   - Tech startups
-   - Financial services
-   - Nonprofits
-   - Corporate
-6. CTA
-
----
-
-#### `/services/corporate-content` - Corporate Content Detail Page
-**Purpose:** Secondary service (headshots, brand videos)
-**Primary Keywords:** corporate photographer nyc, corporate video production, business headshots nyc
-**Estimated Timeline:** Phase 2
-
-**Sections:**
-1. Hero
-2. Services Breakdown
-   - Team headshots
-   - Office/culture photography
-   - Brand videos
-   - Testimonial videos
-3. Package Options
-4. Sample Work
-5. CTA
-
----
-
-### Phase 3: Portfolio & About (Priority: MEDIUM)
-
-#### `/portfolio` or `/work` - Full Portfolio
-**Purpose:** Showcase past work, build credibility
-**Primary Keywords:** event videographer portfolio, nyc event photography examples
-**Estimated Timeline:** Phase 3
-
-**Sections:**
-1. **Hero**
-   - "Real work for real clients"
-
-2. **Filterable Gallery**
-   - Filter by: All / Events / Corporate / Video / Photo
-   - Grid layout (larger than home page)
-
-3. **Featured Projects** (Case Studies)
-   - Project 1: Tech Conference (video + photo)
-   - Project 2: Financial Services Gala
-   - Project 3: Startup Product Launch
-   - Format: Images/video, client quote, deliverables list
-
-4. **Video Showreel**
-   - Embedded highlight reel of best work
-
-5. **Client Logos** (when applicable)
-   - Companies we've worked with
-
-6. **CTA**
-
----
-
-#### `/about` - About Page
-**Purpose:** Build trust, tell story, humanize brand
-**Primary Keywords:** boutique videographer nyc, about core visuals
-**Estimated Timeline:** Phase 3
-
-**Sections:**
-1. **Hero**
-   - Photo of you/team
-   - "Hi, I'm Vlad" or team intro
-
-2. **Story**
-   - Why you started Core Visuals NYC
-   - Your background (photography/video experience)
-   - What makes you different
-
-3. **Our Approach**
-   - Boutique model explained
-   - Direct access
-   - No agency bloat
-   - Transparent pricing philosophy
-
-4. **Equipment & Capabilities**
-   - Camera gear (builds credibility)
-   - Video/photo capabilities
-   - Post-production workflow
-
-5. **Service Area**
-   - Primary: NYC (all boroughs)
-   - Available: Tri-state area
-   - Travel available
-
-6. **Testimonials**
-   - More detailed client feedback
-
-7. **CTA**
-   - Work with us
-
----
-
-#### `/contact` - Contact Page
-**Purpose:** Make it easy to get in touch, capture leads
-**Primary Keywords:** contact event videographer nyc, book event photographer
-**Estimated Timeline:** Phase 3
-
-**Sections:**
-1. **Hero**
-   - "Let's talk about your event"
-
-2. **Contact Form**
-   - Name
-   - Email
-   - Phone
-   - Event Type (dropdown)
-   - Event Date
-   - Message
-   - Budget Range (optional)
-
-3. **Direct Contact Info**
-   - Email: contact@corevisuals.nyc
-   - Phone: (929) 445-0603
-   - Address: 99 Wall Street #1751, New York, NY 10005
-
-4. **Availability Calendar** (Optional/Future)
-   - "Check if your date is available"
-
-5. **Response Time Expectation**
-   - "We typically respond within 24 hours"
-
-6. **Google Map** (Optional)
-   - NYC service area visualization
-
----
-
-### Phase 4: Content Hub / Blog (Priority: LOW - SEO Growth)
-
-#### `/blog` or `/resources` - Content Hub
-**Purpose:** SEO content magnet, establish expertise
-**Primary Keywords:** Long-tail informational keywords
-**Estimated Timeline:** Phase 4 (6+ months out)
-**Note:** See "SEO IDEAS (FUTURE)" in CHANGELOG.md
-
-**Planned Content:**
-
-##### Pillar Article 1: "NYC Event Videography Guide"
-**URL:** `/blog/nyc-event-videography-guide`
-**Target Keywords:** event videography nyc, how to hire event videographer, event video production guide
-**Sections:**
-- Why video matters for events
-- What to look for in an event videographer
-- Pricing breakdown
-- Best practices for clients
-- NYC venue recommendations for video
-- Timeline for booking
-
-##### Pillar Article 2: "Corporate Event Video Pricing Guide NYC"
-**URL:** `/blog/corporate-event-video-pricing-nyc`
-**Target Keywords:** event videography pricing, how much does event video cost, corporate video rates nyc
-**Sections:**
-- Pricing factors
-- Package comparisons
-- Hidden costs to watch for
-- Value of transparent pricing
-- ROI of professional video
-
-##### Pillar Article 3: "How to Choose Event Photographer in NYC"
-**URL:** `/blog/how-to-choose-event-photographer-nyc`
-**Target Keywords:** choosing event photographer, best event photographer nyc, event photography checklist
-**Sections:**
-- Questions to ask
-- Portfolio evaluation
-- Red flags to avoid
-- Agency vs boutique vs freelance
-- Turnaround expectations
-
-##### Supporting Articles:
-- "10 Best NYC Event Venues for Video"
-- "Event Video vs Event Photography: Which Do You Need?"
-- "Same Day Edit Video: Is It Worth It?"
-- "How to Prepare Your Event for Professional Video"
-- "Corporate Event Video Trends 2025"
-- "Video + Photo Packages: Why Book Both?"
-
-**Blog Structure:**
-- Category: Event Video Tips
-- Category: Event Photography Tips
-- Category: NYC Venues & Locations
-- Category: Client Success Stories
-- Category: Behind the Scenes
-
----
-
-## 🗂️ INFORMATION ARCHITECTURE
+## 🗂️ COMPLETE SITE MAP
 
 ```
-/ (Home)
+corevisuals.nyc/
 │
-├── /services
-│   ├── /services/event-video-photography
-│   ├── /services/corporate-content
-│   └── /services/custom-projects (optional)
-│
+├── / (Home)
+├── /event-coverage
+├── /corporate-content
 ├── /portfolio
-│   └── /portfolio/[project-name] (optional individual project pages)
-│
 ├── /about
-│
 ├── /contact
-│
-├── /pricing (optional - if you want separate pricing page)
-│
-└── /blog (Phase 4)
+└── /blog
     ├── /blog/nyc-event-videography-guide
     ├── /blog/corporate-event-video-pricing-nyc
     ├── /blog/how-to-choose-event-photographer-nyc
-    └── /blog/[article-slug]
+    └── ... (additional articles)
 ```
 
 ---
 
-## 📱 NAVIGATION STRUCTURE
+## 📄 PAGES - DETAILED BREAKDOWN
 
-### Main Navigation (Header)
-**Current:**
-- Services (#services on home page)
-- Work (#work on home page)
-- About (#about on home page)
-- Let's Talk (CTA button → #contact)
+### 1. HOME PAGE `/`
+**Primary Keywords:** event videographer nyc, nyc event photographer, video + photo packages
+**Purpose:** First impression, service overview, drive to contact
 
-**Future (Multi-Page Site):**
-- Services (dropdown)
-  - Event Video + Photo
-  - Corporate Content
-  - Custom Projects
-- Portfolio
-- About
-- Blog (optional in nav)
-- Contact (CTA button)
+**Sections:**
+1. **Hero**
+   - "Your event needs to live beyond the room"
+   - "No mystery pricing"
+   - Boutique video and photography positioning
+   - CTAs: View Services, Get Quote
+
+2. **Services Grid** (3 cards)
+   - Video + Photo Packages (primary)
+   - Headshots & Brand Videos (secondary)
+   - Custom Projects (tertiary)
+   - Each links to detail page
+
+3. **Portfolio Preview** (4 items)
+   - Real project examples
+   - CTA to full portfolio
+
+4. **About** (concise)
+   - Boutique production company
+   - Direct access positioning
+
+5. **Testimonials** (2-3 quotes)
+   - Client feedback
+   - Swipeable on mobile
+
+6. **Contact CTA**
+   - Email, phone
+   - Get in Touch button
+
+---
+
+### 2. EVENT COVERAGE PAGE `/event-coverage`
+**Primary Keywords:** event videographer nyc, corporate event videographer, event photographer nyc
+**Purpose:** Primary service detail, drive bookings
+
+**Sections:**
+
+**Hero**
+- H1: "Event Video + Photo Coverage"
+- Subhead: "Corporate events, conferences, galas—captured and delivered while your event is still trending"
+- CTAs: See Packages, Book Now
+
+**What You Get**
+- **Video Deliverables:**
+  - Event highlight reel (2-3 min, social media ready)
+  - Full event footage (optional)
+  - Social media clips (vertical format for Instagram/TikTok)
+  - Same-day edit available (for events that need instant content)
+- **Photo Deliverables:**
+  - Edited high-res gallery (digital download)
+  - Web-optimized versions
+  - Print-ready files
+
+**Package Options**
+| Package | What's Included | Best For |
+|---------|-----------------|----------|
+| **Photo Only** | Full-day coverage, edited gallery, 200-400 images | LinkedIn posts, website updates |
+| **Video Only** | 2-3 min highlight reel, social clips, full footage | Instagram, YouTube, marketing |
+| **Video + Photo** | Everything above | Maximum content output |
+
+*Note: Add pricing when ready, or "Request Quote" CTAs*
+
+**Event Types We Cover**
+- Corporate conferences
+- Industry galas
+- Product launches
+- Networking events
+- Panel discussions & keynotes
+- Trade shows
+- Fundraisers
+- Annual meetings
+
+**How It Works**
+1. **Pre-Event Call** - Discuss your goals, key moments, deliverables
+2. **Event Day** - We show up, capture everything, stay invisible
+3. **Fast Delivery** - Video + photo galleries delivered while your event is still trending
+4. **Revisions** - One round included
+
+**Sample Work**
+- Embedded video player with highlight reel
+- Photo gallery (8-12 images from past events)
+- Client quotes
+
+**Why Clients Choose Us**
+- Direct access (no account managers)
+- Transparent pricing (no hidden fees)
+- Fast turnaround (not weeks later)
+- Video + photo in one booking
+
+**FAQ**
+- "How far in advance should I book?"
+- "Do you provide both video and photo at once?"
+- "What's the turnaround time?"
+- "Can we get same-day edits?"
+- "What if our event runs over?"
+
+**CTA Section**
+- "Ready to book your event?"
+- Contact form or "Get Quote" button
+- Phone, email
+
+**Breadcrumbs:** Home > Event Coverage
+
+---
+
+### 3. CORPORATE CONTENT PAGE `/corporate-content`
+**Primary Keywords:** corporate photographer nyc, corporate video production, business headshots nyc
+**Purpose:** Secondary service detail, attract corporate clients
+
+**Sections:**
+
+**Hero**
+- H1: "Corporate Headshots & Brand Videos"
+- Subhead: "Professional content for your team, office, and brand—without the agency overhead"
+- CTAs: View Services, Get Quote
+
+**What We Offer**
+
+**Team Headshots**
+- Professional headshots for LinkedIn, website, press
+- On-location at your office or studio setting
+- Fast turnaround (3-5 business days)
+- Consistent style across your team
+
+**Office & Culture Photography**
+- Workspace documentation
+- Team candids
+- Environmental portraits
+- Event photography (holiday parties, team offsites)
+
+**Brand Videos**
+- Company overview videos (30-90 sec)
+- Testimonial videos (client or employee)
+- Product/service explainers
+- Social media content
+- Behind-the-scenes
+
+**Package Examples**
+- **Headshot Session:** 10-20 people, professional lighting, edited images
+- **Office Day:** Half-day or full-day coverage of your workspace and team
+- **Brand Video:** Concept, filming, editing, revisions included
+
+**Sample Work**
+- Photo gallery of headshots, office shots
+- Embedded brand video examples
+- Client testimonials
+
+**Industries We Serve**
+- Tech startups
+- Financial services
+- Real estate
+- Law firms
+- Consulting
+- Marketing agencies
+- Nonprofits
+
+**How It Works**
+1. **Discovery Call** - Understand your brand, team size, goals
+2. **Concept & Planning** - Shot list, scheduling, logistics
+3. **Production Day** - Professional, efficient, minimal disruption
+4. **Delivery** - Edited content, revisions included
+
+**FAQ**
+- "How long does a headshot session take?"
+- "Can you come to our office?"
+- "Do you provide hair/makeup?"
+- "What's included in a brand video?"
+- "Can we use the content everywhere?"
+
+**CTA**
+- "Let's discuss your project"
+- Contact button
+
+**Breadcrumbs:** Home > Corporate Content
+
+---
+
+### 4. PORTFOLIO PAGE `/portfolio`
+**Primary Keywords:** nyc event videographer portfolio, corporate photographer work examples
+**Purpose:** Build trust, showcase quality, inspire bookings
+
+**Sections:**
+
+**Hero**
+- H1: "Our Work"
+- Subhead: "Real projects for real clients. No stock footage. No fluff."
+
+**Filter/Category Tabs**
+- All
+- Events
+- Corporate
+- Video
+- Photo
+
+**Project Grid** (12-20 projects)
+- Large images/video thumbnails
+- Hover state shows project title + type
+- Click opens project detail (lightbox or separate page)
+
+**Featured Case Studies** (3-5 projects)
+Each includes:
+- **Project Title:** "Tech Startup Conference 2024"
+- **Client:** Company name (if allowed)
+- **Challenge:** What they needed
+- **Deliverables:** What we provided
+- **Images/Video:** 4-6 images + video embed
+- **Client Quote:** Testimonial from this project
+- **Results:** "500+ social media posts, 50K+ views on YouTube"
+
+**Video Showreel**
+- 90-second montage of best work
+- Embedded video player
+- "This is what we do"
+
+**Client Logos** (Optional)
+- Companies we've worked with
+
+**CTA**
+- "Ready to create something great?"
+- Get in Touch button
+
+**Breadcrumbs:** Home > Portfolio
+
+---
+
+### 5. ABOUT PAGE `/about`
+**Primary Keywords:** about core visuals nyc, boutique videographer nyc
+**Purpose:** Build trust, humanize brand, explain approach
+
+**Sections:**
+
+**Hero**
+- Photo of you (or team)
+- H1: "Hi, I'm Vlad"
+- Subhead: "Founder & Lead Videographer/Photographer"
+
+**The Story**
+- Why you started Core Visuals NYC
+- Your background in photography/video
+- What frustrated you about agencies → why you went boutique
+- What drives you (capturing moments, helping businesses tell their story)
+
+**What Makes Us Different**
+
+**Boutique by Choice**
+- Small team = direct access
+- You work with the person shooting your event
+- No account managers, no junior staff, no runaround
+
+**Transparent Pricing**
+- Fixed packages
+- No surprise fees
+- You know what you're paying before we show up
+
+**Video + Photo Expertise**
+- Not just photographers who "also do video"
+- Professional-grade equipment and skills for both
+- Efficient workflows = better results, better rates
+
+**Fast, Professional Delivery**
+- We don't sit on your content
+- Fast turnaround without sacrificing quality
+- Delivered while your event is still relevant
+
+**Our Equipment** (Optional - builds credibility)
+- Cameras: Sony A7S III, Canon R5
+- Lenses: 24-70mm, 70-200mm, primes
+- Audio: Wireless lav mics, shotgun mics
+- Lighting: Portable LED kits
+- Editing: Adobe Premiere, Lightroom, DaVinci Resolve
+
+**Service Area**
+- **Primary:** All five boroughs of NYC
+- **Available:** Tri-state area (NY, NJ, CT)
+- **Travel:** Available nationwide for the right project
+
+**Values**
+- Quality without ego
+- Clear communication
+- On time, every time
+- No fluff, just results
+
+**Testimonials**
+- 3-5 longer client testimonials with photos
+
+**CTA**
+- "Let's work together"
+- Contact button
+
+**Breadcrumbs:** Home > About
+
+---
+
+### 6. CONTACT PAGE `/contact`
+**Primary Keywords:** contact event videographer nyc, book event photographer, hire videographer
+**Purpose:** Make it ridiculously easy to reach you, capture leads
+
+**Sections:**
+
+**Hero**
+- H1: "Let's Talk About Your Event"
+- Subhead: "We typically respond within 24 hours"
+
+**Contact Form**
+- **Name** (required)
+- **Email** (required)
+- **Phone** (optional)
+- **Event Type** (dropdown)
+  - Corporate Conference
+  - Gala/Awards
+  - Product Launch
+  - Networking Event
+  - Headshots/Office
+  - Brand Video
+  - Other
+- **Event Date** (date picker)
+- **Services Needed** (checkboxes)
+  - Video Only
+  - Photo Only
+  - Video + Photo
+  - Not Sure Yet
+- **Budget Range** (optional dropdown)
+  - Under $2K
+  - $2K-$5K
+  - $5K-$10K
+  - $10K+
+  - Not Sure
+- **Tell Us About Your Event** (textarea)
+- **Submit Button:** "Send Message"
+
+**Direct Contact**
+- **Email:** contact@corevisuals.nyc (clickable)
+- **Phone:** (929) 445-0603 (tap to call on mobile)
+- **Address:** 99 Wall Street #1751, New York, NY 10005
+- **Hours:** Mon-Fri 9am-6pm EST
+
+**Availability Calendar** (Optional Future Feature)
+- "Check if your date is available"
+- Simple calendar showing booked/available dates
+
+**What Happens Next?**
+1. We review your inquiry within 24 hours
+2. We'll email or call to discuss your needs
+3. We'll send you a custom quote and availability
+4. If it's a fit, we'll send a contract and secure your date
+
+**Google Map** (Optional)
+- NYC service area visualization
+- "We serve all five boroughs"
+
+**FAQ (Quick Answers)**
+- "How far in advance should I book?"
+- "Do you travel outside NYC?"
+- "What if I'm not sure about my budget?"
+- "Can we schedule a call first?"
+
+**CTA**
+- Alternative: "Prefer to talk first?" → "Schedule a Call" (Calendly link)
+
+**Breadcrumbs:** Home > Contact
+
+---
+
+### 7. BLOG/RESOURCES `/blog`
+**Primary Keywords:** event videography guide, corporate video tips, nyc event photography
+**Purpose:** SEO content hub, establish expertise, long-tail traffic
+
+**Sections:**
+
+**Hero**
+- H1: "Event Video & Photography Resources"
+- Subhead: "Guides, tips, and insights for NYC event planners and marketing teams"
+
+**Featured Article** (Large card at top)
+- Latest or most popular article
+- Large image
+- Title, excerpt, "Read More" CTA
+
+**Article Grid** (9-12 articles visible)
+- Category tags
+- Title
+- Excerpt (2-3 lines)
+- "Read More" link
+- Published date
+
+**Categories (Sidebar or Filter)**
+- Event Video Tips
+- Event Photography Tips
+- Venue Spotlights
+- Behind the Scenes
+- Client Success Stories
+- Industry Trends
+
+**Search Bar**
+- "Search articles..."
+
+**Newsletter Signup** (Optional)
+- "Get event video tips monthly"
+- Email capture
+
+**Breadcrumbs:** Home > Blog
+
+---
+
+### BLOG ARTICLE TEMPLATE `/blog/[article-slug]`
+
+**Structure:**
+- **Hero Image** (relevant to article)
+- **Category Tag** + **Published Date**
+- **H1: Article Title**
+- **Reading Time:** "5 min read"
+- **Article Content** (1,500-2,500 words)
+  - Intro
+  - Subheadings (H2, H3)
+  - Lists, bullets
+  - Images throughout
+  - Pull quotes
+  - CTAs within content
+- **Author Bio**
+  - Photo of you
+  - "Written by Vlad"
+  - Short bio + link to About page
+- **Related Articles** (3 cards)
+- **CTA Section**
+  - "Ready to book your event?"
+  - Link to contact page
+- **Social Share Buttons**
+- **Breadcrumbs:** Home > Blog > Article Title
+
+---
+
+### PRIORITY BLOG ARTICLES (First 10)
+
+**Pillar Articles (Long-Form, SEO-Heavy):**
+1. **"The Complete NYC Event Videography Guide"**
+   - 3,000+ words
+   - Keywords: event videography nyc, how to hire videographer, event video guide
+   - Covers: Why video matters, what to look for, pricing, venues, timelines
+
+2. **"Corporate Event Video Pricing in NYC: What You'll Actually Pay"**
+   - 2,000+ words
+   - Keywords: event video pricing, corporate videography cost, transparent pricing
+   - Covers: Pricing factors, package types, hidden costs, value breakdown
+
+3. **"How to Choose an Event Photographer in NYC (2025 Guide)"**
+   - 2,500+ words
+   - Keywords: choosing event photographer, best event photographer, hiring tips
+   - Covers: Questions to ask, portfolio evaluation, red flags, contracts
+
+**Supporting Articles:**
+4. "10 Best NYC Event Venues for Video Production"
+5. "Event Video vs Event Photography: Which Do You Need?"
+6. "Same-Day Edit Videos: Are They Worth It?"
+7. "How to Prepare Your Corporate Event for Professional Video"
+8. "Why Boutique Production Companies Beat Big Agencies"
+9. "Event Videography Trends in 2025"
+10. "Video + Photo Packages: Why You Should Book Both"
+
+**Future Article Ideas:**
+- "Behind the Scenes: Shooting a 300-Person Gala"
+- "5 Things Event Planners Forget to Tell Their Videographer"
+- "How to Get the Most ROI from Your Event Video"
+- "Corporate Video vs Agency Video: A Price Comparison"
+- Venue spotlights: "Filming at [Venue Name]: What You Need to Know"
+
+---
+
+## 🧭 NAVIGATION STRUCTURE
+
+### Main Header Navigation
+```
+CORE VISUALS NYC (logo, links to home)
+
+Services ▼ (dropdown)
+  ├─ Event Coverage
+  └─ Corporate Content
+
+Portfolio
+
+About
+
+Blog
+
+CONTACT (button style)
+```
+
+### Mobile Navigation (Hamburger)
+- Same structure, vertical list
+- Larger touch targets
+- Services expandable
 
 ### Footer Navigation
-**Current:**
-- Services
-  - Event Video + Photo
-  - Corporate Content
-  - Custom Projects
-- Company
-  - About
-  - Contact
-  - Phone
-  - Email
-- Connect
-  - LinkedIn
-  - Instagram
-- Sitemap (all pages)
+```
+Column 1: About
+- Core Visuals NYC description
+- Address
+- Hours
 
-**Future:** Expand with blog categories when available
+Column 2: Services
+- Event Video + Photo
+- Corporate Content
+- View Portfolio
 
----
+Column 3: Company
+- About
+- Blog
+- Contact
+- Phone
+- Email
 
-## 🎨 FUTURE PAGE FEATURES
+Column 4: Connect
+- LinkedIn
+- Instagram
+- YouTube (when available)
 
-### Features to Add on Future Pages
-
-**Interactive Elements:**
-- Video player (portfolio/services pages)
-- Before/after image sliders (optional)
-- Package comparison calculator
-- Date availability checker
-- Instant quote form
-- File upload for inspiration/references
-
-**Social Proof:**
-- Client logos
-- More testimonials
-- Video testimonials
-- Case studies with metrics
-- Review aggregator widget (Google Reviews)
-
-**Conversion Optimization:**
-- Exit-intent popup (email capture)
-- Floating "Get Quote" button (all pages)
-- Service area map
-- Live chat widget (optional)
-- Calendly integration for booking calls
+Bottom: Full Sitemap (horizontal)
+Home | Event Coverage | Corporate Content | Portfolio | About | Blog | Contact
+```
 
 ---
 
-## 🔍 SEO CONSIDERATIONS
+## 🔗 INTERNAL LINKING STRATEGY
 
-### URL Structure
-**Format:** `/keyword-rich-slug`
-**Examples:**
-- Good: `/services/event-video-photography-nyc`
-- Bad: `/service1` or `/page-2`
+### From Home Page:
+- Service cards → Service detail pages
+- Portfolio preview → Full portfolio
+- About section → Full about page
+- Footer → All pages
 
-### Internal Linking Strategy
-**From Home Page:**
-- Link to detailed service pages
-- Link to portfolio
-- Link to about
-- Link to blog articles (when created)
-
-**From Service Pages:**
-- Cross-link related services
-- Link to relevant portfolio items
-- Link to blog articles
+### From Service Pages:
+- Link to portfolio (relevant category)
+- Link to about page
 - Link to contact page
+- Link to related blog articles
+- Cross-link to other service page
 
-**From Portfolio:**
-- Link back to service pages
-- Link to blog articles about that event type
+### From Portfolio:
+- Link to service pages from each project
+- Link to contact page
+- Link to blog articles about event types
+
+### From Blog Articles:
+- **High Priority:** Link to service pages (primary CTA)
+- Link to portfolio examples
+- Link to related articles
+- Footer CTA to contact
+
+### From About:
+- Link to services
+- Link to portfolio
 - Link to contact
 
-**From Blog:**
-- Link to service pages (high priority)
-- Link to portfolio examples
-- Link to related blog articles
-- CTAs to contact/quote pages
+---
+
+## 📱 MOBILE CONSIDERATIONS
+
+**All Pages Must Have:**
+- Floating call button (tap to dial)
+- Haptic feedback on buttons
+- Touch ripple effects
+- Swipeable galleries (portfolio, testimonials)
+- Fast loading (optimized images/videos)
+- Readable font sizes (min 16px for body)
+- Large touch targets (min 44x44px)
+
+**Mobile-Specific Features:**
+- Sticky "Get Quote" button on service pages
+- One-tap phone/email buttons
+- Simplified forms (fewer fields)
+- Collapsible FAQ sections
+- Lazy loading images
 
 ---
 
-## 📊 ANALYTICS & TRACKING
+## 🎨 DESIGN CONSISTENCY
 
-### Pages to Track Closely
-1. **Home Page** - Main entry point
-2. **Services Pages** - Conversion pages
-3. **Contact Page** - Lead capture
-4. **Portfolio** - Trust builder
+**Color Palette:**
+- Primary: Gold (#D4AF37)
+- Accent 1: Cyan (#06B6D4)
+- Accent 2: Magenta (#EC4899)
+- Dark: Charcoal (#1F2937)
+- Light: Off-white (#F9FAFB)
 
-### Key Metrics per Page
-- Time on page
-- Scroll depth
-- CTA click rate
-- Form submission rate
-- Exit rate
-- Traffic sources
+**Typography:**
+- Font: Inter (400, 500, 600, 700, 800)
+- H1: 48-72px (clamp)
+- H2: 36-56px (clamp)
+- H3: 24-32px
+- Body: 16-18px
+- Eyebrow: 11-12px uppercase
 
-### Conversion Funnels
-**Funnel 1: Direct Inquiry**
-- Home → Services → Contact → Form Submit
-
-**Funnel 2: Research → Book**
-- Blog → Service Page → Contact → Form Submit
-
-**Funnel 3: Portfolio Browse**
-- Home → Portfolio → Service Page → Contact
-
----
-
-## 🚀 IMPLEMENTATION PRIORITY
-
-### Phase 1: Foundation (COMPLETE ✅)
-- ✅ Home page with all sections
-- ✅ Mobile optimization
-- ✅ Loading screen
-- ✅ Core branding (Core Visuals NYC)
-- ✅ Video-first positioning
-
-### Phase 2: Service Detail Pages (NEXT)
-**Timeline:** Next 2-4 weeks
-**Priority:** HIGH
-- `/services` overview page
-- `/services/event-video-photography` detail page
-- `/services/corporate-content` detail page
-- Package descriptions
-- Basic FAQ
-
-### Phase 3: Trust & Credibility (MID-TERM)
-**Timeline:** 1-2 months
-**Priority:** MEDIUM
-- `/portfolio` with real work
-- `/about` with your story
-- `/contact` with form
-- Add real client testimonials
-- Add real project images/videos
-
-### Phase 4: SEO Content (LONG-TERM)
-**Timeline:** 3-6 months
-**Priority:** LOW (but high value long-term)
-- `/blog` setup
-- First 3 pillar articles
-- Ongoing article publishing (1-2/month)
+**Components to Reuse:**
+- Service cards (from home)
+- Portfolio grid items
+- Testimonial cards
+- CTA sections (dark background)
+- Button styles (primary, secondary, outline)
+- Form inputs (consistent styling)
 
 ---
 
-## 💡 NOTES FOR IMPLEMENTATION
+## 🚀 TECHNICAL REQUIREMENTS
 
-### Design Consistency
-- Use same design system from home page
-- Maintain color palette (Gold, Cyan, Magenta accents)
-- Keep typography consistent (Inter font)
-- Reuse components (service cards, testimonial cards, etc.)
+**SEO:**
+- Unique title tag per page (primary keyword included)
+- Meta description per page (140-160 chars)
+- H1 per page (only one)
+- Image alt text (descriptive + keyword)
+- Schema markup (LocalBusiness, Service, Article)
+- Canonical URLs
+- XML sitemap (auto-generated)
+- Robots.txt
 
-### Content Requirements for Next Phase
-**Service Pages Need:**
-- Detailed service descriptions
-- Package options/pricing (if ready)
-- Sample deliverables lists
-- FAQ content
-- High-quality photos/videos of work
+**Performance:**
+- Image optimization (WebP format)
+- Lazy loading
+- Minified CSS/JS
+- CDN for assets
+- Fast server response time
+- Mobile-first responsive
 
-**Portfolio Page Needs:**
-- 10-15 real project images
-- 3-5 video clips/reels
-- Client quotes for featured projects
-- Permission to show client work
+**Analytics:**
+- Google Analytics 4
+- Google Search Console
+- Conversion tracking (form submissions, calls)
+- Event tracking (CTA clicks, video plays)
 
-**About Page Needs:**
-- Photo of you/team
-- Your story (300-500 words)
-- Equipment list (optional)
-- Press mentions (if any)
-
-### Technical Setup for Multi-Page
-- Set up navigation system
-- Add 404 page
-- Update sitemap.xml
-- Add breadcrumbs on service pages
-- Set up canonical URLs
-- Update robots.txt
+**Forms:**
+- Spam protection (reCAPTCHA or Honeypot)
+- Email notifications
+- Thank you page or message
+- Auto-responder email
 
 ---
 
-## 🔄 KEEP SYNCED WITH:
+## 📊 CONTENT REQUIREMENTS
+
+**Before Launch:**
+- 10-15 high-quality portfolio images
+- 3-5 video examples (embedded or hosted)
+- 3-5 client testimonials (with permission)
+- Your professional photo (about page)
+- 500-word "about" story
+- Service descriptions (300-500 words each)
+- FAQ answers (10-15 questions)
+
+**For Blog Launch:**
+- 3 pillar articles written (3,000+ words total)
+- Featured images for each article
+- Author bio + photo
+
+---
+
+## 🎯 CONVERSION OPTIMIZATION
+
+**CTAs on Every Page:**
+- Primary CTA (above fold): "Get Quote" or "Contact Us"
+- Secondary CTA (mid-page): "View Portfolio" or "See Our Work"
+- Footer CTA: "Ready to book?"
+
+**Trust Signals:**
+- Client testimonials
+- Client logos (when available)
+- Years of experience
+- Number of events covered
+- Fast response time promise
+- Money-back guarantee (if applicable)
+
+**Reduce Friction:**
+- Simple contact forms (fewer fields)
+- Multiple contact methods (form, email, phone, text)
+- Clear pricing (when ready) or "transparent pricing" messaging
+- No account required
+- Fast response promise (24 hours)
+
+---
+
+## 🔄 MAINTENANCE PLAN
+
+**Monthly:**
+- Publish 1-2 blog articles
+- Update portfolio with new work
+- Add new testimonials
+- Check broken links
+- Review analytics
+
+**Quarterly:**
+- Review keyword rankings
+- Update service descriptions
+- Refresh homepage copy
+- Update pricing (if changed)
+- Audit site speed
+
+**Annually:**
+- Major design refresh (if needed)
+- Update about page story
+- Review all content for accuracy
+- Update schema markup
+- Check competitor sites
+
+---
+
+## 📝 NOTES
+
+**This is the final vision.** All pages listed above are what the complete Core Visuals NYC website will include.
+
+**Build Order Recommendation:**
+1. Home (done ✅)
+2. Event Coverage + Corporate Content pages
+3. Portfolio page
+4. Contact page
+5. About page
+6. Blog infrastructure
+7. First 3 blog articles
+8. Ongoing: 1-2 articles/month
+
+**Keep Synced With:**
 - CHANGELOG.md (business strategy)
-- KEYWORD-STRATEGY.md (SEO implications)
-- This document (site structure)
-
-When adding pages, update all three documents!
+- KEYWORD-STRATEGY.md (SEO keywords)
