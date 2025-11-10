@@ -4,6 +4,55 @@
    ============================================ */
 
 /* ============================================
+   LOADING SCREEN
+   ============================================ */
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-white);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.loading-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.loading-percentage {
+  font-size: clamp(80px, 15vw, 160px);
+  font-weight: 800;
+  color: var(--color-gold);
+  line-height: 1;
+  margin-bottom: 32px;
+  letter-spacing: -0.04em;
+  font-family: 'Inter', sans-serif;
+}
+
+.loading-adjective {
+  font-size: clamp(16px, 3vw, 24px);
+  font-weight: 600;
+  color: var(--color-gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-family: 'Inter', sans-serif;
+  min-height: 30px;
+  transition: opacity 0.15s ease;
+}
+
+/* ============================================
    CSS RESET & BASE STYLES
    ============================================ */
 
@@ -152,6 +201,14 @@ a {
   background: var(--gradient-primary);
 }
 
+.eyebrow-no-line {
+  padding-left: 0;
+}
+
+.eyebrow-no-line::before {
+  display: none;
+}
+
 /* Lead text */
 .lead {
   font-size: clamp(21px, 3.5vw, 32px);
@@ -277,7 +334,7 @@ a {
 }
 
 .nav a:hover {
-  color: var(--color-gold);
+  color: var(--color-black);
 }
 
 /* Mobile Navigation */

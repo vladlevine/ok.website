@@ -30,7 +30,7 @@
       "postalCode": "10005",
       "addressCountry": "US"
     },
-    "telephone": "+17869012172",
+    "telephone": "+19294450603",
     "priceRange": "$$",
     "url": "https://lightroomnyc.com",
     "serviceArea": {
@@ -60,6 +60,14 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>">
 </head>
 <body>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-percentage" id="loading-percentage">0%</div>
+      <div class="loading-adjective" id="loading-adjective">Loading</div>
+    </div>
+  </div>
 
   <!-- Skip to content for accessibility -->
   <a href="#main-content" class="skip-to-content">Skip to content</a>
@@ -247,12 +255,12 @@
     <section class="cta-section" id="contact">
       <div class="container" style="position: relative; z-index: 1;">
         <div class="fade-in">
-          <span class="eyebrow" style="color: var(--color-gold); margin-bottom: 24px; padding-left: 0;">GET IN TOUCH</span>
+          <span class="eyebrow eyebrow-no-line" style="color: var(--color-gold); margin-bottom: 24px;">GET IN TOUCH</span>
           <h2>Tell us what you need.</h2>
           <p style="max-width: 700px; margin: 0 auto 48px; font-size: 22px;">No sales pitch. No mystery pricing.<br>Send us the details, we'll send you options.</p>
           <a href="mailto:contact@lightroomnyc.com" class="btn btn-white">Get in Touch</a>
           <p style="font-size: 16px; color: rgba(255, 255, 255, 0.6); margin-top: 32px; margin-bottom: 0;">
-            Or call: <a href="tel:+17869012172" style="color: var(--color-gold); text-decoration: underline; font-weight: 600;">(786) 901-2172</a>
+            Or call: <a href="tel:+19294450603" style="color: var(--color-gold); text-decoration: underline; font-weight: 600;">(929) 445-0603</a>
           </p>
         </div>
       </div>
@@ -289,7 +297,7 @@
           <h4>Company</h4>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
-          <a href="tel:+17869012172">(786) 901-2172</a>
+          <a href="tel:+19294450603">(929) 445-0603</a>
           <a href="mailto:contact@lightroomnyc.com">Email Us</a>
         </div>
 
@@ -306,6 +314,22 @@
 
       </div>
 
+      <!-- Sitemap -->
+      <div style="border-top: 1px solid #E5E7EB; padding-top: 40px; margin-top: 60px;">
+        <h4 style="font-size: 13px; font-weight: 700; color: #0A0A0A; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.1em; text-align: center;">Site Map</h4>
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; font-size: 14px;">
+          <a href="/" style="color: #6B7280;">Home</a>
+          <span style="color: #D1D5DB;">|</span>
+          <a href="#services" style="color: #6B7280;">Services</a>
+          <span style="color: #D1D5DB;">|</span>
+          <a href="#work" style="color: #6B7280;">Portfolio</a>
+          <span style="color: #D1D5DB;">|</span>
+          <a href="#about" style="color: #6B7280;">About</a>
+          <span style="color: #D1D5DB;">|</span>
+          <a href="#contact" style="color: #6B7280;">Contact</a>
+        </div>
+      </div>
+
       <div class="footer-bottom">
         <p>&copy; 2025 The Lightroom Studios. All Rights Reserved.</p>
       </div>
@@ -314,6 +338,65 @@
 
   <!-- JavaScript -->
   <script>
+    // ============================================
+    // Loading Screen Animation
+    // ============================================
+    (function() {
+      const loadingScreen = document.getElementById('loading-screen');
+      const percentageEl = document.getElementById('loading-percentage');
+      const adjectiveEl = document.getElementById('loading-adjective');
+
+      // Adjectives that fit your brand personality
+      const adjectives = [
+        'Professional', 'Creative', 'Modern', 'Reliable',
+        'Bold', 'Sharp', 'Polished', 'Premium',
+        'Clean', 'Swift', 'Refined', 'Dynamic',
+        'Precise', 'Elegant', 'Sleek', 'Sophisticated'
+      ];
+
+      let currentPercentage = 0;
+      let adjectiveIndex = 0;
+
+      // Animate percentage from 0 to 100
+      const percentageInterval = setInterval(() => {
+        currentPercentage += Math.random() * 8 + 2; // Random increment 2-10
+        if (currentPercentage >= 100) {
+          currentPercentage = 100;
+          percentageEl.textContent = '100%';
+          clearInterval(percentageInterval);
+          clearInterval(adjectiveInterval);
+
+          // Hide loading screen after reaching 100%
+          setTimeout(() => {
+            loadingScreen.classList.add('hidden');
+          }, 400);
+        } else {
+          percentageEl.textContent = Math.floor(currentPercentage) + '%';
+        }
+      }, 80); // Update every 80ms
+
+      // Rotate adjectives quickly with variable timing
+      const adjectiveInterval = setInterval(() => {
+        adjectiveEl.style.opacity = '0';
+        setTimeout(() => {
+          adjectiveIndex = (adjectiveIndex + 1) % adjectives.length;
+          adjectiveEl.textContent = adjectives[adjectiveIndex];
+          adjectiveEl.style.opacity = '1';
+        }, 100);
+      }, Math.random() * 200 + 150); // Random timing 150-350ms
+
+      // Ensure loading screen hides after max 3 seconds regardless
+      setTimeout(() => {
+        currentPercentage = 100;
+        percentageEl.textContent = '100%';
+        clearInterval(percentageInterval);
+        clearInterval(adjectiveInterval);
+        setTimeout(() => {
+          loadingScreen.classList.add('hidden');
+        }, 400);
+      }, 3000);
+    })();
+
     // ============================================
     // Mobile Menu Toggle
     // ============================================
