@@ -515,70 +515,33 @@
     }
 
     // ============================================
-    // Magnetic Cursor Effect - Premium 2025
+    // Scroll Progress Bar - Bold 2025
     // ============================================
     (function() {
-      // Only run on desktop devices with hover capability
-      if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-        return;
+      // Create progress bar element
+      const progressBar = document.createElement('div');
+      progressBar.className = 'scroll-progress';
+      document.body.appendChild(progressBar);
+
+      // Update progress on scroll
+      function updateProgress() {
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Calculate scroll percentage
+        const scrollableHeight = documentHeight - windowHeight;
+        const scrollPercentage = (scrollTop / scrollableHeight) * 100;
+
+        // Update progress bar width
+        progressBar.style.width = `${Math.min(scrollPercentage, 100)}%`;
       }
 
-      // Magnetic effect configuration
-      const magneticElements = {
-        '.work-item': { strength: 0.3, speed: 0.3 },      // Portfolio items - moderate
-        '.service-card': { strength: 0.15, speed: 0.35 },  // Service cards - subtle
-        '.btn': { strength: 0.4, speed: 0.25 }             // Buttons - strong
-      };
+      // Listen to scroll events
+      window.addEventListener('scroll', updateProgress, { passive: true });
 
-      function applyMagneticEffect(element, strength, speed) {
-        let isHovering = false;
-
-        element.addEventListener('mouseenter', function() {
-          isHovering = true;
-          this.style.transition = `transform ${speed}s cubic-bezier(0.4, 0, 0.2, 1)`;
-        });
-
-        element.addEventListener('mousemove', function(e) {
-          if (!isHovering) return;
-
-          const rect = this.getBoundingClientRect();
-          const centerX = rect.left + rect.width / 2;
-          const centerY = rect.top + rect.height / 2;
-
-          // Calculate distance from center
-          const deltaX = (e.clientX - centerX) * strength;
-          const deltaY = (e.clientY - centerY) * strength;
-
-          // Get element type to combine with existing hover transforms
-          let additionalTransform = '';
-          if (this.classList.contains('work-item')) {
-            additionalTransform = ' translateY(-8px)';  // Preserve hover lift
-          } else if (this.classList.contains('service-card')) {
-            additionalTransform = ' translateY(-12px)'; // Preserve hover lift
-          } else if (this.classList.contains('btn')) {
-            additionalTransform = ' translateY(-3px)';  // Preserve button lift
-          }
-
-          // Apply transform with existing hover effects
-          this.style.transform = `translate(${deltaX}px, ${deltaY}px)${additionalTransform}`;
-        });
-
-        element.addEventListener('mouseleave', function() {
-          isHovering = false;
-          // Reset to original position
-          this.style.transform = '';
-        });
-      }
-
-      // Apply to all matching elements
-      Object.keys(magneticElements).forEach(selector => {
-        const config = magneticElements[selector];
-        const elements = document.querySelectorAll(selector);
-
-        elements.forEach(element => {
-          applyMagneticEffect(element, config.strength, config.speed);
-        });
-      });
+      // Initial call
+      updateProgress();
     })();
 
     // ============================================

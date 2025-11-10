@@ -1299,22 +1299,26 @@ textarea:focus {
 }
 
 /* ============================================
-   MAGNETIC CURSOR EFFECT - PREMIUM 2025
+   SCROLL PROGRESS BAR - BOLD 2025
    ============================================ */
 
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: var(--gradient-cyber);
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+}
+
+/* Cursor styles */
 @media (hover: hover) and (pointer: fine) {
   .work-item,
   .btn,
   a {
     cursor: pointer;
-  }
-
-  /* Elements with magnetic effect */
-  .magnetic {
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .magnetic-strong {
-    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
