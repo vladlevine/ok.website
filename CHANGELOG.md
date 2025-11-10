@@ -17,13 +17,15 @@
 ## 📋 IMPORTANT DOCUMENTS
 
 **🔗 [KEYWORD-STRATEGY.md](./KEYWORD-STRATEGY.md)** - Complete keyword research & SEO strategy
+**🔗 [SITE-STRUCTURE.md](./SITE-STRUCTURE.md)** - Planned pages & information architecture
 
 **⚠️ SYNC REQUIREMENT:** When updating business strategy, service offerings, or positioning:
 1. Update CHANGELOG.md first (business decisions)
 2. Update KEYWORD-STRATEGY.md second (SEO implications)
-3. Update website content last (implementation)
+3. Update SITE-STRUCTURE.md third (page planning)
+4. Update website content last (implementation)
 
-This ensures keyword strategy always aligns with business direction.
+This ensures all strategy documents stay aligned.
 
 ---
 
