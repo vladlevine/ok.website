@@ -100,7 +100,7 @@ body {
   /* Primary Palette */
   --color-black: #0A0A0A;
   --color-white: #FFFFFF;
-  --color-gold: #D4AF37; /* Rich, sophisticated gold */
+  --color-gold: #F4D03F; /* Brighter, vibrant gold */
   --color-gold-light: #E8C547;
   --color-gold-dark: #B8941F;
   --color-champagne: #F7E7CE;
@@ -452,7 +452,7 @@ a {
   height: auto;
   transform: translate(-50%, -50%);
   z-index: 0;
-  opacity: 0.4;
+  opacity: 0.55; /* Increased by 15% from 0.4 - video less dark */
   object-fit: cover;
   pointer-events: none; /* Make video non-clickable */
 }
