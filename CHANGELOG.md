@@ -14,6 +14,21 @@
 
 ---
 
+## 📋 IMPORTANT DOCUMENTS
+
+**🔗 [KEYWORD-STRATEGY.md](./KEYWORD-STRATEGY.md)** - Complete keyword research & SEO strategy
+**🔗 [SITE-STRUCTURE.md](./SITE-STRUCTURE.md)** - Planned pages & information architecture
+
+**⚠️ SYNC REQUIREMENT:** When updating business strategy, service offerings, or positioning:
+1. Update CHANGELOG.md first (business decisions)
+2. Update KEYWORD-STRATEGY.md second (SEO implications)
+3. Update SITE-STRUCTURE.md third (page planning)
+4. Update website content last (implementation)
+
+This ensures all strategy documents stay aligned.
+
+---
+
 ## 🎬 MAJOR REBRAND & PIVOT (November 2025)
 
 ### Business Focus Change: Event-First, Video-Primary
@@ -35,39 +50,60 @@
 
 ---
 
-## 🎯 NEW SEO STRATEGY - EVENT & VIDEO FIRST
+## 🎯 VALIDATED SEO STRATEGY (Based on Google Keyword Planner Data)
 
-### PRIMARY KEYWORDS (Event Video - 60% focus):
-```
-event videographer NYC
-NYC event video production
-corporate event videography
-conference video coverage NYC
-event photographer NYC
-NYC event photography
-gala videographer NYC
-```
+**Data Period:** Nov 2024 - Oct 2025
+**Validation Date:** November 10, 2025
 
-### SECONDARY KEYWORDS (Corporate - 30% focus):
-```
-corporate photographer NYC
-business photography NYC
-corporate headshots NYC
-office video production NYC
-```
+### ⭐ THE WINNERS (Keywords with Actual Search Volume)
 
-### LONG-TAIL KEYWORDS (High Intent):
-```
-event videographer for corporate events NYC
-how much does event videography cost NYC
-best event videographer manhattan
-corporate event video and photo packages
-```
+**500 searches/month:**
+- event photographer nyc (MEDIUM competition)
+- event photography nyc (MEDIUM competition)
+- **corporate video production nyc** (LOW competition - SECRET WEAPON!)
+- corporate photographer nyc (MEDIUM competition)
+- **corporate event photography pricing** (MEDIUM - people search for pricing!)
+- corporate videographer nyc (HIGH competition)
+- corporate video production company nyc (LOW competition)
 
-### TARGET RANKINGS (6-Month Goals):
-- "event videographer NYC" → Page 1
-- "corporate event video NYC" → Top 5
-- "NYC event photography" → Page 1
+**50 searches/month:**
+- corporate event photographer nyc (MEDIUM competition)
+- event videographer nyc (HIGH competition)
+- event photography rates nyc (LOW competition)
+
+### ❌ KEYWORDS WITH ZERO SEARCH VOLUME (Don't Target)
+
+**Specific event types:** conference photographer nyc, gala photographer nyc, networking event photographer, trade show photographer
+**Industry-specific:** startup event photographer, nonprofit photographer, tech event photographer
+**Package terms:** photo and video package nyc, full event coverage
+**Neighborhood targeting:** manhattan photographer, midtown photographer, downtown
+**Quality modifiers:** best event photographer nyc, top photographer nyc
+
+**Key Learning:** Build ONE comprehensive event coverage page, not separate pages for each event type.
+
+### 🏆 Strategic Insights
+
+**"Corporate Video Production NYC" = Your Secret Weapon**
+- 500 monthly searches
+- LOW competition (3/100)
+- High commercial intent ($5.25-$23.05 bid range)
+- Position as "production company" not just "videographer"
+
+**Pricing Transparency = Differentiator**
+- "corporate event photography pricing" gets 500 searches/month
+- Your competitors hide pricing - you highlight it
+- Include pricing sections on all service pages
+
+### REALISTIC RANKING TARGETS (12-Month Goals):
+
+**High Priority (500 searches/month):**
+- "event photographer NYC" → Top 10
+- "event photography NYC" → Top 10
+- **"corporate video production NYC" → Top 5** (LOW competition!)
+- "corporate photographer NYC" → Top 10
+- "corporate event photography pricing" → Top 10
+
+**Note:** Focus on 2-3 core service pages, not 20 niche pages. Quality over quantity.
 
 ---
 
