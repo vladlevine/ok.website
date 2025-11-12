@@ -741,39 +741,39 @@ Home | Event Coverage | Corporate Content | Portfolio | About | Blog | Contact
 **Purpose:** Deep-dive project breakdowns that demonstrate value, build trust, and educate potential clients on ROI
 
 **Law Firm Photography Case Study** (`case-study-law-firm-photography.html`)
-**Keywords:** law firm photography NYC, corporate office photography, professional headshots attorneys, lifestyle photography
-**Status:** ✅ Live - Two-service offering with clean, scannable blueprint (Nov 2025)
+**Keywords:** law firm photography NYC, corporate office photography, professional headshots attorneys
+**Status:** ✅ Live - True case study format (show, don't tell) (Nov 2025)
 
-**7-Section Scannable Structure:**
-1. **Hero** - Dark background (#1a1a1a), headline, subhead, CTA to pricing
-2. **The Problem** - Stock photo credibility issue (3 short paragraphs, max 250 words)
-3. **What We Did** - Two-column solution cards (Professional Headshots | Lifestyle Photography)
-4. **People at Work** - 3-column grid with action-oriented labels (Strategy Session, Client Prep, etc.)
-5. **Why Both Matter** - Explains dual value: credibility + connection (Benefits → Result, no pricing duplication)
-6. **Pricing + ROI** - $6,250 total ($2,750 headshots + $3,500 lifestyle) + visual ROI diagram showing $25K-$150K+ potential return
-7. **Final CTA** - Simple dark section with email link
+**Philosophy:** Proof page, not pitch page. Show completed work, minimal explanation, clear next step.
 
-**ROI Positioning:**
-- Visual diagram: $6,250 investment → $25K-$150K+ potential return
-- One new client = $25-50K+, some cases $100-150K+
-- Converting 1-2 additional clients = 4-24x ROI in year one
-- Photos work 3-5+ years = infrastructure not expense
+**6-Section Structure (400 words total):**
+1. **Hero** - Project label, headline, one-sentence intro, stats (Manhattan • 9 Attorneys • 1 Shoot Day • 2024)
+2. **The Challenge** - 2 sentences explaining context (why they hired you)
+3. **The Photography** - 3x3 grid (9 slots) combining headshots + lifestyle with hover captions
+4. **The Results** - 2x2 metrics grid (9 attorneys, 65+ images, 10 days, 100% deployment)
+5. **The Investment** - $7,750 ($2,750 headshots + $5,000 lifestyle), commercial rights, 10-day timeline
+6. **The CTA** - Dark section (#2B2B2B), simple copy, phone (786) 901-2172, "Tell Us About Your Project" button
 
-**Service Positioning:**
-- Two-service offering: Professional Headshots + Lifestyle Photography
-- Headshots = credibility ("Are these legitimate professionals?")
-- Lifestyle = connection ("What's it like to work with them?")
-- Combined package addresses both questions for complete visual identity
+**What Was Removed:**
+- ALL educational content (Stock Photo Problem, Why Both Matter, service explanations)
+- ROI calculations and value diagrams
+- Multiple CTAs and mid-page forms
+- Comparison tables and testimonial placeholders
+- Any section > 3 sentences
 
-**Design Principles:**
-- Mobile-first responsive (320px → 1024px+)
-- Clean typography: Inter, 16-18px body, line-height 1.7-1.8
-- Spacing system: 20px increments, 80px section padding
-- Color palette: #1a1a1a dark, #f4c542 gold, #f5f5f5 alt background
-- Max-width: 700px text, 1140px full sections
-- Minimal animations: hover states, smooth scroll
-- No comparison tables, no jargon, benefit-driven copy
-- Template structure for future case studies
+**Core Questions Answered:**
+1. Can they do this? → Yes (see photos)
+2. What did it cost? → $7,750 (see Investment)
+3. How do I ask? → Call or email (see CTA)
+
+**Design:**
+- Alternating white (#ffffff) / gray (#f5f5f5) backgrounds
+- 3-col → 2-col → 1-col responsive grid
+- Hover captions on photo grid
+- Gold accent (#f4c542) for CTAs and metrics
+- Clean, minimal, fast-scanning layout
+
+**Template for Future Case Studies:** This structure works for any service - just swap photos, adjust pricing, update stats.
 
 **Nonprofit Golf Event Case Study** (`case-study-nonprofit-golf.html`)
 **Status:** ✅ Live - Video-focused case study

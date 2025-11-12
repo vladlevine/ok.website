@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO Meta Tags -->
-  <title>Law Firm Office Photography Case Study | Core Visuals NYC</title>
-  <meta name="description" content="How 9 professional headshots and office documentation solved a 3-year credibility problem for a NYC law firm. See the investment breakdown.">
-  <meta name="keywords" content="law firm photography NYC, corporate office photography, professional headshots attorneys, office photography, business headshots">
+  <title>Law Firm Photography Case Study | Core Visuals NYC</title>
+  <meta name="description" content="Complete visual refresh for a Manhattan law firm: 9 professional headshots and authentic office lifestyle photography delivered in 10 days.">
+  <meta name="keywords" content="law firm photography NYC, corporate office photography, professional headshots attorneys, office photography">
 
   <!-- Open Graph -->
   <meta property="og:type" content="article">
   <meta property="og:title" content="Law Firm Photography Case Study | Core Visuals NYC">
-  <meta property="og:description" content="How 9 professional headshots and office documentation solved a 3-year credibility problem.">
+  <meta property="og:description" content="9 professional headshots and authentic office lifestyle photography for a Manhattan law firm.">
   <meta property="og:url" content="https://corevisuals.nyc/case-study-law-firm-photography">
 
   <!-- Canonical URL -->
@@ -33,6 +33,7 @@
     /* Color Variables */
     :root {
       --primary-dark: #1a1a1a;
+      --cta-dark: #2B2B2B;
       --accent-gold: #f4c542;
       --bg-white: #ffffff;
       --bg-alt: #f5f5f5;
@@ -51,7 +52,7 @@
     /* Typography */
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.7;
       color: var(--text-primary);
       background: var(--bg-white);
@@ -65,16 +66,12 @@
 
     h1 {
       font-size: 48px;
+      margin-bottom: 20px;
     }
 
     h2 {
       font-size: 32px;
       margin-bottom: 20px;
-    }
-
-    h3 {
-      font-size: 24px;
-      margin-bottom: 16px;
     }
 
     p {
@@ -89,37 +86,22 @@
     }
 
     .container-narrow {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 0 40px;
-    }
-
-    .container-medium {
       max-width: 800px;
       margin: 0 auto;
       padding: 0 40px;
     }
 
-    .text-center {
-      text-align: center;
-    }
-
-    /* Button Styles */
-    .btn {
+    /* Button */
+    .btn-primary {
       display: inline-block;
-      padding: 16px 40px;
+      padding: 18px 48px;
       font-size: 18px;
       font-weight: 600;
+      background: var(--accent-gold);
+      color: var(--text-heading);
       text-decoration: none;
       border-radius: 8px;
       transition: all 0.3s ease;
-      cursor: pointer;
-      border: none;
-    }
-
-    .btn-primary {
-      background: var(--accent-gold);
-      color: var(--text-heading);
     }
 
     .btn-primary:hover {
@@ -131,132 +113,82 @@
        SECTION 1: HERO
     ============================================ */
     .hero {
-      background: var(--primary-dark);
-      padding: 80px 40px;
+      background: var(--bg-white);
+      padding: 60px 40px;
       text-align: center;
-      color: var(--bg-white);
+    }
+
+    .hero-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-size: 48px;
-      color: var(--bg-white);
-      margin-bottom: 20px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      font-size: 42px;
+      max-width: 900px;
+      margin: 0 auto 20px;
     }
 
-    .hero-subhead {
-      font-size: 18px;
-      color: var(--text-light);
+    .hero-intro {
+      font-size: 20px;
+      line-height: 1.6;
+      color: var(--text-primary);
       max-width: 800px;
-      margin: 0 auto 40px;
-      line-height: 1.7;
+      margin: 0 auto 20px;
+    }
+
+    .hero-meta {
+      font-size: 14px;
+      color: var(--text-light);
     }
 
     /* ============================================
-       SECTION 2: THE PROBLEM
+       SECTION 2: CHALLENGE
     ============================================ */
-    .problem {
+    .challenge {
       background: var(--bg-white);
       padding: 80px 40px;
     }
 
-    .problem h2 {
+    .challenge h2 {
+      text-align: center;
       margin-bottom: 40px;
     }
 
-    .problem p {
+    .challenge p {
       font-size: 18px;
       line-height: 1.8;
-      margin-bottom: 24px;
+      max-width: 700px;
+      margin: 0 auto 20px;
+      text-align: center;
     }
 
     /* ============================================
-       SECTION 3: WHAT WE DID (Two Column)
+       SECTION 3: THE PHOTOGRAPHY
     ============================================ */
-    .solution {
+    .photography {
       background: var(--bg-alt);
       padding: 80px 40px;
     }
 
-    .solution h2 {
+    .photography h2 {
       text-align: center;
       margin-bottom: 60px;
     }
 
-    .solution-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .solution-card {
-      background: var(--bg-white);
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-
-    .solution-card h3 {
-      margin-bottom: 24px;
-      color: var(--text-heading);
-    }
-
-    .solution-card ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .solution-card li {
-      padding: 12px 0;
-      border-bottom: 1px solid #e5e5e5;
-      font-size: 16px;
-      color: var(--text-primary);
-    }
-
-    .solution-card li:last-child {
-      border-bottom: none;
-    }
-
-    .solution-card li:before {
-      content: "✓ ";
-      color: var(--accent-gold);
-      font-weight: 700;
-      margin-right: 8px;
-    }
-
-    /* ============================================
-       SECTION 4: HEADSHOTS GALLERY
-    ============================================ */
-    .headshots-gallery {
-      background: var(--bg-alt);
-      padding: 80px 40px;
-    }
-
-    .headshots-gallery h2 {
-      text-align: center;
-      margin-bottom: 16px;
-    }
-
-    .headshots-gallery-subhead {
-      text-align: center;
-      font-size: 18px;
-      color: var(--text-light);
-      margin-bottom: 60px;
-    }
-
-    .headshots-grid {
+    .photo-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 30px;
-      max-width: 900px;
+      max-width: 1140px;
       margin: 0 auto;
     }
 
-    .headshot-slot {
+    .photo-slot {
       aspect-ratio: 3/4;
       background: linear-gradient(135deg, #e5e5e5 0%, #f5f5f5 100%);
       border-radius: 8px;
@@ -266,276 +198,187 @@
       font-size: 48px;
       color: var(--text-light);
       transition: transform 0.3s ease;
-      border: 3px solid var(--accent-gold);
-    }
-
-    .headshot-slot:hover {
-      transform: scale(1.05);
-    }
-
-    /* ============================================
-       SECTION 5: PEOPLE AT WORK
-    ============================================ */
-    .photo-library {
-      background: var(--bg-white);
-      padding: 80px 40px;
-    }
-
-    .photo-library h2 {
-      text-align: center;
-      margin-bottom: 16px;
-    }
-
-    .photo-library-subhead {
-      text-align: center;
-      font-size: 18px;
-      color: var(--text-light);
-      margin-bottom: 60px;
-    }
-
-    .photo-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 1140px;
-      margin: 0 auto;
-    }
-
-    .photo-block {
-      aspect-ratio: 4/3;
-      background: linear-gradient(135deg, #e5e5e5 0%, #f5f5f5 100%);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--text-primary);
-      text-align: center;
-      padding: 20px;
-      transition: transform 0.3s ease;
+      border: 2px solid #ddd;
       position: relative;
       overflow: hidden;
     }
 
-    .photo-block:hover {
-      transform: scale(1.05);
+    .photo-slot:hover {
+      transform: scale(1.02);
+    }
+
+    .photo-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 12px;
+      font-size: 14px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .photo-slot:hover .photo-caption {
+      opacity: 1;
     }
 
     /* ============================================
-       SECTION 6: WHY BOTH MATTER
+       SECTION 4: RESULTS
     ============================================ */
-    .headshot-value {
-      background: var(--bg-alt);
-      padding: 80px 40px;
-    }
-
-    .headshot-value h2 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .value-copy {
-      max-width: 700px;
-      margin: 0 auto 60px;
-      font-size: 18px;
-      line-height: 1.8;
-    }
-
-    /* Value Diagram */
-    .value-diagram {
-      max-width: 600px;
-      margin: 0 auto;
-      background: var(--bg-white);
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    }
-
-    .value-investment {
-      text-align: center;
-      padding-bottom: 30px;
-      border-bottom: 2px solid #e5e5e5;
-      margin-bottom: 30px;
-    }
-
-    .value-investment-label {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text-light);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 8px;
-    }
-
-    .value-investment-amount {
-      font-size: 36px;
-      font-weight: 800;
-      color: var(--text-heading);
-    }
-
-    .value-what-clients-see {
-      margin-bottom: 30px;
-    }
-
-    .value-what-clients-see h4 {
-      text-align: center;
-      font-size: 16px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-light);
-      margin-bottom: 24px;
-    }
-
-    .value-benefits {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .value-benefit {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 15px;
-      color: var(--text-primary);
-    }
-
-    .value-benefit-icon {
-      font-size: 24px;
-      flex-shrink: 0;
-    }
-
-    .value-result {
-      background: linear-gradient(135deg, #fff9e6 0%, #fff 100%);
-      border: 2px solid var(--accent-gold);
-      border-radius: 8px;
-      padding: 24px;
-      text-align: center;
-    }
-
-    .value-result-label {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text-primary);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 8px;
-    }
-
-    .value-result-text {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--text-heading);
-      line-height: 1.4;
-    }
-
-    /* ============================================
-       SECTION 7: PRICING
-    ============================================ */
-    .pricing {
+    .results {
       background: var(--bg-white);
       padding: 80px 40px;
     }
 
-    .pricing h2 {
+    .results h2 {
       text-align: center;
       margin-bottom: 60px;
     }
 
-    .pricing-card {
-      max-width: 500px;
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      max-width: 900px;
       margin: 0 auto;
-      background: linear-gradient(135deg, #fff9e6 0%, #fefdf7 100%);
-      padding: 60px;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .result-item {
       text-align: center;
     }
 
-    .pricing-total {
-      font-size: 56px;
+    .result-number {
+      font-size: 48px;
+      font-weight: 800;
+      color: var(--accent-gold);
+      margin-bottom: 8px;
+    }
+
+    .result-label {
+      font-size: 16px;
+      color: var(--text-primary);
+      line-height: 1.5;
+    }
+
+    /* ============================================
+       SECTION 5: INVESTMENT
+    ============================================ */
+    .investment {
+      background: var(--bg-alt);
+      padding: 80px 40px;
+    }
+
+    .investment h2 {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .investment-card {
+      max-width: 700px;
+      margin: 0 auto;
+      background: var(--bg-white);
+      padding: 50px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .investment-total {
+      font-size: 48px;
       font-weight: 800;
       color: var(--text-heading);
-      margin-bottom: 16px;
+      text-align: center;
+      margin-bottom: 8px;
     }
 
-    .pricing-breakdown {
-      text-align: left;
-      margin: 40px 0;
+    .investment-subtitle {
+      font-size: 18px;
+      color: var(--text-light);
+      text-align: center;
+      margin-bottom: 40px;
     }
 
-    .pricing-breakdown h4 {
-      font-size: 16px;
+    .investment-included h3 {
+      font-size: 18px;
       font-weight: 700;
-      margin-bottom: 16px;
-      color: var(--text-heading);
+      margin-bottom: 20px;
     }
 
-    .pricing-breakdown ul {
+    .investment-included ul {
       list-style: none;
       padding: 0;
     }
 
-    .pricing-breakdown li {
-      padding: 8px 0;
-      font-size: 15px;
-      color: var(--text-primary);
-      line-height: 1.6;
+    .investment-included li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e5e5e5;
+      font-size: 16px;
     }
 
-    .pricing-breakdown li:before {
-      content: "• ";
+    .investment-included li:last-child {
+      border-bottom: none;
+    }
+
+    .investment-included li:before {
+      content: "✓ ";
       color: var(--accent-gold);
       font-weight: 700;
       margin-right: 8px;
     }
 
-    .pricing-per-person {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin: 20px 0;
-    }
-
-    .pricing-per-photo {
+    .investment-timeline {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 2px solid #e5e5e5;
+      text-align: center;
       font-size: 16px;
-      color: var(--text-light);
-      margin-bottom: 40px;
+      color: var(--text-primary);
     }
 
-    .pricing-note {
-      font-size: 14px;
-      font-style: italic;
-      color: var(--text-primary);
-      line-height: 1.7;
-      border-top: 1px solid #e5e5e5;
-      padding-top: 24px;
+    .investment-timeline strong {
+      color: var(--text-heading);
     }
 
     /* ============================================
-       SECTION 8: FINAL CTA
+       SECTION 6: CTA
     ============================================ */
-    .final-cta {
-      background: var(--primary-dark);
+    .cta {
+      background: var(--cta-dark);
       padding: 100px 40px;
       text-align: center;
       color: var(--bg-white);
     }
 
-    .final-cta h2 {
+    .cta h2 {
       color: var(--bg-white);
       margin-bottom: 20px;
+      font-size: 36px;
     }
 
-    .final-cta-copy {
+    .cta-copy {
       font-size: 18px;
-      color: var(--text-light);
+      color: #cccccc;
       margin-bottom: 40px;
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .cta-phone {
+      font-size: 14px;
+      color: #999999;
+      margin-top: 20px;
+    }
+
+    .cta-phone a {
+      color: var(--accent-gold);
+      text-decoration: none;
+    }
+
+    .cta-phone a:hover {
+      text-decoration: underline;
     }
 
     /* ============================================
@@ -545,102 +388,87 @@
     /* Tablet: 768px - 1023px */
     @media (max-width: 1023px) {
       h1 {
-        font-size: 40px;
+        font-size: 36px;
       }
 
       h2 {
         font-size: 28px;
       }
 
-      .solution-grid {
-        gap: 30px;
+      .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
       }
 
-      .photo-grid {
+      .results-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
     /* Mobile: 320px - 767px */
     @media (max-width: 767px) {
+      body {
+        font-size: 16px;
+      }
+
       h1 {
-        font-size: 32px;
+        font-size: 28px;
       }
 
       h2 {
         font-size: 24px;
       }
 
-      h3 {
-        font-size: 20px;
-      }
-
       .container,
-      .container-narrow,
-      .container-medium {
+      .container-narrow {
         padding: 0 24px;
       }
 
       .hero {
-        padding: 60px 24px;
+        padding: 40px 24px;
       }
 
       .hero h1 {
-        font-size: 32px;
+        font-size: 28px;
       }
 
-      .hero-subhead {
-        font-size: 16px;
+      .hero-intro {
+        font-size: 18px;
       }
 
-      .problem,
-      .solution,
-      .headshots-gallery,
-      .photo-library,
-      .headshot-value,
-      .pricing,
-      .final-cta {
+      .challenge,
+      .photography,
+      .results,
+      .investment,
+      .cta {
         padding: 60px 24px;
-      }
-
-      .solution-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-
-      .solution-card {
-        padding: 30px;
-      }
-
-      .headshots-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
       }
 
       .photo-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 20px;
       }
 
-      .value-diagram {
-        padding: 30px 24px;
-      }
-
-      .value-benefits {
+      .results-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
       }
 
-      .pricing-card {
+      .investment-card {
         padding: 40px 30px;
       }
 
-      .pricing-total {
-        font-size: 42px;
+      .investment-total {
+        font-size: 40px;
       }
 
-      .btn {
+      .btn-primary {
         width: 100%;
-        padding: 14px 32px;
+        padding: 16px 32px;
+      }
+
+      .cta h2 {
+        font-size: 28px;
       }
     }
 
@@ -654,235 +482,132 @@
 
   <!-- SECTION 1: HERO -->
   <section class="hero">
-    <div class="container-medium">
-      <h1>Law Firm Office & Headshot Photography</h1>
-      <p class="hero-subhead">How professional headshots and lifestyle photography solved a 3-year credibility problem</p>
-      <a href="#pricing" class="btn btn-primary">See the Investment</a>
-    </div>
-  </section>
-
-  <!-- SECTION 2: THE PROBLEM -->
-  <section class="problem">
     <div class="container-narrow">
-      <h2>The Stock Photo Problem Nobody Talks About</h2>
-      <p>Your website has smiling people in conference rooms who don't work at your firm. Potential clients notice. They don't say anything, but they notice.</p>
-      <p>Stock photos signal one thing: we didn't care enough to show you our actual team. That's not the message you want to send when someone's deciding who to trust with their legal issues.</p>
-      <p>The other option—amateur iPhone photos taken by whoever was in the office that day—isn't better. Inconsistent lighting, awkward cropping, people looking uncomfortable. Still says: we didn't prioritize this.</p>
+      <p class="hero-label">LAW FIRM PHOTOGRAPHY</p>
+      <h1>Manhattan Law Firm Office & Headshot Photography</h1>
+      <p class="hero-intro">A complete visual refresh for a NYC law firm: 9 professional headshots and authentic office lifestyle imagery delivered in 10 days.</p>
+      <p class="hero-meta">Manhattan • 9 Attorneys • 1 Shoot Day • 2024</p>
     </div>
   </section>
 
-  <!-- SECTION 3: WHAT WE DID -->
-  <section class="solution">
-    <div class="container">
-      <h2>The Solution: Two Services, Complete Visual Identity</h2>
-      <div class="solution-grid">
-
-        <!-- Left Column: Professional Headshots -->
-        <div class="solution-card">
-          <h3>Professional Headshots</h3>
-          <ul>
-            <li>Consistent lighting & backdrop</li>
-            <li>Multiple angles per person</li>
-            <li>Formal, polished presentation</li>
-            <li>High-res + web-optimized files</li>
-          </ul>
-        </div>
-
-        <!-- Right Column: Lifestyle Photography -->
-        <div class="solution-card">
-          <h3>Lifestyle Photography</h3>
-          <ul>
-            <li>Team members at work in their environment</li>
-            <li>Conference discussions in action</li>
-            <li>Individual workspaces with people present</li>
-            <li>Natural interaction shots</li>
-            <li>Real moments that show firm culture</li>
-          </ul>
-        </div>
-
-      </div>
+  <!-- SECTION 2: THE CHALLENGE -->
+  <section class="challenge">
+    <div class="container-narrow">
+      <h2>The Challenge</h2>
+      <p>A Manhattan-based law firm needed to refresh their entire visual presence. Their website still showed attorneys who'd left years ago, and recruiting suffered from generic stock photography.</p>
+      <p>They needed two things: polished individual headshots for every attorney, and authentic office photography that showed their actual team and workspace.</p>
     </div>
   </section>
 
-  <!-- SECTION 4: HEADSHOTS GALLERY -->
-  <section class="headshots-gallery">
+  <!-- SECTION 3: THE PHOTOGRAPHY -->
+  <section class="photography">
     <div class="container">
-      <h2>Professional Headshots</h2>
-      <p class="headshots-gallery-subhead">Consistent, polished, professional</p>
-
-      <div class="headshots-grid">
-        <div class="headshot-slot">👤</div>
-        <div class="headshot-slot">👤</div>
-        <div class="headshot-slot">👤</div>
-        <div class="headshot-slot">👤</div>
-        <div class="headshot-slot">👤</div>
-        <div class="headshot-slot">👤</div>
-        <div class="headshot-slot">👤</div>
-        <div class="headshot-slot">👤</div>
-        <div class="headshot-slot">👤</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 5: PEOPLE AT WORK (Lifestyle Photography) -->
-  <section class="photo-library">
-    <div class="container">
-      <h2>The Team in Their Element</h2>
-      <p class="photo-library-subhead">Beyond headshots—showing how the firm actually works</p>
-
-      <p style="max-width: 700px; margin: 0 auto 60px; font-size: 18px; line-height: 1.8; text-align: center; color: var(--text-primary);">
-        Headshots establish credibility. Environmental shots build connection. Seeing attorneys in their actual workspace, collaborating in real conference rooms, working at their desks—that's what turns "they look professional" into "these are real people I can work with."
-      </p>
+      <h2>The Photography</h2>
 
       <div class="photo-grid">
-        <div class="photo-block">Strategy Session</div>
-        <div class="photo-block">Client Prep</div>
-        <div class="photo-block">Research Mode</div>
-        <div class="photo-block">Team Collaboration</div>
-        <div class="photo-block">Partner at Desk</div>
-        <div class="photo-block">Conference Discussion</div>
-        <div class="photo-block">Document Review</div>
-        <div class="photo-block">Team Meeting</div>
-        <div class="photo-block">Workspace Focus</div>
+        <div class="photo-slot">
+          👤
+          <div class="photo-caption">Individual Headshot</div>
+        </div>
+        <div class="photo-slot">
+          👤
+          <div class="photo-caption">Individual Headshot</div>
+        </div>
+        <div class="photo-slot">
+          👤
+          <div class="photo-caption">Individual Headshot</div>
+        </div>
+        <div class="photo-slot">
+          📋
+          <div class="photo-caption">Office Meeting Scene</div>
+        </div>
+        <div class="photo-slot">
+          💼
+          <div class="photo-caption">Conference Room</div>
+        </div>
+        <div class="photo-slot">
+          🤝
+          <div class="photo-caption">Team Collaboration</div>
+        </div>
+        <div class="photo-slot">
+          👤
+          <div class="photo-caption">Individual Headshot</div>
+        </div>
+        <div class="photo-slot">
+          🏢
+          <div class="photo-caption">Office Environment</div>
+        </div>
+        <div class="photo-slot">
+          👥
+          <div class="photo-caption">Group Shot</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 6: WHY BOTH MATTER -->
-  <section class="headshot-value">
+  <!-- SECTION 4: THE RESULTS -->
+  <section class="results">
     <div class="container">
-      <h2>Why Both Matter: Headshots + Environment</h2>
+      <h2>The Results</h2>
 
-      <div class="value-copy">
-        <p>Professional headshots answer the first question: "Are these legitimate professionals?"</p>
-        <p>Environmental shots answer the second: "What's it actually like to work with them?"</p>
-        <p>Most firms skip the second part. They have headshots and that's it. Or worse—they have one or the other, creating an incomplete picture.</p>
-        <p>When you show both, you're not just proving competence. You're giving potential clients a glimpse into your firm's personality. How your team collaborates. How you prepare for cases. The kind of environment they'll be walking into.</p>
-        <p>That combination—polish AND humanity—is what turns website visitors into phone calls.</p>
-      </div>
-
-      <!-- Value Diagram -->
-      <div class="value-diagram">
-
-        <!-- What Clients See -->
-        <div class="value-what-clients-see" style="margin-bottom: 30px;">
-          <h4>What Clients See:</h4>
-          <div class="value-benefits">
-            <div class="value-benefit">
-              <span class="value-benefit-icon">✓</span>
-              <span>Professional team</span>
-            </div>
-            <div class="value-benefit">
-              <span class="value-benefit-icon">✓</span>
-              <span>Real work environment</span>
-            </div>
-            <div class="value-benefit">
-              <span class="value-benefit-icon">✓</span>
-              <span>Firm culture & personality</span>
-            </div>
-            <div class="value-benefit">
-              <span class="value-benefit-icon">✓</span>
-              <span>People they'll actually work with</span>
-            </div>
-          </div>
+      <div class="results-grid">
+        <div class="result-item">
+          <div class="result-number">9</div>
+          <div class="result-label">Attorneys photographed</div>
         </div>
-
-        <!-- Result -->
-        <div class="value-result">
-          <div class="value-result-label">Result</div>
-          <div class="value-result-text">Trust + Connection = Inquiries</div>
+        <div class="result-item">
+          <div class="result-number">65+</div>
+          <div class="result-label">Impactful final images delivered</div>
         </div>
-
+        <div class="result-item">
+          <div class="result-number">10 days</div>
+          <div class="result-label">Turnaround from shoot date</div>
+        </div>
+        <div class="result-item">
+          <div class="result-number">100%</div>
+          <div class="result-label">Photos deployed across website, LinkedIn, and recruiting</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 7: PRICING + ROI -->
-  <section class="pricing" id="pricing">
+  <!-- SECTION 5: THE INVESTMENT -->
+  <section class="investment">
     <div class="container">
       <h2>The Investment</h2>
 
-      <div class="pricing-card">
-        <div class="pricing-total">$6,250</div>
+      <div class="investment-card">
+        <div class="investment-total">$7,750</div>
+        <p class="investment-subtitle">Complete Package</p>
 
-        <div style="text-align: center; margin: 20px 0 40px;">
-          <div style="font-size: 20px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px;">Professional Headshots: $2,750</div>
-          <div style="font-size: 20px; font-weight: 600; color: var(--text-primary);">Lifestyle Photography: $3,500</div>
-        </div>
-
-        <div class="pricing-breakdown">
-          <h4>What You Get:</h4>
+        <div class="investment-included">
+          <h3>What's Included:</h3>
           <ul>
-            <li>Complete visual identity for your firm</li>
-            <li>Professional credibility established instantly</li>
-            <li>Real moments that show who you actually are</li>
-            <li>Content that works across your website, LinkedIn, proposals, marketing</li>
-            <li>Years of use from a single session</li>
+            <li>Pre-shoot consultation and planning</li>
+            <li>9 professional headshots ($2,750)</li>
+            <li>4 hours of office lifestyle photography ($5,000)</li>
+            <li>Professional lighting and equipment</li>
+            <li>Full editing and retouching</li>
+            <li>Full commercial usage rights (website, social media, recruiting, and all marketing materials)</li>
+            <li>High-resolution files via online gallery</li>
+            <li>10-day delivery from shoot date</li>
           </ul>
         </div>
 
-        <div class="pricing-breakdown" style="margin-top: 40px; border-top: 1px solid #e5e5e5; padding-top: 24px;">
-          <h4>Why This Matters:</h4>
-          <p style="font-size: 15px; line-height: 1.7; color: var(--text-primary); margin: 0;">
-            When a potential client lands on your site and sees real professionals in their actual environment, the decision gets easier. They're not wondering if you're legitimate—they're ready to reach out.
-          </p>
-          <p style="font-size: 15px; line-height: 1.7; color: var(--text-primary); margin: 16px 0 0;">
-            That shift from "maybe" to "let's talk" is what this investment delivers.
-          </p>
+        <div class="investment-timeline">
+          <strong>Timeline:</strong> 10 days from shoot to delivery
         </div>
       </div>
-
-      <!-- ROI Visual -->
-      <div style="max-width: 700px; margin: 80px auto 0; background: var(--bg-white); padding: 50px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);">
-        <h3 style="text-align: center; font-size: 28px; margin-bottom: 40px; color: var(--text-heading);">The ROI Math</h3>
-
-        <div style="display: flex; align-items: center; justify-content: center; gap: 40px; margin-bottom: 40px; flex-wrap: wrap;">
-          <!-- Investment -->
-          <div style="text-align: center;">
-            <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #f5f5f5 0%, #e5e5e5 100%); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; border: 3px solid var(--accent-gold);">
-              <div>
-                <div style="font-size: 24px; font-weight: 800; color: var(--text-heading);">$6,250</div>
-                <div style="font-size: 12px; color: var(--text-primary);">Investment</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Arrow -->
-          <div style="font-size: 32px; color: var(--accent-gold);">→</div>
-
-          <!-- Return -->
-          <div style="text-align: center;">
-            <div style="width: 160px; height: 160px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-gold) 0%, #e0b436 100%); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; box-shadow: 0 8px 24px rgba(244, 197, 66, 0.3);">
-              <div>
-                <div style="font-size: 28px; font-weight: 800; color: var(--text-heading);">$25K-$150K+</div>
-                <div style="font-size: 13px; color: var(--text-heading); margin-top: 4px;">Potential Return</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div style="background: linear-gradient(135deg, #fff9e6 0%, #fff 100%); padding: 30px; border-radius: 8px; border-left: 4px solid var(--accent-gold);">
-          <p style="font-size: 16px; line-height: 1.7; color: var(--text-primary); margin-bottom: 16px;">
-            <strong>The Reality:</strong> One new client typically represents $25,000-$50,000+ in revenue for a law firm. Some cases are worth $100,000-$150,000 or more.
-          </p>
-          <p style="font-size: 16px; line-height: 1.7; color: var(--text-primary); margin-bottom: 16px;">
-            If this investment helps convert just 1-2 additional clients who were on the fence—clients who saw your polished, authentic presence and chose you over a competitor—the ROI is <strong>4-24x</strong> in year one alone.
-          </p>
-          <p style="font-size: 16px; line-height: 1.7; color: var(--text-primary); margin: 0;">
-            These photos work for 3-5+ years. That's not an expense. That's infrastructure.
-          </p>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <!-- SECTION 8: FINAL CTA -->
-  <section class="final-cta">
+  <!-- SECTION 6: THE ASK (CTA) -->
+  <section class="cta">
     <div class="container">
-      <h2>Need Office & Headshot Photography?</h2>
-      <p class="final-cta-copy">One session solves both problems. Let's schedule it.</p>
-      <a href="mailto:contact@corevisuals.nyc" class="btn btn-primary">Book a Call</a>
+      <h2>Need Similar Work for Your Firm?</h2>
+      <p class="cta-copy">Tell us about your team and what you're looking for. We'll send you a straightforward quote within 24 hours.</p>
+      <a href="mailto:contact@corevisuals.nyc" class="btn-primary">Tell Us About Your Project</a>
+      <p class="cta-phone">Or call directly: <a href="tel:+17869012172">(786) 901-2172</a></p>
     </div>
   </section>
 
