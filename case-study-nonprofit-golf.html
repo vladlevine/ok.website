@@ -129,92 +129,131 @@
       margin-top: 24px;
     }
 
-    /* BLOCK 3: Introduction */
+    /* BLOCK 3: Introduction - Redesigned */
     .cs-intro-section {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 80px 40px;
-      border-left: 4px solid var(--cs-gold);
-      padding-left: 60px;
+      padding: 100px 40px;
+      text-align: center;
     }
 
     .cs-intro-section h2 {
-      font-size: clamp(28px, 4vw, 36px);
+      font-size: clamp(20px, 3vw, 24px);
+      font-weight: 600;
+      margin: 0 0 40px;
+      color: var(--cs-light-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .cs-intro-context {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--cs-black);
+      margin-bottom: 48px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cs-intro-question {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--cs-gold);
+      margin: 48px 0;
+      padding: 40px;
+      border: 3px solid var(--cs-gold);
+      border-radius: 8px;
+      background: rgba(212, 175, 55, 0.05);
+    }
+
+    /* BLOCK 4: What We Filmed - Redesigned */
+    .cs-filmed-section {
+      padding: 100px 40px;
+      background: var(--cs-light-bg);
+    }
+
+    .cs-approach-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .cs-approach-column h2 {
+      font-size: clamp(24px, 4vw, 32px);
       font-weight: 700;
       margin: 0 0 32px;
       color: var(--cs-black);
     }
 
-    .cs-intro-section p {
+    .cs-approach-label {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--cs-cyan);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .cs-setup-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .cs-setup-list li {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--cs-border-gray);
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--cs-black);
+    }
+
+    .cs-setup-list li:last-child {
+      border-bottom: none;
+    }
+
+    .cs-strategy-text {
       font-size: 18px;
       line-height: 1.7;
       color: var(--cs-black);
-      margin-bottom: 24px;
+      margin-bottom: 32px;
     }
 
-    /* BLOCK 4: What We Filmed */
-    .cs-filmed-section {
-      padding: 80px 40px;
-      background: var(--cs-white);
-    }
-
-    .cs-filmed-content {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .cs-filmed-content h2 {
-      font-size: clamp(28px, 4vw, 36px);
-      font-weight: 700;
-      margin: 0 0 40px;
-      color: var(--cs-black);
-    }
-
-    .cs-filmed-content h3 {
-      font-size: 24px;
-      font-weight: 700;
-      margin: 32px 0 16px;
-      color: var(--cs-black);
-      display: flex;
-      align-items: center;
+    .cs-deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 12px;
-      justify-content: center;
-    }
-
-    .cs-filmed-content h3::before {
-      content: '●';
-      color: var(--cs-gold);
-      font-size: 16px;
-    }
-
-    .cs-filmed-list {
-      list-style: none;
-      padding: 0;
-      margin: 16px 0;
-      text-align: left;
-      display: inline-block;
-    }
-
-    .cs-filmed-list li {
-      padding: 8px 0 8px 24px;
-      position: relative;
-      font-size: 18px;
-    }
-
-    .cs-filmed-list li::before {
-      content: '−';
-      position: absolute;
-      left: 0;
-      color: var(--cs-gold);
-      font-weight: 700;
-    }
-
-    .cs-deliverables-text {
-      font-size: 18px;
-      line-height: 1.8;
       margin-top: 32px;
+    }
+
+    .cs-deliverable-tag {
+      background: var(--cs-white);
+      border: 2px solid var(--cs-gold);
+      padding: 16px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
       text-align: center;
+      color: var(--cs-black);
+      transition: transform 0.2s ease;
+    }
+
+    .cs-deliverable-tag:hover {
+      transform: translateY(-2px);
+    }
+
+    .cs-approach-callout {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--cs-gold);
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 2px solid var(--cs-gold);
     }
 
     /* Content Multiplication Diagram */
@@ -765,8 +804,20 @@
 
       .cs-intro-section {
         padding: 60px 24px;
-        padding-left: 40px;
-        border-left-width: 3px;
+      }
+
+      .cs-intro-question {
+        font-size: 24px;
+        padding: 24px;
+      }
+
+      .cs-approach-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+
+      .cs-deliverables-grid {
+        grid-template-columns: 1fr;
       }
 
 
@@ -852,35 +903,51 @@
       <p class="cs-video-caption">1-2 minute promotional video • Stakeholder interviews + Event B-roll</p>
     </section>
 
-    <!-- BLOCK 3: Introduction -->
+    <!-- BLOCK 3: Introduction - Redesigned -->
     <section class="cs-intro-section">
       <h2>The Insight Most Nonprofits Miss</h2>
-      <p>They think they're buying event documentation. A nice recap video to post and move on. But here's what you're actually creating: <strong>next year's recruitment tool.</strong></p>
-      <p>This was a New Jersey nonprofit's first video initiative. Annual golf outing. 300+ participants. Celebrities, major donors, beneficiaries. Cherry auction. Speeches. The works.</p>
-      <p>They raised over $200,000 that day.</p>
-      <p><strong>The real question wasn't "should we document this?" It was: "How do we get 30 more people to show up next year?"</strong></p>
+      <div class="cs-intro-context">
+        <p style="margin-bottom: 20px;">They think they're buying event documentation. A nice recap video to post and move on. But here's what you're actually creating: <strong>next year's recruitment tool.</strong></p>
+        <p>This was a New Jersey nonprofit's first video initiative. Annual golf outing. 300+ participants. Celebrities, major donors, beneficiaries. Cherry auction. Speeches. The works. They raised over $200,000 that day.</p>
+      </div>
+      <div class="cs-intro-question">
+        "How do we get 30 more people to show up next year?"
+      </div>
     </section>
 
-    <!-- BLOCK 4: What We Filmed -->
+    <!-- BLOCK 4: What We Filmed - Redesigned -->
     <section class="cs-filmed-section">
-      <div class="cs-filmed-content">
-        <h2>What We Actually Filmed</h2>
+      <div class="cs-approach-grid">
+        <!-- Left Column: The Setup -->
+        <div class="cs-approach-column">
+          <span class="cs-approach-label">The Setup</span>
+          <h2>What We Filmed</h2>
+          <ul class="cs-setup-list">
+            <li>2-person crew</li>
+            <li>Full-day coverage (arrival through awards)</li>
+            <li>10-15 minute interviews with CEO, major donors, beneficiaries</li>
+            <li>Continuous B-roll of the entire event</li>
+          </ul>
+        </div>
 
-        <h3>The Setup</h3>
-        <ul class="cs-filmed-list">
-          <li>2-person crew</li>
-          <li>Full-day coverage (arrival through awards)</li>
-          <li>10-15 minute interviews with CEO, major donors, beneficiaries</li>
-          <li>Continuous B-roll of the entire event</li>
-        </ul>
+        <!-- Right Column: The Strategy -->
+        <div class="cs-approach-column">
+          <span class="cs-approach-label">The Strategy</span>
+          <h2>What We Created</h2>
+          <p class="cs-strategy-text">We weren't documenting the event. <strong>We were building a content library.</strong></p>
+          <p class="cs-strategy-text">Each stakeholder interview created raw material that could be edited multiple ways:</p>
 
-        <h3>The Strategy</h3>
-        <p style="font-size: 18px; margin-bottom: 16px;">We weren't documenting the event. <strong>We were building a content library.</strong></p>
-        <p style="font-size: 18px; margin-bottom: 16px;">Each stakeholder interview created raw material that could be edited multiple ways:</p>
+          <div class="cs-deliverables-grid">
+            <div class="cs-deliverable-tag">Main Video<br>(1-2 min)</div>
+            <div class="cs-deliverable-tag">Social<br>Testimonials</div>
+            <div class="cs-deliverable-tag">Website<br>Hero</div>
+            <div class="cs-deliverable-tag">Grant<br>Materials</div>
+            <div class="cs-deliverable-tag">Donor<br>Cultivation</div>
+            <div class="cs-deliverable-tag">Future<br>Campaigns</div>
+          </div>
 
-        <p class="cs-deliverables-text">
-          <strong>1 SHOOT DAY</strong> → Main Video (1-2 min) ~ Social Testimonials ~ Website Hero ~ Grant Materials ~ Donor Cultivation ~ Future Campaigns
-        </p>
+          <p class="cs-approach-callout">One shoot day. Multiple assets for years.</p>
+        </div>
       </div>
     </section>
 
