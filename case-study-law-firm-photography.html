@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO Meta Tags -->
-  <title>Law Firm Office Photography Case Study | Custom vs Stock Photos | Core Visuals</title>
-  <meta name="description" content="How a boutique law firm replaced stock photos with authentic office photography. See the ROI comparison, usage rights value, and credibility upgrade.">
-  <meta name="keywords" content="law firm photography NYC, corporate office photography, professional headshots attorneys, stock photo alternative, business photography, office lifestyle photography">
+  <title>Law Firm Office Photography Case Study | Core Visuals NYC</title>
+  <meta name="description" content="How 9 professional headshots and office documentation solved a 3-year credibility problem for a NYC law firm. See the investment breakdown.">
+  <meta name="keywords" content="law firm photography NYC, corporate office photography, professional headshots attorneys, office photography, business headshots">
 
   <!-- Open Graph -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Law Firm Photography Case Study | Custom vs Stock Photos">
-  <meta property="og:description" content="Custom photography investment vs stock photo subscriptions: Real ROI and credibility impact for professional services.">
+  <meta property="og:title" content="Law Firm Photography Case Study | Core Visuals NYC">
+  <meta property="og:description" content="How 9 professional headshots and office documentation solved a 3-year credibility problem.">
   <meta property="og:url" content="https://corevisuals.nyc/case-study-law-firm-photography">
 
   <!-- Canonical URL -->
@@ -32,1476 +32,739 @@
   <style>
     /* Color Variables */
     :root {
-      --lf-gold: #D4AF37;
-      --lf-cyan: #06B6D4;
-      --lf-magenta: #EC4899;
-      --lf-black: #000000;
-      --lf-white: #FFFFFF;
-      --lf-dark-bg: #0a0a0a;
-      --lf-light-bg: #fafafa;
-      --lf-light-gray: #a3a3a3;
-      --lf-border-gray: #e5e5e5;
+      --primary-dark: #1a1a1a;
+      --accent-gold: #f4c542;
+      --bg-white: #ffffff;
+      --bg-alt: #f5f5f5;
+      --text-primary: #333333;
+      --text-heading: #000000;
+      --text-light: #999999;
     }
 
-    /* Reset spacing */
-    .lf-hero, .lf-stock-trap, .lf-ai-crisis, .lf-office-library,
-    .lf-headshots, .lf-usage-rights, .lf-roi, .lf-impact,
-    .lf-specs, .lf-cta, .lf-photo-gallery {
+    /* Global Reset */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     /* Typography */
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      font-size: 16px;
       line-height: 1.7;
-      color: var(--lf-black);
-      background: var(--lf-white);
+      color: var(--text-primary);
+      background: var(--bg-white);
     }
 
-    /* BLOCK 1: Hero Section */
-    .lf-hero {
-      background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
-      padding: 180px 40px 80px;
-      text-align: center;
-      color: var(--lf-white);
-    }
-
-    .lf-eyebrow {
-      color: var(--lf-gold);
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      margin-bottom: 24px;
-      display: block;
-    }
-
-    .lf-hero h1 {
-      font-size: clamp(36px, 6vw, 48px);
+    h1, h2, h3 {
+      color: var(--text-heading);
       font-weight: 700;
       line-height: 1.2;
-      margin: 0 0 24px;
-      color: var(--lf-white);
     }
 
-    .lf-hero-subtitle {
-      font-size: 20px;
-      color: var(--lf-light-gray);
+    h1 {
+      font-size: 48px;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    /* Container Utilities */
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .container-narrow {
       max-width: 700px;
       margin: 0 auto;
+      padding: 0 40px;
     }
 
-    /* BLOCK 2: Stock Photo Trap */
-    .lf-stock-trap {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 160px 40px;
-    }
-
-    .lf-stock-trap h2 {
-      font-size: clamp(42px, 6vw, 56px);
-      font-weight: 800;
-      margin: 0 0 48px;
-      color: var(--lf-black);
-      line-height: 1.2;
-    }
-
-    .lf-stock-trap p {
-      font-size: 18px;
-      line-height: 1.7;
-      margin-bottom: 24px;
-      color: var(--lf-black);
-    }
-
-    /* Cost Comparison Diagram */
-    .lf-cost-comparison {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-      margin: 60px 0;
-    }
-
-    .lf-comparison-title {
-      grid-column: 1 / -1;
-      font-size: 24px;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 16px;
-      color: var(--lf-black);
-    }
-
-    .lf-cost-box {
-      background: var(--lf-white);
-      border-radius: 12px;
-      padding: 40px;
-      position: relative;
-    }
-
-    .lf-cost-box.warning {
-      border: 2px solid #fca5a5;
-      background: linear-gradient(135deg, #fff 0%, #fef2f2 100%);
-      opacity: 0.9;
-    }
-
-    .lf-cost-box.premium {
-      border: 4px solid var(--lf-gold);
-      background: linear-gradient(135deg, #fff 0%, #faf8f0 100%);
-      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
-      transform: scale(1.02);
-    }
-
-    .lf-cost-box h3 {
-      font-size: 20px;
-      font-weight: 700;
-      margin: 0 0 24px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .lf-cost-box.warning h3 {
-      color: var(--lf-magenta);
-    }
-
-    .lf-cost-box.premium h3 {
-      color: var(--lf-gold);
-    }
-
-    .lf-cost-item {
-      font-size: 16px;
-      line-height: 1.8;
-      margin-bottom: 12px;
-      color: #374151;
-    }
-
-    .lf-cost-total {
-      font-size: 24px;
-      font-weight: 700;
-      margin-top: 24px;
-      padding-top: 24px;
-      border-top: 2px solid;
-    }
-
-    .lf-cost-box.warning .lf-cost-total {
-      border-color: var(--lf-magenta);
-      color: var(--lf-magenta);
-    }
-
-    .lf-cost-box.premium .lf-cost-total {
-      border-color: var(--lf-gold);
-      color: var(--lf-gold);
-    }
-
-    /* BLOCK 3: AI Crisis */
-    .lf-ai-crisis {
+    .container-medium {
       max-width: 800px;
       margin: 0 auto;
-      padding: 160px 40px 80px;
-      background: var(--lf-light-bg);
+      padding: 0 40px;
     }
 
-    .lf-secondary-cta {
+    .text-center {
       text-align: center;
-      margin-top: 60px;
     }
 
-    .lf-secondary-cta a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--lf-gold);
+    /* Button Styles */
+    .btn {
+      display: inline-block;
+      padding: 16px 40px;
       font-size: 18px;
       font-weight: 600;
       text-decoration: none;
-      transition: transform 0.3s ease;
-    }
-
-    .lf-secondary-cta a:hover {
-      transform: translateX(4px);
-    }
-
-    .lf-ai-crisis-content {
-      border-left: 4px solid var(--lf-gold);
-      padding-left: 40px;
-    }
-
-    .lf-ai-crisis h2 {
-      font-size: clamp(28px, 4vw, 36px);
-      font-weight: 700;
-      margin: 0 0 32px;
-      color: var(--lf-black);
-    }
-
-    .lf-ai-crisis p {
-      font-size: 18px;
-      line-height: 1.7;
-      margin-bottom: 24px;
-      color: var(--lf-black);
-    }
-
-    /* BLOCK 4: Photo Gallery with Puzzle Layout */
-    .lf-photo-gallery {
-      padding: 160px 40px;
-      background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
-    }
-
-    .lf-gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      grid-auto-rows: 200px;
-      gap: 16px;
-      max-width: 1400px;
-      margin: 60px auto 0;
-    }
-
-    .lf-gallery-item {
-      position: relative;
-      overflow: hidden;
       border-radius: 8px;
-      background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
     }
 
-    .lf-gallery-item:hover {
-      transform: scale(1.02);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-      z-index: 10;
+    .btn-primary {
+      background: var(--accent-gold);
+      color: var(--text-heading);
     }
 
-    /* Puzzle piece sizes - create varied layout */
-    .lf-gallery-item:nth-child(1) {
-      grid-column: span 5;
-      grid-row: span 2;
-      background: linear-gradient(135deg, #06B6D4 0%, #0891b2 100%);
+    .btn-primary:hover {
+      background: #e0b436;
+      transform: translateY(-2px);
     }
 
-    .lf-gallery-item:nth-child(2) {
-      grid-column: span 4;
-      grid-row: span 1;
-      background: linear-gradient(135deg, #D4AF37 0%, #b8941f 100%);
-    }
-
-    .lf-gallery-item:nth-child(3) {
-      grid-column: span 3;
-      grid-row: span 1;
-      background: linear-gradient(135deg, #EC4899 0%, #db2777 100%);
-    }
-
-    .lf-gallery-item:nth-child(4) {
-      grid-column: span 3;
-      grid-row: span 2;
-      background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-    }
-
-    .lf-gallery-item:nth-child(5) {
-      grid-column: span 4;
-      grid-row: span 2;
-      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    }
-
-    .lf-gallery-item:nth-child(6) {
-      grid-column: span 5;
-      grid-row: span 1;
-      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-    }
-
-    .lf-gallery-item:nth-child(7) {
-      grid-column: span 4;
-      grid-row: span 2;
-      background: linear-gradient(135deg, #06B6D4 0%, #0891b2 100%);
-    }
-
-    .lf-gallery-item:nth-child(8) {
-      grid-column: span 5;
-      grid-row: span 1;
-      background: linear-gradient(135deg, #EC4899 0%, #db2777 100%);
-    }
-
-    .lf-gallery-item:nth-child(9) {
-      grid-column: span 3;
-      grid-row: span 1;
-      background: linear-gradient(135deg, #D4AF37 0%, #b8941f 100%);
-    }
-
-    .lf-gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .lf-gallery-label {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 20px;
-      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
-      color: white;
-      font-size: 14px;
-      font-weight: 600;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .lf-gallery-item:hover .lf-gallery-label {
-      opacity: 1;
-    }
-
-    /* Office Library Section */
-    .lf-office-library {
-      padding: 160px 40px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    /* NEW: Group Headshot ROI Section */
-    .lf-group-roi {
-      padding: 160px 40px;
-      background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
-      max-width: 1000px;
-      margin: 0 auto;
+    /* ============================================
+       SECTION 1: HERO
+    ============================================ */
+    .hero {
+      background: var(--primary-dark);
+      padding: 120px 40px;
       text-align: center;
+      color: var(--bg-white);
     }
 
-    .lf-group-roi h2 {
-      font-size: clamp(32px, 5vw, 42px);
-      font-weight: 700;
-      margin: 0 0 16px;
-      color: var(--lf-black);
-    }
-
-    .lf-group-roi-subhead {
-      font-size: 20px;
-      color: #6b7280;
-      margin-bottom: 60px;
-    }
-
-    .lf-headshot-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 120px);
-      gap: 24px;
-      justify-content: center;
-      margin: 60px auto;
-    }
-
-    .lf-headshot-circle {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
-      border: 4px solid var(--lf-gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .hero h1 {
       font-size: 48px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .lf-roi-comparison {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      max-width: 900px;
-      margin: 60px auto 0;
-      text-align: left;
-    }
-
-    .lf-roi-box {
-      background: var(--lf-white);
-      border-radius: 12px;
-      padding: 32px;
-      border: 2px solid #e5e5e5;
-    }
-
-    .lf-roi-box h3 {
-      font-size: 22px;
-      font-weight: 700;
-      margin: 0 0 24px;
-      color: var(--lf-black);
-    }
-
-    .lf-roi-box p {
-      font-size: 16px;
-      line-height: 1.8;
-      margin-bottom: 12px;
-      color: #374151;
-    }
-
-    .lf-roi-box strong {
-      color: var(--lf-gold);
-      font-weight: 700;
-    }
-
-    .lf-roi-callout {
-      background: #faf8f0;
-      border-left: 4px solid var(--lf-gold);
-      padding: 24px 32px;
-      margin-top: 40px;
-      font-size: 18px;
-      line-height: 1.7;
-      text-align: left;
+      color: var(--bg-white);
+      margin-bottom: 20px;
       max-width: 800px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    /* Final Pricing Section */
-    .lf-final-pricing {
-      max-width: 700px;
-      margin: 0 auto 80px;
-      background: linear-gradient(135deg, #faf8f0 0%, #fff 100%);
-      border: 3px solid var(--lf-gold);
-      border-radius: 16px;
-      padding: 48px;
+    .hero-subhead {
+      font-size: 18px;
+      color: var(--text-light);
+      max-width: 800px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+
+    /* ============================================
+       SECTION 2: THE PROBLEM
+    ============================================ */
+    .problem {
+      background: var(--bg-white);
+      padding: 80px 40px;
+    }
+
+    .problem h2 {
+      margin-bottom: 40px;
+    }
+
+    .problem p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    /* ============================================
+       SECTION 3: WHAT WE DID (Two Column)
+    ============================================ */
+    .solution {
+      background: var(--bg-alt);
+      padding: 80px 40px;
+    }
+
+    .solution h2 {
       text-align: center;
+      margin-bottom: 60px;
     }
 
-    .lf-final-pricing h3 {
-      font-size: 28px;
-      font-weight: 700;
-      margin: 0 0 32px;
-      color: var(--lf-black);
-    }
-
-    .lf-pricing-main {
-      font-size: 48px;
-      font-weight: 800;
-      color: var(--lf-gold);
-      margin-bottom: 8px;
-    }
-
-    .lf-pricing-per-person {
-      font-size: 20px;
-      color: #6b7280;
-      margin-bottom: 32px;
-    }
-
-    .lf-pricing-includes {
-      list-style: none;
-      padding: 0;
-      margin: 32px 0;
-      text-align: left;
-    }
-
-    .lf-pricing-includes li {
-      padding: 12px 0;
-      font-size: 16px;
-      line-height: 1.6;
-      color: var(--lf-black);
-      position: relative;
-      padding-left: 28px;
-    }
-
-    .lf-pricing-includes li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--lf-gold);
-      font-weight: 700;
-      font-size: 20px;
-    }
-
-    .lf-pricing-note {
-      font-size: 15px;
-      color: #6b7280;
-      margin-top: 24px;
-      padding-top: 24px;
-      border-top: 1px solid #e5e5e5;
-    }
-
-    .lf-library-grid {
+    .solution-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 80px;
-    }
-
-    .lf-library-col h2 {
-      font-size: clamp(24px, 4vw, 32px);
-      font-weight: 700;
-      margin: 0 0 32px;
-      color: var(--lf-black);
-    }
-
-    .lf-library-col h3 {
-      font-size: 20px;
-      font-weight: 700;
-      margin: 24px 0 16px;
-      color: var(--lf-black);
-    }
-
-    .lf-library-col p {
-      font-size: 18px;
-      line-height: 1.7;
-      margin-bottom: 16px;
-      color: var(--lf-black);
-    }
-
-    .lf-library-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .lf-library-list li {
-      padding: 12px 0;
-      border-bottom: 1px solid var(--lf-border-gray);
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    .lf-library-list li:last-child {
-      border-bottom: none;
-    }
-
-    /* Headshots Section - SIMPLIFIED */
-    .lf-headshots {
-      padding: 160px 40px;
-      background: var(--lf-white);
-      text-align: center;
-    }
-
-    .lf-headshots h2 {
-      font-size: clamp(32px, 5vw, 42px);
-      font-weight: 700;
-      margin: 0 0 24px;
-      color: var(--lf-black);
-    }
-
-    .lf-headshots-intro {
-      font-size: 20px;
-      max-width: 700px;
-      margin: 0 auto 60px;
-      color: #374151;
-    }
-
-    /* Simplified Headshot Value - Only 4 Key Benefits */
-    .lf-multiplier {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 60px 20px;
-    }
-
-    .lf-multiplier-center {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--lf-gold) 0%, #b8941f 100%);
-      border: 6px solid var(--lf-white);
-      box-shadow: 0 12px 32px rgba(212, 175, 55, 0.3);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 60px;
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--lf-white);
-      text-align: center;
-      line-height: 1.3;
-      position: relative;
-    }
-
-    .lf-multiplier-center::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      border: 3px solid var(--lf-gold);
-      opacity: 0.3;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-        opacity: 0.3;
-      }
-      50% {
-        transform: scale(1.1);
-        opacity: 0;
-      }
-    }
-
-    .lf-multiplier-amount {
-      font-size: 14px;
-      font-weight: 500;
-      margin-top: 4px;
-      opacity: 0.9;
-    }
-
-    .lf-multiplier-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 32px;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .lf-multiplier-item {
-      background: var(--lf-white);
-      border: 3px solid var(--lf-gold);
-      border-radius: 16px;
-      padding: 32px 24px;
-      text-align: center;
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    .lf-multiplier-item:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 24px rgba(212, 175, 55, 0.2);
-    }
-
-    .lf-multiplier-number {
-      position: absolute;
-      top: -16px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 32px;
-      height: 32px;
-      background: var(--lf-gold);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--lf-black);
-    }
-
-    .lf-multiplier-icon {
-      font-size: 36px;
-      margin-bottom: 16px;
-    }
-
-    .lf-multiplier-title {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: var(--lf-black);
-    }
-
-    .lf-multiplier-desc {
-      font-size: 15px;
-      line-height: 1.6;
-      color: #6b7280;
-    }
-
-    .lf-headshots-body {
-      max-width: 800px;
-      margin: 60px auto 0;
-      text-align: left;
-    }
-
-    .lf-headshots-body p {
-      font-size: 18px;
-      line-height: 1.7;
-      margin-bottom: 24px;
-      color: var(--lf-black);
-    }
-
-    /* Usage Rights */
-    .lf-usage-rights {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 100px 40px;
-      background: #faf8f0;
-    }
-
-    .lf-usage-content {
-      border-left: 4px solid var(--lf-gold);
-      padding-left: 40px;
-    }
-
-    .lf-usage-content h3 {
-      font-size: 24px;
-      font-weight: 700;
-      margin: 0 0 24px;
-      color: var(--lf-black);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .lf-usage-content h3::before {
-      content: '✓';
-      color: var(--lf-gold);
-      font-size: 28px;
-    }
-
-    .lf-usage-content p {
-      font-size: 18px;
-      line-height: 1.7;
-      margin-bottom: 16px;
-      color: var(--lf-black);
-    }
-
-    .lf-usage-list {
-      list-style: none;
-      padding: 0;
-      margin: 24px 0;
-    }
-
-    .lf-usage-list li {
-      padding: 12px 0;
-      font-size: 18px;
-      line-height: 1.6;
-      color: var(--lf-black);
-      position: relative;
-      padding-left: 24px;
-    }
-
-    .lf-usage-list li::before {
-      content: '•';
-      position: absolute;
-      left: 0;
-      color: var(--lf-gold);
-      font-weight: 700;
-      font-size: 24px;
-    }
-
-    /* ROI Section */
-    .lf-roi {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 100px 40px;
-    }
-
-    .lf-roi h2 {
-      font-size: clamp(28px, 4vw, 36px);
-      font-weight: 700;
-      margin: 0 0 32px;
-      color: var(--lf-black);
-    }
-
-    .lf-roi p {
-      font-size: 18px;
-      line-height: 1.7;
-      margin-bottom: 24px;
-      color: var(--lf-black);
-    }
-
-    .lf-roi strong {
-      color: var(--lf-magenta);
-      font-weight: 700;
-    }
-
-    /* Impact Section */
-    .lf-impact {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 100px 40px;
-      background: var(--lf-light-bg);
-    }
-
-    .lf-impact h2 {
-      font-size: clamp(28px, 4vw, 36px);
-      font-weight: 700;
-      margin: 0 0 32px;
-      color: var(--lf-black);
-    }
-
-    .lf-impact p {
-      font-size: 18px;
-      line-height: 1.7;
-      margin-bottom: 16px;
-      color: var(--lf-black);
-    }
-
-    .lf-impact-list {
-      list-style: none;
-      padding: 0;
-      margin: 32px 0;
-    }
-
-    .lf-impact-list li {
-      padding: 16px 0;
-      font-size: 18px;
-      line-height: 1.6;
-      color: var(--lf-black);
-      position: relative;
-      padding-left: 28px;
-    }
-
-    .lf-impact-list li::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: var(--lf-gold);
-      font-weight: 700;
-    }
-
-    /* Specs Section */
-    .lf-specs {
-      padding: 100px 40px;
-      background: #f5f5f5;
-    }
-
-    .lf-specs h3 {
-      font-size: 24px;
-      font-weight: 700;
-      text-align: center;
-      margin: 0 0 48px;
-      color: var(--lf-black);
-    }
-
-    .lf-specs-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 32px 60px;
+      gap: 40px;
       max-width: 1000px;
       margin: 0 auto;
     }
 
-    .lf-spec-item {
-      display: flex;
-      flex-direction: column;
+    .solution-card {
+      background: var(--bg-white);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
 
-    .lf-spec-label {
-      font-size: 14px;
+    .solution-card h3 {
+      margin-bottom: 24px;
+      color: var(--text-heading);
+    }
+
+    .solution-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .solution-card li {
+      padding: 12px 0;
+      border-bottom: 1px solid #e5e5e5;
+      font-size: 16px;
+      color: var(--text-primary);
+    }
+
+    .solution-card li:last-child {
+      border-bottom: none;
+    }
+
+    .solution-card li:before {
+      content: "✓ ";
+      color: var(--accent-gold);
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--lf-light-gray);
-      margin-bottom: 8px;
+      margin-right: 8px;
     }
 
-    .lf-spec-value {
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--lf-black);
+    /* ============================================
+       SECTION 4: OFFICE PHOTO LIBRARY
+    ============================================ */
+    .photo-library {
+      background: var(--bg-white);
+      padding: 80px 40px;
     }
 
-    /* CTA Section */
-    .lf-cta {
-      padding: 100px 40px;
+    .photo-library h2 {
       text-align: center;
-      max-width: 800px;
+      margin-bottom: 16px;
+    }
+
+    .photo-library-subhead {
+      text-align: center;
+      font-size: 18px;
+      color: var(--text-light);
+      margin-bottom: 60px;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1140px;
       margin: 0 auto;
     }
 
-    .lf-cta h2 {
-      font-size: clamp(28px, 4vw, 36px);
-      font-weight: 700;
-      margin: 0 0 24px;
-      color: var(--lf-black);
-    }
-
-    .lf-cta p {
-      font-size: 20px;
-      line-height: 1.6;
-      margin-bottom: 16px;
-      color: #374151;
-    }
-
-    .lf-cta-button {
-      display: inline-block;
-      background: var(--lf-gold);
-      color: var(--lf-black);
-      padding: 20px 48px;
+    .photo-block {
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #e5e5e5 0%, #f5f5f5 100%);
       border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .photo-block:hover {
+      transform: scale(1.05);
+    }
+
+    /* ============================================
+       SECTION 5: HEADSHOT VALUE
+    ============================================ */
+    .headshot-value {
+      background: var(--bg-alt);
+      padding: 80px 40px;
+    }
+
+    .headshot-value h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .value-copy {
+      max-width: 700px;
+      margin: 0 auto 60px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* Value Diagram */
+    .value-diagram {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--bg-white);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .value-investment {
+      text-align: center;
+      padding-bottom: 30px;
+      border-bottom: 2px solid #e5e5e5;
+      margin-bottom: 30px;
+    }
+
+    .value-investment-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+
+    .value-investment-amount {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--text-heading);
+    }
+
+    .value-what-clients-see {
+      margin-bottom: 30px;
+    }
+
+    .value-what-clients-see h4 {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-light);
+      margin-bottom: 24px;
+    }
+
+    .value-benefits {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .value-benefit {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--text-primary);
+    }
+
+    .value-benefit-icon {
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    .value-result {
+      background: linear-gradient(135deg, #fff9e6 0%, #fff 100%);
+      border: 2px solid var(--accent-gold);
+      border-radius: 8px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .value-result-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+
+    .value-result-text {
       font-size: 18px;
       font-weight: 700;
-      text-decoration: none;
-      margin-top: 32px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: var(--text-heading);
+      line-height: 1.4;
     }
 
-    .lf-cta-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);
+    /* ============================================
+       SECTION 6: PRICING
+    ============================================ */
+    .pricing {
+      background: var(--bg-white);
+      padding: 80px 40px;
     }
 
-    /* Responsive */
-    @media (max-width: 968px) {
-      .lf-hero {
-        padding: 120px 24px 60px;
-      }
+    .pricing h2 {
+      text-align: center;
+      margin-bottom: 60px;
+    }
 
-      .lf-stock-trap,
-      .lf-ai-crisis-content,
-      .lf-office-library,
-      .lf-roi,
-      .lf-impact,
-      .lf-cta {
-        padding: 60px 24px;
-      }
+    .pricing-card {
+      max-width: 500px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #fff9e6 0%, #fefdf7 100%);
+      padding: 60px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
 
-      .lf-cost-comparison {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
+    .pricing-total {
+      font-size: 56px;
+      font-weight: 800;
+      color: var(--text-heading);
+      margin-bottom: 16px;
+    }
 
-      .lf-ai-crisis-content {
-        padding-left: 24px;
-        border-left-width: 3px;
-      }
+    .pricing-breakdown {
+      text-align: left;
+      margin: 40px 0;
+    }
 
-      .lf-gallery-grid {
-        grid-template-columns: repeat(6, 1fr);
-        grid-auto-rows: 150px;
-        gap: 12px;
-      }
+    .pricing-breakdown h4 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text-heading);
+    }
 
-      .lf-gallery-item:nth-child(1) {
-        grid-column: span 6;
-        grid-row: span 2;
-      }
+    .pricing-breakdown ul {
+      list-style: none;
+      padding: 0;
+    }
 
-      .lf-gallery-item:nth-child(2) {
-        grid-column: span 3;
-        grid-row: span 1;
-      }
+    .pricing-breakdown li {
+      padding: 8px 0;
+      font-size: 15px;
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
 
-      .lf-gallery-item:nth-child(3) {
-        grid-column: span 3;
-        grid-row: span 1;
-      }
+    .pricing-breakdown li:before {
+      content: "• ";
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin-right: 8px;
+    }
 
-      .lf-gallery-item:nth-child(4) {
-        grid-column: span 2;
-        grid-row: span 2;
-      }
+    .pricing-per-person {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 20px 0;
+    }
 
-      .lf-gallery-item:nth-child(5) {
-        grid-column: span 4;
-        grid-row: span 2;
-      }
+    .pricing-per-photo {
+      font-size: 16px;
+      color: var(--text-light);
+      margin-bottom: 40px;
+    }
 
-      .lf-gallery-item:nth-child(6) {
-        grid-column: span 6;
-        grid-row: span 1;
-      }
+    .pricing-note {
+      font-size: 14px;
+      font-style: italic;
+      color: var(--text-primary);
+      line-height: 1.7;
+      border-top: 1px solid #e5e5e5;
+      padding-top: 24px;
+    }
 
-      .lf-gallery-item:nth-child(7) {
-        grid-column: span 3;
-        grid-row: span 2;
-      }
+    /* ============================================
+       SECTION 7: FINAL CTA
+    ============================================ */
+    .final-cta {
+      background: var(--primary-dark);
+      padding: 100px 40px;
+      text-align: center;
+      color: var(--bg-white);
+    }
 
-      .lf-gallery-item:nth-child(8) {
-        grid-column: span 3;
-        grid-row: span 1;
-      }
+    .final-cta h2 {
+      color: var(--bg-white);
+      margin-bottom: 20px;
+    }
 
-      .lf-gallery-item:nth-child(9) {
-        grid-column: span 3;
-        grid-row: span 1;
-      }
+    .final-cta-copy {
+      font-size: 18px;
+      color: var(--text-light);
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-      .lf-library-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
+    /* ============================================
+       RESPONSIVE DESIGN
+    ============================================ */
 
-      .lf-multiplier-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .lf-specs-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-
-      .lf-usage-content {
-        padding-left: 24px;
-        border-left-width: 3px;
-      }
-
-      /* New sections responsive */
-      .lf-headshot-grid {
-        grid-template-columns: repeat(3, 100px);
-        gap: 16px;
-      }
-
-      .lf-headshot-circle {
-        width: 100px;
-        height: 100px;
+    /* Tablet: 768px - 1023px */
+    @media (max-width: 1023px) {
+      h1 {
         font-size: 40px;
       }
 
-      .lf-roi-comparison {
+      h2 {
+        font-size: 28px;
+      }
+
+      .solution-grid {
+        gap: 30px;
+      }
+
+      .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Mobile: 320px - 767px */
+    @media (max-width: 767px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+
+      .container,
+      .container-narrow,
+      .container-medium {
+        padding: 0 24px;
+      }
+
+      .hero {
+        padding: 80px 24px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero-subhead {
+        font-size: 16px;
+      }
+
+      .problem,
+      .solution,
+      .photo-library,
+      .headshot-value,
+      .pricing,
+      .final-cta {
+        padding: 60px 24px;
+      }
+
+      .solution-grid {
         grid-template-columns: 1fr;
         gap: 24px;
       }
 
-      .lf-roi-callout {
-        padding: 20px 24px;
-        font-size: 16px;
+      .solution-card {
+        padding: 30px;
       }
 
-      .lf-final-pricing {
-        padding: 32px 24px;
+      .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
       }
 
-      .lf-pricing-main {
-        font-size: 36px;
+      .value-diagram {
+        padding: 30px 24px;
       }
 
-      .lf-group-roi,
-      .lf-office-library,
-      .lf-headshots,
-      .lf-stock-trap,
-      .lf-photo-gallery,
-      .lf-ai-crisis {
-        padding: 80px 24px;
+      .value-benefits {
+        grid-template-columns: 1fr;
       }
+
+      .pricing-card {
+        padding: 40px 30px;
+      }
+
+      .pricing-total {
+        font-size: 42px;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 14px 32px;
+      }
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header & Navigation -->
-  <header class="header" id="header">
-    <div class="container header-container">
-      <a href="index.html" class="logo">CORE VISUALS NYC</a>
-      <nav class="nav" id="nav">
-        <a href="index.html#services">Services</a>
-        <a href="index.html#work">Work</a>
-        <a href="about.html">About</a>
-        <a href="index.html#contact" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
-      </nav>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+  <!-- SECTION 1: HERO -->
+  <section class="hero">
+    <div class="container-medium">
+      <h1>Law Firm Office & Headshot Photography</h1>
+      <p class="hero-subhead">How 9 professional headshots and office documentation solved a 3-year credibility problem</p>
+      <a href="#pricing" class="btn btn-primary">See the Investment</a>
     </div>
-  </header>
+  </section>
 
-  <!-- Main Content -->
-  <main id="main-content">
-
-    <!-- BLOCK 1: Hero -->
-    <section class="lf-hero">
-      <div class="container">
-        <span class="lf-eyebrow">CASE STUDY • CORPORATE PHOTOGRAPHY</span>
-        <h1>Law Firm Office & Headshot Photography</h1>
-        <p class="lf-hero-subtitle">Boutique practice • 50+ office photos • Full team headshots</p>
-      </div>
-    </section>
-
-    <!-- BLOCK 2: Stock Photo Trap -->
-    <section class="lf-stock-trap">
+  <!-- SECTION 2: THE PROBLEM -->
+  <section class="problem">
+    <div class="container-narrow">
       <h2>The Stock Photo Problem Nobody Talks About</h2>
-      <p>Boutique law firms all use the same stock photo library. Same generic "diverse team in conference room." Same staged handshake. Same laptop-and-gavel composition.</p>
-      <p>Nobody believes it. Worse: it makes every firm look identical.</p>
-      <p>This firm was paying $400/year for stock photo subscriptions. Each download cost $10-50 per image depending on usage rights. Over three years, that's $1,200-1,500 just for the subscription—plus restriction headaches every time they wanted to use an image in a new way.</p>
-      <p><strong>The breaking point?</strong> Their newsletter. Every article about complex legal matters illustrated with obvious stock photography. Important content, thoughtful analysis—undermined by fake imagery.</p>
+      <p>Your website has smiling people in conference rooms who don't work at your firm. Potential clients notice. They don't say anything, but they notice.</p>
+      <p>Stock photos signal one thing: we didn't care enough to show you our actual team. That's not the message you want to send when someone's deciding who to trust with their legal issues.</p>
+      <p>The other option—amateur iPhone photos taken by whoever was in the office that day—isn't better. Inconsistent lighting, awkward cropping, people looking uncomfortable. Still says: we didn't prioritize this.</p>
+    </div>
+  </section>
 
-      <!-- Cost Comparison Diagram -->
-      <div class="lf-cost-comparison">
-        <div class="lf-comparison-title">Stock Photos vs Custom Photography - 3 Year Comparison</div>
-
-        <div class="lf-cost-box warning">
-          <h3>Stock Photos (3 years)</h3>
-          <div class="lf-cost-item">$400/year subscription = $1,200</div>
-          <div class="lf-cost-item">+ $10-50 per image license</div>
-          <div class="lf-cost-item">+ Renewal fees</div>
-          <div class="lf-cost-item">+ Usage restrictions</div>
-          <div class="lf-cost-item">+ Looks like every competitor</div>
-          <div class="lf-cost-total">TOTAL: $1,500-2,000+</div>
-        </div>
-
-        <div class="lf-cost-box premium">
-          <h3>Custom Photography (one-time)</h3>
-          <div class="lf-cost-item">$6,000 investment</div>
-          <div class="lf-cost-item">+ Unlimited usage rights</div>
-          <div class="lf-cost-item">+ 50-75 unique branded images</div>
-          <div class="lf-cost-item">+ Professional headshots included</div>
-          <div class="lf-cost-item">+ Multi-year content library</div>
-          <div class="lf-cost-total">TOTAL: $6,000 (owned forever)</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BLOCK 3: AI Crisis -->
-    <section class="lf-ai-crisis">
-      <div class="lf-ai-crisis-content">
-        <h2>Why AI Photos Are Even Worse</h2>
-        <p>Some firms are now using AI-generated "office photos." Technically perfect lighting. Zero actual humans.</p>
-        <p>The problem: If a potential client sees AI-generated imagery on your website, the question isn't "why fake photos?"</p>
-        <p>The question is: <strong>"If the photos are fake, what else is fake?"</strong></p>
-        <p>In a profession built on trust and credibility, fake imagery—whether stock or AI—undermines everything. Clients hire lawyers they trust. Trust starts with authenticity.</p>
-      </div>
-
-      <!-- Secondary CTA -->
-      <div class="lf-secondary-cta">
-        <a href="#office-library">See How We Solve This →</a>
-      </div>
-    </section>
-
-    <!-- BLOCK 4: Photo Gallery - Puzzle Layout -->
-    <section class="lf-photo-gallery">
-      <div class="container" style="text-align: center; margin-bottom: 40px;">
-        <h2 style="font-size: clamp(28px, 4vw, 36px); font-weight: 700; margin: 0 0 16px;">Office Photo Library</h2>
-        <p style="font-size: 18px; color: #6b7280; max-width: 700px; margin: 0 auto;">50+ authentic office environment shots that show the real workspace, real team, real character</p>
-      </div>
-
-      <div class="lf-gallery-grid">
-        <div class="lf-gallery-item">
-          <div class="lf-gallery-label">Conference Room</div>
-        </div>
-        <div class="lf-gallery-item">
-          <div class="lf-gallery-label">Team Workspace</div>
-        </div>
-        <div class="lf-gallery-item">
-          <div class="lf-gallery-label">Office Details</div>
-        </div>
-        <div class="lf-gallery-item">
-          <div class="lf-gallery-label">Collaboration</div>
-        </div>
-        <div class="lf-gallery-item">
-          <div class="lf-gallery-label">Reception Area</div>
-        </div>
-        <div class="lf-gallery-item">
-          <div class="lf-gallery-label">Natural Light</div>
-        </div>
-        <div class="lf-gallery-item">
-          <div class="lf-gallery-label">Architecture</div>
-        </div>
-        <div class="lf-gallery-item">
-          <div class="lf-gallery-label">Working Moments</div>
-        </div>
-        <div class="lf-gallery-item">
-          <div class="lf-gallery-label">Office Library</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BLOCK 5: Office Library Details -->
-    <section class="lf-office-library" id="office-library">
-      <div class="lf-library-grid">
-        <div class="lf-library-col">
-          <h2>Building the Office Photo Library</h2>
-          <p>Created 50-75 authentic office environment shots:</p>
-          <ul class="lf-library-list">
-            <li>Conference rooms and workspaces (empty and in-use)</li>
-            <li>Team collaboration moments (real, not staged)</li>
-            <li>Office details (books, architecture, character)</li>
-            <li>Reception and common areas</li>
-            <li>Detail shots for newsletter headers</li>
-          </ul>
-          <p style="margin-top: 32px;">All shot in natural light with minimal staging. The goal: show their actual office, not a "law firm fantasy."</p>
-        </div>
-
-        <div class="lf-library-col">
-          <h3>Where These Actually Get Used</h3>
-          <ul class="lf-library-list">
-            <li>Website homepage and page headers</li>
-            <li>Newsletter article illustrations</li>
-            <li>Social media posts</li>
-            <li>LinkedIn company page</li>
-            <li>Marketing materials</li>
-            <li>Pitch decks and presentations</li>
-            <li>Conference materials</li>
-            <li>Print advertising</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- NEW BLOCK: Group Headshot ROI -->
-    <section class="lf-group-roi">
-      <h2>Nine Partners, One Session: The Group Headshot Advantage</h2>
-      <p class="lf-group-roi-subhead">When you schedule everyone together, efficiency compounds into serious value</p>
-
-      <!-- 3x3 Headshot Grid -->
-      <div class="lf-headshot-grid">
-        <div class="lf-headshot-circle">👤</div>
-        <div class="lf-headshot-circle">👤</div>
-        <div class="lf-headshot-circle">👤</div>
-        <div class="lf-headshot-circle">👤</div>
-        <div class="lf-headshot-circle">👤</div>
-        <div class="lf-headshot-circle">👤</div>
-        <div class="lf-headshot-circle">👤</div>
-        <div class="lf-headshot-circle">👤</div>
-        <div class="lf-headshot-circle">👤</div>
-      </div>
-
-      <!-- ROI Comparison -->
-      <div class="lf-roi-comparison">
-        <!-- Individual Approach -->
-        <div class="lf-roi-box">
-          <h3>Individual Headshot Economics</h3>
-          <p><strong>Standard solo session:</strong> $350/person</p>
-          <p><strong>Scheduling complexity:</strong> 9 separate bookings</p>
-          <p><strong>Time cost:</strong> 9 different days, 9 setup/breakdown cycles</p>
-          <p><strong>Total individual approach:</strong> $3,150 + coordination headache</p>
-        </div>
-
-        <!-- Group Approach -->
-        <div class="lf-roi-box">
-          <h3>Group Session Economics</h3>
-          <p><strong>Group rate:</strong> $2,750 for 9 people</p>
-          <p><strong>Per-person cost:</strong> $305 (saves $45/person)</p>
-          <p><strong>One scheduling email,</strong> one date, one setup</p>
-          <p><strong>Consistent lighting/backdrop</strong> = cohesive brand presentation</p>
-          <p><strong>Savings:</strong> $400 + immeasurable time saved</p>
-        </div>
-      </div>
-
-      <!-- The Real ROI Callout -->
-      <div class="lf-roi-callout">
-        <strong>The Real ROI Nobody Calculates:</strong><br><br>
-        Each headshot gets used for 3-5 years minimum. That's $61-102/year per person for professional credibility.<br><br>
-        Across 9 partners: <strong>$549-918/year</strong> for your entire leadership team to look polished.<br><br>
-        Compare that to one bad month of client acquisition because your website looks like a 2008 stock photo catalog.<br><br>
-        <em style="font-size: 17px;">"Here's the thing about group sessions: you're not just saving money, you're buying consistency. Nine partners shot on nine different days will look like nine different photographers worked on your site—even if it's the same photographer. Same light, same day, same visual language = one cohesive team."</em>
-      </div>
-    </section>
-
-    <!-- BLOCK 6: Headshots -->
-    <section class="lf-headshots">
-      <h2>The Headshot Investment</h2>
-      <p class="lf-headshots-intro">Professional headshots aren't just for the website bio page. They're a business development multiplier.</p>
-
-      <!-- Headshot Value Multiplier - SIMPLIFIED TO 4 KEY BENEFITS -->
-      <div class="lf-multiplier">
-        <div class="lf-multiplier-center">
-          One<br>Headshot
-          <div class="lf-multiplier-amount">$250-350</div>
-        </div>
-
-        <div class="lf-multiplier-grid">
-          <div class="lf-multiplier-item">
-            <div class="lf-multiplier-number">1</div>
-            <div class="lf-multiplier-icon">🌐</div>
-            <div class="lf-multiplier-title">Digital Presence</div>
-            <div class="lf-multiplier-desc">Website bio, LinkedIn profile, email signatures—everywhere your name appears online</div>
-          </div>
-
-          <div class="lf-multiplier-item">
-            <div class="lf-multiplier-number">2</div>
-            <div class="lf-multiplier-icon">🎤</div>
-            <div class="lf-multiplier-title">Speaking & Media</div>
-            <div class="lf-multiplier-desc">Conference speaker cards, media quotes, press releases, podcast appearances</div>
-          </div>
-
-          <div class="lf-multiplier-item">
-            <div class="lf-multiplier-number">3</div>
-            <div class="lf-multiplier-icon">✍️</div>
-            <div class="lf-multiplier-title">Publications & Awards</div>
-            <div class="lf-multiplier-desc">Byline articles, award submissions, industry directories, thought leadership content</div>
-          </div>
-
-          <div class="lf-multiplier-item">
-            <div class="lf-multiplier-number">4</div>
-            <div class="lf-multiplier-icon">💼</div>
-            <div class="lf-multiplier-title">Business Development</div>
-            <div class="lf-multiplier-desc">Pitch decks, proposals, internal materials, client-facing presentations</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="lf-headshots-body">
-        <p>Most attorney headshots are outdated (5+ years old), inconsistent (different photographers, different lighting), or unprofessional (cropped from group photos, poorly lit iPhone shots).</p>
-        <p>Every time a lawyer speaks at a conference, writes an article, gets quoted in media, or submits for an award, they need a professional photo. Without one, they either scramble at the last minute or use something subpar—which reflects poorly on the entire firm.</p>
-        <p><strong>A professional headshot isn't decoration. It's infrastructure for business development.</strong></p>
-      </div>
-    </section>
-
-    <!-- BLOCK 7: Usage Rights -->
-    <section class="lf-usage-rights">
-      <div class="lf-usage-content">
-        <h3>What You Actually Own</h3>
-        <p>Unlike stock photography subscriptions that restrict usage and require renewal fees, this firm owns everything:</p>
-        <ul class="lf-usage-list">
-          <li>Full commercial usage rights</li>
-          <li>Print, digital, web, social media—no restrictions</li>
-          <li>No annual fees or renewal costs</li>
-          <li>No "extended license" charges for advertising use</li>
-          <li>Transferable rights if firm merges or rebrands</li>
-        </ul>
-        <p style="margin-top: 32px; font-size: 20px; font-weight: 600;">The photos are theirs. Forever. For any use.</p>
-        <p>That's the difference between renting content and owning assets.</p>
-      </div>
-    </section>
-
-    <!-- BLOCK 8: ROI -->
-    <section class="lf-roi">
-      <h2>What This Actually Costs vs. What It's Worth</h2>
-      <p><strong>Stock photography approach over 3 years:</strong><br>
-      Subscription + licenses = $1,500-2,000<br>
-      Results: Generic imagery, ongoing costs, usage restrictions</p>
-
-      <p><strong>Custom photography investment:</strong><br>
-      One-time shoot = $6,000<br>
-      Results: 50-75 branded images + full team headshots, unlimited rights, multi-year library</p>
-
-      <p>The math flips when you calculate <strong>impact per use:</strong></p>
-
-      <p>Each office photo gets used 5-10+ times across different channels.<br>
-      Each headshot gets used 8+ places per attorney.<br>
-      <strong>Total asset uses: 400-800+ over 3 years.</strong></p>
-
-      <p><strong>Cost per use: $7-15 (custom) vs $10-50 (stock).</strong></p>
-
-      <p style="font-size: 22px; margin-top: 32px;">And only one of those options makes you look like yourself.</p>
-    </section>
-
-    <!-- BLOCK 9: Impact -->
-    <section class="lf-impact">
-      <h2>The Instant Credibility Upgrade</h2>
-      <ul class="lf-impact-list">
-        <li><strong>Website:</strong> All stock photos replaced with authentic office imagery</li>
-        <li><strong>Newsletter:</strong> Now uses only real photos—clients noticed immediately</li>
-        <li><strong>Social Media:</strong> Consistent brand presence with recognizable spaces</li>
-        <li><strong>Recruiting:</strong> Modern, professional presentation that attracts top talent</li>
-        <li><strong>Business Development:</strong> Credible pitch materials with real team photos</li>
-      </ul>
-      <p style="margin-top: 32px; font-size: 20px; font-weight: 600;">The firm looks like themselves instead of a generic law firm template.</p>
-      <p>In a profession built on trust and relationships, authenticity matters.</p>
-    </section>
-
-    <!-- BLOCK 10: Specs -->
-    <section class="lf-specs">
-      <h3>Project Details</h3>
-      <div class="lf-specs-grid">
-        <div class="lf-spec-item">
-          <span class="lf-spec-label">Client</span>
-          <span class="lf-spec-value">Boutique law firm</span>
-        </div>
-        <div class="lf-spec-item">
-          <span class="lf-spec-label">Coverage</span>
-          <span class="lf-spec-value">Full-day office photography</span>
-        </div>
-        <div class="lf-spec-item">
-          <span class="lf-spec-label">Team</span>
-          <span class="lf-spec-value">Solo photographer</span>
-        </div>
-        <div class="lf-spec-item">
-          <span class="lf-spec-label">Deliverables</span>
-          <span class="lf-spec-value">50-75 office photos + headshots for all attorneys & staff</span>
-        </div>
-        <div class="lf-spec-item">
-          <span class="lf-spec-label">Usage Rights</span>
-          <span class="lf-spec-value">Full commercial ownership, unlimited use</span>
-        </div>
-        <div class="lf-spec-item">
-          <span class="lf-spec-label">Investment</span>
-          <span class="lf-spec-value">$6,000</span>
-        </div>
-        <div class="lf-spec-item">
-          <span class="lf-spec-label">Multi-Year Value</span>
-          <span class="lf-spec-value">3-5 years of content across all marketing channels</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- BLOCK 11: CTA -->
-    <section class="lf-cta">
-      <h2>Need Office Photography That Actually Looks Like Your Business?</h2>
-      <p>Stock photos make you look like everyone else.</p>
-      <p>AI photos make you look fake.</p>
-      <p>Real photos make you look credible.</p>
-
-      <!-- Final Pricing Section -->
-      <div class="lf-final-pricing">
-        <h3>What 9 People Actually Costs</h3>
-        <div class="lf-pricing-main">$2,750</div>
-        <div class="lf-pricing-per-person">Per Person: $305</div>
-
-        <ul class="lf-pricing-includes">
-          <li>Professional headshots for all 9 partners</li>
-          <li>Multiple angles per person (straight-on, 3/4 profile)</li>
-          <li>High-res files for print + web-optimized versions</li>
-          <li>Consistent lighting and backdrop for cohesive team presentation</li>
-          <li>Turnaround: 3-5 business days</li>
-        </ul>
-
-        <div class="lf-pricing-note">
-          <strong>Optional Add-Ons:</strong><br>
-          Office environment portraits: +$150/person<br>
-          LinkedIn banner images: +$75/person<br><br>
-          Solo sessions available at $350/person. Group booking saves $45/person + eliminates scheduling complexity.
-        </div>
-      </div>
-
-      <a href="index.html#contact" class="lf-cta-button">Tell us what you need →</a>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer" style="background: #1a1a1a; color: #e5e5e5; padding: 80px 40px 40px;">
+  <!-- SECTION 3: WHAT WE DID -->
+  <section class="solution">
     <div class="container">
-      <div class="footer-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 48px; margin-bottom: 60px;">
+      <h2>The Solution: One Session, Complete Visual Identity</h2>
+      <div class="solution-grid">
 
-        <!-- Column 1: Services -->
-        <div>
-          <h4 style="font-weight: 700; margin-bottom: 24px; color: #D4AF37;">Services</h4>
-          <a href="index.html#services" style="display: block; color: #e5e5e5; text-decoration: none; margin-bottom: 12px; font-size: 15px; transition: color 0.3s;">Event Coverage</a>
-          <a href="index.html#services" style="display: block; color: #e5e5e5; text-decoration: none; margin-bottom: 12px; font-size: 15px; transition: color 0.3s;">Corporate Content</a>
-          <a href="index.html#services" style="display: block; color: #e5e5e5; text-decoration: none; margin-bottom: 12px; font-size: 15px; transition: color 0.3s;">Headshots & Lifestyle</a>
+        <!-- Left Column: Headshots -->
+        <div class="solution-card">
+          <h3>Headshots</h3>
+          <ul>
+            <li>9 professional headshots</li>
+            <li>Consistent lighting & backdrop</li>
+            <li>Multiple angles per person</li>
+            <li>High-res + web-optimized files</li>
+          </ul>
         </div>
 
-        <!-- Column 2: Work -->
-        <div>
-          <h4 style="font-weight: 700; margin-bottom: 24px; color: #D4AF37;">Work</h4>
-          <a href="case-study-nonprofit-golf.html" style="display: block; color: #e5e5e5; text-decoration: none; margin-bottom: 12px; font-size: 15px; transition: color 0.3s;">Nonprofit Event Video</a>
-          <a href="case-study-law-firm-photography.html" style="display: block; color: #e5e5e5; text-decoration: none; margin-bottom: 12px; font-size: 15px; transition: color 0.3s;">Law Firm Photography</a>
-          <a href="index.html#work" style="display: block; color: #e5e5e5; text-decoration: none; margin-bottom: 12px; font-size: 15px; transition: color 0.3s;">Portfolio</a>
+        <!-- Right Column: Office Documentation -->
+        <div class="solution-card">
+          <h3>Office Documentation</h3>
+          <ul>
+            <li>Conference rooms</li>
+            <li>Reception area</li>
+            <li>Individual offices</li>
+            <li>Environmental detail shots</li>
+            <li>Signage & branding</li>
+          </ul>
         </div>
 
-        <!-- Column 3: Company -->
-        <div>
-          <h4 style="font-weight: 700; margin-bottom: 24px; color: #D4AF37;">Company</h4>
-          <a href="about.html" style="display: block; color: #e5e5e5; text-decoration: none; margin-bottom: 12px; font-size: 15px; transition: color 0.3s;">About</a>
-          <a href="index.html#contact" style="display: block; color: #e5e5e5; text-decoration: none; margin-bottom: 12px; font-size: 15px; transition: color 0.3s;">Contact</a>
-          <a href="tel:+19294450603" style="display: block; color: #e5e5e5; text-decoration: none; margin-bottom: 12px; font-size: 15px; transition: color 0.3s;">(929) 445-0603</a>
-          <a href="mailto:contact@corevisuals.nyc" style="display: block; color: #e5e5e5; text-decoration: none; margin-bottom: 12px; font-size: 15px; transition: color 0.3s;">Email Us</a>
-        </div>
-
-        <!-- Column 4: Connect -->
-        <div>
-          <h4 style="font-weight: 700; margin-bottom: 24px; color: #D4AF37;">Connect</h4>
-          <a href="https://www.linkedin.com/in/vladlevine/" target="_blank" rel="noopener" style="display: block; color: #e5e5e5; text-decoration: none; margin-bottom: 12px; font-size: 15px; transition: color 0.3s;">LinkedIn</a>
-          <a href="#" target="_blank" rel="noopener" style="display: block; color: #e5e5e5; text-decoration: none; margin-bottom: 12px; font-size: 15px; transition: color 0.3s;">Instagram</a>
-          <p style="margin-top: 32px; font-size: 14px;">
-            <strong style="font-weight: 700;">Hours</strong><br>
-            Mon-Fri: 9am - 6pm EST
-          </p>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom" style="border-top: 1px solid #374151; padding-top: 32px; text-align: center;">
-        <p style="font-size: 14px; color: #9ca3af; margin: 0;">&copy; 2025 Core Visuals NYC. All Rights Reserved.</p>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <!-- Navigation Script -->
-  <script>
-    // Mobile navigation
-    const hamburger = document.getElementById('hamburger');
-    const nav = document.getElementById('nav');
+  <!-- SECTION 4: OFFICE PHOTO LIBRARY -->
+  <section class="photo-library">
+    <div class="container">
+      <h2>The Office Library</h2>
+      <p class="photo-library-subhead">Real spaces, professional presentation</p>
 
-    if (hamburger) {
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        nav.classList.toggle('active');
-      });
-    }
+      <div class="photo-grid">
+        <div class="photo-block">Conference Room</div>
+        <div class="photo-block">Reception Area</div>
+        <div class="photo-block">Partner Office</div>
+        <div class="photo-block">Detail Shot: Signage</div>
+        <div class="photo-block">Meeting Space</div>
+        <div class="photo-block">Detail Shot: Library</div>
+        <div class="photo-block">Workspace</div>
+        <div class="photo-block">Common Area</div>
+        <div class="photo-block">Entrance</div>
+      </div>
+    </div>
+  </section>
 
-    // Header scroll effect
-    const header = document.getElementById('header');
-    let lastScroll = 0;
+  <!-- SECTION 5: HEADSHOT VALUE -->
+  <section class="headshot-value">
+    <div class="container">
+      <h2>Nine Headshots, One Message: We're Real Professionals</h2>
 
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
+      <div class="value-copy">
+        <p>When potential clients land on your site, they're asking: "Are these people I can trust?"</p>
+        <p>Professional headshots answer that instantly. Not because of lighting or composition—those are table stakes. Because it shows you invested in presenting your team properly.</p>
+        <p>Nine consistent headshots tell a story: this is an actual firm with real people who take their reputation seriously. The alternative—mismatched photos or stock images—tells a different story.</p>
+      </div>
 
-      if (currentScroll > 100) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
+      <!-- Value Diagram -->
+      <div class="value-diagram">
 
-      lastScroll = currentScroll;
-    });
-  </script>
+        <!-- Investment -->
+        <div class="value-investment">
+          <div class="value-investment-label">Investment</div>
+          <div class="value-investment-amount">$2,750</div>
+          <div style="font-size: 14px; color: var(--text-light); margin-top: 4px;">one session, 9 people</div>
+        </div>
+
+        <!-- What Clients See -->
+        <div class="value-what-clients-see">
+          <h4>What Clients See:</h4>
+          <div class="value-benefits">
+            <div class="value-benefit">
+              <span class="value-benefit-icon">✓</span>
+              <span>Consistent professional team</span>
+            </div>
+            <div class="value-benefit">
+              <span class="value-benefit-icon">✓</span>
+              <span>Established, credible firm</span>
+            </div>
+            <div class="value-benefit">
+              <span class="value-benefit-icon">✓</span>
+              <span>People who care about details</span>
+            </div>
+            <div class="value-benefit">
+              <span class="value-benefit-icon">✓</span>
+              <span>Real humans they can contact</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Result -->
+        <div class="value-result">
+          <div class="value-result-label">Result</div>
+          <div class="value-result-text">Trust established in 3 seconds of scrolling</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <h2>What This Investment Looks Like</h2>
+
+      <div class="pricing-card">
+        <div class="pricing-total">$2,750</div>
+
+        <div class="pricing-breakdown">
+          <h4>What's Included:</h4>
+          <ul>
+            <li>9 professional headshots (multiple angles each)</li>
+            <li>Office environment documentation (12-15 locations)</li>
+            <li>High-resolution files for print</li>
+            <li>Web-optimized versions for digital use</li>
+            <li>3-5 day turnaround</li>
+            <li>Consistent lighting & backdrop for cohesive brand</li>
+          </ul>
+        </div>
+
+        <div class="pricing-per-person">Per-Person Cost: $305</div>
+        <div class="pricing-per-photo">Per-Photo Cost: Less than $130 (when you factor in office shots)</div>
+
+        <div class="pricing-note">
+          This isn't about photography—it's about showing up professionally when someone's deciding whether to call you.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: FINAL CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Need Office & Headshot Photography?</h2>
+      <p class="final-cta-copy">One session solves both problems. Let's schedule it.</p>
+      <a href="mailto:contact@corevisuals.nyc" class="btn btn-primary">Book a Call</a>
+    </div>
+  </section>
 
 </body>
 </html>

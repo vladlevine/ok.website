@@ -742,32 +742,26 @@ Home | Event Coverage | Corporate Content | Portfolio | About | Blog | Contact
 
 **Law Firm Photography Case Study** (`case-study-law-firm-photography.html`)
 **Keywords:** law firm photography NYC, corporate office photography, professional headshots attorneys
-**Status:** ✅ Live with enhanced design (Nov 2025)
+**Status:** ✅ Live - Redesigned with clean, scannable blueprint (Nov 2025)
 
-**Sections:**
-1. **Hero** - Project type, scope, client segment
-2. **Problem Statement** - "Stock Photo Problem Nobody Talks About" (56px headline, 160px padding)
-3. **Cost Comparison** - Stock vs Custom (3-year analysis, muted pink vs prominent gold)
-4. **AI Crisis Warning** - Why authenticity matters + secondary CTA to photo library
-5. **Photo Gallery** - Puzzle layout with labeled placeholders (9 items, category labels)
-6. **Office Library Details** - Two-column breakdown of deliverables and usage
-7. **Group Headshot ROI** (NEW) - 3x3 grid, individual vs group economics, real ROI calculation
-8. **Headshot Investment** - Simplified 4-benefit multiplier with icons and numbers
-9. **Usage Rights** - What client owns vs stock restrictions
-10. **ROI Analysis** - Cost per use breakdown
-11. **Impact Results** - Measurable outcomes across channels
-12. **Project Specs** - Technical details grid
-13. **Final Pricing** - Clear $2,750 breakdown with per-person cost and add-ons
-14. **CTA** - Strong closing with transparent next steps
+**7-Section Scannable Structure:**
+1. **Hero** - Dark background (#1a1a1a), headline, subhead, CTA to pricing
+2. **The Problem** - Stock photo credibility issue (3 short paragraphs, max 250 words)
+3. **What We Did** - Two-column solution cards (Headshots | Office Documentation)
+4. **Office Photo Library** - 3-column grid with labeled placeholders (9 blocks)
+5. **Headshot Value** - Simple value diagram (Investment → What Clients See → Result)
+6. **Pricing** - Clean card with $2,750 breakdown, per-person cost, included items
+7. **Final CTA** - Simple dark section with email link
 
-**Design Principles Applied:**
-- 40-50% larger primary headlines (42-56px vs 28-36px)
-- Doubled section padding (160px vs 100px for major sections)
-- Muted warning colors, enhanced premium/gold elements
-- Clear visual hierarchy with weight differentiation
-- Multiple CTAs throughout (secondary after problem, primary at end)
-- Simplified complex sections (4 benefits vs 8 in multiplier)
-- Mobile-first responsive with generous white space
+**Design Principles:**
+- Mobile-first responsive (320px → 1024px+)
+- Clean typography: Inter, 16-18px body, line-height 1.7-1.8
+- Spacing system: 20px increments, 80px section padding
+- Color palette: #1a1a1a dark, #f4c542 gold, #f5f5f5 alt background
+- Max-width: 700px text, 1140px full sections
+- Minimal animations: hover states, smooth scroll
+- No comparison tables, no jargon, benefit-driven copy
+- Template structure for future case studies
 
 **Nonprofit Golf Event Case Study** (`case-study-nonprofit-golf.html`)
 **Status:** ✅ Live - Video-focused case study
