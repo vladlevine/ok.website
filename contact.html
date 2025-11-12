@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Get a Quote | Core Visuals NYC</title>
+  <meta name="description" content="Tell us what you need. No sales pitch, just transparent pricing for event video, photography, and corporate content in NYC.">
+  <meta name="keywords" content="get quote NYC videographer, event photography quote, corporate video pricing NYC, contact Core Visuals">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Get a Quote | Core Visuals NYC">
+  <meta property="og:description" content="Tell us what you need. No sales pitch, just transparent pricing.">
+  <meta property="og:url" content="https://corevisuals.nyc/contact">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://corevisuals.nyc/contact">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>">
+
+  <style>
+    :root {
+      --contact-gold: #D4AF37;
+      --contact-cyan: #06B6D4;
+      --contact-magenta: #EC4899;
+      --contact-black: #000000;
+      --contact-white: #FFFFFF;
+      --contact-light-bg: #F9FAFB;
+      --contact-border: #E5E7EB;
+      --contact-text-secondary: #6B7280;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      line-height: 1.6;
+      color: var(--contact-black);
+      background: var(--contact-white);
+    }
+
+    /* Hero Section */
+    .contact-hero {
+      background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+      padding: 140px 40px 60px;
+      text-align: center;
+      color: var(--contact-white);
+    }
+
+    .contact-hero h1 {
+      font-size: clamp(32px, 6vw, 48px);
+      font-weight: 700;
+      margin: 0 0 16px;
+      color: var(--contact-white);
+    }
+
+    .contact-hero p {
+      font-size: 20px;
+      color: #a3a3a3;
+      margin: 0;
+    }
+
+    /* Form Container */
+    .form-wrapper {
+      max-width: 800px;
+      margin: -40px auto 0;
+      padding: 0 20px 80px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .form-container {
+      background: var(--contact-white);
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+      padding: 48px;
+      border: 1px solid var(--contact-border);
+    }
+
+    /* Progress Bar */
+    .progress-container {
+      margin-bottom: 40px;
+    }
+
+    .progress-label {
+      font-size: 14px;
+      color: var(--contact-text-secondary);
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 8px;
+      background: var(--contact-light-bg);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--contact-cyan), var(--contact-magenta));
+      border-radius: 8px;
+      transition: width 0.4s ease;
+    }
+
+    /* Question Styles */
+    .question {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .question.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .question-label {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--contact-black);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .question-hint {
+      font-size: 15px;
+      color: var(--contact-text-secondary);
+      margin-bottom: 32px;
+      display: block;
+      line-height: 1.6;
+    }
+
+    /* Radio & Checkbox Styles */
+    .option {
+      display: block;
+      position: relative;
+      padding: 20px 24px 20px 60px;
+      margin-bottom: 12px;
+      border: 2px solid var(--contact-border);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--contact-black);
+      min-height: 44px;
+    }
+
+    .option:hover {
+      border-color: var(--contact-cyan);
+      background: rgba(6, 182, 212, 0.03);
+    }
+
+    .option input[type="radio"],
+    .option input[type="checkbox"] {
+      position: absolute;
+      left: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      accent-color: var(--contact-cyan);
+    }
+
+    .option.selected {
+      border-color: var(--contact-cyan);
+      background: rgba(6, 182, 212, 0.05);
+    }
+
+    /* Text Input Styles */
+    .text-input,
+    .textarea-input,
+    .date-input {
+      width: 100%;
+      padding: 16px 20px;
+      border: 2px solid var(--contact-border);
+      border-radius: 12px;
+      font-size: 17px;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.3s ease;
+      margin-top: 8px;
+    }
+
+    .text-input:focus,
+    .textarea-input:focus,
+    .date-input:focus {
+      outline: none;
+      border-color: var(--contact-cyan);
+      box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+    }
+
+    .textarea-input {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .char-counter {
+      text-align: right;
+      font-size: 14px;
+      color: var(--contact-text-secondary);
+      margin-top: 8px;
+    }
+
+    /* Button Styles */
+    .form-actions {
+      margin-top: 40px;
+      display: flex;
+      gap: 16px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn {
+      padding: 18px 40px;
+      border-radius: 8px;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: var(--contact-gold);
+      color: var(--contact-white);
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: #c19b2e;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--contact-text-secondary);
+      border: 2px solid var(--contact-border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--contact-cyan);
+      color: var(--contact-cyan);
+    }
+
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    /* Success Message */
+    .success-screen {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .success-screen.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .success-icon {
+      font-size: 72px;
+      margin-bottom: 24px;
+    }
+
+    .success-screen h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--contact-black);
+      margin-bottom: 24px;
+    }
+
+    .success-screen p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--contact-text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .success-screen ul {
+      text-align: left;
+      max-width: 500px;
+      margin: 32px auto;
+      padding: 0;
+      list-style: none;
+    }
+
+    .success-screen li {
+      padding: 12px 0 12px 40px;
+      position: relative;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .success-screen li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--contact-cyan);
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    .callout-box {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.08) 0%, rgba(236, 72, 153, 0.08) 100%);
+      border-left: 4px solid var(--contact-cyan);
+      padding: 24px;
+      border-radius: 8px;
+      margin: 32px 0;
+    }
+
+    .callout-box p {
+      margin: 8px 0;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .callout-box strong {
+      color: var(--contact-black);
+      font-weight: 600;
+    }
+
+    /* Alternative Contact */
+    .alt-contact {
+      text-align: center;
+      padding: 60px 40px;
+      background: var(--contact-light-bg);
+    }
+
+    .alt-contact h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--contact-black);
+      margin-bottom: 16px;
+    }
+
+    .alt-contact p {
+      font-size: 17px;
+      color: var(--contact-text-secondary);
+      margin-bottom: 8px;
+    }
+
+    .alt-contact a {
+      color: var(--contact-cyan);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .alt-contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .contact-hero {
+        padding: 120px 24px 40px;
+      }
+
+      .form-container {
+        padding: 32px 24px;
+      }
+
+      .form-wrapper {
+        padding: 0 16px 60px;
+      }
+
+      .question-label {
+        font-size: 22px;
+      }
+
+      .option {
+        padding: 16px 20px 16px 52px;
+      }
+
+      .form-actions {
+        flex-direction: column-reverse;
+        width: 100%;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .date-field-wrapper {
+      display: none;
+      margin-top: 16px;
+    }
+
+    .date-field-wrapper.active {
+      display: block;
+    }
+
+    .other-field-wrapper {
+      display: none;
+      margin-top: 16px;
+    }
+
+    .other-field-wrapper.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">CORE VISUALS NYC</a>
+      <nav class="nav" id="nav">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="contact-hero">
+    <h1>Tell Us What You Need</h1>
+    <p>No sales pitch, just transparent pricing.</p>
+  </section>
+
+  <!-- Form Section -->
+  <div class="form-wrapper">
+    <div class="form-container">
+
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-label"><span id="progress-text">Question 1 of 6</span></div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill" style="width: 16.67%"></div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form action="https://formspree.io/f/xjkjkkjg" method="POST" id="conversational-form">
+
+        <!-- Question 1: Service Type -->
+        <div class="question active" id="q1" data-question="1">
+          <label class="question-label">What brings you here today?</label>
+
+          <label class="option">
+            <input type="radio" name="service_type" value="event-coverage" required>
+            📹 I need event coverage (photo/video)
+          </label>
+
+          <label class="option">
+            <input type="radio" name="service_type" value="brand-content" required>
+            🎬 I need brand content or corporate video
+          </label>
+
+          <label class="option">
+            <input type="radio" name="service_type" value="office-photography" required>
+            📸 I need office/team photography
+          </label>
+
+          <label class="option">
+            <input type="radio" name="service_type" value="not-sure" required>
+            🤔 I'm not quite sure yet (help me figure it out)
+          </label>
+        </div>
+
+        <!-- Question 2A: Event Type (shows for event-coverage) -->
+        <div class="question" id="q2a" data-question="2">
+          <label class="question-label">What type of event are we covering?</label>
+          <span class="question-hint">Select all that apply</span>
+
+          <label class="option">
+            <input type="checkbox" name="event_type[]" value="conference">
+            ☑️ Corporate conference or summit
+          </label>
+
+          <label class="option">
+            <input type="checkbox" name="event_type[]" value="party">
+            ☑️ Company party or celebration
+          </label>
+
+          <label class="option">
+            <input type="checkbox" name="event_type[]" value="networking">
+            ☑️ Networking event
+          </label>
+
+          <label class="option">
+            <input type="checkbox" name="event_type[]" value="gala">
+            ☑️ Gala or fundraiser
+          </label>
+
+          <label class="option">
+            <input type="checkbox" name="event_type[]" value="product-launch">
+            ☑️ Product launch
+          </label>
+
+          <label class="option">
+            <input type="checkbox" name="event_type[]" value="multiple">
+            ☑️ Multiple events (ongoing coverage)
+          </label>
+
+          <label class="option">
+            <input type="checkbox" name="event_type[]" value="other" id="event-other-check">
+            ☑️ Other:
+          </label>
+          <div class="other-field-wrapper" id="event-other-wrapper">
+            <input type="text" name="event_type_other" class="text-input" placeholder="Tell us about your event type">
+          </div>
+
+          <p class="question-hint" style="margin-top: 24px;">Most of our clients need full-day coverage. We'll discuss exact timing once we know your event type.</p>
+        </div>
+
+        <!-- Question 2B: Content Type (shows for brand-content) -->
+        <div class="question" id="q2b" data-question="2">
+          <label class="question-label">What are you looking to create?</label>
+
+          <label class="option">
+            <input type="radio" name="content_type" value="brand-story">
+            🎥 Brand story or company video
+          </label>
+
+          <label class="option">
+            <input type="radio" name="content_type" value="testimonials">
+            💬 Customer testimonial videos
+          </label>
+
+          <label class="option">
+            <input type="radio" name="content_type" value="team-culture">
+            👥 Team/culture content
+          </label>
+
+          <label class="option">
+            <input type="radio" name="content_type" value="multiple-types">
+            📊 Multiple types of content
+          </label>
+
+          <label class="option">
+            <input type="radio" name="content_type" value="need-help">
+            💡 I have an idea but need help shaping it
+          </label>
+
+          <p class="question-hint" style="margin-top: 24px;">No Hollywood production needed. We specialize in authentic corporate content that actually gets watched.</p>
+        </div>
+
+        <!-- Question 2C: Photography Use (shows for office-photography) -->
+        <div class="question" id="q2c" data-question="2">
+          <label class="question-label">What will these photos be used for?</label>
+          <span class="question-hint">Select all that apply</span>
+
+          <label class="option">
+            <input type="checkbox" name="photo_use[]" value="website">
+            ☑️ Website refresh
+          </label>
+
+          <label class="option">
+            <input type="checkbox" name="photo_use[]" value="social">
+            ☑️ Social media content
+          </label>
+
+          <label class="option">
+            <input type="checkbox" name="photo_use[]" value="recruiting">
+            ☑️ Recruiting/careers page
+          </label>
+
+          <label class="option">
+            <input type="checkbox" name="photo_use[]" value="marketing">
+            ☑️ Marketing materials
+          </label>
+
+          <label class="option">
+            <input type="checkbox" name="photo_use[]" value="linkedin">
+            ☑️ LinkedIn team updates
+          </label>
+
+          <label class="option">
+            <input type="checkbox" name="photo_use[]" value="all">
+            ☑️ All of the above (we need everything)
+          </label>
+
+          <p class="question-hint" style="margin-top: 24px;">Knowing how you'll use them helps us shoot for the right vibe—professional but not stiff.</p>
+        </div>
+
+        <!-- Question 2D: Not Sure Path -->
+        <div class="question" id="q2d" data-question="2">
+          <label class="question-label">No problem! Tell us a bit about what you're thinking.</label>
+          <span class="question-hint">Just a few sentences is fine</span>
+
+          <textarea name="initial_thoughts" class="textarea-input" placeholder="Example: We want to showcase our company culture and maybe document our next event, but we're not sure what makes the most sense..."></textarea>
+
+          <p class="question-hint" style="margin-top: 16px;">We'll help you figure out the best approach based on your goals and budget.</p>
+        </div>
+
+        <!-- Question 3: Timeline -->
+        <div class="question" id="q3" data-question="3">
+          <label class="question-label">When do you need this?</label>
+
+          <label class="option">
+            <input type="radio" name="timeline" value="asap" required>
+            ⚡ ASAP (within 2 weeks)
+          </label>
+
+          <label class="option">
+            <input type="radio" name="timeline" value="specific-date" id="specific-date-radio" required>
+            📅 I have a specific date:
+          </label>
+          <div class="date-field-wrapper" id="date-field-wrapper">
+            <input type="date" name="specific_date" class="date-input">
+          </div>
+
+          <label class="option">
+            <input type="radio" name="timeline" value="1-2-months" required>
+            🗓️ Within the next 1-2 months
+          </label>
+
+          <label class="option">
+            <input type="radio" name="timeline" value="flexible" required>
+            🤷 Flexible timeline (just planning ahead)
+          </label>
+
+          <p class="question-hint" style="margin-top: 24px;">Honest answer: We can usually accommodate rushes, but the more notice the better.</p>
+        </div>
+
+        <!-- Question 4: Budget -->
+        <div class="question" id="q4" data-question="4">
+          <label class="question-label">What's your ballpark budget?</label>
+
+          <label class="option">
+            <input type="radio" name="budget" value="under-2k" required>
+            💰 Under $2,000
+          </label>
+
+          <label class="option">
+            <input type="radio" name="budget" value="2k-5k" required>
+            💰💰 $2,000 - $5,000
+          </label>
+
+          <label class="option">
+            <input type="radio" name="budget" value="5k-10k" required>
+            💰💰💰 $5,000 - $10,000
+          </label>
+
+          <label class="option">
+            <input type="radio" name="budget" value="10k-plus" required>
+            💰💰💰💰 $10,000+
+          </label>
+
+          <label class="option">
+            <input type="radio" name="budget" value="not-sure" required>
+            🤔 Not sure what this should cost
+          </label>
+
+          <p class="question-hint" style="margin-top: 24px;">This helps us recommend the right package. No surprises, no hourly rates—just fixed pricing.</p>
+        </div>
+
+        <!-- Question 5: Project Details -->
+        <div class="question" id="q5" data-question="5">
+          <label class="question-label">Tell us about your project in a few sentences.</label>
+
+          <textarea name="project_details" class="textarea-input" maxlength="500" id="details-textarea" placeholder="Example: We're hosting a 200-person tech conference on March 15th at [venue]. Need full-day photo/video coverage of keynotes, breakout sessions, and networking." required></textarea>
+          <div class="char-counter"><span id="char-count">0</span> / 500 characters</div>
+
+          <p class="question-hint" style="margin-top: 16px;">Don't worry about getting this perfect. We'll ask follow-up questions once we connect.</p>
+        </div>
+
+        <!-- Question 6: Contact Info -->
+        <div class="question" id="q6" data-question="6">
+          <label class="question-label">How should we reach you?</label>
+
+          <div style="margin-bottom: 20px;">
+            <label style="display: block; font-size: 15px; font-weight: 600; margin-bottom: 8px; color: var(--contact-black);">Your name *</label>
+            <input type="text" name="name" class="text-input" required>
+          </div>
+
+          <div style="margin-bottom: 20px;">
+            <label style="display: block; font-size: 15px; font-weight: 600; margin-bottom: 8px; color: var(--contact-black);">Email *</label>
+            <input type="email" name="email" class="text-input" required>
+          </div>
+
+          <div style="margin-bottom: 20px;">
+            <label style="display: block; font-size: 15px; font-weight: 600; margin-bottom: 8px; color: var(--contact-black);">Phone <span style="font-weight: 400; color: var(--contact-text-secondary);">(optional but helpful)</span></label>
+            <input type="tel" name="phone" class="text-input">
+          </div>
+
+          <div style="margin-bottom: 20px;">
+            <label style="display: block; font-size: 15px; font-weight: 600; margin-bottom: 8px; color: var(--contact-black);">Company name <span style="font-weight: 400; color: var(--contact-text-secondary);">(optional)</span></label>
+            <input type="text" name="company" class="text-input">
+          </div>
+
+          <p class="question-hint">We respond within 24 hours with transparent pricing. No sales pitch, just a clear quote.</p>
+        </div>
+
+        <!-- Form Actions -->
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary hidden" id="back-btn">← Back</button>
+          <button type="button" class="btn btn-primary" id="next-btn">Continue →</button>
+        </div>
+
+      </form>
+
+      <!-- Success Screen -->
+      <div class="success-screen" id="success-screen">
+        <div class="success-icon">✅</div>
+        <h2>Got it! Here's what happens next:</h2>
+
+        <ul>
+          <li>📧 You'll hear from us within 24 hours (usually much faster)</li>
+          <li>📋 We'll send you a fixed-price quote—no hourly rates, no surprises</li>
+          <li>📞 We'll hop on a quick call if needed to nail down the details</li>
+        </ul>
+
+        <div class="callout-box">
+          <p><strong>One of our most common questions:</strong></p>
+          <p>"Can you do both photo and video?"</p>
+          <p><strong>Answer: Yes. That's kind of our thing.</strong></p>
+        </div>
+
+        <p style="margin-top: 32px; font-size: 16px; color: var(--contact-text-secondary);">— Vlad & the Core Visuals team</p>
+
+        <a href="index.html" class="btn btn-primary" style="margin-top: 32px;">← Back to Homepage</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Alternative Contact Methods -->
+  <section class="alt-contact">
+    <h3>Prefer to Call or Email?</h3>
+    <p><a href="tel:+19294450603">(929) 445-0603</a></p>
+    <p><a href="mailto:contact@corevisuals.nyc">contact@corevisuals.nyc</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Core Visuals NYC</h4>
+          <p style="max-width: 320px; line-height: 1.8;">Event video and photography for NYC businesses. Corporate events, conferences, brand content. Professional, transparent, reliable.</p>
+          <p style="margin-top: 32px;">
+            <strong style="font-weight: 700;">99 Wall Street #1751</strong><br>
+            New York, NY 10005
+          </p>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <a href="index.html#services">Event Video + Photo</a>
+          <a href="index.html#services">Corporate Content</a>
+          <a href="index.html#services">Custom Projects</a>
+          <a href="index.html#work">Portfolio</a>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="tel:+19294450603">(929) 445-0603</a>
+          <a href="mailto:contact@corevisuals.nyc">Email Us</a>
+        </div>
+
+        <div>
+          <h4>Connect</h4>
+          <a href="https://www.linkedin.com/in/vladlevine/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <p style="margin-top: 32px; font-size: 14px;">
+            <strong style="font-weight: 700;">Hours</strong><br>
+            Mon-Fri: 9am - 6pm EST
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Core Visuals NYC. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Form Logic -->
+  <script>
+    // Form state
+    let currentQuestion = 1;
+    let totalQuestions = 6;
+    let selectedServicePath = null;
+
+    // Elements
+    const form = document.getElementById('conversational-form');
+    const nextBtn = document.getElementById('next-btn');
+    const backBtn = document.getElementById('back-btn');
+    const progressFill = document.getElementById('progress-fill');
+    const progressText = document.getElementById('progress-text');
+    const successScreen = document.getElementById('success-screen');
+    const formContainer = document.querySelector('.form-container > form');
+    const detailsTextarea = document.getElementById('details-textarea');
+    const charCount = document.getElementById('char-count');
+
+    // Character counter
+    if (detailsTextarea) {
+      detailsTextarea.addEventListener('input', function() {
+        charCount.textContent = this.value.length;
+      });
+    }
+
+    // Specific date field toggle
+    document.getElementById('specific-date-radio').addEventListener('change', function() {
+      if (this.checked) {
+        document.getElementById('date-field-wrapper').classList.add('active');
+      }
+    });
+
+    document.querySelectorAll('input[name="timeline"]').forEach(radio => {
+      radio.addEventListener('change', function() {
+        if (this.value !== 'specific-date') {
+          document.getElementById('date-field-wrapper').classList.remove('active');
+        }
+      });
+    });
+
+    // Event type "other" field toggle
+    document.getElementById('event-other-check').addEventListener('change', function() {
+      if (this.checked) {
+        document.getElementById('event-other-wrapper').classList.add('active');
+      } else {
+        document.getElementById('event-other-wrapper').classList.remove('active');
+      }
+    });
+
+    // Option selection styling
+    document.querySelectorAll('.option').forEach(option => {
+      option.addEventListener('click', function() {
+        const input = this.querySelector('input');
+        if (input.type === 'radio') {
+          // Remove selected class from siblings
+          const name = input.name;
+          document.querySelectorAll(`input[name="${name}"]`).forEach(radio => {
+            radio.closest('.option').classList.remove('selected');
+          });
+          this.classList.add('selected');
+        } else if (input.type === 'checkbox') {
+          // Toggle selected class
+          if (input.checked) {
+            this.classList.add('selected');
+          } else {
+            this.classList.remove('selected');
+          }
+        }
+      });
+    });
+
+    // Next button click
+    nextBtn.addEventListener('click', function() {
+      if (currentQuestion === 1) {
+        // Validate Q1
+        const serviceType = document.querySelector('input[name="service_type"]:checked');
+        if (!serviceType) {
+          alert('Please select an option');
+          return;
+        }
+        selectedServicePath = serviceType.value;
+
+        // Show appropriate Q2 based on selection
+        document.getElementById('q1').classList.remove('active');
+        if (selectedServicePath === 'event-coverage') {
+          document.getElementById('q2a').classList.add('active');
+        } else if (selectedServicePath === 'brand-content') {
+          document.getElementById('q2b').classList.add('active');
+        } else if (selectedServicePath === 'office-photography') {
+          document.getElementById('q2c').classList.add('active');
+        } else if (selectedServicePath === 'not-sure') {
+          document.getElementById('q2d').classList.add('active');
+        }
+
+        currentQuestion = 2;
+        updateProgress();
+        backBtn.classList.remove('hidden');
+        updateButtonText();
+      } else if (currentQuestion === 2) {
+        // Validate Q2 based on path
+        let isValid = false;
+        if (selectedServicePath === 'event-coverage') {
+          const checked = document.querySelectorAll('input[name="event_type[]"]:checked');
+          isValid = checked.length > 0;
+        } else if (selectedServicePath === 'brand-content') {
+          isValid = document.querySelector('input[name="content_type"]:checked') !== null;
+        } else if (selectedServicePath === 'office-photography') {
+          const checked = document.querySelectorAll('input[name="photo_use[]"]:checked');
+          isValid = checked.length > 0;
+        } else if (selectedServicePath === 'not-sure') {
+          const textarea = document.querySelector('textarea[name="initial_thoughts"]');
+          isValid = textarea && textarea.value.trim().length > 0;
+        }
+
+        if (!isValid) {
+          alert('Please select at least one option or fill in the field');
+          return;
+        }
+
+        // Hide all Q2 variants and show Q3
+        document.getElementById('q2a').classList.remove('active');
+        document.getElementById('q2b').classList.remove('active');
+        document.getElementById('q2c').classList.remove('active');
+        document.getElementById('q2d').classList.remove('active');
+        document.getElementById('q3').classList.add('active');
+
+        currentQuestion = 3;
+        updateProgress();
+        updateButtonText();
+      } else if (currentQuestion === 3) {
+        // Validate Q3
+        const timeline = document.querySelector('input[name="timeline"]:checked');
+        if (!timeline) {
+          alert('Please select when you need this');
+          return;
+        }
+
+        document.getElementById('q3').classList.remove('active');
+        document.getElementById('q4').classList.add('active');
+
+        currentQuestion = 4;
+        updateProgress();
+        updateButtonText();
+      } else if (currentQuestion === 4) {
+        // Validate Q4
+        const budget = document.querySelector('input[name="budget"]:checked');
+        if (!budget) {
+          alert('Please select a budget range');
+          return;
+        }
+
+        document.getElementById('q4').classList.remove('active');
+        document.getElementById('q5').classList.add('active');
+
+        currentQuestion = 5;
+        updateProgress();
+        updateButtonText();
+      } else if (currentQuestion === 5) {
+        // Validate Q5
+        const details = document.querySelector('textarea[name="project_details"]');
+        if (!details || details.value.trim().length === 0) {
+          alert('Please tell us about your project');
+          return;
+        }
+
+        document.getElementById('q5').classList.remove('active');
+        document.getElementById('q6').classList.add('active');
+
+        currentQuestion = 6;
+        updateProgress();
+        updateButtonText();
+        nextBtn.textContent = 'Send My Request →';
+      } else if (currentQuestion === 6) {
+        // Validate Q6 and submit
+        const name = document.querySelector('input[name="name"]');
+        const email = document.querySelector('input[name="email"]');
+
+        if (!name || name.value.trim().length === 0) {
+          alert('Please enter your name');
+          return;
+        }
+
+        if (!email || email.value.trim().length === 0) {
+          alert('Please enter your email');
+          return;
+        }
+
+        // Submit the form
+        nextBtn.disabled = true;
+        nextBtn.textContent = 'Sending...';
+
+        // Submit via Formspree
+        const formData = new FormData(form);
+
+        fetch('https://formspree.io/f/xjkjkkjg', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        }).then(response => {
+          if (response.ok) {
+            // Show success screen
+            document.querySelector('.form-container > form').style.display = 'none';
+            document.querySelector('.progress-container').style.display = 'none';
+            successScreen.classList.add('active');
+          } else {
+            alert('There was a problem submitting your request. Please try again or email us directly at contact@corevisuals.nyc');
+            nextBtn.disabled = false;
+            nextBtn.textContent = 'Send My Request →';
+          }
+        }).catch(error => {
+          alert('There was a problem submitting your request. Please try again or email us directly at contact@corevisuals.nyc');
+          nextBtn.disabled = false;
+          nextBtn.textContent = 'Send My Request →';
+        });
+      }
+    });
+
+    // Back button click
+    backBtn.addEventListener('click', function() {
+      if (currentQuestion === 2) {
+        // Go back to Q1
+        document.getElementById('q2a').classList.remove('active');
+        document.getElementById('q2b').classList.remove('active');
+        document.getElementById('q2c').classList.remove('active');
+        document.getElementById('q2d').classList.remove('active');
+        document.getElementById('q1').classList.add('active');
+
+        currentQuestion = 1;
+        backBtn.classList.add('hidden');
+        updateProgress();
+        updateButtonText();
+      } else if (currentQuestion === 3) {
+        // Go back to Q2
+        document.getElementById('q3').classList.remove('active');
+        if (selectedServicePath === 'event-coverage') {
+          document.getElementById('q2a').classList.add('active');
+        } else if (selectedServicePath === 'brand-content') {
+          document.getElementById('q2b').classList.add('active');
+        } else if (selectedServicePath === 'office-photography') {
+          document.getElementById('q2c').classList.add('active');
+        } else if (selectedServicePath === 'not-sure') {
+          document.getElementById('q2d').classList.add('active');
+        }
+
+        currentQuestion = 2;
+        updateProgress();
+        updateButtonText();
+      } else if (currentQuestion === 4) {
+        document.getElementById('q4').classList.remove('active');
+        document.getElementById('q3').classList.add('active');
+
+        currentQuestion = 3;
+        updateProgress();
+        updateButtonText();
+      } else if (currentQuestion === 5) {
+        document.getElementById('q5').classList.remove('active');
+        document.getElementById('q4').classList.add('active');
+
+        currentQuestion = 4;
+        updateProgress();
+        updateButtonText();
+      } else if (currentQuestion === 6) {
+        document.getElementById('q6').classList.remove('active');
+        document.getElementById('q5').classList.add('active');
+
+        currentQuestion = 5;
+        updateProgress();
+        updateButtonText();
+        nextBtn.textContent = 'One more step →';
+      }
+    });
+
+    function updateProgress() {
+      const percentage = (currentQuestion / totalQuestions) * 100;
+      progressFill.style.width = percentage + '%';
+      progressText.textContent = `Question ${currentQuestion} of ${totalQuestions}`;
+    }
+
+    function updateButtonText() {
+      const buttonTexts = {
+        1: 'Continue →',
+        2: 'Next →',
+        3: 'Almost there →',
+        4: 'Last few questions →',
+        5: 'One more step →',
+        6: 'Send My Request →'
+      };
+      nextBtn.textContent = buttonTexts[currentQuestion] || 'Continue →';
+    }
+
+    // Mobile Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+
+    // Header Scroll Effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 120) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>
