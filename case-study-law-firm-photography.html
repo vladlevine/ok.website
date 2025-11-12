@@ -95,14 +95,15 @@
     .lf-stock-trap {
       max-width: 900px;
       margin: 0 auto;
-      padding: 100px 40px;
+      padding: 160px 40px;
     }
 
     .lf-stock-trap h2 {
-      font-size: clamp(28px, 4vw, 36px);
-      font-weight: 700;
-      margin: 0 0 32px;
+      font-size: clamp(42px, 6vw, 56px);
+      font-weight: 800;
+      margin: 0 0 48px;
       color: var(--lf-black);
+      line-height: 1.2;
     }
 
     .lf-stock-trap p {
@@ -137,13 +138,16 @@
     }
 
     .lf-cost-box.warning {
-      border: 3px solid var(--lf-magenta);
+      border: 2px solid #fca5a5;
       background: linear-gradient(135deg, #fff 0%, #fef2f2 100%);
+      opacity: 0.9;
     }
 
     .lf-cost-box.premium {
-      border: 3px solid var(--lf-gold);
+      border: 4px solid var(--lf-gold);
       background: linear-gradient(135deg, #fff 0%, #faf8f0 100%);
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
+      transform: scale(1.02);
     }
 
     .lf-cost-box h3 {
@@ -191,8 +195,28 @@
     .lf-ai-crisis {
       max-width: 800px;
       margin: 0 auto;
-      padding: 100px 40px;
+      padding: 160px 40px 80px;
       background: var(--lf-light-bg);
+    }
+
+    .lf-secondary-cta {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .lf-secondary-cta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--lf-gold);
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .lf-secondary-cta a:hover {
+      transform: translateX(4px);
     }
 
     .lf-ai-crisis-content {
@@ -216,7 +240,7 @@
 
     /* BLOCK 4: Photo Gallery with Puzzle Layout */
     .lf-photo-gallery {
-      padding: 100px 40px;
+      padding: 160px 40px;
       background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
     }
 
@@ -325,9 +349,164 @@
 
     /* Office Library Section */
     .lf-office-library {
-      padding: 100px 40px;
+      padding: 160px 40px;
       max-width: 1100px;
       margin: 0 auto;
+    }
+
+    /* NEW: Group Headshot ROI Section */
+    .lf-group-roi {
+      padding: 160px 40px;
+      background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .lf-group-roi h2 {
+      font-size: clamp(32px, 5vw, 42px);
+      font-weight: 700;
+      margin: 0 0 16px;
+      color: var(--lf-black);
+    }
+
+    .lf-group-roi-subhead {
+      font-size: 20px;
+      color: #6b7280;
+      margin-bottom: 60px;
+    }
+
+    .lf-headshot-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 120px);
+      gap: 24px;
+      justify-content: center;
+      margin: 60px auto;
+    }
+
+    .lf-headshot-circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+      border: 4px solid var(--lf-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .lf-roi-comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      max-width: 900px;
+      margin: 60px auto 0;
+      text-align: left;
+    }
+
+    .lf-roi-box {
+      background: var(--lf-white);
+      border-radius: 12px;
+      padding: 32px;
+      border: 2px solid #e5e5e5;
+    }
+
+    .lf-roi-box h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 0 0 24px;
+      color: var(--lf-black);
+    }
+
+    .lf-roi-box p {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 12px;
+      color: #374151;
+    }
+
+    .lf-roi-box strong {
+      color: var(--lf-gold);
+      font-weight: 700;
+    }
+
+    .lf-roi-callout {
+      background: #faf8f0;
+      border-left: 4px solid var(--lf-gold);
+      padding: 24px 32px;
+      margin-top: 40px;
+      font-size: 18px;
+      line-height: 1.7;
+      text-align: left;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Final Pricing Section */
+    .lf-final-pricing {
+      max-width: 700px;
+      margin: 0 auto 80px;
+      background: linear-gradient(135deg, #faf8f0 0%, #fff 100%);
+      border: 3px solid var(--lf-gold);
+      border-radius: 16px;
+      padding: 48px;
+      text-align: center;
+    }
+
+    .lf-final-pricing h3 {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0 0 32px;
+      color: var(--lf-black);
+    }
+
+    .lf-pricing-main {
+      font-size: 48px;
+      font-weight: 800;
+      color: var(--lf-gold);
+      margin-bottom: 8px;
+    }
+
+    .lf-pricing-per-person {
+      font-size: 20px;
+      color: #6b7280;
+      margin-bottom: 32px;
+    }
+
+    .lf-pricing-includes {
+      list-style: none;
+      padding: 0;
+      margin: 32px 0;
+      text-align: left;
+    }
+
+    .lf-pricing-includes li {
+      padding: 12px 0;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--lf-black);
+      position: relative;
+      padding-left: 28px;
+    }
+
+    .lf-pricing-includes li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--lf-gold);
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    .lf-pricing-note {
+      font-size: 15px;
+      color: #6b7280;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid #e5e5e5;
     }
 
     .lf-library-grid {
@@ -374,15 +553,15 @@
       border-bottom: none;
     }
 
-    /* Headshots Section */
+    /* Headshots Section - SIMPLIFIED */
     .lf-headshots {
-      padding: 100px 40px;
+      padding: 160px 40px;
       background: var(--lf-white);
       text-align: center;
     }
 
     .lf-headshots h2 {
-      font-size: clamp(28px, 4vw, 36px);
+      font-size: clamp(32px, 5vw, 42px);
       font-weight: 700;
       margin: 0 0 24px;
       color: var(--lf-black);
@@ -395,71 +574,118 @@
       color: #374151;
     }
 
-    /* Headshot Value Multiplier */
+    /* Simplified Headshot Value - Only 4 Key Benefits */
     .lf-multiplier {
-      max-width: 900px;
+      max-width: 800px;
       margin: 0 auto;
-      position: relative;
       padding: 60px 20px;
     }
 
     .lf-multiplier-center {
-      width: 160px;
-      height: 160px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--lf-cyan) 0%, #0891b2 100%);
-      border: 4px solid var(--lf-white);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      background: linear-gradient(135deg, var(--lf-gold) 0%, #b8941f 100%);
+      border: 6px solid var(--lf-white);
+      box-shadow: 0 12px 32px rgba(212, 175, 55, 0.3);
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       margin: 0 auto 60px;
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 700;
       color: var(--lf-white);
       text-align: center;
       line-height: 1.3;
+      position: relative;
+    }
+
+    .lf-multiplier-center::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 3px solid var(--lf-gold);
+      opacity: 0.3;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 0;
+      }
+    }
+
+    .lf-multiplier-amount {
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 4px;
+      opacity: 0.9;
     }
 
     .lf-multiplier-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      max-width: 700px;
+      margin: 0 auto;
     }
 
     .lf-multiplier-item {
       background: var(--lf-white);
-      border: 2px solid;
-      border-radius: 12px;
-      padding: 24px;
+      border: 3px solid var(--lf-gold);
+      border-radius: 16px;
+      padding: 32px 24px;
       text-align: center;
-      font-size: 15px;
-      font-weight: 600;
-      transition: transform 0.3s ease;
+      transition: all 0.3s ease;
+      position: relative;
     }
 
     .lf-multiplier-item:hover {
-      transform: translateY(-4px);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(212, 175, 55, 0.2);
     }
 
-    .lf-multiplier-item:nth-child(1),
-    .lf-multiplier-item:nth-child(5) {
-      border-color: var(--lf-gold);
+    .lf-multiplier-number {
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 32px;
+      height: 32px;
+      background: var(--lf-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--lf-black);
     }
 
-    .lf-multiplier-item:nth-child(2),
-    .lf-multiplier-item:nth-child(6) {
-      border-color: var(--lf-cyan);
+    .lf-multiplier-icon {
+      font-size: 36px;
+      margin-bottom: 16px;
     }
 
-    .lf-multiplier-item:nth-child(3),
-    .lf-multiplier-item:nth-child(7) {
-      border-color: var(--lf-magenta);
+    .lf-multiplier-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--lf-black);
     }
 
-    .lf-multiplier-item:nth-child(4),
-    .lf-multiplier-item:nth-child(8) {
-      border-color: var(--lf-gold);
+    .lf-multiplier-desc {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #6b7280;
     }
 
     .lf-headshots-body {
@@ -770,7 +996,7 @@
       }
 
       .lf-multiplier-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
       }
 
       .lf-specs-grid {
@@ -781,6 +1007,45 @@
       .lf-usage-content {
         padding-left: 24px;
         border-left-width: 3px;
+      }
+
+      /* New sections responsive */
+      .lf-headshot-grid {
+        grid-template-columns: repeat(3, 100px);
+        gap: 16px;
+      }
+
+      .lf-headshot-circle {
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+      }
+
+      .lf-roi-comparison {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .lf-roi-callout {
+        padding: 20px 24px;
+        font-size: 16px;
+      }
+
+      .lf-final-pricing {
+        padding: 32px 24px;
+      }
+
+      .lf-pricing-main {
+        font-size: 36px;
+      }
+
+      .lf-group-roi,
+      .lf-office-library,
+      .lf-headshots,
+      .lf-stock-trap,
+      .lf-photo-gallery,
+      .lf-ai-crisis {
+        padding: 80px 24px;
       }
     }
   </style>
@@ -860,6 +1125,11 @@
         <p>The question is: <strong>"If the photos are fake, what else is fake?"</strong></p>
         <p>In a profession built on trust and credibility, fake imagery—whether stock or AI—undermines everything. Clients hire lawyers they trust. Trust starts with authenticity.</p>
       </div>
+
+      <!-- Secondary CTA -->
+      <div class="lf-secondary-cta">
+        <a href="#office-library">See How We Solve This →</a>
+      </div>
     </section>
 
     <!-- BLOCK 4: Photo Gallery - Puzzle Layout -->
@@ -901,7 +1171,7 @@
     </section>
 
     <!-- BLOCK 5: Office Library Details -->
-    <section class="lf-office-library">
+    <section class="lf-office-library" id="office-library">
       <div class="lf-library-grid">
         <div class="lf-library-col">
           <h2>Building the Office Photo Library</h2>
@@ -932,24 +1202,96 @@
       </div>
     </section>
 
+    <!-- NEW BLOCK: Group Headshot ROI -->
+    <section class="lf-group-roi">
+      <h2>Nine Partners, One Session: The Group Headshot Advantage</h2>
+      <p class="lf-group-roi-subhead">When you schedule everyone together, efficiency compounds into serious value</p>
+
+      <!-- 3x3 Headshot Grid -->
+      <div class="lf-headshot-grid">
+        <div class="lf-headshot-circle">👤</div>
+        <div class="lf-headshot-circle">👤</div>
+        <div class="lf-headshot-circle">👤</div>
+        <div class="lf-headshot-circle">👤</div>
+        <div class="lf-headshot-circle">👤</div>
+        <div class="lf-headshot-circle">👤</div>
+        <div class="lf-headshot-circle">👤</div>
+        <div class="lf-headshot-circle">👤</div>
+        <div class="lf-headshot-circle">👤</div>
+      </div>
+
+      <!-- ROI Comparison -->
+      <div class="lf-roi-comparison">
+        <!-- Individual Approach -->
+        <div class="lf-roi-box">
+          <h3>Individual Headshot Economics</h3>
+          <p><strong>Standard solo session:</strong> $350/person</p>
+          <p><strong>Scheduling complexity:</strong> 9 separate bookings</p>
+          <p><strong>Time cost:</strong> 9 different days, 9 setup/breakdown cycles</p>
+          <p><strong>Total individual approach:</strong> $3,150 + coordination headache</p>
+        </div>
+
+        <!-- Group Approach -->
+        <div class="lf-roi-box">
+          <h3>Group Session Economics</h3>
+          <p><strong>Group rate:</strong> $2,750 for 9 people</p>
+          <p><strong>Per-person cost:</strong> $305 (saves $45/person)</p>
+          <p><strong>One scheduling email,</strong> one date, one setup</p>
+          <p><strong>Consistent lighting/backdrop</strong> = cohesive brand presentation</p>
+          <p><strong>Savings:</strong> $400 + immeasurable time saved</p>
+        </div>
+      </div>
+
+      <!-- The Real ROI Callout -->
+      <div class="lf-roi-callout">
+        <strong>The Real ROI Nobody Calculates:</strong><br><br>
+        Each headshot gets used for 3-5 years minimum. That's $61-102/year per person for professional credibility.<br><br>
+        Across 9 partners: <strong>$549-918/year</strong> for your entire leadership team to look polished.<br><br>
+        Compare that to one bad month of client acquisition because your website looks like a 2008 stock photo catalog.<br><br>
+        <em style="font-size: 17px;">"Here's the thing about group sessions: you're not just saving money, you're buying consistency. Nine partners shot on nine different days will look like nine different photographers worked on your site—even if it's the same photographer. Same light, same day, same visual language = one cohesive team."</em>
+      </div>
+    </section>
+
     <!-- BLOCK 6: Headshots -->
     <section class="lf-headshots">
       <h2>The Headshot Investment</h2>
       <p class="lf-headshots-intro">Professional headshots aren't just for the website bio page. They're a business development multiplier.</p>
 
-      <!-- Headshot Value Multiplier -->
+      <!-- Headshot Value Multiplier - SIMPLIFIED TO 4 KEY BENEFITS -->
       <div class="lf-multiplier">
-        <div class="lf-multiplier-center">One<br>Headshot</div>
+        <div class="lf-multiplier-center">
+          One<br>Headshot
+          <div class="lf-multiplier-amount">$250-350</div>
+        </div>
 
         <div class="lf-multiplier-grid">
-          <div class="lf-multiplier-item">Website Bio</div>
-          <div class="lf-multiplier-item">LinkedIn Profile</div>
-          <div class="lf-multiplier-item">Conference Speaker Card</div>
-          <div class="lf-multiplier-item">Media Quotes & Press</div>
-          <div class="lf-multiplier-item">Articles & Publications</div>
-          <div class="lf-multiplier-item">Award Submissions</div>
-          <div class="lf-multiplier-item">Internal Materials</div>
-          <div class="lf-multiplier-item">Business Development Decks</div>
+          <div class="lf-multiplier-item">
+            <div class="lf-multiplier-number">1</div>
+            <div class="lf-multiplier-icon">🌐</div>
+            <div class="lf-multiplier-title">Digital Presence</div>
+            <div class="lf-multiplier-desc">Website bio, LinkedIn profile, email signatures—everywhere your name appears online</div>
+          </div>
+
+          <div class="lf-multiplier-item">
+            <div class="lf-multiplier-number">2</div>
+            <div class="lf-multiplier-icon">🎤</div>
+            <div class="lf-multiplier-title">Speaking & Media</div>
+            <div class="lf-multiplier-desc">Conference speaker cards, media quotes, press releases, podcast appearances</div>
+          </div>
+
+          <div class="lf-multiplier-item">
+            <div class="lf-multiplier-number">3</div>
+            <div class="lf-multiplier-icon">✍️</div>
+            <div class="lf-multiplier-title">Publications & Awards</div>
+            <div class="lf-multiplier-desc">Byline articles, award submissions, industry directories, thought leadership content</div>
+          </div>
+
+          <div class="lf-multiplier-item">
+            <div class="lf-multiplier-number">4</div>
+            <div class="lf-multiplier-icon">💼</div>
+            <div class="lf-multiplier-title">Business Development</div>
+            <div class="lf-multiplier-desc">Pitch decks, proposals, internal materials, client-facing presentations</div>
+          </div>
         </div>
       </div>
 
@@ -1054,6 +1396,29 @@
       <p>Stock photos make you look like everyone else.</p>
       <p>AI photos make you look fake.</p>
       <p>Real photos make you look credible.</p>
+
+      <!-- Final Pricing Section -->
+      <div class="lf-final-pricing">
+        <h3>What 9 People Actually Costs</h3>
+        <div class="lf-pricing-main">$2,750</div>
+        <div class="lf-pricing-per-person">Per Person: $305</div>
+
+        <ul class="lf-pricing-includes">
+          <li>Professional headshots for all 9 partners</li>
+          <li>Multiple angles per person (straight-on, 3/4 profile)</li>
+          <li>High-res files for print + web-optimized versions</li>
+          <li>Consistent lighting and backdrop for cohesive team presentation</li>
+          <li>Turnaround: 3-5 business days</li>
+        </ul>
+
+        <div class="lf-pricing-note">
+          <strong>Optional Add-Ons:</strong><br>
+          Office environment portraits: +$150/person<br>
+          LinkedIn banner images: +$75/person<br><br>
+          Solo sessions available at $350/person. Group booking saves $45/person + eliminates scheduling complexity.
+        </div>
+      </div>
+
       <a href="index.html#contact" class="lf-cta-button">Tell us what you need →</a>
     </section>
 

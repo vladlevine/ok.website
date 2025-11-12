@@ -734,6 +734,46 @@ Home | Event Coverage | Corporate Content | Portfolio | About | Blog | Contact
 
 ---
 
+## 📖 CASE STUDIES
+
+### STRUCTURE: `/case-study-[project-name].html`
+
+**Purpose:** Deep-dive project breakdowns that demonstrate value, build trust, and educate potential clients on ROI
+
+**Law Firm Photography Case Study** (`case-study-law-firm-photography.html`)
+**Keywords:** law firm photography NYC, corporate office photography, professional headshots attorneys
+**Status:** ✅ Live with enhanced design (Nov 2025)
+
+**Sections:**
+1. **Hero** - Project type, scope, client segment
+2. **Problem Statement** - "Stock Photo Problem Nobody Talks About" (56px headline, 160px padding)
+3. **Cost Comparison** - Stock vs Custom (3-year analysis, muted pink vs prominent gold)
+4. **AI Crisis Warning** - Why authenticity matters + secondary CTA to photo library
+5. **Photo Gallery** - Puzzle layout with labeled placeholders (9 items, category labels)
+6. **Office Library Details** - Two-column breakdown of deliverables and usage
+7. **Group Headshot ROI** (NEW) - 3x3 grid, individual vs group economics, real ROI calculation
+8. **Headshot Investment** - Simplified 4-benefit multiplier with icons and numbers
+9. **Usage Rights** - What client owns vs stock restrictions
+10. **ROI Analysis** - Cost per use breakdown
+11. **Impact Results** - Measurable outcomes across channels
+12. **Project Specs** - Technical details grid
+13. **Final Pricing** - Clear $2,750 breakdown with per-person cost and add-ons
+14. **CTA** - Strong closing with transparent next steps
+
+**Design Principles Applied:**
+- 40-50% larger primary headlines (42-56px vs 28-36px)
+- Doubled section padding (160px vs 100px for major sections)
+- Muted warning colors, enhanced premium/gold elements
+- Clear visual hierarchy with weight differentiation
+- Multiple CTAs throughout (secondary after problem, primary at end)
+- Simplified complex sections (4 benefits vs 8 in multiplier)
+- Mobile-first responsive with generous white space
+
+**Nonprofit Golf Event Case Study** (`case-study-nonprofit-golf.html`)
+**Status:** ✅ Live - Video-focused case study
+
+---
+
 ## 📝 NOTES
 
 **This is the final vision.** All pages listed above are what the complete Core Visuals NYC website will include.
@@ -744,9 +784,10 @@ Home | Event Coverage | Corporate Content | Portfolio | About | Blog | Contact
 3. Portfolio page
 4. Contact page
 5. About page
-6. Blog infrastructure
-7. First 3 blog articles
-8. Ongoing: 1-2 articles/month
+6. Case studies (done ✅)
+7. Blog infrastructure
+8. First 3 blog articles
+9. Ongoing: 1-2 articles/month
 
 **Keep Synced With:**
 - CHANGELOG.md (business strategy)

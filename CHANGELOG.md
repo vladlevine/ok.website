@@ -400,6 +400,19 @@ What boutique ACTUALLY means for clients:
 
 ## 🔄 RECENT CHANGES LOG
 
+**November 12, 2025:**
+- ✅ Law Firm Case Study: Major design overhaul based on UX review
+- ✅ Increased primary headline size by 40-50% (42-56px "Stock Photo Problem")
+- ✅ Doubled section padding (160px vs 100px) for better breathing room
+- ✅ Refined comparison section: muted pink/red, enhanced gold premium side
+- ✅ Added NEW "Group Headshot ROI" section with 3x3 grid and economics breakdown
+- ✅ Simplified headshot multiplier from 8 items to 4 key benefits with icons + numbers
+- ✅ Added secondary CTA after AI Crisis section ("See How We Solve This →")
+- ✅ Added final pricing section before main CTA ($2,750 breakdown with per-person cost)
+- ✅ Updated all section padding for consistent white space (line-height 1.7, generous margins)
+- ✅ Enhanced mobile responsive styles for new sections
+- ✅ Updated SITE-STRUCTURE.md with case study documentation
+
 **November 10, 2025:**
 - ✅ Rebrand: Lightroom NYC → Core Visuals NYC
 - ✅ New loading animation (CORE → VISUALS → NYC)
