@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO Meta Tags -->
-  <title>Nonprofit Event Video Case Study | $200K Fundraiser | Core Visuals NYC</title>
-  <meta name="description" content="How event video drove $200K+ in fundraising for a nonprofit golf tournament. Full case study with ROI breakdown and multi-year content strategy.">
+  <title>Nonprofit Event Video Case Study | Fundraising ROI | Core Visuals</title>
+  <meta name="description" content="How a $7,500 nonprofit golf tournament video created $20K+ fundraising potential. See the strategy, deliverables, and ROI math for event video production.">
   <meta name="keywords" content="nonprofit event video, fundraising event videography NYC, golf tournament video production, event video ROI, nonprofit video production, charity event videographer">
 
   <!-- Open Graph -->
@@ -30,191 +30,781 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>">
 
   <style>
-    /* Case Study Specific Styles */
-    .case-study-hero {
-      padding: 180px 0 80px;
-      background: linear-gradient(180deg, #0A0A0A 0%, #1F2937 100%);
-      color: var(--color-white);
+    /* Color Variables */
+    :root {
+      --cs-gold: #D4AF37;
+      --cs-cyan: #06B6D4;
+      --cs-magenta: #EC4899;
+      --cs-black: #000000;
+      --cs-white: #FFFFFF;
+      --cs-dark-bg: #0a0a0a;
+      --cs-light-bg: #fafafa;
+      --cs-light-gray: #a3a3a3;
+      --cs-border-gray: #e5e5e5;
+    }
+
+    /* Reset spacing for case study */
+    .cs-hero, .cs-video-section, .cs-intro-section, .cs-filmed-section,
+    .cs-deliverables-section, .cs-roi-section, .cs-works-section,
+    .cs-different-section, .cs-bottom-line-section, .cs-specs-section,
+    .cs-cta-section, .cs-footer-nav {
+      margin: 0;
+    }
+
+    /* Typography */
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      line-height: 1.7;
+      color: var(--cs-black);
+      background: var(--cs-white);
+    }
+
+    /* BLOCK 1: Hero Section */
+    .cs-hero {
+      background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+      padding: 180px 40px 80px;
       text-align: center;
+      color: var(--cs-white);
     }
 
-    .case-study-hero h1 {
-      font-size: clamp(36px, 6vw, 56px);
-      margin-bottom: 24px;
-    }
-
-    .case-study-meta {
-      display: flex;
-      justify-content: center;
-      gap: 32px;
-      flex-wrap: wrap;
-      margin-top: 32px;
-      opacity: 0.8;
-    }
-
-    .case-study-meta-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .case-study-meta-number {
-      font-size: 32px;
-      font-weight: 700;
-      color: var(--color-gold);
-    }
-
-    .case-study-meta-label {
+    .cs-eyebrow {
+      color: var(--cs-gold);
       font-size: 14px;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .video-container {
-      position: relative;
-      width: 100%;
-      max-width: 1200px;
-      margin: -60px auto 80px;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 40px 100px rgba(0,0,0,0.3);
-    }
-
-    .video-container video {
-      width: 100%;
+      letter-spacing: 0.15em;
+      margin-bottom: 24px;
       display: block;
     }
 
-    .insight-box {
-      background: linear-gradient(135deg, #F4D03F 0%, #E8C547 100%);
-      color: #0A0A0A;
-      padding: 48px;
-      border-radius: 16px;
-      margin: 80px 0;
-    }
-
-    .insight-box h2 {
-      margin-bottom: 24px;
-      font-size: 32px;
-    }
-
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 32px;
-      margin: 60px 0;
-    }
-
-    .stat-card {
-      background: #F9FAFB;
-      padding: 32px;
-      border-radius: 12px;
-      text-align: center;
-      border: 2px solid #E5E7EB;
-    }
-
-    .stat-card-number {
-      font-size: 48px;
-      font-weight: 800;
-      color: var(--color-gold);
-      line-height: 1;
-      margin-bottom: 16px;
-    }
-
-    .stat-card-label {
-      font-size: 16px;
-      color: #374151;
-      font-weight: 600;
-    }
-
-    .roi-breakdown {
-      background: #0A0A0A;
-      color: #FFFFFF;
-      padding: 60px;
-      border-radius: 16px;
-      margin: 80px 0;
-    }
-
-    .roi-breakdown h3 {
-      color: var(--color-gold);
-      margin-bottom: 32px;
-    }
-
-    .roi-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 24px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .roi-item:last-child {
-      border-bottom: none;
-    }
-
-    .roi-label {
-      font-size: 18px;
-    }
-
-    .roi-value {
-      font-size: 28px;
+    .cs-hero h1 {
+      font-size: clamp(36px, 6vw, 48px);
       font-weight: 700;
-      color: var(--color-gold);
+      line-height: 1.2;
+      margin: 0 0 24px;
+      color: var(--cs-white);
     }
 
-    .deliverables-list {
+    .cs-hero-subtitle {
+      font-size: 20px;
+      color: var(--cs-light-gray);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* BLOCK 2: Video Embed */
+    .cs-video-section {
+      background: #f5f5f5;
+      padding: 60px 40px;
+    }
+
+    .cs-video-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: var(--cs-white);
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .cs-video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .cs-video-wrapper video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .cs-video-caption {
+      text-align: center;
+      font-size: 16px;
+      color: #6B7280;
+      margin-top: 24px;
+    }
+
+    /* BLOCK 3: Introduction */
+    .cs-intro-section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px 40px 80px 60px;
+      border-left: 4px solid var(--cs-gold);
+    }
+
+    .cs-intro-section h2 {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      margin: 0 0 32px;
+      color: var(--cs-black);
+    }
+
+    .cs-intro-section p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--cs-black);
+      margin-bottom: 24px;
+    }
+
+    /* BLOCK 4: What We Filmed */
+    .cs-filmed-section {
+      padding: 80px 40px;
+      background: var(--cs-white);
+    }
+
+    .cs-filmed-grid {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      gap: 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .cs-filmed-content h2 {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      margin: 0 0 40px;
+      color: var(--cs-black);
+    }
+
+    .cs-filmed-content h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 32px 0 16px;
+      color: var(--cs-black);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cs-filmed-content h3::before {
+      content: '●';
+      color: var(--cs-gold);
+      font-size: 16px;
+    }
+
+    .cs-filmed-list {
       list-style: none;
       padding: 0;
+      margin: 16px 0;
     }
 
-    .deliverables-list li {
-      padding: 16px 0;
-      padding-left: 40px;
+    .cs-filmed-list li {
+      padding: 8px 0 8px 24px;
       position: relative;
       font-size: 18px;
     }
 
-    .deliverables-list li:before {
-      content: "✓";
+    .cs-filmed-list li::before {
+      content: '−';
       position: absolute;
       left: 0;
-      color: var(--color-gold);
+      color: var(--cs-gold);
       font-weight: 700;
-      font-size: 24px;
     }
 
-    .cta-box {
-      background: linear-gradient(135deg, #1F2937 0%, #0A0A0A 100%);
-      color: #FFFFFF;
-      padding: 80px 48px;
-      border-radius: 16px;
+    .cs-callout {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--cs-gold);
+      margin: 40px 0 0;
+    }
+
+    /* Content Multiplication Diagram */
+    .cs-diagram {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 40px;
+    }
+
+    .cs-diagram-center {
+      background: var(--cs-cyan);
+      color: var(--cs-white);
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      margin: 80px 0;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.3;
+      margin-bottom: 32px;
     }
 
-    .cta-box h2 {
+    .cs-diagram-branches {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      width: 100%;
+    }
+
+    .cs-diagram-box {
+      background: var(--cs-white);
+      border: 2px solid;
+      padding: 16px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .cs-diagram-box:nth-child(odd) {
+      border-color: var(--cs-gold);
+    }
+
+    .cs-diagram-box:nth-child(even) {
+      border-color: var(--cs-magenta);
+    }
+
+    .cs-diagram-box:hover {
+      transform: translateY(-4px);
+    }
+
+    /* BLOCK 5: Deliverables */
+    .cs-deliverables-section {
+      background: var(--cs-light-bg);
+      padding: 80px 40px;
+    }
+
+    .cs-deliverables-section h2 {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 60px;
+      color: var(--cs-black);
+    }
+
+    .cs-deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .cs-deliverable-box {
+      background: var(--cs-white);
+      border: 1px solid var(--cs-border-gray);
+      border-radius: 8px;
+      padding: 40px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .cs-deliverable-box:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .cs-deliverable-icon {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .cs-deliverable-icon.primary {
+      color: var(--cs-gold);
+    }
+
+    .cs-deliverable-icon.bonus {
+      color: var(--cs-cyan);
+    }
+
+    .cs-deliverable-label {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--cs-light-gray);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .cs-deliverable-box h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 0 0 16px;
+      color: var(--cs-black);
+    }
+
+    .cs-deliverable-box p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--cs-black);
+      margin: 0 0 16px;
+    }
+
+    .cs-deliverable-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .cs-deliverable-box ul li {
+      padding: 8px 0 8px 24px;
+      position: relative;
+      font-size: 17px;
+    }
+
+    .cs-deliverable-box ul li::before {
+      content: '●';
+      position: absolute;
+      left: 0;
+      color: var(--cs-magenta);
+      font-size: 12px;
+    }
+
+    /* BLOCK 6: ROI Section */
+    .cs-roi-section {
+      background: var(--cs-white);
+      padding: 80px 40px;
+    }
+
+    .cs-roi-section h2 {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      margin: 0 0 32px;
+      text-align: center;
+      color: var(--cs-black);
+    }
+
+    .cs-roi-intro {
+      font-size: 18px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 60px;
+      color: var(--cs-black);
+    }
+
+    .cs-roi-chart {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 1000px;
+      margin: 0 auto 60px;
+    }
+
+    .cs-roi-column {
+      background: var(--cs-white);
+      border: 2px solid var(--cs-black);
+      border-radius: 8px;
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .cs-roi-column.current {
+      border-color: var(--cs-black);
+    }
+
+    .cs-roi-column.growth-5 {
+      border-color: var(--cs-cyan);
+      background: linear-gradient(180deg, rgba(6, 182, 212, 0.05) 0%, var(--cs-white) 100%);
+    }
+
+    .cs-roi-column.growth-10 {
+      border-color: var(--cs-gold);
+      background: linear-gradient(180deg, rgba(212, 175, 55, 0.05) 0%, var(--cs-white) 100%);
+    }
+
+    .cs-roi-header {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
       margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid;
     }
 
-    .cta-box p {
-      max-width: 700px;
-      margin: 0 auto 48px;
+    .cs-roi-column.current .cs-roi-header {
+      border-color: var(--cs-black);
+    }
+
+    .cs-roi-column.growth-5 .cs-roi-header {
+      border-color: var(--cs-cyan);
+      color: var(--cs-cyan);
+    }
+
+    .cs-roi-column.growth-10 .cs-roi-header {
+      border-color: var(--cs-gold);
+      color: var(--cs-gold);
+    }
+
+    .cs-roi-number {
+      font-size: 36px;
+      font-weight: 700;
+      margin: 16px 0;
+      color: var(--cs-black);
+    }
+
+    .cs-roi-label {
+      font-size: 16px;
+      color: #6B7280;
+      margin: 8px 0;
+    }
+
+    .cs-roi-callout {
+      background: #faf8f0;
+      border-left: 4px solid var(--cs-gold);
+      padding: 32px;
+      border-radius: 8px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .cs-roi-callout p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 0 0 16px;
+      color: var(--cs-black);
+    }
+
+    .cs-roi-callout .highlight {
+      color: var(--cs-magenta);
+      font-weight: 700;
       font-size: 20px;
-      opacity: 0.9;
     }
 
-    @media (max-width: 768px) {
-      .case-study-hero {
-        padding: 140px 20px 60px;
+    /* BLOCK 7: Why It Works */
+    .cs-works-section {
+      background: var(--cs-white);
+      padding: 80px 40px;
+    }
+
+    .cs-works-section h2 {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 60px;
+      color: var(--cs-black);
+    }
+
+    .cs-works-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .cs-work-card {
+      background: var(--cs-white);
+      border: 1px solid var(--cs-border-gray);
+      border-radius: 8px;
+      padding: 32px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .cs-work-card:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .cs-card-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .cs-card-label.problem {
+      color: var(--cs-magenta);
+    }
+
+    .cs-card-label.solution {
+      color: var(--cs-cyan);
+    }
+
+    .cs-card-divider {
+      width: 40px;
+      height: 2px;
+      background: var(--cs-cyan);
+      margin: 16px 0;
+    }
+
+    .cs-card-text {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 12px 0 0;
+      color: var(--cs-black);
+    }
+
+    .cs-card-text.bold {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    /* BLOCK 8: What Makes This Different */
+    .cs-different-section {
+      background: var(--cs-light-bg);
+      padding: 80px 40px;
+    }
+
+    .cs-different-section h2 {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 60px;
+      color: var(--cs-black);
+    }
+
+    .cs-different-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 60px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .cs-different-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .cs-different-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--cs-white);
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .cs-different-icon.gold {
+      background: var(--cs-gold);
+    }
+
+    .cs-different-icon.cyan {
+      background: var(--cs-cyan);
+    }
+
+    .cs-different-icon.magenta {
+      background: var(--cs-magenta);
+    }
+
+    .cs-different-content h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0 0 12px;
+      color: var(--cs-black);
+    }
+
+    .cs-different-content p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 0;
+      color: var(--cs-black);
+    }
+
+    /* BLOCK 9: The Bottom Line */
+    .cs-bottom-line-section {
+      background: #0f0f0f;
+      color: var(--cs-white);
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .cs-bottom-line-section h2 {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      margin: 0 0 32px;
+      color: var(--cs-white);
+    }
+
+    .cs-bottom-line-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cs-bottom-line-content p {
+      font-size: 20px;
+      line-height: 1.7;
+      margin: 24px 0;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .cs-bottom-line-highlight {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--cs-gold);
+      margin: 32px 0;
+      display: block;
+    }
+
+    /* BLOCK 10: Project Specs */
+    .cs-specs-section {
+      background: #f5f5f5;
+      padding: 80px 40px;
+    }
+
+    .cs-specs-section h3 {
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 40px;
+      color: var(--cs-black);
+    }
+
+    .cs-specs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px 60px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .cs-spec-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .cs-spec-label {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--cs-gold);
+    }
+
+    .cs-spec-value {
+      font-size: 18px;
+      color: var(--cs-black);
+      font-weight: 500;
+    }
+
+    /* BLOCK 11: Final CTA */
+    .cs-cta-section {
+      background: var(--cs-white);
+      padding: 100px 40px;
+      text-align: center;
+    }
+
+    .cs-cta-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .cs-cta-content h2 {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      margin: 0 0 32px;
+      color: var(--cs-black);
+    }
+
+    .cs-cta-content p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #6B7280;
+      margin: 0 0 24px;
+    }
+
+    .cs-cta-button {
+      display: inline-block;
+      background: var(--cs-gold);
+      color: var(--cs-white);
+      font-size: 18px;
+      font-weight: 700;
+      padding: 16px 40px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin-top: 24px;
+    }
+
+    .cs-cta-button:hover {
+      background: #c19b2e;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(212, 175, 55, 0.3);
+    }
+
+    /* BLOCK 12: Footer Navigation */
+    .cs-footer-nav {
+      background: var(--cs-white);
+      border-top: 1px solid var(--cs-border-gray);
+      padding: 40px;
+      text-align: center;
+    }
+
+    .cs-footer-nav a {
+      font-size: 14px;
+      color: #6B7280;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .cs-footer-nav a:hover {
+      color: var(--cs-gold);
+    }
+
+    /* Responsive */
+    @media (max-width: 968px) {
+      .cs-hero {
+        padding: 140px 24px 60px;
       }
 
-      .insight-box,
-      .roi-breakdown {
-        padding: 32px 24px;
+      .cs-video-section {
+        padding: 40px 24px;
       }
 
-      .stat-grid {
+      .cs-intro-section {
+        padding: 60px 24px 60px 40px;
+        border-left-width: 3px;
+      }
+
+      .cs-filmed-grid {
         grid-template-columns: 1fr;
+        gap: 60px;
+      }
+
+      .cs-diagram-branches {
+        grid-template-columns: 1fr;
+      }
+
+      .cs-deliverables-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cs-roi-chart {
+        grid-template-columns: 1fr;
+      }
+
+      .cs-works-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cs-different-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .cs-specs-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cs-filmed-section,
+      .cs-deliverables-section,
+      .cs-roi-section,
+      .cs-works-section,
+      .cs-different-section,
+      .cs-bottom-line-section,
+      .cs-specs-section,
+      .cs-cta-section {
+        padding: 60px 24px;
       }
     }
   </style>
@@ -242,285 +832,252 @@
   <!-- Main Content -->
   <main id="main-content">
 
-    <!-- Case Study Hero -->
-    <section class="case-study-hero">
+    <!-- BLOCK 1: Hero Section -->
+    <section class="cs-hero">
       <div class="container">
-        <span class="eyebrow" style="color: var(--color-gold);">CASE STUDY • NONPROFIT</span>
-        <h1>Fundraising Event Video</h1>
-        <p style="font-size: 20px; max-width: 700px; margin: 0 auto; opacity: 0.9;">Full-day golf tournament coverage • 300+ attendees • $200K raised</p>
-
-        <div class="case-study-meta">
-          <div class="case-study-meta-item">
-            <div class="case-study-meta-number">300+</div>
-            <div class="case-study-meta-label">Attendees</div>
-          </div>
-          <div class="case-study-meta-item">
-            <div class="case-study-meta-number">$200K</div>
-            <div class="case-study-meta-label">Raised</div>
-          </div>
-          <div class="case-study-meta-item">
-            <div class="case-study-meta-number">2-3x</div>
-            <div class="case-study-meta-label">ROI Year 1</div>
-          </div>
-        </div>
+        <span class="cs-eyebrow">CASE STUDY • NONPROFIT EVENT VIDEO</span>
+        <h1>Nonprofit Fundraising Event Video</h1>
+        <p class="cs-hero-subtitle">Full-day golf tournament coverage • 300+ attendees • $200K raised</p>
       </div>
     </section>
 
-    <!-- Video -->
-    <div class="container">
-      <div class="video-container">
-        <video controls playsinline>
-          <source src="https://res.cloudinary.com/dtuxu64zp/video/upload/q_auto,f_auto,vc_auto/v1762907480/CGE_golf_1080_logos_WEB_yljzcb.mp4" type="video/mp4">
-        </video>
+    <!-- BLOCK 2: Video Embed -->
+    <section class="cs-video-section">
+      <div class="cs-video-container">
+        <div class="cs-video-wrapper">
+          <video controls playsinline>
+            <source src="https://res.cloudinary.com/dtuxu64zp/video/upload/q_auto,f_auto,vc_auto/v1762907480/CGE_golf_1080_logos_WEB_yljzcb.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
-    </div>
+      <p class="cs-video-caption">1-2 minute promotional video • Stakeholder interviews + Event B-roll</p>
+    </section>
 
-    <!-- Content -->
-    <article class="container-narrow" style="padding: 60px 20px;">
+    <!-- BLOCK 3: Introduction -->
+    <section class="cs-intro-section">
+      <h2>The Insight Most Nonprofits Miss</h2>
+      <p>They think they're buying event documentation. A nice recap video to post and move on. But here's what you're actually creating: <strong>next year's recruitment tool.</strong></p>
+      <p>This was a New Jersey nonprofit's first video initiative. Annual golf outing. 300+ participants. Celebrities, major donors, beneficiaries. Cherry auction. Speeches. The works.</p>
+      <p>They raised over $200,000 that day.</p>
+      <p><strong>The real question wasn't "should we document this?" It was: "How do we get 30 more people to show up next year?"</strong></p>
+    </section>
 
-      <!-- The Insight -->
-      <div class="insight-box">
-        <h2>The Insight Most Nonprofits Miss</h2>
-        <p style="font-size: 19px; line-height: 1.7; margin: 0;">They think they're buying event documentation. A nice recap video to post and move on. But here's what you're actually creating: <strong>next year's recruitment tool.</strong></p>
-      </div>
+    <!-- BLOCK 4: What We Filmed -->
+    <section class="cs-filmed-section">
+      <div class="cs-filmed-grid">
+        <div class="cs-filmed-content">
+          <h2>What We Actually Filmed</h2>
 
-      <!-- The Context -->
-      <section style="margin: 80px 0;">
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A;">This was a New Jersey nonprofit's first video initiative. Annual golf outing. 300+ participants. Celebrities, major donors, beneficiaries. Cherry auction. Speeches. The works.</p>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A;">They raised over $200,000 that day.</p>
-
-        <p style="font-size: 24px; line-height: 1.6; color: #0A0A0A; font-weight: 600; margin-top: 40px;">The real question wasn't "should we document this?" It was: <span style="color: var(--color-gold);">"How do we get 30 more people to show up next year?"</span></p>
-      </section>
-
-      <!-- What We Filmed -->
-      <section style="margin: 80px 0;">
-        <h2 style="font-size: 36px; margin-bottom: 40px;">What We Actually Filmed</h2>
-
-        <div style="background: #F9FAFB; padding: 40px; border-radius: 12px; margin-bottom: 40px;">
-          <h3 style="color: var(--color-gold); margin-bottom: 24px;">The Setup</h3>
-          <ul class="deliverables-list">
+          <h3>The Setup</h3>
+          <ul class="cs-filmed-list">
             <li>2-person crew</li>
             <li>Full-day coverage (arrival through awards)</li>
             <li>10-15 minute interviews with CEO, major donors, beneficiaries</li>
             <li>Continuous B-roll of the entire event</li>
           </ul>
+
+          <h3>The Strategy</h3>
+          <p style="font-size: 18px; margin-bottom: 16px;">We weren't documenting the event. <strong>We were building a content library.</strong></p>
+          <p style="font-size: 18px; margin-bottom: 16px;">Each stakeholder interview created raw material that could be edited multiple ways:</p>
+
+          <p class="cs-callout">One shoot day. Multiple assets for years.</p>
         </div>
 
-        <h3 style="font-size: 28px; margin-bottom: 24px;">The Strategy</h3>
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A;">We weren't documenting the event. <strong>We were building a content library.</strong></p>
+        <div class="cs-diagram">
+          <div class="cs-diagram-center">1 SHOOT DAY</div>
+          <div class="cs-diagram-branches">
+            <div class="cs-diagram-box">Main Video<br>(1-2 min)</div>
+            <div class="cs-diagram-box">Social Testimonials</div>
+            <div class="cs-diagram-box">Website Hero</div>
+            <div class="cs-diagram-box">Grant Materials</div>
+            <div class="cs-diagram-box">Donor Cultivation</div>
+            <div class="cs-diagram-box">Future Campaigns</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-top: 24px;">Each stakeholder interview created raw material that could be edited multiple ways:</p>
-
-        <ul style="font-size: 19px; line-height: 2; color: #0A0A0A; margin-left: 24px; margin-top: 24px;">
-          <li>Main promotional video (1-2 minutes)</li>
-          <li>Social media testimonials</li>
-          <li>Website hero video</li>
-          <li>Donor cultivation clips</li>
-          <li>Grant application footage</li>
-        </ul>
-
-        <p style="font-size: 22px; font-weight: 700; margin-top: 40px; color: var(--color-gold);">One shoot day. Multiple assets for years.</p>
-      </section>
-
-      <!-- The Deliverables -->
-      <section style="margin: 80px 0;">
-        <h2 style="font-size: 36px; margin-bottom: 40px;">The Deliverables</h2>
-
-        <div style="background: linear-gradient(135deg, #06B6D4 0%, #0891B2 100%); color: #FFFFFF; padding: 40px; border-radius: 12px; margin-bottom: 32px;">
-          <h3 style="margin-bottom: 24px;">Primary</h3>
-          <p style="font-size: 19px; line-height: 1.7; margin: 0;">1-2 minute promotional video showing prospective attendees what the event actually feels like</p>
+    <!-- BLOCK 5: Deliverables -->
+    <section class="cs-deliverables-section">
+      <h2>The Deliverables</h2>
+      <div class="cs-deliverables-grid">
+        <div class="cs-deliverable-box">
+          <span class="cs-deliverable-icon primary">1</span>
+          <span class="cs-deliverable-label">Primary</span>
+          <h3>1-2 minute promotional video</h3>
+          <p>Designed to show prospective attendees what the event actually feels like—not sterile corporate footage, but real people, real impact, real energy. This becomes your Year 2 recruitment engine.</p>
         </div>
 
-        <div style="background: #F9FAFB; padding: 40px; border-radius: 12px;">
-          <h3 style="color: #0A0A0A; margin-bottom: 24px;">Bonus</h3>
-          <ul class="deliverables-list">
-            <li>Full raw footage library (interviews + B-roll)</li>
+        <div class="cs-deliverable-box">
+          <span class="cs-deliverable-icon bonus">+</span>
+          <span class="cs-deliverable-label">Bonus</span>
+          <h3>Content Library</h3>
+          <ul>
+            <li>Full raw footage library</li>
             <li>Individual testimonial clips</li>
-            <li>Future edit potential without another shoot</li>
-            <li>Social media content for months</li>
-            <li>Website and email campaign materials</li>
+            <li>Future edit potential</li>
+            <li>Social media content</li>
+            <li>Email campaign materials</li>
           </ul>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- The Math -->
-      <section style="margin: 80px 0;">
-        <h2 style="font-size: 36px; margin-bottom: 40px;">The Math That Matters</h2>
+    <!-- BLOCK 6: ROI Section -->
+    <section class="cs-roi-section">
+      <h2>The Math That Matters</h2>
+      <p class="cs-roi-intro">Here's what nobody talks about: you're not buying a video. You're buying infrastructure that increases attendance, which increases revenue, which funds more mission work.</p>
 
-        <div class="stat-grid">
-          <div class="stat-card">
-            <div class="stat-card-number">$200K</div>
-            <div class="stat-card-label">Raised Annually</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-card-number">300</div>
-            <div class="stat-card-label">Attendees</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-card-number">~$667</div>
-            <div class="stat-card-label">Average Per Person</div>
-          </div>
+      <div class="cs-roi-chart">
+        <div class="cs-roi-column current">
+          <div class="cs-roi-header">CURRENT EVENT</div>
+          <div class="cs-roi-number">$200K</div>
+          <div class="cs-roi-label">raised</div>
+          <div class="cs-roi-number" style="font-size: 28px;">300</div>
+          <div class="cs-roi-label">attendees</div>
+          <div class="cs-roi-number" style="font-size: 28px;">~$667</div>
+          <div class="cs-roi-label">per person</div>
         </div>
 
-        <div style="background: #F9FAFB; padding: 48px; border-radius: 12px; margin-top: 48px;">
-          <h3 style="font-size: 28px; margin-bottom: 32px; color: #0A0A0A;">What a 5% Attendance Increase Means</h3>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-            <span style="font-size: 18px;">15 additional attendees</span>
-            <span style="font-size: 32px; font-weight: 700; color: var(--color-gold);">+$10K</span>
-          </div>
-          <p style="margin: 0; color: #374151;">In additional fundraising capacity</p>
+        <div class="cs-roi-column growth-5">
+          <div class="cs-roi-header">+5% ATTENDANCE</div>
+          <div class="cs-roi-number" style="font-size: 32px;">15</div>
+          <div class="cs-roi-label">more attendees</div>
+          <div class="cs-roi-number">$10,000+</div>
+          <div class="cs-roi-label">additional revenue</div>
         </div>
 
-        <div style="background: linear-gradient(135deg, #EC4899 0%, #DB2777 100%); color: #FFFFFF; padding: 48px; border-radius: 12px; margin-top: 24px;">
-          <h3 style="font-size: 28px; margin-bottom: 32px;">What a 10% Increase Means</h3>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-            <span style="font-size: 18px;">30 additional attendees</span>
-            <span style="font-size: 32px; font-weight: 700; color: #FFFFFF;">+$20K</span>
-          </div>
-          <p style="margin: 0; opacity: 0.9;">In additional fundraising</p>
-        </div>
-
-        <div style="margin-top: 60px; padding: 40px; border-left: 4px solid var(--color-gold); background: #FFFBF0;">
-          <p style="font-size: 20px; line-height: 1.7; color: #0A0A0A; margin: 0;"><strong>But here's what most people miss:</strong></p>
-          <p style="font-size: 19px; line-height: 1.7; color: #0A0A0A; margin-top: 16px;">It's not just <em>how many</em> people show up. It's <em>how they show up</em>.</p>
-
-          <p style="font-size: 19px; line-height: 1.7; color: #0A0A0A; margin-top: 24px;">Someone who watches a 90-second video of last year's event—seeing real beneficiaries, hearing impact stories, feeling the energy—arrives with different expectations.</p>
-
-          <p style="font-size: 19px; line-height: 1.7; color: #0A0A0A; margin-top: 24px;">They're not thinking "golf outing with colleagues." They're thinking <strong>"meaningful day supporting something that matters."</strong></p>
-
-          <p style="font-size: 19px; line-height: 1.7; color: #0A0A0A; margin-top: 24px;">That mindset affects auction bidding, donation amounts, and likelihood of becoming a recurring donor.</p>
-
-          <p style="font-size: 20px; font-weight: 700; color: var(--color-gold); margin-top: 32px;">Conservative estimate: Even without adding attendees, better pre-event communication could drive 5-10% higher contributions from existing donors. That's $10-20K in impact.</p>
-        </div>
-      </section>
-
-      <!-- ROI Breakdown -->
-      <div class="roi-breakdown">
-        <h3 style="font-size: 32px;">The ROI</h3>
-
-        <div class="roi-item">
-          <span class="roi-label">Video investment</span>
-          <span class="roi-value">~$7,500</span>
-        </div>
-
-        <div class="roi-item">
-          <span class="roi-label">Potential Year 1 impact</span>
-          <span class="roi-value">$10-20K</span>
-        </div>
-
-        <div class="roi-item">
-          <span class="roi-label">Multi-year content value</span>
-          <span class="roi-value">3-5x initial investment</span>
+        <div class="cs-roi-column growth-10">
+          <div class="cs-roi-header">+10% ATTENDANCE</div>
+          <div class="cs-roi-number" style="font-size: 32px;">30</div>
+          <div class="cs-roi-label">more attendees</div>
+          <div class="cs-roi-number">$20,000+</div>
+          <div class="cs-roi-label">additional revenue</div>
         </div>
       </div>
 
-      <!-- Why It Works -->
-      <section style="margin: 80px 0;">
-        <h2 style="font-size: 36px; margin-bottom: 40px;">Why Video Actually Works</h2>
-
-        <div style="display: grid; gap: 24px;">
-          <div style="padding: 32px; background: #F9FAFB; border-radius: 12px; border-left: 4px solid #06B6D4;">
-            <p style="font-size: 16px; color: #374151; margin: 0 0 8px 0; font-weight: 600;">PROBLEM</p>
-            <p style="font-size: 19px; color: #0A0A0A; margin: 0;">Nobody reads event invitation emails anymore.</p>
-            <p style="font-size: 16px; color: #06B6D4; margin: 16px 0 0 0; font-weight: 700;">SOLUTION</p>
-            <p style="font-size: 19px; color: #0A0A0A; margin: 8px 0 0 0;">A 90-second video gets opened, watched, forwarded.</p>
-          </div>
-
-          <div style="padding: 32px; background: #F9FAFB; border-radius: 12px; border-left: 4px solid #EC4899;">
-            <p style="font-size: 16px; color: #374151; margin: 0 0 8px 0; font-weight: 600;">PROBLEM</p>
-            <p style="font-size: 19px; color: #0A0A0A; margin: 0;">People don't trust promotional copy.</p>
-            <p style="font-size: 16px; color: #EC4899; margin: 16px 0 0 0; font-weight: 700;">SOLUTION</p>
-            <p style="font-size: 19px; color: #0A0A0A; margin: 8px 0 0 0;">Video of beneficiaries and donors explaining real impact? That's proof.</p>
-          </div>
-
-          <div style="padding: 32px; background: #F9FAFB; border-radius: 12px; border-left: 4px solid var(--color-gold);">
-            <p style="font-size: 16px; color: #374151; margin: 0 0 8px 0; font-weight: 600;">PROBLEM</p>
-            <p style="font-size: 19px; color: #0A0A0A; margin: 0;">FOMO doesn't drive donations. Belonging does.</p>
-            <p style="font-size: 16px; color: var(--color-gold); margin: 16px 0 0 0; font-weight: 700;">SOLUTION</p>
-            <p style="font-size: 19px; color: #0A0A0A; margin: 8px 0 0 0;">Show people being part of the community before they commit.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- What Makes This Different -->
-      <section style="margin: 80px 0;">
-        <h2 style="font-size: 36px; margin-bottom: 40px;">What Makes This Different</h2>
-
-        <div style="display: grid; gap: 32px;">
-          <div>
-            <h3 style="color: var(--color-gold); font-size: 22px; margin-bottom: 12px;">No staged content</h3>
-            <p style="font-size: 19px; line-height: 1.7; color: #0A0A0A;">Everything captured live. Real moments, real people, real impact.</p>
-          </div>
-
-          <div>
-            <h3 style="color: var(--color-gold); font-size: 22px; margin-bottom: 12px;">No photography</h3>
-            <p style="font-size: 19px; line-height: 1.7; color: #0A0A0A;">Budget focused on video only—the asset that would drive next year's recruitment.</p>
-          </div>
-
-          <div>
-            <h3 style="color: var(--color-gold); font-size: 22px; margin-bottom: 12px;">No single-use thinking</h3>
-            <p style="font-size: 19px; line-height: 1.7; color: #0A0A0A;">One shoot created a content library that keeps working long after the event ends.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- The Bottom Line -->
-      <section style="margin: 80px 0; padding: 60px; background: linear-gradient(135deg, #0A0A0A 0%, #1F2937 100%); border-radius: 16px; color: #FFFFFF;">
-        <h2 style="font-size: 36px; margin-bottom: 32px; color: var(--color-gold);">The Bottom Line</h2>
-
-        <p style="font-size: 20px; line-height: 1.8; margin-bottom: 24px;">Most nonprofits treat event video as a nice-to-have luxury.</p>
-
-        <p style="font-size: 24px; line-height: 1.6; font-weight: 700; margin-bottom: 24px; color: var(--color-gold);">But event video isn't documentation. It's infrastructure.</p>
-
-        <p style="font-size: 19px; line-height: 1.8; opacity: 0.9;">It's next year's recruitment foundation. Your donor cultivation tool. Your grant support. Your website's emotional center. Your social content for 12 months.</p>
-
-        <p style="font-size: 24px; font-weight: 700; margin-top: 40px; color: #FFFFFF;">One shoot day. Years of leverage.</p>
-      </section>
-
-      <!-- Project Specs -->
-      <section style="margin: 80px 0;">
-        <h2 style="font-size: 28px; margin-bottom: 32px;">Project Specs</h2>
-
-        <div style="background: #F9FAFB; padding: 40px; border-radius: 12px;">
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
-            <div>
-              <p style="font-size: 14px; color: #374151; margin: 0 0 8px 0; font-weight: 600;">EVENT TYPE</p>
-              <p style="font-size: 18px; color: #0A0A0A; margin: 0;">Nonprofit fundraising golf tournament</p>
-            </div>
-            <div>
-              <p style="font-size: 14px; color: #374151; margin: 0 0 8px 0; font-weight: 600;">SCALE</p>
-              <p style="font-size: 18px; color: #0A0A0A; margin: 0;">300+ attendees, $200K raised</p>
-            </div>
-            <div>
-              <p style="font-size: 14px; color: #374151; margin: 0 0 8px 0; font-weight: 600;">COVERAGE</p>
-              <p style="font-size: 18px; color: #0A0A0A; margin: 0;">Full day, 2-person crew</p>
-            </div>
-            <div>
-              <p style="font-size: 14px; color: #374151; margin: 0 0 8px 0; font-weight: 600;">DELIVERABLES</p>
-              <p style="font-size: 18px; color: #0A0A0A; margin: 0;">Final video (1-2 min) + raw footage library</p>
-            </div>
-            <div>
-              <p style="font-size: 14px; color: #374151; margin: 0 0 8px 0; font-weight: 600;">INVESTMENT</p>
-              <p style="font-size: 18px; color: #0A0A0A; margin: 0;">$7,500-8,000</p>
-            </div>
-            <div>
-              <p style="font-size: 14px; color: #374151; margin: 0 0 8px 0; font-weight: 600;">ROI POTENTIAL</p>
-              <p style="font-size: 18px; color: #0A0A0A; margin: 0;">2-3x Year 1, 3-5x multi-year</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </article>
-
-    <!-- CTA Section -->
-    <section class="container" style="padding: 0 20px 120px;">
-      <div class="cta-box">
-        <h2 style="font-size: 40px; margin-bottom: 24px;">Need Event Video That Actually Drives Results?</h2>
-        <p>Most videographers film your event, edit a recap, call it done. We build content libraries that keep working long after the event ends.</p>
-        <a href="index.html#contact" class="btn" style="font-size: 18px; padding: 18px 40px; background: var(--color-gold); color: #0A0A0A; font-weight: 700;">Tell us about your event →</a>
+      <div class="cs-roi-callout">
+        <p><span class="highlight">Video Investment:</span> ~$7,500</p>
+        <p><span class="highlight">Potential Year 1 Impact:</span> $10-20K</p>
+        <p><span class="highlight">Multi-year value:</span> 3-5x initial investment</p>
       </div>
+    </section>
+
+    <!-- BLOCK 7: Why It Works -->
+    <section class="cs-works-section">
+      <h2>Why Video Actually Works</h2>
+      <div class="cs-works-grid">
+        <div class="cs-work-card">
+          <span class="cs-card-label problem">PROBLEM</span>
+          <p class="cs-card-text bold">Nobody reads event invitation emails anymore.</p>
+          <div class="cs-card-divider"></div>
+          <span class="cs-card-label solution">SOLUTION</span>
+          <p class="cs-card-text">A 90-second video gets opened, watched, forwarded.</p>
+        </div>
+
+        <div class="cs-work-card">
+          <span class="cs-card-label problem">PROBLEM</span>
+          <p class="cs-card-text bold">People don't trust promotional copy.</p>
+          <div class="cs-card-divider"></div>
+          <span class="cs-card-label solution">SOLUTION</span>
+          <p class="cs-card-text">Video of beneficiaries and donors explaining real impact? That's proof.</p>
+        </div>
+
+        <div class="cs-work-card">
+          <span class="cs-card-label problem">PROBLEM</span>
+          <p class="cs-card-text bold">FOMO doesn't drive donations. Belonging does.</p>
+          <div class="cs-card-divider"></div>
+          <span class="cs-card-label solution">SOLUTION</span>
+          <p class="cs-card-text">Show people being part of the community before they commit.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCK 8: What Makes This Different -->
+    <section class="cs-different-section">
+      <h2>What Makes This Different</h2>
+      <div class="cs-different-grid">
+        <div class="cs-different-item">
+          <div class="cs-different-icon gold">✓</div>
+          <div class="cs-different-content">
+            <h3>No staged content.</h3>
+            <p>Everything captured live. Real moments, real people, real impact.</p>
+          </div>
+        </div>
+
+        <div class="cs-different-item">
+          <div class="cs-different-icon cyan">✓</div>
+          <div class="cs-different-content">
+            <h3>No photography.</h3>
+            <p>Budget focused on video only—the asset that would drive next year's recruitment.</p>
+          </div>
+        </div>
+
+        <div class="cs-different-item">
+          <div class="cs-different-icon magenta">✓</div>
+          <div class="cs-different-content">
+            <h3>No single-use thinking.</h3>
+            <p>One shoot created a content library that keeps working long after the event ends.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCK 9: The Bottom Line -->
+    <section class="cs-bottom-line-section">
+      <div class="cs-bottom-line-content">
+        <h2>The Bottom Line</h2>
+        <p>Most nonprofits treat event video as a nice-to-have luxury.</p>
+        <span class="cs-bottom-line-highlight">But event video isn't documentation. It's infrastructure.</span>
+        <p>It's next year's recruitment foundation. Your donor cultivation tool. Your grant support. Your website's emotional center. Your social content for 12 months.</p>
+        <p style="font-size: 24px; font-weight: 700; margin-top: 40px; color: var(--cs-white);">One shoot day. Years of leverage.</p>
+      </div>
+    </section>
+
+    <!-- BLOCK 10: Project Specs -->
+    <section class="cs-specs-section">
+      <h3>Project Specs</h3>
+      <div class="cs-specs-grid">
+        <div class="cs-spec-item">
+          <span class="cs-spec-label">EVENT TYPE</span>
+          <span class="cs-spec-value">Nonprofit fundraising golf tournament</span>
+        </div>
+        <div class="cs-spec-item">
+          <span class="cs-spec-label">SCALE</span>
+          <span class="cs-spec-value">300+ attendees, $200K raised</span>
+        </div>
+        <div class="cs-spec-item">
+          <span class="cs-spec-label">COVERAGE</span>
+          <span class="cs-spec-value">Full day, 2-person crew</span>
+        </div>
+        <div class="cs-spec-item">
+          <span class="cs-spec-label">DELIVERABLES</span>
+          <span class="cs-spec-value">Final video (1-2 min) + raw footage library</span>
+        </div>
+        <div class="cs-spec-item">
+          <span class="cs-spec-label">INVESTMENT</span>
+          <span class="cs-spec-value">$7,500-8,000</span>
+        </div>
+        <div class="cs-spec-item">
+          <span class="cs-spec-label">ROI POTENTIAL</span>
+          <span class="cs-spec-value">2-3x Year 1, 3-5x multi-year</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCK 11: Final CTA -->
+    <section class="cs-cta-section">
+      <div class="cs-cta-content">
+        <h2>Need Event Video That Actually Drives Results?</h2>
+        <p>Most videographers film your event, edit a recap, call it done.</p>
+        <p>We build content libraries that keep working long after the event ends.</p>
+        <a href="index.html#contact" class="cs-cta-button">Tell us about your event →</a>
+      </div>
+    </section>
+
+    <!-- BLOCK 12: Footer Navigation -->
+    <section class="cs-footer-nav">
+      <a href="index.html#work">← Back to Portfolio</a>
     </section>
 
   </main>
@@ -529,8 +1086,6 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-
-        <!-- Column 1: About -->
         <div>
           <h4>Core Visuals NYC</h4>
           <p style="max-width: 320px; line-height: 1.8;">Event video and photography for NYC businesses. Corporate events, conferences, brand content. Professional, transparent, reliable.</p>
@@ -540,7 +1095,6 @@
           </p>
         </div>
 
-        <!-- Column 2: Services -->
         <div>
           <h4>Services</h4>
           <a href="index.html#services">Event Video + Photo</a>
@@ -549,7 +1103,6 @@
           <a href="index.html#work">Portfolio</a>
         </div>
 
-        <!-- Column 3: Company -->
         <div>
           <h4>Company</h4>
           <a href="about.html">About</a>
@@ -558,7 +1111,6 @@
           <a href="mailto:contact@corevisuals.nyc">Email Us</a>
         </div>
 
-        <!-- Column 4: Connect -->
         <div>
           <h4>Connect</h4>
           <a href="https://www.linkedin.com/in/vladlevine/" target="_blank" rel="noopener">LinkedIn</a>
@@ -568,7 +1120,6 @@
             Mon-Fri: 9am - 6pm EST
           </p>
         </div>
-
       </div>
 
       <div class="footer-bottom">
@@ -604,6 +1155,29 @@
       } else {
         header.classList.remove('scrolled');
       }
+    });
+
+    // Scroll animations (optional subtle fade-ins)
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Add fade-in animation to key sections
+    document.querySelectorAll('.cs-intro-section, .cs-filmed-section, .cs-deliverables-section, .cs-roi-section, .cs-works-section, .cs-different-section, .cs-bottom-line-section, .cs-cta-section').forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(section);
     });
   </script>
 
