@@ -133,18 +133,9 @@
     .cs-intro-section {
       max-width: 800px;
       margin: 0 auto;
-      padding: 80px 40px 80px 60px;
-      position: relative;
-    }
-
-    .cs-intro-section::before {
-      content: '';
-      position: absolute;
-      left: 40px;
-      top: 80px;
-      width: 4px;
-      height: 200px;
-      background: var(--cs-gold);
+      padding: 80px 40px;
+      border-left: 4px solid var(--cs-gold);
+      padding-left: 60px;
     }
 
     .cs-intro-section h2 {
@@ -167,12 +158,10 @@
       background: var(--cs-white);
     }
 
-    .cs-filmed-grid {
-      display: grid;
-      grid-template-columns: 60% 40%;
-      gap: 80px;
-      max-width: 1200px;
+    .cs-filmed-content {
+      max-width: 800px;
       margin: 0 auto;
+      text-align: center;
     }
 
     .cs-filmed-content h2 {
@@ -190,6 +179,7 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      justify-content: center;
     }
 
     .cs-filmed-content h3::before {
@@ -202,6 +192,8 @@
       list-style: none;
       padding: 0;
       margin: 16px 0;
+      text-align: left;
+      display: inline-block;
     }
 
     .cs-filmed-list li {
@@ -218,11 +210,11 @@
       font-weight: 700;
     }
 
-    .cs-callout {
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--cs-gold);
-      margin: 40px 0 0;
+    .cs-deliverables-text {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-top: 32px;
+      text-align: center;
     }
 
     /* Content Multiplication Diagram */
@@ -772,20 +764,11 @@
       }
 
       .cs-intro-section {
-        padding: 60px 24px 60px 40px;
+        padding: 60px 24px;
+        padding-left: 40px;
+        border-left-width: 3px;
       }
 
-      .cs-intro-section::before {
-        left: 24px;
-        top: 60px;
-        width: 3px;
-        height: 150px;
-      }
-
-      .cs-filmed-grid {
-        grid-template-columns: 1fr;
-        gap: 60px;
-      }
 
       .cs-diagram-branches {
         grid-template-columns: 1fr;
@@ -880,26 +863,22 @@
 
     <!-- BLOCK 4: What We Filmed -->
     <section class="cs-filmed-section">
-      <div class="cs-filmed-grid">
-        <div class="cs-filmed-content">
-          <h2>What We Actually Filmed</h2>
+      <div class="cs-filmed-content">
+        <h2>What We Actually Filmed</h2>
 
-          <h3>The Setup</h3>
-          <ul class="cs-filmed-list">
-            <li>2-person crew</li>
-            <li>Full-day coverage (arrival through awards)</li>
-            <li>10-15 minute interviews with CEO, major donors, beneficiaries</li>
-            <li>Continuous B-roll of the entire event</li>
-          </ul>
+        <h3>The Setup</h3>
+        <ul class="cs-filmed-list">
+          <li>2-person crew</li>
+          <li>Full-day coverage (arrival through awards)</li>
+          <li>10-15 minute interviews with CEO, major donors, beneficiaries</li>
+          <li>Continuous B-roll of the entire event</li>
+        </ul>
 
-          <h3>The Strategy</h3>
-          <p style="font-size: 18px; margin-bottom: 16px;">We weren't documenting the event. <strong>We were building a content library.</strong></p>
-          <p style="font-size: 18px; margin-bottom: 16px;">Each stakeholder interview created raw material that could be edited multiple ways:</p>
+        <h3>The Strategy</h3>
+        <p style="font-size: 18px; margin-bottom: 16px;">We weren't documenting the event. <strong>We were building a content library.</strong></p>
+        <p style="font-size: 18px; margin-bottom: 16px;">Each stakeholder interview created raw material that could be edited multiple ways:</p>
 
-          <p class="cs-callout">One shoot day. Multiple assets for years.</p>
-        </div>
-
-        <p style="font-size: 18px; line-height: 1.8; margin-top: 32px;">
+        <p class="cs-deliverables-text">
           <strong>1 SHOOT DAY</strong> → Main Video (1-2 min) ~ Social Testimonials ~ Website Hero ~ Grant Materials ~ Donor Cultivation ~ Future Campaigns
         </p>
       </div>
