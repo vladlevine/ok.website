@@ -67,13 +67,13 @@
 
     .service-gallery-item {
       aspect-ratio: 16/10;
-      background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(212, 175, 55, 0.2) 100%);
+      background: linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(6, 182, 212, 0.15) 100%);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 48px;
-      border: 2px solid rgba(212, 175, 55, 0.3);
+      border: 2px solid rgba(236, 72, 153, 0.3);
       transition: all 0.3s ease;
     }
 
@@ -92,7 +92,7 @@
 
     .project-card {
       background: #FFFFFF;
-      border: 2px solid #D4AF37;
+      border: 2px solid #EC4899;
       border-radius: 16px;
       padding: 40px;
       transition: all 0.3s ease;
@@ -100,7 +100,7 @@
 
     .project-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 16px 48px rgba(212, 175, 55, 0.2);
+      box-shadow: 0 16px 48px rgba(236, 72, 153, 0.2);
     }
 
     .project-card h3 {
@@ -130,7 +130,7 @@
 
     .project-card ul li:before {
       content: "→ ";
-      color: #D4AF37;
+      color: #EC4899;
       font-weight: 700;
       margin-right: 8px;
     }
@@ -184,6 +184,17 @@
       <p class="service-hero-subtitle">Special events, product launches, multi-day conferences. Need something specific? We'll build a package that fits your exact needs. Fixed pricing, no surprises.</p>
     </section>
 
+    <!-- Positioning Statement -->
+    <section class="service-section" style="padding: 80px 40px;">
+      <div class="container">
+        <div style="max-width: 900px; margin: 0 auto; text-align: center; background: linear-gradient(135deg, rgba(236, 72, 153, 0.05) 0%, rgba(6, 182, 212, 0.05) 100%); padding: 48px; border-radius: 16px; border: 2px solid #EC4899;">
+          <p style="font-size: 22px; line-height: 1.7; color: #0A0A0A; margin: 0;">
+            <strong style="font-weight: 700; color: #0A0A0A;">Custom projects in NYC that actually make sense.</strong> You tell us what you need (executive portraits, ongoing content, special announcements), we quote a fixed price that includes all deliverables, and you get everything on schedule. <strong style="color: #EC4899;">No hourly calculations, no surprise add-ons, no agency markup.</strong> Custom projects start at $2,500 because that's what it costs to do this right.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Portfolio Gallery -->
     <section class="service-section" style="background: #F9FAFB;">
       <div class="container">
@@ -204,47 +215,57 @@
     <!-- Project Types -->
     <section class="service-section">
       <div class="container">
-        <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 24px;">What We Can Do</h2>
-        <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto 60px;">These are the most common custom requests. If you need something else, just ask.</p>
+        <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 24px;">Custom Project Types</h2>
+        <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto 20px;"><strong style="color: #EC4899;">Fixed project pricing, not hourly rates.</strong></p>
+        <p style="text-align: center; font-size: 17px; color: #6B7280; max-width: 700px; margin: 0 auto 60px;">These are the most common custom requests. If you need something else, just ask.</p>
 
         <div class="project-types">
-          <!-- Product Launches -->
+          <!-- Executive Portrait Sessions -->
           <div class="project-card">
-            <h3>Product Launches</h3>
-            <p>Coverage for your product launch event, press conferences, and demo days. Get both video highlights and professional photos for your press kit.</p>
+            <h3>Executive Portrait Sessions</h3>
+            <p>Half-day creative sessions for C-suite executives, board members, and key leadership. Premium headshots and environmental portraits that command presence.</p>
             <ul>
-              <li>Event coverage</li>
-              <li>Product demos on camera</li>
-              <li>Founder interviews</li>
+              <li>Half-day creative session</li>
+              <li>Multiple setups & backgrounds</li>
+              <li>Professional styling guidance</li>
+              <li>10-15 final edited portraits</li>
+              <li>Web, print & PR ready files</li>
+            </ul>
+            <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid #E5E7EB;">
+              <p style="font-size: 18px; font-weight: 700; color: #EC4899; margin: 0;">Starting at $2,500</p>
+            </div>
+          </div>
+
+          <!-- Recruitment & Culture Content -->
+          <div class="project-card">
+            <h3>Recruitment & Culture Content</h3>
+            <p>Ongoing monthly packages for companies that need regular fresh content for recruiting, social media, and internal communications.</p>
+            <ul>
+              <li>Monthly on-location shoots</li>
+              <li>Team photos & candid moments</li>
+              <li>Office culture documentation</li>
+              <li>Social media ready content</li>
+              <li>Consistent visual brand</li>
+            </ul>
+            <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid #E5E7EB;">
+              <p style="font-size: 18px; font-weight: 700; color: #EC4899; margin: 0;">Starting at $3,500/month</p>
+            </div>
+          </div>
+
+          <!-- Partnership Announcements -->
+          <div class="project-card">
+            <h3>Partnership Announcements</h3>
+            <p>Merger photos, new office openings, ribbon cuttings, partnership signings. Professional documentation for your major corporate milestones.</p>
+            <ul>
+              <li>Event coverage (2-4 hours)</li>
+              <li>Key moment documentation</li>
+              <li>Executive group photos</li>
               <li>Press-ready materials</li>
-              <li>Social media clips</li>
+              <li>Same-day preview delivery</li>
             </ul>
-          </div>
-
-          <!-- Multi-Day Events -->
-          <div class="project-card" style="border-color: #06B6D4;">
-            <h3>Multi-Day Conferences</h3>
-            <p>Full coverage across multiple days, stages, and sessions. We'll document your entire event from setup to teardown.</p>
-            <ul>
-              <li>Multi-day shooting</li>
-              <li>Multiple camera operators</li>
-              <li>Session recordings</li>
-              <li>Highlight reels</li>
-              <li>Daily photo galleries</li>
-            </ul>
-          </div>
-
-          <!-- Special Events -->
-          <div class="project-card" style="border-color: #EC4899;">
-            <h3>Special Events</h3>
-            <p>Award ceremonies, galas, anniversaries, groundbreakings. One-time events that need professional documentation.</p>
-            <ul>
-              <li>Full event coverage</li>
-              <li>VIP photography</li>
-              <li>Award presentations</li>
-              <li>Speech recordings</li>
-              <li>Fast turnaround</li>
-            </ul>
+            <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid #E5E7EB;">
+              <p style="font-size: 18px; font-weight: 700; color: #EC4899; margin: 0;">Starting at $2,500</p>
+            </div>
           </div>
         </div>
       </div>
@@ -281,24 +302,24 @@
     <!-- Pricing Guide -->
     <section class="service-section">
       <div class="container">
-        <div style="max-width: 800px; margin: 0 auto; background: #FFFFFF; border: 2px solid #D4AF37; border-radius: 16px; padding: 48px; text-align: center;">
-          <h2 style="font-size: clamp(28px, 4vw, 38px); margin-bottom: 20px; color: #0A0A0A;">Custom Project Pricing</h2>
-          <p style="font-size: 19px; color: #6B7280; line-height: 1.7; margin-bottom: 32px;">Most custom projects range from <strong style="color: #0A0A0A;">$5,000 - $25,000</strong> depending on scope, complexity, and deliverables. You'll always get a fixed quote upfront—no hourly billing, no surprise charges.</p>
+        <div style="max-width: 800px; margin: 0 auto; background: #FFFFFF; border: 2px solid #EC4899; border-radius: 16px; padding: 48px; text-align: center;">
+          <h2 style="font-size: clamp(28px, 4vw, 38px); margin-bottom: 20px; color: #0A0A0A;">Typical Project Ranges</h2>
+          <p style="font-size: 19px; color: #6B7280; line-height: 1.7; margin-bottom: 32px;">Most custom projects range from <strong style="color: #0A0A0A;">$2,500 - $15,000</strong> depending on scope, complexity, and deliverables. <strong style="color: #EC4899;">Fixed project pricing, not hourly rates.</strong> You'll always get a fixed quote upfront.</p>
           <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; text-align: center;">
             <div>
-              <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #EC4899; margin-bottom: 8px;">SMALL</div>
+              <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #EC4899; margin-bottom: 8px;">BASIC</div>
+              <div style="font-size: 28px; font-weight: 800; color: #0A0A0A;">$2.5K-5K</div>
+              <div style="font-size: 14px; color: #6B7280; margin-top: 8px;">Executive portraits<br>Small announcements</div>
+            </div>
+            <div>
+              <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #EC4899; margin-bottom: 8px;">STANDARD</div>
               <div style="font-size: 28px; font-weight: 800; color: #0A0A0A;">$5K-10K</div>
-              <div style="font-size: 14px; color: #6B7280; margin-top: 8px;">Single-day events<br>Basic coverage</div>
+              <div style="font-size: 14px; color: #6B7280; margin-top: 8px;">Monthly packages<br>Full-day coverage</div>
             </div>
             <div>
-              <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #D4AF37; margin-bottom: 8px;">MEDIUM</div>
-              <div style="font-size: 28px; font-weight: 800; color: #0A0A0A;">$10K-18K</div>
-              <div style="font-size: 14px; color: #6B7280; margin-top: 8px;">Multi-day events<br>Full deliverables</div>
-            </div>
-            <div>
-              <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #06B6D4; margin-bottom: 8px;">LARGE</div>
-              <div style="font-size: 28px; font-weight: 800; color: #0A0A0A;">$18K-25K+</div>
-              <div style="font-size: 14px; color: #6B7280; margin-top: 8px;">Complex projects<br>Multiple teams</div>
+              <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #EC4899; margin-bottom: 8px;">PREMIUM</div>
+              <div style="font-size: 28px; font-weight: 800; color: #0A0A0A;">$10K-15K+</div>
+              <div style="font-size: 14px; color: #6B7280; margin-top: 8px;">Multi-day projects<br>Complex productions</div>
             </div>
           </div>
         </div>

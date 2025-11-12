@@ -67,13 +67,13 @@
 
     .service-gallery-item {
       aspect-ratio: 16/10;
-      background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(212, 175, 55, 0.2) 100%);
+      background: linear-gradient(135deg, rgba(100, 116, 139, 0.15) 0%, rgba(148, 163, 184, 0.15) 100%);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 48px;
-      border: 2px solid rgba(236, 72, 153, 0.3);
+      border: 2px solid rgba(100, 116, 139, 0.3);
       transition: all 0.3s ease;
     }
 
@@ -92,7 +92,7 @@
 
     .package-card {
       background: #FFFFFF;
-      border: 2px solid #EC4899;
+      border: 2px solid #64748B;
       border-radius: 16px;
       padding: 40px;
       transition: all 0.3s ease;
@@ -100,7 +100,7 @@
 
     .package-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 16px 48px rgba(236, 72, 153, 0.2);
+      box-shadow: 0 16px 48px rgba(100, 116, 139, 0.2);
     }
 
     .package-card h3 {
@@ -113,7 +113,7 @@
     .package-price {
       font-size: 38px;
       font-weight: 800;
-      color: #EC4899;
+      color: #64748B;
       margin-bottom: 20px;
     }
 
@@ -132,7 +132,7 @@
 
     .package-features li:before {
       content: "✓ ";
-      color: #EC4899;
+      color: #64748B;
       font-weight: 700;
       margin-right: 8px;
     }
@@ -186,6 +186,17 @@
       <p class="service-hero-subtitle">Team headshots, office photography, brand videos. The visual content your marketing team actually needs—delivered on time, on budget, without the agency runaround.</p>
     </section>
 
+    <!-- Positioning Statement -->
+    <section class="service-section" style="padding: 80px 40px;">
+      <div class="container">
+        <div style="max-width: 900px; margin: 0 auto; text-align: center; background: linear-gradient(135deg, rgba(100, 116, 139, 0.05) 0%, rgba(148, 163, 184, 0.1) 100%); padding: 48px; border-radius: 16px; border: 2px solid #64748B;">
+          <p style="font-size: 22px; line-height: 1.7; color: #0A0A0A; margin: 0;">
+            <strong style="font-weight: 700; color: #0A0A0A;">Corporate content in NYC that actually makes sense.</strong> You tell us how many people need headshots or what type of brand video you need, we quote a fixed price that includes all deliverables, and you get everything within 2-20 days. <strong style="color: #64748B;">No hourly calculations, no surprise add-ons, no agency markup.</strong> Team headshots start at $1,250 (5 people) because that's what it costs to do this right.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- Portfolio Gallery -->
     <section class="service-section" style="background: #F9FAFB;">
       <div class="container">
@@ -207,14 +218,15 @@
     <section class="service-section">
       <div class="container">
         <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 24px;">Content Packages</h2>
-        <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto 60px;">Fixed pricing. Fast turnaround. No surprises.</p>
+        <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto 20px;"><strong style="color: #64748B;">Fixed project pricing, not hourly rates.</strong></p>
+        <p style="text-align: center; font-size: 17px; color: #6B7280; max-width: 700px; margin: 0 auto 60px;">Volume discounts automatically applied. All packages include commercial usage rights.</p>
 
-        <div class="package-grid">
+        <div class="package-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 1100px;">
           <!-- Headshots Package -->
-          <div class="package-card">
+          <div class="package-card" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto; width: 100%;">
             <h3>Team Headshots</h3>
-            <div class="package-price">From $150/person</div>
-            <p style="color: #6B7280; margin-bottom: 28px;">Professional headshots for your entire team</p>
+            <div class="package-price">$1,250 <span style="font-size: 20px; font-weight: 600; color: #6B7280;">(first 5 people)</span></div>
+            <p style="color: #6B7280; margin-bottom: 28px;">Professional headshots with automatic volume discounts</p>
             <ul class="package-features">
               <li>On-location or studio</li>
               <li>3-5 looks per person</li>
@@ -222,37 +234,62 @@
               <li>Web & print ready files</li>
               <li>2-day delivery</li>
             </ul>
-            <a href="index.html#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 20px; background: #EC4899;">Get Quote</a>
+
+            <!-- Progressive Pricing Breakdown -->
+            <div style="margin-top: 32px; padding-top: 28px; border-top: 2px solid #E5E7EB;">
+              <h4 style="font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #64748B; margin-bottom: 16px;">Volume Pricing</h4>
+              <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; text-align: center;">
+                <div>
+                  <div style="font-size: 12px; color: #6B7280; margin-bottom: 4px;">First 5</div>
+                  <div style="font-size: 20px; font-weight: 700; color: #0A0A0A;">$250<span style="font-size: 14px; font-weight: 500;">/ea</span></div>
+                </div>
+                <div>
+                  <div style="font-size: 12px; color: #6B7280; margin-bottom: 4px;">Next 5 (6-10)</div>
+                  <div style="font-size: 20px; font-weight: 700; color: #0A0A0A;">$200<span style="font-size: 14px; font-weight: 500;">/ea</span></div>
+                </div>
+                <div>
+                  <div style="font-size: 12px; color: #6B7280; margin-bottom: 4px;">11-20</div>
+                  <div style="font-size: 20px; font-weight: 700; color: #0A0A0A;">$150<span style="font-size: 14px; font-weight: 500;">/ea</span></div>
+                </div>
+                <div>
+                  <div style="font-size: 12px; color: #6B7280; margin-bottom: 4px;">20+</div>
+                  <div style="font-size: 20px; font-weight: 700; color: #0A0A0A;">$125<span style="font-size: 14px; font-weight: 500;">/ea</span></div>
+                </div>
+              </div>
+              <p style="font-size: 14px; color: #6B7280; margin-top: 16px; text-align: center; font-style: italic;">Example: 10 people = $1,250 + $1,000 = $2,250 total</p>
+            </div>
+
+            <a href="index.html#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 28px; background: #64748B;">Get Quote</a>
           </div>
 
           <!-- Office Photography -->
-          <div class="package-card" style="border-color: #D4AF37;">
+          <div class="package-card">
             <h3>Office Photography</h3>
-            <div class="package-price" style="color: #D4AF37;">From $2,500</div>
+            <div class="package-price">$2,500</div>
             <p style="color: #6B7280; margin-bottom: 28px;">Workspace photos that show your culture</p>
             <ul class="package-features">
-              <li>Full office coverage</li>
+              <li>Half-day on location</li>
               <li>Team candids & workspace shots</li>
               <li>100-150 edited images</li>
               <li>Commercial usage rights</li>
               <li>5-day delivery</li>
             </ul>
-            <a href="index.html#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 20px; background: #D4AF37; color: #0A0A0A;">Get Quote</a>
+            <a href="index.html#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 20px; background: #64748B;">Get Quote</a>
           </div>
 
           <!-- Brand Video Package -->
-          <div class="package-card" style="border-color: #06B6D4;">
+          <div class="package-card">
             <h3>Brand Video</h3>
-            <div class="package-price" style="color: #06B6D4;">From $5,500</div>
+            <div class="package-price">$5,500</div>
             <p style="color: #6B7280; margin-bottom: 28px;">Tell your story with professional video</p>
             <ul class="package-features">
-              <li>Half or full-day shoot</li>
+              <li>Half-day shoot</li>
               <li>2-3 minute brand video</li>
               <li>Interview + B-roll footage</li>
               <li>Professional editing & graphics</li>
               <li>20-day delivery</li>
             </ul>
-            <a href="index.html#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 20px; background: #06B6D4;">Get Quote</a>
+            <a href="index.html#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 20px; background: #64748B;">Get Quote</a>
           </div>
         </div>
       </div>
@@ -265,22 +302,22 @@
         <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 800px; margin: 0 auto 60px;">The content you need for your website, LinkedIn, press kits, and marketing materials.</p>
 
         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; max-width: 1000px; margin: 0 auto;">
-          <div style="background: #FFFFFF; padding: 32px; border-radius: 12px; border: 2px solid #EC4899;">
+          <div style="background: #FFFFFF; padding: 32px; border-radius: 12px; border: 2px solid #64748B;">
             <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 16px; color: #0A0A0A;">Website Updates</h3>
             <p style="color: #6B7280; line-height: 1.7;">Fresh headshots, office photos, and brand videos to modernize your site and build trust with prospects.</p>
           </div>
 
-          <div style="background: #FFFFFF; padding: 32px; border-radius: 12px; border: 2px solid #06B6D4;">
+          <div style="background: #FFFFFF; padding: 32px; border-radius: 12px; border: 2px solid #64748B;">
             <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 16px; color: #0A0A0A;">LinkedIn Presence</h3>
             <p style="color: #6B7280; line-height: 1.7;">Professional team photos that make your company look legitimate and help your employees' personal brands.</p>
           </div>
 
-          <div style="background: #FFFFFF; padding: 32px; border-radius: 12px; border: 2px solid #D4AF37;">
+          <div style="background: #FFFFFF; padding: 32px; border-radius: 12px; border: 2px solid #64748B;">
             <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 16px; color: #0A0A0A;">Recruiting & Culture</h3>
             <p style="color: #6B7280; line-height: 1.7;">Authentic office content that shows candidates what it's really like to work at your company.</p>
           </div>
 
-          <div style="background: #FFFFFF; padding: 32px; border-radius: 12px; border: 2px solid #EC4899;">
+          <div style="background: #FFFFFF; padding: 32px; border-radius: 12px; border: 2px solid #64748B;">
             <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 16px; color: #0A0A0A;">Press & Marketing</h3>
             <p style="color: #6B7280; line-height: 1.7;">High-quality founder photos, team shots, and video clips ready for press releases and marketing campaigns.</p>
           </div>
