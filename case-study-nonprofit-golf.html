@@ -134,7 +134,17 @@
       max-width: 800px;
       margin: 0 auto;
       padding: 80px 40px 80px 60px;
-      border-left: 4px solid var(--cs-gold);
+      position: relative;
+    }
+
+    .cs-intro-section::before {
+      content: '';
+      position: absolute;
+      left: 40px;
+      top: 80px;
+      width: 4px;
+      height: 200px;
+      background: var(--cs-gold);
     }
 
     .cs-intro-section h2 {
@@ -559,9 +569,9 @@
 
     .cs-different-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 60px;
-      max-width: 900px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
@@ -763,7 +773,13 @@
 
       .cs-intro-section {
         padding: 60px 24px 60px 40px;
-        border-left-width: 3px;
+      }
+
+      .cs-intro-section::before {
+        left: 24px;
+        top: 60px;
+        width: 3px;
+        height: 150px;
       }
 
       .cs-filmed-grid {
@@ -883,17 +899,9 @@
           <p class="cs-callout">One shoot day. Multiple assets for years.</p>
         </div>
 
-        <div class="cs-diagram">
-          <div class="cs-diagram-center">1 SHOOT DAY</div>
-          <div class="cs-diagram-branches">
-            <div class="cs-diagram-box">Main Video<br>(1-2 min)</div>
-            <div class="cs-diagram-box">Social Testimonials</div>
-            <div class="cs-diagram-box">Website Hero</div>
-            <div class="cs-diagram-box">Grant Materials</div>
-            <div class="cs-diagram-box">Donor Cultivation</div>
-            <div class="cs-diagram-box">Future Campaigns</div>
-          </div>
-        </div>
+        <p style="font-size: 18px; line-height: 1.8; margin-top: 32px;">
+          <strong>1 SHOOT DAY</strong> → Main Video (1-2 min) ~ Social Testimonials ~ Website Hero ~ Grant Materials ~ Donor Cultivation ~ Future Campaigns
+        </p>
       </div>
     </section>
 
@@ -931,7 +939,7 @@
       <div class="cs-roi-chart">
         <div class="cs-roi-column current">
           <div class="cs-roi-header">CURRENT EVENT</div>
-          <div class="cs-roi-number">$200K</div>
+          <div class="cs-roi-number">~$200K</div>
           <div class="cs-roi-label">raised</div>
           <div class="cs-roi-number" style="font-size: 28px;">300</div>
           <div class="cs-roi-label">attendees</div>
