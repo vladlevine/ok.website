@@ -45,7 +45,7 @@
 
     /* Reset spacing for case study */
     .cs-hero, .cs-video-section, .cs-intro-section, .cs-filmed-section,
-    .cs-deliverables-section, .cs-roi-section, .cs-works-section,
+    .cs-roi-section, .cs-works-section,
     .cs-different-section, .cs-bottom-line-section, .cs-specs-section,
     .cs-cta-section, .cs-footer-nav {
       margin: 0;
@@ -310,98 +310,6 @@
       transform: translateY(-4px);
     }
 
-    /* BLOCK 5: Deliverables */
-    .cs-deliverables-section {
-      background: var(--cs-light-bg);
-      padding: 80px 40px;
-    }
-
-    .cs-deliverables-section h2 {
-      font-size: clamp(28px, 4vw, 36px);
-      font-weight: 700;
-      text-align: center;
-      margin: 0 0 60px;
-      color: var(--cs-black);
-    }
-
-    .cs-deliverables-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 40px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .cs-deliverable-box {
-      background: var(--cs-white);
-      border: 1px solid var(--cs-border-gray);
-      border-radius: 8px;
-      padding: 40px;
-      transition: box-shadow 0.3s ease;
-    }
-
-    .cs-deliverable-box:hover {
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    }
-
-    .cs-deliverable-icon {
-      font-size: 48px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      display: block;
-    }
-
-    .cs-deliverable-icon.primary {
-      color: var(--cs-gold);
-    }
-
-    .cs-deliverable-icon.bonus {
-      color: var(--cs-cyan);
-    }
-
-    .cs-deliverable-label {
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--cs-light-gray);
-      margin-bottom: 12px;
-      display: block;
-    }
-
-    .cs-deliverable-box h3 {
-      font-size: 22px;
-      font-weight: 700;
-      margin: 0 0 16px;
-      color: var(--cs-black);
-    }
-
-    .cs-deliverable-box p {
-      font-size: 17px;
-      line-height: 1.7;
-      color: var(--cs-black);
-      margin: 0 0 16px;
-    }
-
-    .cs-deliverable-box ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .cs-deliverable-box ul li {
-      padding: 8px 0 8px 24px;
-      position: relative;
-      font-size: 17px;
-    }
-
-    .cs-deliverable-box ul li::before {
-      content: '●';
-      position: absolute;
-      left: 0;
-      color: var(--cs-magenta);
-      font-size: 12px;
-    }
 
     /* BLOCK 6: ROI Section */
     .cs-roi-section {
@@ -847,7 +755,6 @@
       }
 
       .cs-filmed-section,
-      .cs-deliverables-section,
       .cs-roi-section,
       .cs-works-section,
       .cs-different-section,
@@ -947,32 +854,6 @@
           </div>
 
           <p class="cs-approach-callout">One shoot day. Multiple assets for years.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- BLOCK 5: Deliverables -->
-    <section class="cs-deliverables-section">
-      <h2>The Deliverables</h2>
-      <div class="cs-deliverables-grid">
-        <div class="cs-deliverable-box">
-          <span class="cs-deliverable-icon primary">1</span>
-          <span class="cs-deliverable-label">Primary</span>
-          <h3>1-2 minute promotional video</h3>
-          <p>Designed to show prospective attendees what the event actually feels like—not sterile corporate footage, but real people, real impact, real energy. This becomes your Year 2 recruitment engine.</p>
-        </div>
-
-        <div class="cs-deliverable-box">
-          <span class="cs-deliverable-icon bonus">+</span>
-          <span class="cs-deliverable-label">Bonus</span>
-          <h3>Content Library</h3>
-          <ul>
-            <li>Full raw footage library</li>
-            <li>Individual testimonial clips</li>
-            <li>Future edit potential</li>
-            <li>Social media content</li>
-            <li>Email campaign materials</li>
-          </ul>
         </div>
       </div>
     </section>
@@ -1227,7 +1108,7 @@
     }, observerOptions);
 
     // Add fade-in animation to key sections
-    document.querySelectorAll('.cs-intro-section, .cs-filmed-section, .cs-deliverables-section, .cs-roi-section, .cs-works-section, .cs-different-section, .cs-bottom-line-section, .cs-cta-section').forEach(section => {
+    document.querySelectorAll('.cs-intro-section, .cs-filmed-section, .cs-roi-section, .cs-works-section, .cs-different-section, .cs-bottom-line-section, .cs-cta-section').forEach(section => {
       section.style.opacity = '0';
       section.style.transform = 'translateY(20px)';
       section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
