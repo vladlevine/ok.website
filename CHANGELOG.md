@@ -404,9 +404,12 @@ What boutique ACTUALLY means for clients:
 - ✅ Law Firm Case Study: Complete redesign with clean, scannable blueprint
 - ✅ Simplified from 14 sections to 7 focused sections for better scannability
 - ✅ Removed: comparison tables, AI crisis warning, usage rights, ROI analysis, impact results, project specs
-- ✅ New structure: Hero → Problem → Solution (2-col) → People at Work → Why Both Matter → Pricing → CTA
+- ✅ New structure: Hero → Problem → Solution (2-col) → People at Work → Why Both Matter → Pricing + ROI → CTA
 - ✅ Reframed as two-service offering: Professional Headshots + Lifestyle Photography
-- ✅ Updated pricing: $7,750 total ($2,750 headshots + $5,000 lifestyle photography)
+- ✅ Final pricing: $6,250 total ($2,750 headshots + $3,500 lifestyle photography)
+- ✅ Removed duplicate pricing banner (was appearing in both "Why Both Matter" and "Pricing" sections)
+- ✅ Added visual ROI section with investment → return diagram ($6,250 → $25K-$150K+ potential)
+- ✅ ROI explanation: 1-2 new clients = 4-24x ROI, photos work 3-5+ years (infrastructure not expense)
 - ✅ Section 4 renamed to "People at Work" with action-oriented labels (Strategy Session, Client Prep, etc.)
 - ✅ Section 5 rewritten as "Why Both Matter" explaining dual value of headshots + environment
 - ✅ Pricing section restructured to focus on "return" rather than just deliverables

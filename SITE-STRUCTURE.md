@@ -749,9 +749,15 @@ Home | Event Coverage | Corporate Content | Portfolio | About | Blog | Contact
 2. **The Problem** - Stock photo credibility issue (3 short paragraphs, max 250 words)
 3. **What We Did** - Two-column solution cards (Professional Headshots | Lifestyle Photography)
 4. **People at Work** - 3-column grid with action-oriented labels (Strategy Session, Client Prep, etc.)
-5. **Why Both Matter** - Explains dual value: credibility + connection (Investment → Benefits → Result)
-6. **Pricing** - $7,750 total ($2,750 headshots + $5,000 lifestyle), focus on return
+5. **Why Both Matter** - Explains dual value: credibility + connection (Benefits → Result, no pricing duplication)
+6. **Pricing + ROI** - $6,250 total ($2,750 headshots + $3,500 lifestyle) + visual ROI diagram showing $25K-$150K+ potential return
 7. **Final CTA** - Simple dark section with email link
+
+**ROI Positioning:**
+- Visual diagram: $6,250 investment → $25K-$150K+ potential return
+- One new client = $25-50K+, some cases $100-150K+
+- Converting 1-2 additional clients = 4-24x ROI in year one
+- Photos work 3-5+ years = infrastructure not expense
 
 **Service Positioning:**
 - Two-service offering: Professional Headshots + Lifestyle Photography
