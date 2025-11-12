@@ -67,7 +67,7 @@
 
     .service-gallery-item {
       aspect-ratio: 16/10;
-      background: linear-gradient(135deg, rgba(100, 116, 139, 0.15) 0%, rgba(148, 163, 184, 0.15) 100%);
+      background: linear-gradient(135deg, rgba(100, 116, 139, 0.1) 0%, rgba(100, 116, 139, 0.2) 100%);
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -75,11 +75,13 @@
       font-size: 48px;
       border: 2px solid rgba(100, 116, 139, 0.3);
       transition: all 0.3s ease;
+      overflow: hidden;
+      position: relative;
     }
 
     .service-gallery-item:hover {
       transform: translateY(-8px);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+      box-shadow: 0 16px 48px rgba(100, 116, 139, 0.3);
     }
 
     .package-grid {
@@ -204,12 +206,14 @@
         <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto;">From law firms to tech startups. Professional content that represents your brand.</p>
 
         <div class="service-gallery">
+          <a href="case-study-law-firm-photography.html" class="service-gallery-item" style="text-decoration: none;">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/w_600,h_375,c_fill,q_auto,f_auto/v1762874804/law_firm_stock_imagery_photography_z0uklj.jpg" alt="Law firm office lifestyle photography" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+          </a>
           <div class="service-gallery-item">📸</div>
           <div class="service-gallery-item">🎬</div>
           <div class="service-gallery-item">📸</div>
           <div class="service-gallery-item">🎬</div>
           <div class="service-gallery-item">📸</div>
-          <div class="service-gallery-item">🎬</div>
         </div>
       </div>
     </section>

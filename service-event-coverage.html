@@ -67,25 +67,27 @@
 
     .service-gallery-item {
       aspect-ratio: 16/10;
-      background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.2) 100%);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 48px;
-      border: 2px solid rgba(6, 182, 212, 0.3);
+      border: 2px solid rgba(212, 175, 55, 0.3);
       transition: all 0.3s ease;
+      overflow: hidden;
+      position: relative;
     }
 
     .service-gallery-item:hover {
       transform: translateY(-8px);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+      box-shadow: 0 16px 48px rgba(212, 175, 55, 0.3);
     }
 
     .package-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 40px;
+      gap: 32px;
       max-width: 1200px;
       margin: 80px auto;
     }
@@ -94,7 +96,7 @@
       background: #FFFFFF;
       border: 2px solid #D4AF37;
       border-radius: 16px;
-      padding: 48px;
+      padding: 40px;
       transition: all 0.3s ease;
     }
 
@@ -104,29 +106,29 @@
     }
 
     .package-card h3 {
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 700;
       margin-bottom: 16px;
       color: #0A0A0A;
     }
 
     .package-price {
-      font-size: 42px;
+      font-size: 38px;
       font-weight: 800;
       color: #D4AF37;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .package-features {
       list-style: none;
       padding: 0;
-      margin: 32px 0;
+      margin: 28px 0;
     }
 
     .package-features li {
-      padding: 12px 0;
+      padding: 10px 0;
       border-bottom: 1px solid #E5E7EB;
-      font-size: 17px;
+      font-size: 16px;
       color: #0A0A0A;
     }
 
@@ -200,12 +202,16 @@
     <!-- Portfolio Gallery -->
     <section class="service-section" style="background: #F9FAFB;">
       <div class="container">
-        <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 24px;">Recent Events</h2>
+        <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 24px;">Events We've Covered</h2>
         <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto;">Real coverage from real events. No stock footage.</p>
 
         <div class="service-gallery">
-          <div class="service-gallery-item">📸</div>
-          <div class="service-gallery-item">🎬</div>
+          <a href="case-study-tech-expo.html" class="service-gallery-item" style="text-decoration: none;">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/w_600,h_375,c_fill,q_auto,f_auto/v1762826235/mlops0052_rkyg1j.jpg" alt="Tech expo event coverage" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+          </a>
+          <a href="case-study-nonprofit-golf.html" class="service-gallery-item" style="text-decoration: none;">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/w_600,h_375,c_fill,q_auto,f_auto/v1762874514/nonprofit_event_videography_nyc_vxlkur.jpg" alt="Nonprofit golf tournament video" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+          </a>
           <div class="service-gallery-item">📸</div>
           <div class="service-gallery-item">🎬</div>
           <div class="service-gallery-item">📸</div>
@@ -226,7 +232,7 @@
           <div class="package-card">
             <h3>Half-Day Coverage</h3>
             <div class="package-price">$3,500</div>
-            <p style="color: #6B7280; margin-bottom: 32px;">4 hours of coverage — perfect for focused events</p>
+            <p style="color: #6B7280; margin-bottom: 28px;">4 hours of coverage — perfect for focused events</p>
             <ul class="package-features">
               <li>Photo OR Video (choose one)</li>
               <li>150-200 edited photos OR 2-3 min highlight reel</li>
@@ -234,14 +240,14 @@
               <li>Online delivery</li>
               <li>5-10 day turnaround</li>
             </ul>
-            <a href="index.html#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 24px; background: #D4AF37; color: #0A0A0A;">Get Quote</a>
+            <a href="index.html#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 20px; background: #D4AF37; color: #0A0A0A;">Get Quote</a>
           </div>
 
           <!-- Full-Day Package -->
           <div class="package-card">
             <h3>Full-Day Coverage</h3>
             <div class="package-price">$6,000</div>
-            <p style="color: #6B7280; margin-bottom: 32px;">8 hours of coverage — comprehensive event documentation</p>
+            <p style="color: #6B7280; margin-bottom: 28px;">8 hours of coverage — comprehensive event documentation</p>
             <ul class="package-features">
               <li>Photo OR Video (choose one)</li>
               <li>300-400 edited photos OR 4-6 min highlight reel</li>
@@ -249,14 +255,14 @@
               <li>Online delivery</li>
               <li>7-15 day turnaround</li>
             </ul>
-            <a href="index.html#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 24px; background: #D4AF37; color: #0A0A0A;">Get Quote</a>
+            <a href="index.html#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 20px; background: #D4AF37; color: #0A0A0A;">Get Quote</a>
           </div>
 
           <!-- Combined Package -->
           <div class="package-card" style="grid-column: 1 / -1; max-width: 700px; margin: 0 auto; width: 100%;">
             <h3>Video + Photo Bundle</h3>
             <div class="package-price">From $9,500</div>
-            <p style="color: #6B7280; margin-bottom: 32px;"><strong style="color: #D4AF37;">Save $2,500+</strong> by booking both for full-day events</p>
+            <p style="color: #6B7280; margin-bottom: 28px;"><strong style="color: #D4AF37;">Save $2,500+</strong> by booking both for full-day events</p>
             <ul class="package-features" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px;">
               <li>Full photo coverage (300-400 images)</li>
               <li>2-camera video coverage</li>
@@ -265,7 +271,7 @@
               <li>Online gallery delivery</li>
               <li>Coordinated turnaround (7-15 days)</li>
             </ul>
-            <a href="index.html#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 24px; background: #D4AF37; color: #0A0A0A;">Get Quote</a>
+            <a href="index.html#contact" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 20px; background: #D4AF37; color: #0A0A0A;">Get Quote</a>
           </div>
         </div>
       </div>
