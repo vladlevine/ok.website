@@ -404,14 +404,16 @@ What boutique ACTUALLY means for clients:
 - ✅ Law Firm Case Study: Complete redesign with clean, scannable blueprint
 - ✅ Simplified from 14 sections to 7 focused sections for better scannability
 - ✅ Removed: comparison tables, AI crisis warning, usage rights, ROI analysis, impact results, project specs
-- ✅ New structure: Hero → Problem → Solution (2-col) → Photo Library → Headshot Value → Pricing → CTA
+- ✅ New structure: Hero → Problem → Solution (2-col) → People at Work → Why Both Matter → Pricing → CTA
+- ✅ Reframed as two-service offering: Professional Headshots + Lifestyle Photography
+- ✅ Updated pricing: $7,750 total ($2,750 headshots + $5,000 lifestyle photography)
+- ✅ Section 4 renamed to "People at Work" with action-oriented labels (Strategy Session, Client Prep, etc.)
+- ✅ Section 5 rewritten as "Why Both Matter" explaining dual value of headshots + environment
+- ✅ Pricing section restructured to focus on "return" rather than just deliverables
 - ✅ Clean color palette: #1a1a1a dark, #f4c542 gold accent, #f5f5f5 alt backgrounds
 - ✅ Mobile-first responsive design (320px-767px-1024px+ breakpoints)
 - ✅ Typography: Inter font, 16-18px body, line-height 1.7-1.8, generous spacing
 - ✅ Benefit-driven copy: No jargon, active voice, max 250 words per section
-- ✅ Value diagram: Simple Investment → What Clients See → Result flow
-- ✅ Photo library: 3-column grid with labeled placeholders (Conference Room, Reception, etc.)
-- ✅ Pricing card: Clean $2,750 breakdown with per-person cost and included items
 - ✅ Template structure for future case studies (reusable sections)
 - ✅ Connected homepage "Corporate Photography" portfolio item to law firm case study page (index.html:208)
 - ✅ Updated SITE-STRUCTURE.md with new 7-section blueprint documentation

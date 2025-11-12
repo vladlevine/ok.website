@@ -741,17 +741,23 @@ Home | Event Coverage | Corporate Content | Portfolio | About | Blog | Contact
 **Purpose:** Deep-dive project breakdowns that demonstrate value, build trust, and educate potential clients on ROI
 
 **Law Firm Photography Case Study** (`case-study-law-firm-photography.html`)
-**Keywords:** law firm photography NYC, corporate office photography, professional headshots attorneys
-**Status:** ✅ Live - Redesigned with clean, scannable blueprint (Nov 2025)
+**Keywords:** law firm photography NYC, corporate office photography, professional headshots attorneys, lifestyle photography
+**Status:** ✅ Live - Two-service offering with clean, scannable blueprint (Nov 2025)
 
 **7-Section Scannable Structure:**
 1. **Hero** - Dark background (#1a1a1a), headline, subhead, CTA to pricing
 2. **The Problem** - Stock photo credibility issue (3 short paragraphs, max 250 words)
-3. **What We Did** - Two-column solution cards (Headshots | Office Documentation)
-4. **Office Photo Library** - 3-column grid with labeled placeholders (9 blocks)
-5. **Headshot Value** - Simple value diagram (Investment → What Clients See → Result)
-6. **Pricing** - Clean card with $2,750 breakdown, per-person cost, included items
+3. **What We Did** - Two-column solution cards (Professional Headshots | Lifestyle Photography)
+4. **People at Work** - 3-column grid with action-oriented labels (Strategy Session, Client Prep, etc.)
+5. **Why Both Matter** - Explains dual value: credibility + connection (Investment → Benefits → Result)
+6. **Pricing** - $7,750 total ($2,750 headshots + $5,000 lifestyle), focus on return
 7. **Final CTA** - Simple dark section with email link
+
+**Service Positioning:**
+- Two-service offering: Professional Headshots + Lifestyle Photography
+- Headshots = credibility ("Are these legitimate professionals?")
+- Lifestyle = connection ("What's it like to work with them?")
+- Combined package addresses both questions for complete visual identity
 
 **Design Principles:**
 - Mobile-first responsive (320px → 1024px+)
