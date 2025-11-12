@@ -94,7 +94,7 @@
     /* Button */
     .btn-primary {
       display: inline-block;
-      padding: 18px 48px;
+      padding: 20px 48px;
       font-size: 18px;
       font-weight: 700;
       background: var(--cs-gold);
@@ -160,6 +160,9 @@
     .cs-challenge h2 {
       text-align: center;
       margin-bottom: 40px;
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      color: var(--cs-black);
     }
 
     .cs-challenge p {
@@ -181,13 +184,16 @@
 
     .cs-photography h2 {
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      color: var(--cs-black);
     }
 
     .photo-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
+      gap: 24px;
       max-width: 1140px;
       margin: 0 auto;
     }
@@ -239,13 +245,16 @@
 
     .cs-results h2 {
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      color: var(--cs-black);
     }
 
     .results-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 40px;
+      gap: 32px;
       max-width: 900px;
       margin: 0 auto;
     }
@@ -277,7 +286,10 @@
 
     .cs-investment h2 {
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      color: var(--cs-black);
     }
 
     .investment-card {
@@ -349,21 +361,21 @@
        SECTION 6: CTA
     ============================================ */
     .cs-cta {
-      background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+      background: var(--cs-light-bg);
       padding: 100px 40px;
       text-align: center;
-      color: var(--cs-white);
+      color: var(--cs-black);
     }
 
     .cs-cta h2 {
-      color: var(--cs-white);
+      color: var(--cs-black);
       margin-bottom: 20px;
       font-size: clamp(28px, 4vw, 36px);
     }
 
     .cta-copy {
       font-size: 18px;
-      color: var(--cs-light-gray);
+      color: #4B5563;
       margin-bottom: 40px;
       max-width: 600px;
       margin-left: auto;
@@ -377,7 +389,7 @@
     }
 
     .cta-phone a {
-      color: var(--cs-gold);
+      color: var(--cs-magenta);
       text-decoration: none;
       font-weight: 600;
     }
@@ -390,28 +402,8 @@
        RESPONSIVE DESIGN
     ============================================ */
 
-    /* Tablet: 768px - 1023px */
-    @media (max-width: 1023px) {
-      h1 {
-        font-size: 36px;
-      }
-
-      h2 {
-        font-size: 28px;
-      }
-
-      .photo-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-
-      .results-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    /* Mobile: 320px - 767px */
-    @media (max-width: 767px) {
+    /* Responsive */
+    @media (max-width: 968px) {
       .container,
       .container-narrow {
         padding: 0 24px;
@@ -430,13 +422,13 @@
       }
 
       .photo-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
       }
 
       .results-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 32px;
       }
 
       .investment-card {
@@ -448,26 +440,14 @@
       }
 
       .btn-primary {
-        width: 100%;
-        padding: 16px 32px;
-      }
-
-      .cta h2 {
-        font-size: 28px;
+        padding: 18px 40px;
       }
     }
 
-    /* ROI Section Responsive */
-    @media (max-width: 1024px) {
-      section[style*="grid-template-columns: repeat(4, 1fr)"] > div {
-        grid-template-columns: repeat(2, 1fr) !important;
-      }
-    }
-
-    @media (max-width: 767px) {
-      section[style*="grid-template-columns: repeat(4, 1fr)"] > div,
-      section[style*="grid-template-columns: repeat(3, 1fr)"] > div {
-        grid-template-columns: 1fr !important;
+    @media (max-width: 768px) {
+      .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
       }
     }
 
