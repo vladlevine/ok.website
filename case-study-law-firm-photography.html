@@ -132,7 +132,7 @@
     ============================================ */
     .hero {
       background: var(--primary-dark);
-      padding: 120px 40px;
+      padding: 80px 40px;
       text-align: center;
       color: var(--bg-white);
     }
@@ -229,7 +229,52 @@
     }
 
     /* ============================================
-       SECTION 4: OFFICE PHOTO LIBRARY
+       SECTION 4: HEADSHOTS GALLERY
+    ============================================ */
+    .headshots-gallery {
+      background: var(--bg-alt);
+      padding: 80px 40px;
+    }
+
+    .headshots-gallery h2 {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .headshots-gallery-subhead {
+      text-align: center;
+      font-size: 18px;
+      color: var(--text-light);
+      margin-bottom: 60px;
+    }
+
+    .headshots-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .headshot-slot {
+      aspect-ratio: 3/4;
+      background: linear-gradient(135deg, #e5e5e5 0%, #f5f5f5 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      color: var(--text-light);
+      transition: transform 0.3s ease;
+      border: 3px solid var(--accent-gold);
+    }
+
+    .headshot-slot:hover {
+      transform: scale(1.05);
+    }
+
+    /* ============================================
+       SECTION 5: PEOPLE AT WORK
     ============================================ */
     .photo-library {
       background: var(--bg-white);
@@ -278,7 +323,7 @@
     }
 
     /* ============================================
-       SECTION 5: HEADSHOT VALUE
+       SECTION 6: WHY BOTH MATTER
     ============================================ */
     .headshot-value {
       background: var(--bg-alt);
@@ -387,7 +432,7 @@
     }
 
     /* ============================================
-       SECTION 6: PRICING
+       SECTION 7: PRICING
     ============================================ */
     .pricing {
       background: var(--bg-white);
@@ -470,7 +515,7 @@
     }
 
     /* ============================================
-       SECTION 7: FINAL CTA
+       SECTION 8: FINAL CTA
     ============================================ */
     .final-cta {
       background: var(--primary-dark);
@@ -537,7 +582,7 @@
       }
 
       .hero {
-        padding: 80px 24px;
+        padding: 60px 24px;
       }
 
       .hero h1 {
@@ -550,6 +595,7 @@
 
       .problem,
       .solution,
+      .headshots-gallery,
       .photo-library,
       .headshot-value,
       .pricing,
@@ -564,6 +610,11 @@
 
       .solution-card {
         padding: 30px;
+      }
+
+      .headshots-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
       }
 
       .photo-grid {
@@ -653,7 +704,27 @@
     </div>
   </section>
 
-  <!-- SECTION 4: PEOPLE AT WORK -->
+  <!-- SECTION 4: HEADSHOTS GALLERY -->
+  <section class="headshots-gallery">
+    <div class="container">
+      <h2>Professional Headshots</h2>
+      <p class="headshots-gallery-subhead">Consistent, polished, professional</p>
+
+      <div class="headshots-grid">
+        <div class="headshot-slot">👤</div>
+        <div class="headshot-slot">👤</div>
+        <div class="headshot-slot">👤</div>
+        <div class="headshot-slot">👤</div>
+        <div class="headshot-slot">👤</div>
+        <div class="headshot-slot">👤</div>
+        <div class="headshot-slot">👤</div>
+        <div class="headshot-slot">👤</div>
+        <div class="headshot-slot">👤</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: PEOPLE AT WORK (Lifestyle Photography) -->
   <section class="photo-library">
     <div class="container">
       <h2>The Team in Their Element</h2>
@@ -677,7 +748,7 @@
     </div>
   </section>
 
-  <!-- SECTION 5: WHY BOTH MATTER -->
+  <!-- SECTION 6: WHY BOTH MATTER -->
   <section class="headshot-value">
     <div class="container">
       <h2>Why Both Matter: Headshots + Environment</h2>
@@ -726,7 +797,7 @@
     </div>
   </section>
 
-  <!-- SECTION 6: PRICING -->
+  <!-- SECTION 7: PRICING + ROI -->
   <section class="pricing" id="pricing">
     <div class="container">
       <h2>The Investment</h2>
@@ -806,7 +877,7 @@
     </div>
   </section>
 
-  <!-- SECTION 7: FINAL CTA -->
+  <!-- SECTION 8: FINAL CTA -->
   <section class="final-cta">
     <div class="container">
       <h2>Need Office & Headshot Photography?</h2>
