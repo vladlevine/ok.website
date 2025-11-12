@@ -30,90 +30,301 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>">
 
   <style>
-    .about-hero {
-      padding: 180px 0 80px;
-      background: linear-gradient(180deg, #0A0A0A 0%, #1F2937 100%);
-      color: var(--color-white);
+    /* About Page Specific Styles */
+
+    /* Hero Section - 50/50 Split */
+    .about-hero-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .about-hero-image {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .about-hero-content {
+      padding: 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: #FFFFFF;
+    }
+
+    .about-hero-content h1 {
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.2;
+      margin-bottom: 32px;
+      color: #0A0A0A;
+    }
+
+    .about-hero-content p {
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.7;
+      color: #0A0A0A;
+      margin-bottom: 24px;
+    }
+
+    .about-hero-content .tagline {
+      font-size: clamp(16px, 1.8vw, 20px);
+      color: #4B5563;
+      font-style: italic;
+    }
+
+    /* Two Column Layout */
+    .two-column-section {
+      padding: 100px 0;
+    }
+
+    .two-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .two-columns h2 {
+      font-size: 32px;
+      margin-bottom: 24px;
+      color: #0A0A0A;
+    }
+
+    .two-columns p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #0A0A0A;
+      margin-bottom: 20px;
+    }
+
+    /* Centered Full Width Philosophy */
+    .philosophy-section {
+      padding: 100px 40px;
+      background: linear-gradient(180deg, #F9FAFB 0%, #FFFFFF 100%);
       text-align: center;
     }
 
-    .about-hero h1 {
-      font-size: clamp(40px, 6vw, 64px);
+    .philosophy-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .philosophy-content h2 {
+      font-size: clamp(36px, 5vw, 48px);
+      margin-bottom: 40px;
+      color: #0A0A0A;
+    }
+
+    .philosophy-content p {
+      font-size: 20px;
+      line-height: 1.8;
+      color: #0A0A0A;
       margin-bottom: 24px;
     }
 
-    .about-section {
-      padding: 80px 0;
+    .philosophy-content .highlight {
+      font-size: 26px;
+      font-weight: 700;
+      color: #0A0A0A;
+      margin: 40px 0;
     }
 
-    .about-section:nth-child(even) {
+    .philosophy-content .no-nonsense {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #0A0A0A;
+      margin-top: 32px;
+    }
+
+    /* Three Column Work Approach */
+    .work-approach-section {
+      padding: 100px 40px;
+      background: #FFFFFF;
+    }
+
+    .work-approach-section h2 {
+      font-size: clamp(36px, 5vw, 48px);
+      text-align: center;
+      margin-bottom: 60px;
+      color: #0A0A0A;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 48px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .work-card {
+      text-align: left;
+    }
+
+    .work-card h3 {
+      font-size: 22px;
+      margin-bottom: 16px;
+      color: var(--color-gold);
+      font-weight: 700;
+    }
+
+    .work-card p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #0A0A0A;
+    }
+
+    /* Current Focus */
+    .current-focus-section {
+      padding: 100px 40px;
       background: #F9FAFB;
     }
 
-    .highlight-box {
-      background: linear-gradient(135deg, #F4D03F 0%, #E8C547 100%);
-      color: #0A0A0A;
-      padding: 48px;
-      border-radius: 16px;
-      margin: 60px 0;
+    .current-focus-content {
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    .highlight-box h2 {
-      font-size: 32px;
+    .current-focus-content h2 {
+      font-size: clamp(36px, 5vw, 48px);
+      margin-bottom: 32px;
+      color: #0A0A0A;
+    }
+
+    .current-focus-content p {
+      font-size: 19px;
+      line-height: 1.8;
+      color: #0A0A0A;
       margin-bottom: 24px;
     }
 
-    .contact-info {
-      display: flex;
-      gap: 40px;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-top: 40px;
+    /* CTA Section */
+    .about-cta-section {
+      padding: 120px 40px;
+      background: linear-gradient(135deg, #0A0A0A 0%, #1F2937 100%);
+      text-align: center;
+      color: #FFFFFF;
     }
 
-    .contact-info a {
+    .about-cta-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .about-cta-content h2 {
+      font-size: clamp(36px, 5vw, 48px);
+      margin-bottom: 32px;
+      color: #FFFFFF;
+    }
+
+    .about-cta-content p {
+      font-size: 20px;
+      line-height: 1.7;
+      margin-bottom: 24px;
+      opacity: 0.95;
+    }
+
+    .about-cta-content .emphasis {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-gold);
+      margin: 32px 0 48px;
+    }
+
+    /* Footer Contact Info */
+    .about-footer-info {
+      padding: 60px 40px;
+      background: #F9FAFB;
+      text-align: center;
+    }
+
+    .about-footer-info h3 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #0A0A0A;
+    }
+
+    .about-footer-info .subtitle {
+      font-size: 18px;
+      color: #4B5563;
+      margin-bottom: 32px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .contact-links a {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 8px;
       color: #0A0A0A;
       font-weight: 600;
-      font-size: 18px;
+      font-size: 16px;
       transition: all 0.3s ease;
     }
 
-    .contact-info a:hover {
-      transform: translateX(4px);
+    .contact-links a:hover {
       color: var(--color-gold);
     }
 
-    .social-icon {
-      width: 32px;
-      height: 32px;
-      opacity: 0.9;
-      transition: opacity 0.3s ease;
+    .social-icon-small {
+      width: 24px;
+      height: 24px;
     }
 
-    .social-icon:hover {
-      opacity: 1;
-    }
-
-    @media (max-width: 768px) {
-      .about-hero {
-        padding: 140px 20px 60px;
+    /* Mobile Responsive */
+    @media (max-width: 968px) {
+      .about-hero-split {
+        grid-template-columns: 1fr;
+        min-height: auto;
       }
 
-      .about-section {
-        padding: 60px 0;
+      .about-hero-image {
+        height: 60vh;
+        min-height: 400px;
       }
 
-      .highlight-box {
-        padding: 32px 24px;
+      .about-hero-content {
+        padding: 60px 32px;
       }
 
-      .contact-info {
+      .two-columns {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        padding: 0 32px;
+      }
+
+      .two-column-section,
+      .philosophy-section,
+      .work-approach-section,
+      .current-focus-section {
+        padding: 60px 24px;
+      }
+
+      .about-cta-section {
+        padding: 80px 24px;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .contact-links {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
+        align-items: center;
+        gap: 16px;
       }
     }
   </style>
@@ -123,12 +334,12 @@
   <!-- Header & Navigation -->
   <header class="header" id="header">
     <div class="container header-container">
-      <a href="/" class="logo">CORE VISUALS NYC</a>
+      <a href="index.html" class="logo">CORE VISUALS NYC</a>
       <nav class="nav" id="nav">
-        <a href="/#services">Services</a>
-        <a href="/#work">Work</a>
-        <a href="/about.html">About</a>
-        <a href="/#contact" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="index.html#contact" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
       </nav>
       <div class="hamburger" id="hamburger">
         <span></span>
@@ -141,193 +352,105 @@
   <!-- Main Content -->
   <main id="main-content">
 
-    <!-- Hero -->
-    <section class="about-hero">
-      <div class="container">
-        <span class="eyebrow" style="color: var(--color-gold);">ABOUT CORE VISUALS NYC</span>
-        <h1>Direct. Professional.<br>No Runaround.</h1>
-        <p style="font-size: 22px; max-width: 700px; margin: 24px auto 0; opacity: 0.9;">I'm Vlad Levine. I shoot events, make videos, and document what matters to NYC businesses—without the agency mystique or mystery pricing.</p>
+    <!-- BLOCK 1: Hero - 50/50 Split -->
+    <section class="about-hero-split">
+      <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/w_1200,h_1600,c_fill,q_auto,f_auto,g_face/v1762912494/4920E92A-7AE8-41FF-B174-566220AB7C2E-branded_ac6ktj.heic"
+           alt="Vlad Levine - NYC Event Photographer and Videographer"
+           class="about-hero-image"
+           loading="eager">
+
+      <div class="about-hero-content">
+        <h1>I'm Vlad Levine. I shoot events, make videos, and document what matters to NYC businesses—without the agency mystique or mystery pricing.</h1>
+        <p class="tagline">That's the elevator pitch. Here's the actual story.</p>
       </div>
     </section>
 
-    <!-- The Short Version -->
-    <section class="about-section">
-      <div class="container-narrow">
-        <p style="font-size: 22px; line-height: 1.8; color: #0A0A0A;">That's the elevator pitch. Here's the actual story.</p>
-      </div>
-    </section>
-
-    <!-- How I Got Here -->
-    <section class="about-section">
-      <div class="container-narrow">
-        <h2 style="font-size: 40px; margin-bottom: 32px;">How I Got Here</h2>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-bottom: 24px;">I used to run a physical photography studio in Dallas. Award-winning space. Full production setup. The kind of place where creatives would rent the space, collaborate, shoot fashion editorials and product campaigns.</p>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-bottom: 24px;">It was exactly what I thought I wanted to build—until I realized I was spending more time managing a location than actually creating work.</p>
-
-        <p style="font-size: 22px; line-height: 1.7; color: #0A0A0A; font-weight: 600;">So I pivoted. Sold the physical space. Moved to NYC. Started focusing on what I'm actually good at: showing up, capturing what needs to be captured, and delivering it without the runaround.</p>
-      </div>
-    </section>
-
-    <!-- What I Actually Do Now -->
-    <section class="about-section">
-      <div class="container-narrow">
-        <h2 style="font-size: 40px; margin-bottom: 32px;">What I Actually Do Now</h2>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-bottom: 32px;"><strong style="color: #0A0A0A;">Corporate events. Conferences. Galas. Company parties. Networking events.</strong> The kind of work where someone needs professional documentation but doesn't want to deal with a full production company's account managers and three-week turnarounds.</p>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-bottom: 32px;"><strong style="color: #0A0A0A;">Brand content. Videos that explain what your company does. Team headshots. Office photography. Testimonial videos.</strong> The visual content marketing teams need but don't have time to produce themselves.</p>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-bottom: 32px;"><strong style="color: #0A0A0A;">Diverse projects.</strong> I've documented art exhibitions, hosted a podcast about creativity, worked with nonprofits on impact videos, and photographed everything from gallery openings to tech product launches.</p>
-
-        <div class="highlight-box">
-          <h3 style="font-size: 28px; margin-bottom: 16px;">The common thread?</h3>
-          <p style="font-size: 20px; line-height: 1.7; margin: 0;">Storytelling that actually serves a purpose. I'm not interested in making "content for content's sake." I care about whether the work actually helps the client achieve something—more event attendees next year, better recruitment materials, clearer brand communication.</p>
+    <!-- BLOCK 2: Background - Two Columns -->
+    <section class="two-column-section">
+      <div class="two-columns">
+        <div>
+          <h2>How I Got Here</h2>
+          <p>I used to run a physical photography studio in Dallas. Award-winning space. Full production setup. The kind of place where creatives would rent the space and shoot fashion editorials.</p>
+          <p>It was exactly what I thought I wanted—until I realized I was managing a location instead of creating work.</p>
+        </div>
+        <div>
+          <h2>What Changed</h2>
+          <p>Sold the space. Moved to NYC. Started focusing on what I'm actually good at: showing up, capturing what needs to be captured, and delivering it without the runaround.</p>
+          <p>Now I work with corporate clients, nonprofits, and businesses who need professional visual content but don't want to deal with production company bureaucracy.</p>
         </div>
       </div>
     </section>
 
-    <!-- Why Core Visuals NYC Exists -->
-    <section class="about-section">
-      <div class="container-narrow">
-        <h2 style="font-size: 40px; margin-bottom: 32px;">Why Core Visuals NYC Exists</h2>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-bottom: 24px;">Most corporate photography and video services in NYC operate one of two ways:</p>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-bottom: 16px;"><strong style="color: #0A0A0A;">Option 1:</strong> Massive production companies with impressive portfolios, huge teams, and pricing that requires three approvals and a purchase order.</p>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-bottom: 32px;"><strong style="color: #0A0A0A;">Option 2:</strong> Solo freelancers with inconsistent quality, no backup plan if they're unavailable, and websites that haven't been updated since 2019.</p>
-
-        <p style="font-size: 24px; line-height: 1.6; color: #0A0A0A; font-weight: 700; margin: 40px 0;">Core Visuals NYC is the middle ground.</p>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-bottom: 16px;">You work directly with me (and my assistant when needed for larger projects). You get transparent pricing before you commit. You get professional results delivered on the timeline we agreed to.</p>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-bottom: 16px;">No account managers. No "let's hop on a discovery call to explore possibilities." No surprise invoices.</p>
-
-        <p style="font-size: 22px; line-height: 1.7; color: #0A0A0A; font-weight: 600; margin-top: 32px;">You tell me what you need. I tell you what it costs and when you'll have it. We make it happen.</p>
+    <!-- BLOCK 3: Philosophy - Centered Full Width -->
+    <section class="philosophy-section">
+      <div class="philosophy-content">
+        <h2>Why Core Visuals NYC Exists</h2>
+        <p>Most NYC photography services are either massive production companies with three-week turnarounds and budget-committee pricing, or solo freelancers with inconsistent quality and outdated websites.</p>
+        <p class="highlight">Core Visuals NYC is the middle ground.</p>
+        <p class="no-nonsense">You work directly with me. You get transparent pricing before you commit. You get professional results delivered on the timeline we agreed to.</p>
+        <p class="no-nonsense">No account managers. No "discovery calls to explore possibilities." No surprise invoices.</p>
       </div>
     </section>
 
-    <!-- My Approach -->
-    <section class="about-section">
-      <div class="container-narrow">
-        <h2 style="font-size: 40px; margin-bottom: 32px;">My Approach</h2>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-bottom: 24px;">I'm not here to win awards or build an artistic portfolio at your expense. I'm here to make your event, your brand video, or your corporate content look professional and get delivered on time.</p>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-bottom: 16px;">That means:</p>
-
-        <ul style="list-style: none; padding: 0; margin: 32px 0;">
-          <li style="padding: 16px 0 16px 40px; position: relative; font-size: 18px; color: #0A0A0A;">
-            <span style="position: absolute; left: 0; color: var(--color-gold); font-weight: 700; font-size: 24px;">✓</span>
-            <strong style="color: #0A0A0A;">Clear communication.</strong> I respond to emails. I show up when I say I will. I deliver when I say I will.
-          </li>
-          <li style="padding: 16px 0 16px 40px; position: relative; font-size: 18px; color: #0A0A0A;">
-            <span style="position: absolute; left: 0; color: var(--color-gold); font-weight: 700; font-size: 24px;">✓</span>
-            <strong style="color: #0A0A0A;">Transparent pricing.</strong> Fixed packages. No hourly rates. No "depends on what you need" vagueness.
-          </li>
-          <li style="padding: 16px 0 16px 40px; position: relative; font-size: 18px; color: #0A0A0A;">
-            <span style="position: absolute; left: 0; color: var(--color-gold); font-weight: 700; font-size: 24px;">✓</span>
-            <strong style="color: #0A0A0A;">Professional results without pretension.</strong> You get high-quality work. You don't get a creative director monologue about my "vision" for your quarterly sales conference.
-          </li>
-        </ul>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-top: 32px;">I've been on both sides of this transaction—commissioning work and delivering it. I know what's frustrating about working with creatives who treat every project like a masterpiece negotiation.</p>
-
-        <p style="font-size: 22px; line-height: 1.7; color: #0A0A0A; font-weight: 600; margin-top: 24px;">This isn't that.</p>
-      </div>
-    </section>
-
-    <!-- What You're Actually Getting -->
-    <section class="about-section">
-      <div class="container-narrow">
-        <h2 style="font-size: 40px; margin-bottom: 32px;">What You're Actually Getting</h2>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-bottom: 24px;">When you hire Core Visuals NYC, you're getting someone who:</p>
-
-        <ul style="list-style: disc; padding-left: 32px; margin: 32px 0;">
-          <li style="padding: 8px 0; font-size: 18px; color: #0A0A0A;">Has run a creative business before and understands client-side pressures</li>
-          <li style="padding: 8px 0; font-size: 18px; color: #0A0A0A;">Knows how to work fast without compromising quality</li>
-          <li style="padding: 8px 0; font-size: 18px; color: #0A0A0A;">Brings backup equipment because things break</li>
-          <li style="padding: 8px 0; font-size: 18px; color: #0A0A0A;">Shows up early, not "on time" (which really means 5 minutes late)</li>
-          <li style="padding: 8px 0; font-size: 18px; color: #0A0A0A;">Delivers edited work in days or weeks, not months</li>
-          <li style="padding: 8px 0; font-size: 18px; color: #0A0A0A;">Responds to revision requests without passive-aggressive energy</li>
-        </ul>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-top: 32px;">You're also getting someone who's comfortable in multiple contexts—I've shot art gallery exhibitions and corporate board meetings, nonprofit fundraisers and tech product launches, podcast interviews and conference keynotes.</p>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-top: 24px;">That range matters when you need someone who can adapt to your specific environment without needing extensive hand-holding.</p>
-      </div>
-    </section>
-
-    <!-- Why NYC -->
-    <section class="about-section">
-      <div class="container-narrow">
-        <h2 style="font-size: 40px; margin-bottom: 32px;">Why NYC</h2>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-bottom: 24px;">New York has the density of opportunity that doesn't exist anywhere else. Corporate events happening daily. Nonprofits doing meaningful work. Startups launching products. Creative agencies producing campaigns.</p>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-bottom: 24px;">It's also a city where people appreciate directness. No one here has time for elaborate discovery processes or consultative selling theatrics.</p>
-
-        <p style="font-size: 22px; line-height: 1.7; color: #0A0A0A; font-weight: 600; margin-top: 32px;">You need someone who can show up at a Midtown conference at 8am, capture a full day of content, and have edited highlights delivered by the end of the week.</p>
-
-        <p style="font-size: 22px; line-height: 1.7; color: #0A0A0A; font-weight: 600; margin-top: 16px;">That's the service I built.</p>
-      </div>
-    </section>
-
-    <!-- Current Projects -->
-    <section class="about-section">
-      <div class="container-narrow">
-        <h2 style="font-size: 40px; margin-bottom: 32px;">Current Projects</h2>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-bottom: 16px;">Right now, I'm focused on:</p>
-
-        <ul style="list-style: none; padding: 0; margin: 32px 0;">
-          <li style="padding: 16px 0; font-size: 18px; color: #0A0A0A; border-bottom: 1px solid #E5E7EB;">
-            Event coverage for NYC corporate clients (tech, finance, nonprofit sectors)
-          </li>
-          <li style="padding: 16px 0; font-size: 18px; color: #0A0A0A; border-bottom: 1px solid #E5E7EB;">
-            Brand video production for companies who need testimonials, culture content, and explainer videos
-          </li>
-          <li style="padding: 16px 0; font-size: 18px; color: #0A0A0A; border-bottom: 1px solid #E5E7EB;">
-            Ongoing partnerships with organizations who need regular visual content but don't want to hire in-house
-          </li>
-        </ul>
-
-        <p style="font-size: 19px; line-height: 1.8; color: #0A0A0A; margin-top: 32px;">I'm also still doing select art documentation projects—gallery photography, exhibition coverage, artist portfolio work—because that's where I started and I'm not interested in abandoning it completely.</p>
-      </div>
-    </section>
-
-    <!-- Let's Work Together -->
-    <section class="about-section">
-      <div class="container-narrow">
-        <div class="highlight-box">
-          <h2 style="font-size: 40px; margin-bottom: 24px;">Let's Work Together</h2>
-
-          <p style="font-size: 20px; line-height: 1.7; margin-bottom: 32px;">If you need event coverage, brand video, or corporate photography in NYC—and you value straightforward communication over creative mystique—send me a message.</p>
-
-          <p style="font-size: 22px; line-height: 1.6; font-weight: 600; margin-bottom: 40px;">Tell me what you need. I'll tell you what it costs and when you'll have it.</p>
-
-          <div style="margin-bottom: 32px;">
-            <a href="/#contact" class="btn" style="background: #0A0A0A; color: #FFFFFF; font-weight: 700; font-size: 18px; padding: 18px 40px;">Contact me →</a>
-          </div>
-
-          <div style="border-top: 2px solid rgba(10,10,10,0.2); padding-top: 32px; margin-top: 40px;">
-            <p style="font-size: 28px; font-weight: 700; margin-bottom: 8px;">Vlad Levine</p>
-            <p style="font-size: 18px; margin-bottom: 24px;">Founder, Core Visuals NYC<br>Based in NYC • Serving all five boroughs</p>
-
-            <div class="contact-info">
-              <a href="mailto:heyvladlevine@gmail.com">
-                <span style="font-size: 20px;">✉</span>
-                heyvladlevine@gmail.com
-              </a>
-              <a href="https://www.linkedin.com/in/vladlevine/" target="_blank" rel="noopener">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="social-icon">
-              </a>
-            </div>
-          </div>
+    <!-- BLOCK 4: Work Approach - Three Column Grid -->
+    <section class="work-approach-section">
+      <h2>What You're Getting</h2>
+      <div class="work-grid">
+        <div class="work-card">
+          <h3>Clear Communication</h3>
+          <p>I respond to emails. I show up early. I deliver when I say I will.</p>
         </div>
+        <div class="work-card">
+          <h3>Transparent Pricing</h3>
+          <p>Fixed packages. No hourly rates. No "depends on what you need" vagueness.</p>
+        </div>
+        <div class="work-card">
+          <h3>Professional Results</h3>
+          <p>High-quality work without the creative director monologue about my "vision" for your quarterly conference.</p>
+        </div>
+        <div class="work-card">
+          <h3>Range</h3>
+          <p>I've shot art galleries and corporate boards, nonprofit fundraisers and tech launches, podcasts and keynotes. I adapt without hand-holding.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCK 5: Current Focus -->
+    <section class="current-focus-section">
+      <div class="current-focus-content">
+        <h2>What I'm Working On</h2>
+        <p><strong>Right now:</strong> event coverage for NYC corporate clients (tech, finance, nonprofit), brand videos for companies who need testimonials and culture content, and ongoing partnerships with organizations who need regular visual content.</p>
+        <p>I also still do select art documentation—gallery photography, exhibition coverage, artist portfolios—because that's where I started and I'm not abandoning it.</p>
+      </div>
+    </section>
+
+    <!-- BLOCK 6: CTA -->
+    <section class="about-cta-section">
+      <div class="about-cta-content">
+        <h2>Let's Work Together</h2>
+        <p>If you need event coverage, brand video, or corporate photography in NYC—and you value straightforward communication over creative mystique—send me a message.</p>
+        <p class="emphasis">Tell me what you need. I'll tell you what it costs and when you'll have it.</p>
+        <a href="index.html#contact" class="btn" style="background: var(--color-gold); color: #0A0A0A; font-weight: 700; font-size: 18px; padding: 18px 40px;">Contact me →</a>
+      </div>
+    </section>
+
+    <!-- BLOCK 7: Footer Info -->
+    <section class="about-footer-info">
+      <h3>Vlad Levine</h3>
+      <p class="subtitle">Founder, Core Visuals NYC<br>Based in NYC • Serving all five boroughs</p>
+      <div class="contact-links">
+        <a href="mailto:heyvladlevine@gmail.com">
+          <span>✉</span>
+          heyvladlevine@gmail.com
+        </a>
+        <a href="tel:+19294450603">
+          <span>📞</span>
+          (929) 445-0603
+        </a>
+        <a href="https://www.linkedin.com/in/vladlevine/" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="social-icon-small">
+          LinkedIn
+        </a>
       </div>
     </section>
 
@@ -351,17 +474,17 @@
         <!-- Column 2: Services -->
         <div>
           <h4>Services</h4>
-          <a href="/#services">Event Video + Photo</a>
-          <a href="/#services">Corporate Content</a>
-          <a href="/#services">Custom Projects</a>
-          <a href="/#work">Portfolio</a>
+          <a href="index.html#services">Event Video + Photo</a>
+          <a href="index.html#services">Corporate Content</a>
+          <a href="index.html#services">Custom Projects</a>
+          <a href="index.html#work">Portfolio</a>
         </div>
 
         <!-- Column 3: Company -->
         <div>
           <h4>Company</h4>
-          <a href="/about.html">About</a>
-          <a href="/#contact">Contact</a>
+          <a href="about.html">About</a>
+          <a href="index.html#contact">Contact</a>
           <a href="tel:+19294450603">(929) 445-0603</a>
           <a href="mailto:contact@corevisuals.nyc">Email Us</a>
         </div>
