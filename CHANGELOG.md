@@ -412,6 +412,7 @@ What boutique ACTUALLY means for clients:
 - ✅ Updated all section padding for consistent white space (line-height 1.7, generous margins)
 - ✅ Enhanced mobile responsive styles for new sections
 - ✅ Updated SITE-STRUCTURE.md with case study documentation
+- ✅ Connected homepage "Corporate Photography" portfolio item to law firm case study page (index.html:208)
 
 **November 10, 2025:**
 - ✅ Rebrand: Lightroom NYC → Core Visuals NYC
