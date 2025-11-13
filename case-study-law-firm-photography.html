@@ -200,21 +200,23 @@
 
     .photo-slot {
       aspect-ratio: 3/4;
-      background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
       border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 48px;
-      color: var(--cs-light-gray);
-      transition: transform 0.3s ease;
-      border: 2px solid rgba(6, 182, 212, 0.3);
       position: relative;
       overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .photo-slot:hover {
-      transform: scale(1.02);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .photo-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .photo-caption {
@@ -222,10 +224,11 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: rgba(0,0,0,0.7);
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
       color: white;
-      padding: 12px;
-      font-size: 14px;
+      padding: 16px 12px;
+      font-size: 13px;
+      font-weight: 500;
       text-align: center;
       opacity: 0;
       transition: opacity 0.3s ease;
@@ -508,40 +511,94 @@
 
       <div class="photo-grid">
         <div class="photo-slot">
-          👤
-          <div class="photo-caption">Individual Headshot</div>
+          <img
+            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762999434/Pyke27104520_gnchct.jpg"
+            alt="Professional woman headshot smiling in NYC office"
+            width="600"
+            height="800"
+            loading="lazy"
+          >
+          <div class="photo-caption">Professional Headshot</div>
         </div>
         <div class="photo-slot">
-          👤
-          <div class="photo-caption">Individual Headshot</div>
+          <img
+            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762999434/David127_pceth3.jpg"
+            alt="Professional man headshot in suit and tie with glasses NYC office"
+            width="600"
+            height="800"
+            loading="lazy"
+          >
+          <div class="photo-caption">Professional Headshot</div>
         </div>
         <div class="photo-slot">
-          👤
-          <div class="photo-caption">Individual Headshot</div>
+          <img
+            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762999434/Michelle280_gvpd5e.jpg"
+            alt="Professional woman headshot with glasses in patterned top NYC office"
+            width="600"
+            height="800"
+            loading="lazy"
+          >
+          <div class="photo-caption">Professional Headshot</div>
         </div>
         <div class="photo-slot">
-          📋
-          <div class="photo-caption">Office Meeting Scene</div>
+          <img
+            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915326/A7105570_wmr83v.jpg"
+            alt="Professional team at conference table NYC office lifestyle photography"
+            width="600"
+            height="800"
+            loading="lazy"
+          >
+          <div class="photo-caption">Team Meeting</div>
         </div>
         <div class="photo-slot">
-          💼
-          <div class="photo-caption">Conference Room</div>
+          <img
+            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915326/A7105502_e0r1x1.jpg"
+            alt="Man explaining diagram on whiteboard NYC office lifestyle photography"
+            width="600"
+            height="800"
+            loading="lazy"
+          >
+          <div class="photo-caption">Presentation & Training</div>
         </div>
         <div class="photo-slot">
-          🤝
+          <img
+            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915326/A7105622_vffceq.jpg"
+            alt="Group meeting collaboration with laptop NYC office lifestyle photography"
+            width="600"
+            height="800"
+            loading="lazy"
+          >
           <div class="photo-caption">Team Collaboration</div>
         </div>
         <div class="photo-slot">
-          👤
-          <div class="photo-caption">Individual Headshot</div>
+          <img
+            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762999434/James412_ndy7px.jpg"
+            alt="Professional man headshot in suit with red tie NYC office"
+            width="600"
+            height="800"
+            loading="lazy"
+          >
+          <div class="photo-caption">Professional Headshot</div>
         </div>
         <div class="photo-slot">
-          🏢
-          <div class="photo-caption">Office Environment</div>
+          <img
+            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915326/A7105016_rikmij.jpg"
+            alt="Woman working at dual monitors NYC office lifestyle photography"
+            width="600"
+            height="800"
+            loading="lazy"
+          >
+          <div class="photo-caption">Focused Workflow</div>
         </div>
         <div class="photo-slot">
-          👥
-          <div class="photo-caption">Group Shot</div>
+          <img
+            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915326/A7105584_p5fphg.jpg"
+            alt="Diverse team meeting discussion NYC office lifestyle photography"
+            width="600"
+            height="800"
+            loading="lazy"
+          >
+          <div class="photo-caption">Group Discussion</div>
         </div>
       </div>
     </div>
