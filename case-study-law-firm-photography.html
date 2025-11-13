@@ -198,6 +198,14 @@
       margin: 0 auto;
     }
 
+    .photo-grid.headshots {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .photo-grid.lifestyle {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
     .photo-slot {
       aspect-ratio: 3/4;
       border-radius: 8px;
@@ -205,6 +213,14 @@
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .photo-slot.landscape {
+      aspect-ratio: 3/2;
+    }
+
+    .photo-slot.portrait {
+      aspect-ratio: 3/4;
     }
 
     .photo-slot:hover {
@@ -427,8 +443,13 @@
         padding: 60px 24px;
       }
 
-      .photo-grid {
+      .photo-grid.headshots {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .photo-grid.lifestyle {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 20px;
       }
 
@@ -451,7 +472,8 @@
     }
 
     @media (max-width: 768px) {
-      .photo-grid {
+      .photo-grid.headshots,
+      .photo-grid.lifestyle {
         grid-template-columns: 1fr;
         gap: 20px;
       }
@@ -509,7 +531,7 @@
     <div class="container">
       <h2>Professional Headshots</h2>
 
-      <div class="photo-grid">
+      <div class="photo-grid headshots">
         <div class="photo-slot">
           <img
             src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762999434/manhattan_lawfirm_headshot_1.jpg"
@@ -579,58 +601,71 @@
     <div class="container">
       <h2>Office Lifestyle Photography</h2>
 
-      <div class="photo-grid">
-        <div class="photo-slot">
+      <div class="photo-grid lifestyle">
+        <!-- Landscape photos -->
+        <div class="photo-slot landscape">
           <img
-            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915326/NYC_office_lifestyle_group_meeting_collaboration_laptop.jpg"
+            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1762915326/NYC_office_lifestyle_group_meeting_collaboration_laptop.jpg"
             alt="NYC law firm office group meeting collaboration with laptop professional photography"
-            width="600"
-            height="800"
+            width="800"
+            height="533"
             loading="lazy"
           >
           <div class="photo-caption">Team Collaboration</div>
         </div>
-        <div class="photo-slot">
+        <div class="photo-slot landscape">
           <img
-            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915323/NYC_office_lifestyle_professional_team_at_conference_table.jpg"
+            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1762915323/NYC_office_lifestyle_professional_team_at_conference_table.jpg"
             alt="Professional team at conference table NYC law firm office lifestyle photography"
-            width="600"
-            height="800"
+            width="800"
+            height="533"
             loading="lazy"
           >
           <div class="photo-caption">Conference Room Meeting</div>
         </div>
-        <div class="photo-slot">
+        <div class="photo-slot landscape">
           <img
-            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915325/NYC_office_lifestyle_diverse_team_meeting_discussion.jpg"
-            alt="Diverse team meeting discussion NYC law firm office lifestyle photography"
-            width="600"
-            height="800"
-            loading="lazy"
-          >
-          <div class="photo-caption">Team Discussion</div>
-        </div>
-        <div class="photo-slot">
-          <img
-            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915319/NYC_office_lifestyle_man_explaining_diagram_on_whiteboard.jpg"
+            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1762915319/NYC_office_lifestyle_man_explaining_diagram_on_whiteboard.jpg"
             alt="Attorney explaining diagram on whiteboard NYC law firm office photography"
-            width="600"
-            height="800"
+            width="800"
+            height="533"
             loading="lazy"
           >
           <div class="photo-caption">Strategy Session</div>
         </div>
-        <div class="photo-slot">
+        <div class="photo-slot landscape">
           <img
-            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915318/NYC_office_lifestyle_two_men_collaborating_pointing.jpg"
-            alt="Two attorneys collaborating and pointing NYC law firm office lifestyle photography"
-            width="600"
-            height="800"
+            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1762915312/NYC_office_lifestyle_woman_working_dual_monitors.jpg"
+            alt="Attorney working at dual monitors NYC law firm office lifestyle photography"
+            width="800"
+            height="533"
             loading="lazy"
           >
-          <div class="photo-caption">Collaborative Work</div>
+          <div class="photo-caption">Focused Work</div>
         </div>
-        <div class="photo-slot">
+        <div class="photo-slot landscape">
+          <img
+            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1762915315/NYC_office_lifestyle_legal_books_on_desk_with_plant.jpg"
+            alt="Legal reference books on desk with plant NYC law firm office detail photography"
+            width="800"
+            height="533"
+            loading="lazy"
+          >
+          <div class="photo-caption">Office Environment</div>
+        </div>
+        <div class="photo-slot landscape">
+          <img
+            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1762915325/NYC_office_lifestyle_diverse_team_meeting_discussion.jpg"
+            alt="Diverse team meeting discussion NYC law firm office lifestyle photography"
+            width="800"
+            height="533"
+            loading="lazy"
+          >
+          <div class="photo-caption">Team Discussion</div>
+        </div>
+
+        <!-- Portrait photos -->
+        <div class="photo-slot portrait">
           <img
             src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915322/NYC_office_lifestyle_professional_woman_smiling_portrait.jpg"
             alt="Professional woman smiling portrait NYC law firm office lifestyle photography"
@@ -640,47 +675,7 @@
           >
           <div class="photo-caption">Office Portrait</div>
         </div>
-        <div class="photo-slot">
-          <img
-            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915312/NYC_office_lifestyle_woman_working_dual_monitors.jpg"
-            alt="Attorney working at dual monitors NYC law firm office lifestyle photography"
-            width="600"
-            height="800"
-            loading="lazy"
-          >
-          <div class="photo-caption">Focused Work</div>
-        </div>
-        <div class="photo-slot">
-          <img
-            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915314/NYC_office_lifestyle_man_working_on_laptop_focus.jpg"
-            alt="Attorney working on laptop with focus NYC law firm office photography"
-            width="600"
-            height="800"
-            loading="lazy"
-          >
-          <div class="photo-caption">Deep Focus</div>
-        </div>
-        <div class="photo-slot">
-          <img
-            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915310/NYC_office_lifestyle_man_giving_speech_presentation.jpg"
-            alt="Attorney giving speech presentation NYC law firm office lifestyle photography"
-            width="600"
-            height="800"
-            loading="lazy"
-          >
-          <div class="photo-caption">Client Presentation</div>
-        </div>
-        <div class="photo-slot">
-          <img
-            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915315/NYC_office_lifestyle_legal_books_on_desk_with_plant.jpg"
-            alt="Legal reference books on desk with plant NYC law firm office detail photography"
-            width="600"
-            height="800"
-            loading="lazy"
-          >
-          <div class="photo-caption">Office Environment</div>
-        </div>
-        <div class="photo-slot">
+        <div class="photo-slot portrait">
           <img
             src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915311/NYC_office_lifestyle_professional_woman_standing_portrait.jpg"
             alt="Professional woman standing portrait NYC law firm office lifestyle photography"
@@ -690,7 +685,37 @@
           >
           <div class="photo-caption">Professional Portrait</div>
         </div>
-        <div class="photo-slot">
+        <div class="photo-slot portrait">
+          <img
+            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915318/NYC_office_lifestyle_two_men_collaborating_pointing.jpg"
+            alt="Two attorneys collaborating and pointing NYC law firm office lifestyle photography"
+            width="600"
+            height="800"
+            loading="lazy"
+          >
+          <div class="photo-caption">Collaborative Work</div>
+        </div>
+        <div class="photo-slot portrait">
+          <img
+            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915314/NYC_office_lifestyle_man_working_on_laptop_focus.jpg"
+            alt="Attorney working on laptop with focus NYC law firm office photography"
+            width="600"
+            height="800"
+            loading="lazy"
+          >
+          <div class="photo-caption">Deep Focus</div>
+        </div>
+        <div class="photo-slot portrait">
+          <img
+            src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915310/NYC_office_lifestyle_man_giving_speech_presentation.jpg"
+            alt="Attorney giving speech presentation NYC law firm office lifestyle photography"
+            width="600"
+            height="800"
+            loading="lazy"
+          >
+          <div class="photo-caption">Client Presentation</div>
+        </div>
+        <div class="photo-slot portrait">
           <img
             src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1762915322/NYC_office_lifestyle_professional_group_looking_up.jpg"
             alt="Professional group looking up NYC law firm office lifestyle photography"
