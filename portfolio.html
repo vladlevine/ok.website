@@ -146,6 +146,18 @@
       border-color: var(--portfolio-magenta);
     }
 
+    /* Featured Project Cards */
+    a[href*="case-study"]:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Category Links */
+    a[href*="service-"]:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    }
+
     /* CTA Section */
     .portfolio-cta {
       background: var(--portfolio-light-bg);
@@ -250,25 +262,75 @@
       <p>Professional event photography and videography across NYC. Corporate events, conferences, brand storytelling, and custom projects.</p>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Featured Projects -->
     <section class="portfolio-gallery">
       <div class="gallery-container">
-        <div class="gallery-grid">
-          <div class="gallery-item">📸</div>
-          <div class="gallery-item">🎬</div>
-          <div class="gallery-item">📸</div>
-          <div class="gallery-item">🎬</div>
-          <div class="gallery-item">📸</div>
-          <div class="gallery-item">🎬</div>
-          <div class="gallery-item">📸</div>
-          <div class="gallery-item">🎬</div>
-          <div class="gallery-item">📸</div>
-          <div class="gallery-item">🎬</div>
-          <div class="gallery-item">📸</div>
-          <div class="gallery-item">🎬</div>
-          <div class="gallery-item">📸</div>
-          <div class="gallery-item">🎬</div>
-          <div class="gallery-item">📸</div>
+        <h2 style="text-align: center; font-size: clamp(32px, 5vw, 42px); margin-bottom: 16px; font-weight: 700; color: var(--portfolio-black);">Featured Projects</h2>
+        <p style="text-align: center; font-size: 18px; color: #6B7280; max-width: 700px; margin: 0 auto 60px;">Real work from real clients. See how we help NYC businesses tell their stories.</p>
+
+        <!-- Featured Project Cards -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; max-width: 1200px; margin: 0 auto 80px;">
+          <!-- Law Firm Photography -->
+          <a href="case-study-law-firm-photography.html" style="text-decoration: none; background: #FFFFFF; border: 2px solid var(--portfolio-cyan); border-radius: 12px; overflow: hidden; transition: all 0.3s ease; display: block;">
+            <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, rgba(100, 116, 139, 0.15) 0%, rgba(148, 163, 184, 0.15) 100%); display: flex; align-items: center; justify-content: center; font-size: 64px;">📸</div>
+            <div style="padding: 28px;">
+              <h3 style="font-size: 22px; font-weight: 700; color: var(--portfolio-black); margin-bottom: 12px;">Manhattan Law Firm</h3>
+              <p style="font-size: 16px; color: #6B7280; line-height: 1.6; margin-bottom: 16px;">Professional headshots and office lifestyle photography for a growing Manhattan law firm. 18 attorneys, two sessions, consistent professional branding.</p>
+              <span style="color: var(--portfolio-cyan); font-weight: 600; font-size: 15px;">View Case Study →</span>
+            </div>
+          </a>
+
+          <!-- Tech Expo Coverage -->
+          <a href="case-study-tech-expo.html" style="text-decoration: none; background: #FFFFFF; border: 2px solid var(--portfolio-gold); border-radius: 12px; overflow: hidden; transition: all 0.3s ease; display: block;">
+            <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(6, 182, 212, 0.15) 100%); display: flex; align-items: center; justify-content: center; font-size: 64px;">🎬</div>
+            <div style="padding: 28px;">
+              <h3 style="font-size: 22px; font-weight: 700; color: var(--portfolio-black); margin-bottom: 12px;">Tech Conference NYC</h3>
+              <p style="font-size: 16px; color: #6B7280; line-height: 1.6; margin-bottom: 16px;">Full-day video and photo coverage of a 300-person tech expo. Keynote speakers, networking sessions, product demos—delivered in 7 days.</p>
+              <span style="color: var(--portfolio-gold); font-weight: 600; font-size: 15px;">View Case Study →</span>
+            </div>
+          </a>
+
+          <!-- Nonprofit Golf Tournament -->
+          <a href="case-study-nonprofit-golf.html" style="text-decoration: none; background: #FFFFFF; border: 2px solid var(--portfolio-magenta); border-radius: 12px; overflow: hidden; transition: all 0.3s ease; display: block;">
+            <div style="aspect-ratio: 16/10; background: linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(212, 175, 55, 0.15) 100%); display: flex; align-items: center; justify-content: center; font-size: 64px;">📸</div>
+            <div style="padding: 28px;">
+              <h3 style="font-size: 22px; font-weight: 700; color: var(--portfolio-black); margin-bottom: 12px;">Nonprofit Golf Tournament</h3>
+              <p style="font-size: 16px; color: #6B7280; line-height: 1.6; margin-bottom: 16px;">Outdoor event photography capturing sponsors, attendees, and tournament highlights for post-event marketing and donor engagement.</p>
+              <span style="color: var(--portfolio-magenta); font-weight: 600; font-size: 15px;">View Case Study →</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Browse by Category -->
+        <div style="border-top: 2px solid #E5E7EB; padding-top: 60px;">
+          <h3 style="text-align: center; font-size: clamp(24px, 4vw, 32px); margin-bottom: 16px; font-weight: 700; color: var(--portfolio-black);">Browse by Category</h3>
+          <p style="text-align: center; font-size: 16px; color: #6B7280; max-width: 600px; margin: 0 auto 40px;">Explore more work from each service area.</p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto;">
+            <!-- Event Coverage -->
+            <a href="service-event-coverage.html#portfolio" style="text-decoration: none; background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%); border: 2px solid var(--portfolio-cyan); border-radius: 12px; padding: 32px; transition: all 0.3s ease; display: block; text-align: center;">
+              <div style="font-size: 48px; margin-bottom: 16px;">🎬</div>
+              <h4 style="font-size: 20px; font-weight: 700; color: var(--portfolio-black); margin-bottom: 12px;">Event Coverage</h4>
+              <p style="font-size: 15px; color: #6B7280; line-height: 1.6; margin-bottom: 16px;">Conferences, galas, networking events, product launches</p>
+              <span style="color: var(--portfolio-cyan); font-weight: 600; font-size: 14px;">View Gallery →</span>
+            </a>
+
+            <!-- Corporate Photography -->
+            <a href="service-corporate-content.html#portfolio" style="text-decoration: none; background: linear-gradient(135deg, rgba(100, 116, 139, 0.1) 0%, rgba(148, 163, 184, 0.1) 100%); border: 2px solid #64748B; border-radius: 12px; padding: 32px; transition: all 0.3s ease; display: block; text-align: center;">
+              <div style="font-size: 48px; margin-bottom: 16px;">📸</div>
+              <h4 style="font-size: 20px; font-weight: 700; color: var(--portfolio-black); margin-bottom: 12px;">Corporate Photography</h4>
+              <p style="font-size: 15px; color: #6B7280; line-height: 1.6; margin-bottom: 16px;">Headshots, office lifestyle, brand videos, team content</p>
+              <span style="color: #64748B; font-weight: 600; font-size: 14px;">View Gallery →</span>
+            </a>
+
+            <!-- Personal Branding & Product Launches -->
+            <a href="service-custom-projects.html#portfolio" style="text-decoration: none; background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%); border: 2px solid var(--portfolio-magenta); border-radius: 12px; padding: 32px; transition: all 0.3s ease; display: block; text-align: center;">
+              <div style="font-size: 48px; margin-bottom: 16px;">🎯</div>
+              <h4 style="font-size: 20px; font-weight: 700; color: var(--portfolio-black); margin-bottom: 12px;">Personal Branding & Launches</h4>
+              <p style="font-size: 15px; color: #6B7280; line-height: 1.6; margin-bottom: 16px;">Thought leadership, founder content, multi-day projects</p>
+              <span style="color: var(--portfolio-magenta); font-weight: 600; font-size: 14px;">View Gallery →</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>

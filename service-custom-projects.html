@@ -332,31 +332,39 @@
         <h2 style="font-size: clamp(28px, 4vw, 36px); color: #FFFFFF; margin-bottom: 16px; text-align: center;">Ready to discuss your custom project?</h2>
         <p style="font-size: 17px; color: #a3a3a3; max-width: 600px; margin: 0 auto 48px; text-align: center;">Quick quote — just 4 questions</p>
 
-        <form action="https://formspree.io/f/xjkjkkjg" method="POST" style="background: #FFFFFF; padding: 40px; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+        <!-- Progress Bar -->
+        <div style="background: rgba(255,255,255,0.1); height: 6px; border-radius: 10px; margin-bottom: 32px; overflow: hidden;">
+          <div id="progress-bar" style="background: #EC4899; height: 100%; width: 25%; transition: width 0.3s ease;"></div>
+        </div>
+
+        <form action="https://formspree.io/f/xjkjkkjg" method="POST" id="service-form" style="background: #FFFFFF; padding: 40px; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
           <input type="hidden" name="service_type" value="custom-project">
           <input type="hidden" name="_subject" value="Custom Project Quote Request">
 
-          <div style="margin-bottom: 32px;">
+          <div class="form-question" data-question="1" style="display: block; margin-bottom: 32px;">
             <label style="display: block; font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #000;">Tell us about your project</label>
             <textarea name="project_description" rows="4" placeholder="Describe what you're looking to create..." required style="width: 100%; padding: 14px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px; font-family: 'Inter', sans-serif; resize: vertical;"></textarea>
+            <button type="button" class="next-btn" onclick="nextQuestion(2)" style="width: 100%; padding: 16px; background: #EC4899; color: #FFF; font-size: 16px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; margin-top: 16px; transition: all 0.3s;">Next →</button>
           </div>
 
-          <div style="margin-bottom: 32px;">
+          <div class="form-question" data-question="2" style="display: none; margin-bottom: 32px;">
             <label style="display: block; font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #000;">When do you need this?</label>
             <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="timeline" value="asap" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #EC4899;"> ASAP (within 2 weeks)</label>
             <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="timeline" value="1-2-months" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #EC4899;"> Within 1-2 months</label>
             <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="timeline" value="flexible" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #EC4899;"> Flexible timeline</label>
+            <button type="button" class="next-btn" onclick="nextQuestion(3)" style="width: 100%; padding: 16px; background: #EC4899; color: #FFF; font-size: 16px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; margin-top: 16px; transition: all 0.3s;">Next →</button>
           </div>
 
-          <div style="margin-bottom: 32px;">
+          <div class="form-question" data-question="3" style="display: none; margin-bottom: 32px;">
             <label style="display: block; font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #000;">Budget range?</label>
             <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="budget" value="2k-5k" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #EC4899;"> $2,000 - $5,000</label>
             <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="budget" value="5k-10k" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #EC4899;"> $5,000 - $10,000</label>
             <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="budget" value="10k-plus" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #EC4899;"> $10,000+</label>
             <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="budget" value="not-sure" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #EC4899;"> Not sure yet</label>
+            <button type="button" class="next-btn" onclick="nextQuestion(4)" style="width: 100%; padding: 16px; background: #EC4899; color: #FFF; font-size: 16px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; margin-top: 16px; transition: all 0.3s;">Next →</button>
           </div>
 
-          <div style="margin-bottom: 24px;">
+          <div class="form-question" data-question="4" style="display: none; margin-bottom: 24px;">
             <label style="display: block; font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #000;">Contact info</label>
             <input type="text" name="name" placeholder="Your name *" required style="width: 100%; padding: 14px; margin-bottom: 12px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;">
             <input type="email" name="email" placeholder="Email *" required style="width: 100%; padding: 14px; margin-bottom: 12px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;">
@@ -443,6 +451,24 @@
         header.classList.remove('scrolled');
       }
     });
+
+    // Conversational form navigation
+    function nextQuestion(questionNum) {
+      const questions = document.querySelectorAll('.form-question');
+      questions.forEach(q => q.style.display = 'none');
+
+      const nextQ = document.querySelector(`[data-question="${questionNum}"]`);
+      if (nextQ) {
+        nextQ.style.display = 'block';
+
+        // Update progress bar
+        const progress = (questionNum / 4) * 100;
+        document.getElementById('progress-bar').style.width = progress + '%';
+
+        // Smooth scroll to form
+        nextQ.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
   </script>
 
 </body>
