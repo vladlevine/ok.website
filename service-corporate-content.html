@@ -59,27 +59,39 @@
 
     .service-gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
       max-width: 1400px;
       margin: 80px auto;
+      grid-auto-flow: dense;
     }
 
     .service-gallery-item {
-      aspect-ratio: 16/10;
-      background: linear-gradient(135deg, rgba(100, 116, 139, 0.15) 0%, rgba(148, 163, 184, 0.15) 100%);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 48px;
-      border: 2px solid rgba(100, 116, 139, 0.3);
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: all 0.3s ease;
     }
 
+    .service-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     .service-gallery-item:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    }
+
+    .gallery-tall {
+      grid-row: span 2;
+    }
+
+    .gallery-wide {
+      grid-column: span 2;
     }
 
     .package-grid {
@@ -165,7 +177,23 @@
       <a href="index.html" class="logo">CORE VISUALS NYC</a>
       <nav class="nav" id="nav">
         <a href="index.html#services">Services</a>
-        <a href="portfolio.html">Work</a>
+        <div class="nav-item">
+          <a href="portfolio.html">Work</a>
+          <div class="dropdown-menu">
+            <a href="service-event-coverage.html">
+              Event Coverage
+              <span>Conferences, galas, networking events, product launches</span>
+            </a>
+            <a href="service-corporate-content.html">
+              Corporate Photography
+              <span>Headshots, office lifestyle, brand videos, team content</span>
+            </a>
+            <a href="service-custom-projects.html">
+              Personal Branding & Launches
+              <span>Thought leadership, founder content, multi-day projects</span>
+            </a>
+          </div>
+        </div>
         <a href="about.html">About</a>
         <a href="contact.html" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
       </nav>
@@ -204,12 +232,63 @@
         <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto;">From law firms to tech startups. Professional content that represents your brand.</p>
 
         <div class="service-gallery">
-          <div class="service-gallery-item">📸</div>
-          <div class="service-gallery-item">🎬</div>
-          <div class="service-gallery-item">📸</div>
-          <div class="service-gallery-item">🎬</div>
-          <div class="service-gallery-item">📸</div>
-          <div class="service-gallery-item">🎬</div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763004061/headshot_businessman.jpg" alt="NYC business headshot professional photography" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763004062/business_woman_branding_portrait.jpg" alt="Professional business woman branding portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763004055/professional_business_headshot.jpg" alt="Professional business headshot Manhattan" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763004051/businessman_headshot_white_background.jpg" alt="Businessman headshot white background NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002590/man_business_headshot.jpg" alt="Man business headshot corporate NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002579/woman_moody_professional_headshot.jpg" alt="Woman professional headshot NYC corporate" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002509/business_woman_professional_headshot.jpg" alt="Business woman professional headshot Manhattan" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002248/businessman_headshot_white_background_2.jpg" alt="Corporate businessman headshot white background" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763058025/manhatta_business_headshot.jpg" alt="Manhattan business headshot photography" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763057059/business_headshot_1.jpg" alt="NYC business headshot corporate photography" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763057040/business_headshot_2.jpg" alt="Professional business headshot NYC office" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763057032/lawyer_headshot_1.jpg" alt="Manhattan lawyer headshot professional" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763057030/manhattan_finance_headshot_woman.jpg" alt="Manhattan finance headshot woman professional" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-wide">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1763057026/manhattan_finance_headshot_cityview.jpg" alt="Manhattan finance headshot with city view" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-wide">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1763057023/manhattan_finance_headshot_team_photo.jpg" alt="Manhattan finance team photo corporate" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763057009/office_headshot.jpg" alt="Office headshot NYC corporate photography" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-wide">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1763056973/business_partners_photo.jpg" alt="Business partners photo NYC corporate" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763057014/doctor_NYC_headshot.jpg" alt="Doctor NYC headshot professional medical" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763057016/casual_headshot.jpg" alt="Casual business headshot NYC" loading="lazy">
+          </div>
         </div>
       </div>
     </section>
@@ -369,11 +448,11 @@
             <label style="display: block; font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #000;">Contact info</label>
             <input type="text" name="name" placeholder="Your name *" required style="width: 100%; padding: 14px; margin-bottom: 12px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;">
             <input type="email" name="email" placeholder="Email *" required style="width: 100%; padding: 14px; margin-bottom: 12px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;">
-            <input type="tel" name="phone" placeholder="Phone (optional)" style="width: 100%; padding: 14px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;">
-          </div>
+            <input type="tel" name="phone" placeholder="Phone (optional)" style="width: 100%; padding: 14px; margin-bottom: 12px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;">
 
-          <button type="submit" style="width: 100%; padding: 18px; background: #64748B; color: #FFF; font-size: 18px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s;">Get My Quote →</button>
-          <p style="text-align: center; margin-top: 24px; font-size: 15px; color: #6B7280;">Or call: <a href="tel:+19294450603" style="color: #64748B; text-decoration: none; font-weight: 600;">(929) 445-0603</a></p>
+            <button type="submit" style="width: 100%; padding: 18px; background: #64748B; color: #FFF; font-size: 18px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-top: 16px;">Get My Quote →</button>
+            <p style="text-align: center; margin-top: 24px; font-size: 15px; color: #6B7280;">Or call: <a href="tel:+19294450603" style="color: #64748B; text-decoration: none; font-weight: 600;">(929) 445-0603</a></p>
+          </div>
         </form>
       </div>
     </section>

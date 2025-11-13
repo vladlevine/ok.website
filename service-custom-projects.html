@@ -59,27 +59,39 @@
 
     .service-gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
       max-width: 1400px;
       margin: 80px auto;
+      grid-auto-flow: dense;
     }
 
     .service-gallery-item {
-      aspect-ratio: 16/10;
-      background: linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(6, 182, 212, 0.15) 100%);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 48px;
-      border: 2px solid rgba(236, 72, 153, 0.3);
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: all 0.3s ease;
     }
 
+    .service-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     .service-gallery-item:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    }
+
+    .gallery-tall {
+      grid-row: span 2;
+    }
+
+    .gallery-wide {
+      grid-column: span 2;
     }
 
     .project-types {
@@ -163,7 +175,23 @@
       <a href="index.html" class="logo">CORE VISUALS NYC</a>
       <nav class="nav" id="nav">
         <a href="index.html#services">Services</a>
-        <a href="portfolio.html">Work</a>
+        <div class="nav-item">
+          <a href="portfolio.html">Work</a>
+          <div class="dropdown-menu">
+            <a href="service-event-coverage.html">
+              Event Coverage
+              <span>Conferences, galas, networking events, product launches</span>
+            </a>
+            <a href="service-corporate-content.html">
+              Corporate Photography
+              <span>Headshots, office lifestyle, brand videos, team content</span>
+            </a>
+            <a href="service-custom-projects.html">
+              Personal Branding & Launches
+              <span>Thought leadership, founder content, multi-day projects</span>
+            </a>
+          </div>
+        </div>
         <a href="about.html">About</a>
         <a href="contact.html" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
       </nav>
@@ -198,16 +226,145 @@
     <!-- Portfolio Gallery -->
     <section class="service-section" style="background: #F9FAFB;">
       <div class="container">
-        <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 24px;">Custom Projects We've Done</h2>
-        <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto;">From tech expos to product launches. Every project is different.</p>
+        <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 24px;">Personal Branding & Editorial</h2>
+        <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto;">Thought leadership content, founder portraits, creative projects, and performer branding photography.</p>
 
         <div class="service-gallery">
-          <div class="service-gallery-item">📸</div>
-          <div class="service-gallery-item">🎬</div>
-          <div class="service-gallery-item">📸</div>
-          <div class="service-gallery-item">🎬</div>
-          <div class="service-gallery-item">📸</div>
-          <div class="service-gallery-item">🎬</div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763004070/artist_banding_portrait.jpg" alt="Artist branding portrait NYC photographer" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763004060/clean_editorial_woman_portrait.jpg" alt="Clean editorial woman portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763004057/dramatic_lawyer_headshot.jpg" alt="Dramatic lawyer headshot NYC branding" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763004056/woman_dramatic_editorial_wet_hair.jpg" alt="Woman dramatic editorial portrait photographer NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763004053/woman_red_dress_editorial.jpg" alt="Woman red dress editorial NYC photography" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763004045/editorial_dramatic_woman_neon_lightring.jpg" alt="Editorial dramatic woman neon light ring NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763004034/moody_editorial_woman.jpg" alt="Moody editorial woman portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002593/man_modeling_portrait_editorial.jpg" alt="Man modeling portrait editorial NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002591/man_dramatic_editorial_portrait.jpg" alt="Man dramatic editorial portrait NYC photographer" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002589/woman_creative_headshot_portrait_branding.jpg" alt="Woman creative headshot portrait branding NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002578/voice_actor_branding_portrait.jpg" alt="Voice actor branding portrait NYC photographer" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002570/woman_creative_headshot_portrait_branding2.jpg" alt="Woman creative headshot portrait branding NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-wide">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1763002568/celebrity_musician_guitar_portrait.jpg" alt="Celebrity musician guitar portrait NYC photography" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002567/woman_dark_moody_portrait.jpg" alt="Woman dark moody portrait NYC photographer" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002562/woman_actress_closeup_portrait.jpg" alt="Woman actress closeup portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002556/woman_model_sitting_edgy_editorial.jpg" alt="Woman model sitting edgy editorial NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002554/woman_neon_lighting_moody_editorial.jpg" alt="Woman neon lighting moody editorial NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002540/man_voiceactor_branding_2.jpg" alt="Man voice actor branding portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002538/woman_model_editorial_2_black_and_white.jpg" alt="Woman model editorial black and white NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-wide">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1763002532/model_sportswear_outdoors_editorial.jpg" alt="Model sportswear outdoors editorial NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002518/smiling_outdoors_headshot_woman.jpg" alt="Smiling outdoors headshot woman NYC photographer" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002512/woman_editorial_closeup_model_edgy.jpg" alt="Woman editorial closeup model edgy NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002503/woman_sportswear_professional_photography.jpg" alt="Woman sportswear professional photography NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002502/editorial_musician_portrait.jpg" alt="Editorial musician portrait NYC photographer" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-wide">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1763002497/editorial_outdoors_casual.jpg" alt="Editorial outdoors casual NYC photography" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002496/woman_real_estate_nyc_headshot_yellow_background_energetic.jpg" alt="Woman real estate NYC headshot yellow background energetic" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-wide">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1763002493/musician_player_portrait_playing_drums.jpg" alt="Musician player portrait playing drums NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002491/man_tshirt_headshot_casual.jpg" alt="Man tshirt headshot casual NYC branding" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002491/woman_editorial_portrait_closeup_black_and_white.jpg" alt="Woman editorial portrait closeup black and white NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-wide">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1763002464/editorial_outdoors_woman_casual_flowers.jpg" alt="Editorial outdoors woman casual flowers NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002369/editorial_sportswear_woman_indoors.jpg" alt="Editorial sportswear woman indoors NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002366/stylist_personal_branding_photogprahy.jpg" alt="Stylist personal branding photography NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002224/woman_editorial_leather_blazer_dramatic.jpg" alt="Woman editorial leather blazer dramatic NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002240/woman_editorial_portrait_indoors_soft_light.jpg" alt="Woman editorial portrait indoors soft light NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002250/woman_editorial_sportswear_indoors.jpg" alt="Woman editorial sportswear indoors NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002251/stylist_personal_branding_photogprahy_3.jpg" alt="Stylist personal branding photography session NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002356/stylist_personal_branding_photogprahy_2.jpg" alt="Stylist personal branding photography portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763002215/creative_headshot_woman_yellow_background.jpg" alt="Creative headshot woman yellow background NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-wide">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1763002211/marathon_runner_book_autohor_branding.jpg" alt="Marathon runner book author branding NYC photography" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763057062/Winter1120____siwpjj.jpg" alt="Winter portrait editorial NYC photographer" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763057046/book_launch_author_portrait.jpg" alt="Book launch author portrait NYC branding" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763057045/styled_creative_headshot_marketing_agency.jpg" alt="Styled creative headshot marketing agency NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763057019/comedian_portrait.jpg" alt="Comedian portrait branding NYC photographer" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763056963/editorial_photography_portrait.jpg" alt="Editorial photography portrait NYC creative" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_600/v1763056967/dancer_editorial.jpg" alt="Dancer editorial portrait NYC photographer" loading="lazy">
+          </div>
         </div>
       </div>
     </section>
@@ -368,11 +525,11 @@
             <label style="display: block; font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #000;">Contact info</label>
             <input type="text" name="name" placeholder="Your name *" required style="width: 100%; padding: 14px; margin-bottom: 12px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;">
             <input type="email" name="email" placeholder="Email *" required style="width: 100%; padding: 14px; margin-bottom: 12px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;">
-            <input type="tel" name="phone" placeholder="Phone (optional)" style="width: 100%; padding: 14px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;">
-          </div>
+            <input type="tel" name="phone" placeholder="Phone (optional)" style="width: 100%; padding: 14px; margin-bottom: 12px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;">
 
-          <button type="submit" style="width: 100%; padding: 18px; background: #EC4899; color: #FFF; font-size: 18px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s;">Get My Custom Quote →</button>
-          <p style="text-align: center; margin-top: 24px; font-size: 15px; color: #6B7280;">Or call: <a href="tel:+19294450603" style="color: #EC4899; text-decoration: none; font-weight: 600;">(929) 445-0603</a></p>
+            <button type="submit" style="width: 100%; padding: 18px; background: #EC4899; color: #FFF; font-size: 18px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-top: 16px;">Get My Custom Quote →</button>
+            <p style="text-align: center; margin-top: 24px; font-size: 15px; color: #6B7280;">Or call: <a href="tel:+19294450603" style="color: #EC4899; text-decoration: none; font-weight: 600;">(929) 445-0603</a></p>
+          </div>
         </form>
       </div>
     </section>
