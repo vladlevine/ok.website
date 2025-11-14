@@ -484,7 +484,8 @@ a {
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 600px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -492,8 +493,8 @@ a {
   color: var(--color-white);
   overflow: hidden;
   margin-top: 0;
-  padding-top: 120px; /* Increased spacing between header and hero content */
-  padding-bottom: 120px; /* Prevent next section from overlapping buttons */
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 /* Video background support */
@@ -606,11 +607,18 @@ a {
   }
 }
 
+/* Large desktop - make hero full viewport height */
+@media (min-width: 1400px) {
+  .hero {
+    min-height: 100vh;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
-    min-height: 90vh;
-    padding-top: 120px; /* More space between header and hero text on mobile */
-    padding-bottom: 140px; /* Extra padding for mobile Safari UI */
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: 80px;
   }
 
   .hero-content {
@@ -631,7 +639,7 @@ a {
     flex-direction: column;
     width: 100%;
     gap: 16px;
-    margin-bottom: 60px; /* Prevent overlap with Safari bottom bar */
+    margin-bottom: 40px;
   }
 
   .hero-ctas .btn {
