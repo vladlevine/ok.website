@@ -930,11 +930,11 @@ a {
   transition: all 0.4s ease;
 }
 
-/* Zoom in headshot thumbnail by 15% */
+/* Zoom in headshot thumbnail by 25% and move left by 10% */
 .service-card:nth-child(2) .service-thumbnail {
   object-fit: cover;
-  object-position: center;
-  transform: scale(1.15);
+  object-position: 40% center;
+  transform: scale(1.25);
 }
 
 .service-card:hover .service-thumbnail {
@@ -943,7 +943,7 @@ a {
 }
 
 .service-card:nth-child(2):hover .service-thumbnail {
-  transform: scale(1.2);
+  transform: scale(1.3);
 }
 
 @keyframes float {
