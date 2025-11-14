@@ -930,9 +930,20 @@ a {
   transition: all 0.4s ease;
 }
 
+/* Zoom in headshot thumbnail by 15% */
+.service-card:nth-child(2) .service-thumbnail {
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.15);
+}
+
 .service-card:hover .service-thumbnail {
   transform: scale(1.05);
   box-shadow: var(--shadow-lg);
+}
+
+.service-card:nth-child(2):hover .service-thumbnail {
+  transform: scale(1.2);
 }
 
 @keyframes float {
