@@ -574,8 +574,16 @@ a {
 .hero .lead {
   color: rgba(255, 255, 255, 0.85);
   max-width: 800px;
-  margin: 0 auto 56px;
+  margin: 0 auto 24px;
   animation: fadeInUp 1.2s ease-out;
+}
+
+.hero-pricing-anchor {
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 auto 48px;
+  animation: fadeInUp 1.4s ease-out;
 }
 
 .hero-ctas {
@@ -610,6 +618,11 @@ a {
 
   .hero-tagline {
     font-size: clamp(24px, 6vw, 36px);
+    margin: 0 auto 32px;
+  }
+
+  .hero-pricing-anchor {
+    font-size: clamp(16px, 3vw, 18px);
     margin: 0 auto 32px;
   }
 

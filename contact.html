@@ -560,6 +560,39 @@
           <p class="question-hint" style="margin-top: 24px;">Most of our clients need full-day coverage. We'll discuss exact timing once we know your event type.</p>
         </div>
 
+        <!-- Question 2A-Duration: Event Duration (shows for event-coverage after event type) -->
+        <div class="question" id="q2a-duration" data-question="2.5">
+          <label class="question-label">How long do you expect the event to run?</label>
+          <span class="question-hint">This helps us recommend the right package</span>
+
+          <label class="option">
+            <input type="radio" name="event_duration" value="2-3-hours">
+            ⏱️ 2-3 hours
+          </label>
+
+          <label class="option">
+            <input type="radio" name="event_duration" value="4-5-hours">
+            ⏱️ 4-5 hours (Essential Package Range)
+          </label>
+
+          <label class="option">
+            <input type="radio" name="event_duration" value="6-8-hours">
+            ⏱️ 6-8 hours (Professional Package Range)
+          </label>
+
+          <label class="option">
+            <input type="radio" name="event_duration" value="8-plus-hours">
+            ⏱️ 8+ hours (Let's discuss)
+          </label>
+
+          <label class="option">
+            <input type="radio" name="event_duration" value="not-sure">
+            🤔 Not sure yet
+          </label>
+
+          <p class="question-hint" style="margin-top: 24px;">Our packages are designed to save you money compared to hourly rates—most clients find the 6-8 hour Professional package works best.</p>
+        </div>
+
         <!-- Question 2B: Content Type (shows for brand-content) -->
         <div class="question" id="q2b" data-question="2">
           <label class="question-label">What are you looking to create?</label>
@@ -943,11 +976,32 @@
           return;
         }
 
-        // Hide all Q2 variants and show Q3
+        // Hide all Q2 variants
         document.getElementById('q2a').classList.remove('active');
         document.getElementById('q2b').classList.remove('active');
         document.getElementById('q2c').classList.remove('active');
         document.getElementById('q2d').classList.remove('active');
+
+        // For event-coverage, show duration question; for others, go to Q3
+        if (selectedServicePath === 'event-coverage') {
+          document.getElementById('q2a-duration').classList.add('active');
+          currentQuestion = 2.5;
+        } else {
+          document.getElementById('q3').classList.add('active');
+          currentQuestion = 3;
+        }
+
+        updateProgress();
+        updateButtonText();
+      } else if (currentQuestion === 2.5) {
+        // Validate event duration question
+        const duration = document.querySelector('input[name="event_duration"]:checked');
+        if (!duration) {
+          alert('Please select an event duration');
+          return;
+        }
+
+        document.getElementById('q2a-duration').classList.remove('active');
         document.getElementById('q3').classList.add('active');
 
         currentQuestion = 3;
@@ -1057,20 +1111,32 @@
         backBtn.classList.add('hidden');
         updateProgress();
         updateButtonText();
+      } else if (currentQuestion === 2.5) {
+        // Go back to Q2A (event type)
+        document.getElementById('q2a-duration').classList.remove('active');
+        document.getElementById('q2a').classList.add('active');
+
+        currentQuestion = 2;
+        updateProgress();
+        updateButtonText();
       } else if (currentQuestion === 3) {
         // Go back to Q2
         document.getElementById('q3').classList.remove('active');
         if (selectedServicePath === 'event-coverage') {
-          document.getElementById('q2a').classList.add('active');
+          // Event coverage goes back to duration question
+          document.getElementById('q2a-duration').classList.add('active');
+          currentQuestion = 2.5;
         } else if (selectedServicePath === 'brand-content') {
           document.getElementById('q2b').classList.add('active');
+          currentQuestion = 2;
         } else if (selectedServicePath === 'office-photography') {
           document.getElementById('q2c').classList.add('active');
+          currentQuestion = 2;
         } else if (selectedServicePath === 'not-sure') {
           document.getElementById('q2d').classList.add('active');
+          currentQuestion = 2;
         }
 
-        currentQuestion = 2;
         updateProgress();
         updateButtonText();
       } else if (currentQuestion === 4) {
