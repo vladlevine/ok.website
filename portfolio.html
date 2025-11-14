@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Portfolio | Core Visuals NYC - Event Photography & Video Work</title>
+  <meta name="description" content="View our portfolio of professional event photography and videography work in NYC. Corporate events, conferences, brand content, and custom projects.">
+  <meta name="keywords" content="event photography portfolio NYC, corporate videography work, professional event photos, NYC event coverage portfolio">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Portfolio | Core Visuals NYC">
+  <meta property="og:description" content="Professional event photography and videography portfolio from Core Visuals NYC.">
+  <meta property="og:url" content="https://corevisuals.nyc/portfolio">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://corevisuals.nyc/portfolio">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>">
+
+  <style>
+    /* Portfolio Page Styles */
+    :root {
+      --portfolio-gold: #D4AF37;
+      --portfolio-cyan: #06B6D4;
+      --portfolio-magenta: #EC4899;
+      --portfolio-black: #000000;
+      --portfolio-white: #FFFFFF;
+      --portfolio-dark-bg: #0a0a0a;
+      --portfolio-light-bg: #F9FAFB;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      line-height: 1.7;
+      color: var(--portfolio-black);
+      background: var(--portfolio-white);
+    }
+
+    /* Hero Section */
+    .portfolio-hero {
+      background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+      padding: 180px 40px 80px;
+      text-align: center;
+      color: var(--portfolio-white);
+    }
+
+    .portfolio-hero h1 {
+      font-size: clamp(36px, 6vw, 56px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0 0 24px;
+      color: var(--portfolio-white);
+    }
+
+    .portfolio-hero p {
+      font-size: 20px;
+      color: #a3a3a3;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Gallery Section */
+    .portfolio-gallery {
+      padding: 80px 40px;
+      background: var(--portfolio-white);
+    }
+
+    .gallery-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .gallery-item {
+      aspect-ratio: 16/10;
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(236, 72, 153, 0.15) 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      color: rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      border: 2px solid rgba(6, 182, 212, 0.2);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+      border-color: var(--portfolio-cyan);
+    }
+
+    .gallery-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(6, 182, 212, 0.1) 50%, rgba(236, 72, 153, 0.1) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover::before {
+      opacity: 1;
+    }
+
+    /* Alternate gradient patterns */
+    .gallery-item:nth-child(3n+1) {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(6, 182, 212, 0.15) 100%);
+      border-color: rgba(212, 175, 55, 0.2);
+    }
+
+    .gallery-item:nth-child(3n+1):hover {
+      border-color: var(--portfolio-gold);
+    }
+
+    .gallery-item:nth-child(3n+2) {
+      background: linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(212, 175, 55, 0.15) 100%);
+      border-color: rgba(236, 72, 153, 0.2);
+    }
+
+    .gallery-item:nth-child(3n+2):hover {
+      border-color: var(--portfolio-magenta);
+    }
+
+    /* Featured Project Cards */
+    a[href*="case-study"]:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Category Links */
+    a[href*="service-"]:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    /* CTA Section */
+    .portfolio-cta {
+      background: var(--portfolio-light-bg);
+      padding: 100px 40px;
+      text-align: center;
+    }
+
+    .portfolio-cta h2 {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      margin-bottom: 24px;
+      color: var(--portfolio-black);
+    }
+
+    .portfolio-cta p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #4B5563;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .portfolio-cta-button {
+      display: inline-block;
+      background: var(--portfolio-gold);
+      color: var(--portfolio-white);
+      font-size: 18px;
+      font-weight: 700;
+      padding: 20px 48px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+    }
+
+    .portfolio-cta-button:hover {
+      background: #c19b2e;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(212, 175, 55, 0.4);
+    }
+
+    /* Responsive */
+    @media (max-width: 968px) {
+      .portfolio-hero {
+        padding: 140px 24px 60px;
+      }
+
+      .portfolio-gallery {
+        padding: 60px 24px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .portfolio-cta {
+        padding: 80px 24px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .gallery-item {
+        aspect-ratio: 16/9;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">CORE VISUALS NYC</a>
+      <nav class="nav" id="nav">
+        <a href="index.html#services">Services</a>
+        <div class="nav-item">
+          <a href="portfolio.html">Work</a>
+          <div class="dropdown-menu">
+            <a href="service-event-coverage.html">
+              Event Coverage
+              <span>Conferences, galas, networking events, product launches</span>
+            </a>
+            <a href="service-corporate-content.html">
+              Headshots &amp; Brand Videos
+              <span>Office lifestyle, team content, video business cards</span>
+            </a>
+            <a href="service-custom-projects.html">
+              Personal Branding & Launches
+              <span>Thought leadership, founder content, multi-day projects</span>
+            </a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="portfolio-hero">
+      <h1>Portfolio</h1>
+      <p>Professional event photography and videography across NYC. Corporate events, conferences, brand storytelling, and custom projects.</p>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="portfolio-gallery">
+      <div class="gallery-container">
+        <h2 style="text-align: center; font-size: clamp(32px, 5vw, 42px); margin-bottom: 16px; font-weight: 700; color: var(--portfolio-black);">Featured Projects</h2>
+        <p style="text-align: center; font-size: 18px; color: #6B7280; max-width: 700px; margin: 0 auto 60px;">Real work from real clients. See how we help NYC businesses tell their stories.</p>
+
+        <!-- Featured Project Cards -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; max-width: 1200px; margin: 0 auto 80px;">
+          <!-- Law Firm Photography -->
+          <a href="case-study-law-firm-photography.html" style="text-decoration: none; background: #FFFFFF; border: 2px solid var(--portfolio-cyan); border-radius: 12px; overflow: hidden; transition: all 0.3s ease; display: block;">
+            <div style="aspect-ratio: 16/10; overflow: hidden;">
+              <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/w_800,h_600,c_fill,q_auto,f_auto/v1762874804/law_firm_stock_imagery_photography_z0uklj.jpg" alt="Manhattan law firm office photography NYC" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            </div>
+            <div style="padding: 28px;">
+              <h3 style="font-size: 22px; font-weight: 700; color: var(--portfolio-black); margin-bottom: 12px;">Law Firm</h3>
+              <p style="font-size: 16px; color: #6B7280; line-height: 1.6; margin-bottom: 16px;">Professional headshots and office lifestyle photography for a growing law firm. 18 attorneys, two sessions, consistent professional branding.</p>
+              <span style="color: var(--portfolio-cyan); font-weight: 600; font-size: 15px;">View Case Study →</span>
+            </div>
+          </a>
+
+          <!-- Tech Expo Coverage -->
+          <a href="case-study-tech-expo.html" style="text-decoration: none; background: #FFFFFF; border: 2px solid var(--portfolio-gold); border-radius: 12px; overflow: hidden; transition: all 0.3s ease; display: block;">
+            <div style="aspect-ratio: 16/10; overflow: hidden;">
+              <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/w_800,h_600,c_fill,q_auto,f_auto/v1762826235/mlops0052_rkyg1j.jpg" alt="NYC tech conference event photography and videography" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            </div>
+            <div style="padding: 28px;">
+              <h3 style="font-size: 22px; font-weight: 700; color: var(--portfolio-black); margin-bottom: 12px;">Tech Conference NYC</h3>
+              <p style="font-size: 16px; color: #6B7280; line-height: 1.6; margin-bottom: 16px;">Full-day video and photo coverage of a 100+ attendee tech expo. Keynote speakers, networking sessions, product demos—delivered in 7 days.</p>
+              <span style="color: var(--portfolio-gold); font-weight: 600; font-size: 15px;">View Case Study →</span>
+            </div>
+          </a>
+
+          <!-- Nonprofit Golf Tournament -->
+          <a href="case-study-nonprofit-golf.html" style="text-decoration: none; background: #FFFFFF; border: 2px solid var(--portfolio-magenta); border-radius: 12px; overflow: hidden; transition: all 0.3s ease; display: block;">
+            <div style="aspect-ratio: 16/10; overflow: hidden;">
+              <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/w_800,h_600,c_fill,q_auto,f_auto/v1762874514/nonprofit_event_videography_nyc_vxlkur.jpg" alt="Nonprofit golf tournament event videography NYC" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            </div>
+            <div style="padding: 28px;">
+              <h3 style="font-size: 22px; font-weight: 700; color: var(--portfolio-black); margin-bottom: 12px;">Nonprofit Golf Tournament</h3>
+              <p style="font-size: 16px; color: #6B7280; line-height: 1.6; margin-bottom: 16px;">Outdoor event photography capturing sponsors, attendees, and tournament highlights for post-event marketing and donor engagement.</p>
+              <span style="color: var(--portfolio-magenta); font-weight: 600; font-size: 15px;">View Case Study →</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Browse by Category -->
+        <div style="border-top: 2px solid #E5E7EB; padding-top: 60px;">
+          <h3 style="text-align: center; font-size: clamp(24px, 4vw, 32px); margin-bottom: 16px; font-weight: 700; color: var(--portfolio-black);">Browse by Category</h3>
+          <p style="text-align: center; font-size: 16px; color: #6B7280; max-width: 600px; margin: 0 auto 40px;">Explore more work from each service area.</p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto;">
+            <!-- Event Coverage -->
+            <a href="service-event-coverage.html#portfolio" style="text-decoration: none; background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%); border: 2px solid var(--portfolio-cyan); border-radius: 12px; padding: 32px; transition: all 0.3s ease; display: block; text-align: center;">
+              <div style="font-size: 48px; margin-bottom: 16px;">🎬</div>
+              <h4 style="font-size: 20px; font-weight: 700; color: var(--portfolio-black); margin-bottom: 12px;">Event Coverage</h4>
+              <p style="font-size: 15px; color: #6B7280; line-height: 1.6; margin-bottom: 16px;">Conferences, galas, networking events, product launches</p>
+              <span style="color: var(--portfolio-cyan); font-weight: 600; font-size: 14px;">View Gallery →</span>
+            </a>
+
+            <!-- Headshots &amp; Brand Videos -->
+            <a href="service-corporate-content.html#portfolio" style="text-decoration: none; background: linear-gradient(135deg, rgba(100, 116, 139, 0.1) 0%, rgba(148, 163, 184, 0.1) 100%); border: 2px solid #64748B; border-radius: 12px; padding: 32px; transition: all 0.3s ease; display: block; text-align: center;">
+              <div style="font-size: 48px; margin-bottom: 16px;">📸</div>
+              <h4 style="font-size: 20px; font-weight: 700; color: var(--portfolio-black); margin-bottom: 12px;">Headshots &amp; Brand Videos</h4>
+              <p style="font-size: 15px; color: #6B7280; line-height: 1.6; margin-bottom: 16px;">Office lifestyle, team content, video business cards</p>
+              <span style="color: #64748B; font-weight: 600; font-size: 14px;">View Gallery →</span>
+            </a>
+
+            <!-- Personal Branding & Product Launches -->
+            <a href="service-custom-projects.html#portfolio" style="text-decoration: none; background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%); border: 2px solid var(--portfolio-magenta); border-radius: 12px; padding: 32px; transition: all 0.3s ease; display: block; text-align: center;">
+              <div style="font-size: 48px; margin-bottom: 16px;">🎯</div>
+              <h4 style="font-size: 20px; font-weight: 700; color: var(--portfolio-black); margin-bottom: 12px;">Personal Branding & Launches</h4>
+              <p style="font-size: 15px; color: #6B7280; line-height: 1.6; margin-bottom: 16px;">Thought leadership, founder content, multi-day projects</p>
+              <span style="color: var(--portfolio-magenta); font-weight: 600; font-size: 14px;">View Gallery →</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="portfolio-cta">
+      <h2>Ready to Work Together?</h2>
+      <p>Get in touch to discuss your next event or project. We'll send you a transparent quote within 24 hours.</p>
+      <a href="contact.html" class="portfolio-cta-button">Get a Quote →</a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Core Visuals NYC</h4>
+          <p style="max-width: 320px; line-height: 1.8;">Event video and photography for NYC businesses. Corporate events, conferences, brand content. Professional, transparent, reliable.</p>
+          <p style="margin-top: 32px;">
+            <strong style="font-weight: 700;">99 Wall Street #1751</strong><br>
+            New York, NY 10005
+          </p>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <a href="index.html#services">Event Video + Photo</a>
+          <a href="index.html#services">Corporate Content</a>
+          <a href="index.html#services">Custom Projects</a>
+          <a href="portfolio.html">Portfolio</a>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="tel:+19294450603">(929) 445-0603</a>
+          <a href="mailto:heyvladlevine@gmail.com">Email Us</a>
+        </div>
+
+        <div>
+          <h4>Connect</h4>
+          <a href="https://www.linkedin.com/in/vladlevine/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <p style="margin-top: 32px; font-size: 14px;">
+            <strong style="font-weight: 700;">Hours</strong><br>
+            Mon-Fri: 9am - 6pm EST
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Core Visuals NYC. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+
+    // Header Scroll Effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 120) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>

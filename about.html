@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>About Core Visuals NYC | Event Photographer & Videographer Vlad Levine</title>
+  <meta name="description" content="Meet Vlad Levine, founder of Core Visuals NYC. Transparent pricing, professional event photography and video production for NYC businesses. No agency runaround.">
+  <meta name="keywords" content="NYC event photographer, corporate videographer New York, brand video production, event coverage NYC, corporate photography services, Vlad Levine photographer">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Core Visuals NYC | Event Photographer Vlad Levine">
+  <meta property="og:description" content="Professional event photography and video production for NYC businesses. Direct communication, transparent pricing, fast delivery.">
+  <meta property="og:url" content="https://corevisuals.nyc/about">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://corevisuals.nyc/about">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>">
+
+  <style>
+    /* About Page Specific Styles */
+
+    /* Hero Section - 50/50 Split */
+    .about-hero-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .about-hero-image {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .about-hero-content {
+      padding: 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: #FFFFFF;
+    }
+
+    .about-hero-content h1 {
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.2;
+      margin-bottom: 32px;
+      color: #0A0A0A;
+    }
+
+    .about-hero-content p {
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.7;
+      color: #0A0A0A;
+      margin-bottom: 24px;
+    }
+
+    .about-hero-content .tagline {
+      font-size: clamp(16px, 1.8vw, 20px);
+      color: #4B5563;
+      font-style: italic;
+    }
+
+    /* Two Column Layout */
+    .two-column-section {
+      padding: 100px 0;
+    }
+
+    .two-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .two-columns h2 {
+      font-size: 32px;
+      margin-bottom: 24px;
+      color: #0A0A0A;
+    }
+
+    .two-columns p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #0A0A0A;
+      margin-bottom: 20px;
+    }
+
+    /* Centered Full Width Philosophy */
+    .philosophy-section {
+      padding: 100px 40px;
+      background: linear-gradient(180deg, #F9FAFB 0%, #FFFFFF 100%);
+      text-align: center;
+    }
+
+    .philosophy-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .philosophy-content h2 {
+      font-size: clamp(36px, 5vw, 48px);
+      margin-bottom: 40px;
+      color: #0A0A0A;
+    }
+
+    .philosophy-content p {
+      font-size: 20px;
+      line-height: 1.8;
+      color: #0A0A0A;
+      margin-bottom: 24px;
+    }
+
+    .philosophy-content .highlight {
+      font-size: 26px;
+      font-weight: 700;
+      color: #0A0A0A;
+      margin: 40px 0;
+    }
+
+    .philosophy-content .no-nonsense {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #0A0A0A;
+      margin-top: 32px;
+    }
+
+    /* Three Column Work Approach */
+    .work-approach-section {
+      padding: 100px 40px;
+      background: #FFFFFF;
+    }
+
+    .work-approach-section h2 {
+      font-size: clamp(36px, 5vw, 48px);
+      text-align: center;
+      margin-bottom: 60px;
+      color: #0A0A0A;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .work-card {
+      text-align: left;
+    }
+
+    .work-card h3 {
+      font-size: 22px;
+      margin-bottom: 16px;
+      color: var(--color-gold);
+      font-weight: 700;
+    }
+
+    .work-card p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #0A0A0A;
+    }
+
+    /* Current Focus */
+    .current-focus-section {
+      padding: 100px 40px;
+      background: #F9FAFB;
+    }
+
+    .current-focus-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .current-focus-content h2 {
+      font-size: clamp(36px, 5vw, 48px);
+      margin-bottom: 32px;
+      color: #0A0A0A;
+    }
+
+    .current-focus-content p {
+      font-size: 19px;
+      line-height: 1.8;
+      color: #0A0A0A;
+      margin-bottom: 24px;
+    }
+
+    /* CTA Section */
+    .about-cta-section {
+      padding: 120px 40px;
+      background: linear-gradient(135deg, #0A0A0A 0%, #1F2937 100%);
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .about-cta-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .about-cta-content h2 {
+      font-size: clamp(36px, 5vw, 48px);
+      margin-bottom: 32px;
+      color: #FFFFFF;
+    }
+
+    .about-cta-content p {
+      font-size: 20px;
+      line-height: 1.7;
+      margin-bottom: 24px;
+      opacity: 0.95;
+    }
+
+    .about-cta-content .emphasis {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-gold);
+      margin: 32px 0 48px;
+    }
+
+    /* Footer Contact Info */
+    .about-footer-info {
+      padding: 60px 40px;
+      background: #F9FAFB;
+      text-align: center;
+    }
+
+    .about-footer-info h3 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #0A0A0A;
+    }
+
+    .about-footer-info .subtitle {
+      font-size: 18px;
+      color: #4B5563;
+      margin-bottom: 32px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .contact-links a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #0A0A0A;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .contact-links a:hover {
+      color: var(--color-gold);
+    }
+
+    .social-icon-small {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 968px) {
+      .about-hero-split {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .about-hero-image {
+        height: 60vh;
+        min-height: 400px;
+      }
+
+      .about-hero-content {
+        padding: 60px 32px;
+      }
+
+      .two-columns {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        padding: 0 32px;
+      }
+
+      .two-column-section,
+      .philosophy-section,
+      .work-approach-section,
+      .current-focus-section {
+        padding: 60px 24px;
+      }
+
+      .about-cta-section {
+        padding: 80px 24px;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .contact-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">CORE VISUALS NYC</a>
+      <nav class="nav" id="nav">
+        <a href="index.html#services">Services</a>
+        <div class="nav-item">
+          <a href="portfolio.html">Work</a>
+          <div class="dropdown-menu">
+            <a href="service-event-coverage.html">
+              Event Coverage
+              <span>Conferences, galas, networking events, product launches</span>
+            </a>
+            <a href="service-corporate-content.html">
+              Headshots &amp; Brand Videos
+              <span>Office lifestyle, team content, video business cards</span>
+            </a>
+            <a href="service-custom-projects.html">
+              Personal Branding & Launches
+              <span>Thought leadership, founder content, multi-day projects</span>
+            </a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- BLOCK 1: Hero - 50/50 Split -->
+    <section class="about-hero-split">
+      <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/w_1200,h_1600,c_fill,q_auto,f_auto,g_face/v1762912494/4920E92A-7AE8-41FF-B174-566220AB7C2E-branded_ac6ktj.heic"
+           alt="Vlad Levine - NYC Event Photographer and Videographer"
+           class="about-hero-image"
+           loading="eager">
+
+      <div class="about-hero-content">
+        <h1>I'm Vlad Levine. I shoot events, make videos, and document what matters to NYC businesses—without the agency mystique or mystery pricing.</h1>
+        <p class="tagline">That's the elevator pitch. Here's the actual story.</p>
+      </div>
+    </section>
+
+    <!-- BLOCK 2: Background - Two Columns -->
+    <section class="two-column-section">
+      <div class="two-columns">
+        <div>
+          <h2>How I Got Here</h2>
+          <p>I used to run a physical photography studio in Dallas. Award-winning space. Full production setup. The kind of place where creatives would rent the space and shoot fashion editorials.</p>
+          <p>It was exactly what I thought I wanted—until I realized I was managing a location instead of creating work.</p>
+        </div>
+        <div>
+          <h2>What Changed</h2>
+          <p>Sold the space. Moved to NYC. Started focusing on what I'm actually good at: showing up, capturing what needs to be captured, and delivering it without the runaround.</p>
+          <p>Now I work with corporate clients, nonprofits, and businesses who need professional visual content but don't want to deal with production company bureaucracy.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCK 3: Philosophy - Centered Full Width -->
+    <section class="philosophy-section">
+      <div class="philosophy-content">
+        <h2>Why Core Visuals NYC Exists</h2>
+        <p>Most NYC photography services are either massive production companies with three-week turnarounds and budget-committee pricing, or solo freelancers with inconsistent quality and outdated websites.</p>
+        <p class="highlight">Core Visuals NYC is the middle ground.</p>
+        <p class="no-nonsense">You work directly with me. You get transparent pricing before you commit. You get professional results delivered on the timeline we agreed to.</p>
+        <p class="no-nonsense">No account managers. No "discovery calls to explore possibilities." No surprise invoices.</p>
+      </div>
+    </section>
+
+    <!-- BLOCK 4: Work Approach - Three Column Grid -->
+    <section class="work-approach-section">
+      <h2>What You're Getting</h2>
+      <div class="work-grid">
+        <div class="work-card">
+          <h3>Clear Communication</h3>
+          <p>I respond to emails. I show up early. I deliver when I say I will.</p>
+        </div>
+        <div class="work-card">
+          <h3>Transparent Pricing</h3>
+          <p>Fixed packages. No hourly rates. No "depends on what you need" vagueness.</p>
+        </div>
+        <div class="work-card">
+          <h3>Professional Results</h3>
+          <p>High-quality work without the creative director monologue about my "vision" for your quarterly conference.</p>
+        </div>
+        <div class="work-card">
+          <h3>Range</h3>
+          <p>I've shot art galleries and corporate boards, nonprofit fundraisers and tech launches, podcasts and keynotes. I adapt without hand-holding.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCK 5: Current Focus -->
+    <section class="current-focus-section">
+      <div class="current-focus-content">
+        <h2>What I'm Working On</h2>
+        <p><strong>Right now:</strong> event coverage for NYC corporate clients (tech, finance, nonprofit), brand videos for companies who need testimonials and culture content, and ongoing partnerships with organizations who need regular visual content.</p>
+        <p>I also still do select art documentation—gallery photography, exhibition coverage, artist portfolios—because that's where I started and I'm not abandoning it.</p>
+      </div>
+    </section>
+
+    <!-- BLOCK 6: CTA -->
+    <section class="about-cta-section">
+      <div class="about-cta-content">
+        <h2>Let's Work Together</h2>
+        <p>If you need event coverage, brand video, or corporate photography in NYC—and you value straightforward communication over creative mystique—send me a message.</p>
+        <p class="emphasis">Tell me what you need. I'll tell you what it costs and when you'll have it.</p>
+        <a href="contact.html" class="btn" style="background: var(--color-gold); color: #0A0A0A; font-weight: 700; font-size: 18px; padding: 18px 40px;">Contact me →</a>
+      </div>
+    </section>
+
+    <!-- BLOCK 7: Footer Info -->
+    <section class="about-footer-info">
+      <h3>Vlad Levine</h3>
+      <p class="subtitle">Founder, Core Visuals NYC<br>Based in NYC • Serving all five boroughs</p>
+      <div class="contact-links">
+        <a href="mailto:heyvladlevine@gmail.com">
+          <span>✉</span>
+          heyvladlevine@gmail.com
+        </a>
+        <a href="tel:+19294450603">
+          <span>📞</span>
+          (929) 445-0603
+        </a>
+        <a href="https://www.linkedin.com/in/vladlevine/" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="social-icon-small">
+          LinkedIn
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Column 1: About -->
+        <div>
+          <h4>Core Visuals NYC</h4>
+          <p style="max-width: 320px; line-height: 1.8;">Event video and photography for NYC businesses. Corporate events, conferences, brand content. Professional, transparent, reliable.</p>
+          <p style="margin-top: 32px;">
+            <strong style="font-weight: 700;">99 Wall Street #1751</strong><br>
+            New York, NY 10005
+          </p>
+        </div>
+
+        <!-- Column 2: Services -->
+        <div>
+          <h4>Services</h4>
+          <a href="index.html#services">Event Video + Photo</a>
+          <a href="index.html#services">Corporate Content</a>
+          <a href="index.html#services">Custom Projects</a>
+          <a href="portfolio.html">Portfolio</a>
+        </div>
+
+        <!-- Column 3: Company -->
+        <div>
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="tel:+19294450603">(929) 445-0603</a>
+          <a href="mailto:heyvladlevine@gmail.com"><img src="https://res.cloudinary.com/dtuxu64zp/image/upload/w_20,h_20,q_auto,f_auto/v1762915229/email_icon_letter_ccwutp.png" alt="" style="width: 16px; height: 16px; margin-right: 8px; vertical-align: middle;">Email Us</a>
+        </div>
+
+        <!-- Column 4: Connect -->
+        <div>
+          <h4>Connect</h4>
+          <a href="https://www.linkedin.com/in/vladlevine/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <p style="margin-top: 32px; font-size: 14px;">
+            <strong style="font-weight: 700;">Hours</strong><br>
+            Mon-Fri: 9am - 6pm EST
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Core Visuals NYC. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+
+    // Header Scroll Effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 120) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>

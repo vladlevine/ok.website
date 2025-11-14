@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Corporate Content - Headshots & Brand Videos | Core Visuals NYC</title>
+  <meta name="description" content="Professional team headshots, office photography, and brand videos for NYC businesses. Visual content your marketing team needs—delivered on time, on budget, without the agency runaround.">
+  <meta name="keywords" content="NYC corporate headshots, professional team photography, brand video production, office photography, corporate videography NYC">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Corporate Content - Headshots & Brand Videos | Core Visuals NYC">
+  <meta property="og:description" content="Team headshots, office photography, brand videos. Visual content your marketing team needs—delivered on time, on budget.">
+  <meta property="og:url" content="https://corevisuals.nyc/service-corporate-content">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://corevisuals.nyc/service-corporate-content">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>">
+
+  <style>
+    .service-hero {
+      background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+      padding: 180px 40px 100px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .service-hero h1 {
+      font-size: clamp(42px, 7vw, 64px);
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0 0 24px;
+      color: #FFFFFF;
+    }
+
+    .service-hero-subtitle {
+      font-size: 22px;
+      color: #a3a3a3;
+      max-width: 800px;
+      margin: 0 auto 48px;
+      line-height: 1.6;
+    }
+
+    .service-section {
+      padding: 100px 40px;
+    }
+
+    .service-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1400px;
+      margin: 80px auto;
+      grid-auto-flow: dense;
+    }
+
+    .service-gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .service-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .service-gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    }
+
+    .gallery-tall {
+      grid-row: span 2;
+    }
+
+    .gallery-wide {
+      grid-column: span 2;
+    }
+
+    .package-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 1400px;
+      margin: 80px auto;
+    }
+
+    .package-card {
+      background: #FFFFFF;
+      border: 2px solid #64748B;
+      border-radius: 16px;
+      padding: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .package-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 48px rgba(100, 116, 139, 0.2);
+    }
+
+    .package-card h3 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #0A0A0A;
+    }
+
+    .package-price {
+      font-size: 38px;
+      font-weight: 800;
+      color: #64748B;
+      margin-bottom: 20px;
+    }
+
+    .package-features {
+      list-style: none;
+      padding: 0;
+      margin: 28px 0;
+    }
+
+    .package-features li {
+      padding: 10px 0;
+      border-bottom: 1px solid #E5E7EB;
+      font-size: 16px;
+      color: #0A0A0A;
+    }
+
+    .package-features li:before {
+      content: "✓ ";
+      color: #64748B;
+      font-weight: 700;
+      margin-right: 8px;
+    }
+
+    @media (max-width: 968px) {
+      .service-hero {
+        padding: 140px 24px 80px;
+      }
+
+      .service-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .package-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-section {
+        padding: 60px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">CORE VISUALS NYC</a>
+      <nav class="nav" id="nav">
+        <a href="index.html#services">Services</a>
+        <div class="nav-item">
+          <a href="portfolio.html">Work</a>
+          <div class="dropdown-menu">
+            <a href="service-event-coverage.html">
+              Event Coverage
+              <span>Conferences, galas, networking events, product launches</span>
+            </a>
+            <a href="service-corporate-content.html">
+              Headshots &amp; Brand Videos
+              <span>Office lifestyle, team content, video business cards</span>
+            </a>
+            <a href="service-custom-projects.html">
+              Personal Branding & Launches
+              <span>Thought leadership, founder content, multi-day projects</span>
+            </a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section class="service-hero">
+      <h1>Corporate Content<br>Headshots & Brand Videos</h1>
+      <p class="service-hero-subtitle">Team headshots, office photography, brand videos. The visual content your marketing team actually needs—delivered on time, on budget, without the agency runaround.</p>
+    </section>
+
+    <!-- Positioning Statement -->
+    <section class="service-section" style="padding: 80px 40px;">
+      <div class="container">
+        <div style="max-width: 900px; margin: 0 auto; text-align: center; background: linear-gradient(135deg, rgba(100, 116, 139, 0.05) 0%, rgba(148, 163, 184, 0.1) 100%); padding: 48px; border-radius: 16px; border: 2px solid #64748B;">
+          <p style="font-size: 22px; line-height: 1.7; color: #0A0A0A; margin: 0;">
+            <strong style="font-weight: 700; color: #0A0A0A;">Corporate content in NYC that actually makes sense.</strong> You tell us how many people need headshots or what type of brand video you need, we quote a fixed price that includes all deliverables, and you get everything within 2-20 days. <strong style="color: #64748B;">No hourly calculations, no surprise add-ons, no agency markup.</strong> Team headshots start at $1,250 (5 people) because that's what it costs to do this right.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Showcase -->
+    <section class="service-section">
+      <div class="container">
+        <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 16px;">Video Production Examples</h2>
+        <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto 48px;">From event highlights to business intros and testimonials—professional video content that gets results.</p>
+
+        <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 40px;">
+
+          <!-- Video 1: Charity Golf Event (First) -->
+          <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid #E5E7EB;">
+            <video controls style="width: 100%; display: block;" poster="">
+              <source src="https://res.cloudinary.com/dtuxu64zp/video/upload/v1762907480/CGE_golf_1080_logos_WEB_yljzcb.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div style="padding: 24px;">
+              <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 8px; color: #0A0A0A;">Nonprofit Golf Event Highlight</h3>
+              <p style="color: #6B7280; font-size: 15px; line-height: 1.6; margin: 0;">Full-day coverage of a charity golf tournament with sponsor highlights, candid moments, and event atmosphere—delivered as a polished highlight reel.</p>
+            </div>
+          </div>
+
+          <!-- Video 2: Business Card Video -->
+          <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid #E5E7EB;">
+            <video controls style="width: 100%; display: block;" poster="">
+              <source src="https://res.cloudinary.com/dtuxu64zp/video/upload/v1763058628/02_-_WEB_austin_edit1_1_n06qj9.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div style="padding: 24px;">
+              <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 8px; color: #0A0A0A;">Video Business Card</h3>
+              <p style="color: #6B7280; font-size: 15px; line-height: 1.6; margin: 0;">Professional intro video for a divorce attorney. Concise, direct, and designed for LinkedIn and website use.</p>
+            </div>
+          </div>
+
+          <!-- Video 3: Testimonial Reel -->
+          <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid #E5E7EB;">
+            <video controls style="width: 100%; display: block;" poster="">
+              <source src="https://res.cloudinary.com/dtuxu64zp/video/upload/v1763070711/Timeline_11_a14qrg.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div style="padding: 24px;">
+              <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 8px; color: #0A0A0A;">Testimonial Video Production</h3>
+              <p style="color: #6B7280; font-size: 15px; line-height: 1.6; margin: 0;">Clips from testimonial videos I've shot. Full productions include audio, obviously—this version is just showing the camera work.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Gallery -->
+    <section class="service-section" style="background: #F9FAFB;">
+      <div class="container">
+        <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 24px;">Our Corporate Work</h2>
+        <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto;">From law firms to tech startups. Professional content that represents your brand.</p>
+
+        <div class="service-gallery">
+          <!-- Row 1 -->
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/corporate/headshot_businesswoman-black-blazer-red-top-dark-background_studio-portrait_confident-professional_corporate_vertical.jpg" alt="NYC businesswoman professional headshot corporate photography" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/corporate/headshot_man-blue-shirt-black-suit-white-background_studio-portrait_friendly-professional_corporate_horizontal.jpg" alt="Professional businessman headshot white background NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/corporate/headshot_man-black-suit-tie-dark-background_studio-portrait_strong-professional_corporate_vertical.jpg" alt="Man black suit professional headshot NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/corporate/headshot_smiling-woman-plaid-blazer-dark-background_studio-portrait_friendly-professional_corporate_horizontal.jpg" alt="Smiling woman professional headshot corporate NYC" loading="lazy">
+          </div>
+
+          <!-- Row 2 -->
+          <div class="service-gallery-item gallery-wide">
+            <img src="images/corporate/commercial_business-team-meeting-candid-office_corporate-candid_engaged-collaborative_business_horizontal.jpg" alt="Business team meeting candid office NYC corporate photography" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/corporate/headshot_man-blue-suit-dark-background_studio-portrait_confident-professional_corporate_vertical.jpg" alt="Man blue suit professional headshot NYC" loading="lazy">
+          </div>
+
+          <!-- Row 3 -->
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/corporate/headshot_mature-woman-key-necklace-smiling-white-background_studio-portrait_warm-confident_corporate_vertical.jpg" alt="Mature woman professional headshot NYC corporate" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/corporate/headshot_man-black-tshirt-dark-background_studio-portrait_confident-direct_corporate_horizontal.jpg" alt="Man casual business headshot NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/corporate/headshot_middle-aged-man-suit-tie-dark-background_studio-portrait_confident-professional_corporate_vertical.jpg" alt="Middle-aged man professional headshot corporate NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/corporate/headshot_senior-businessman-blue-suit-red-tie-white-background_studio-portrait_formal-trustworthy_corporate_horizontal.jpg" alt="Senior businessman formal headshot NYC" loading="lazy">
+          </div>
+
+          <!-- Row 4 -->
+          <div class="service-gallery-item gallery-wide">
+            <img src="images/corporate/commercial_three-business-professionals-office-window_corporate-environmental_confident-professional_corporate_horizontal.jpg" alt="Three business professionals office NYC corporate photography" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/corporate/headshot_woman-black-blazer-dark-background_studio-portrait_warm-confident_corporate_vertical.jpg" alt="Woman black blazer professional headshot NYC" loading="lazy">
+          </div>
+
+          <!-- Row 5 -->
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/corporate/headshot_senior-businessman-glasses-suit-dark-background_studio-portrait_formal-trustworthy_corporate_vertical.jpg" alt="Senior businessman glasses professional headshot NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/corporate/headshot_young-businessman-blue-suit-dark-background_studio-portrait_confident-serious_corporate_horizontal.jpg" alt="Young businessman professional headshot NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/corporate/headshot_smiling-young-woman-pink-blazer-close-up_studio-portrait_friendly-stylish_corporate-lifestyle_vertical.jpg" alt="Smiling young woman professional headshot pink blazer NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/corporate/commercial_businessman-black-suit-pointing-white-background_studio-portrait_engaging-confident_corporate_horizontal.jpg" alt="Businessman engaging corporate headshot white background NYC" loading="lazy">
+          </div>
+
+          <!-- Row 6 -->
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/corporate/headshot_senior-businessman-plaid-suit-red-tie-dark-background_studio-portrait_intense-trustworthy_corporate_vertical.jpg" alt="Senior businessman plaid suit professional headshot NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/corporate/headshot_woman-beige-blazer-long-black-hair-close-up_studio-portrait_focused-direct_corporate_vertical.jpg" alt="Woman beige blazer professional headshot NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/corporate/headshot_man-white-shirt-neutral-background_corporate-studio_neutral-professional_corporate_horizontal.jpg" alt="Man professional headshot neutral background NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/corporate/headshot_middle-aged-man-white-shirt-tie-dark-background_studio-portrait_serious-trustworthy_corporate_vertical.jpg" alt="Middle-aged man serious professional headshot NYC" loading="lazy">
+          </div>
+
+          <!-- Row 7 -->
+          <div class="service-gallery-item gallery-wide">
+            <img src="images/corporate/commercial_businesswoman-at-desk-multiple-monitors_corporate-environmental_confident-friendly_business_horizontal.jpg" alt="Businesswoman at desk office NYC corporate photography" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/corporate/headshot_man-blue-suit-white-background_studio-portrait_friendly-professional_corporate_vertical.jpg" alt="Man blue suit white background professional headshot NYC" loading="lazy">
+          </div>
+
+          <!-- Row 8 -->
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/corporate/headshot_smiling-woman-white-blazer-dark-dress-yellow-background_studio-portrait_friendly-confident_corporate_vertical.jpg" alt="Smiling woman white blazer yellow background NYC corporate" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/corporate/commercial_mature-woman-working-at-computer-monitors_environmental-portrait_focused-professional_business-tech_horizontal.jpg" alt="Mature woman working computer office NYC corporate photography" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/corporate/headshot_senior-businessman-blue-suit-glasses-office-window_corporate-studio_confident-experienced_corporate_vertical.jpg" alt="Senior businessman blue suit office window NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/corporate/commercial_two-men-white-background-business-partners_studio-commercial_friendly-collaborative_startup-business_horizontal.jpg" alt="Two men business partners white background NYC corporate photography" loading="lazy">
+          </div>
+
+          <!-- Row 9 -->
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/corporate/headshot_senior-man-black-tshirt-smiling-dark-background_studio-portrait_enthusiastic-energetic_lifestyle_vertical.jpg" alt="Senior man smiling energetic lifestyle headshot NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/corporate/headshot_senior-man-blue-shirt-pointing-yellow-background_studio-portrait_friendly-engaging_corporate-lifestyle_vertical.jpg" alt="Senior man engaging yellow background NYC corporate headshot" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/corporate/headshot_man-black-tshirt-dark-background-studio_studio-portrait_neutral-direct_corporate-lifestyle_horizontal.jpg" alt="Man casual business headshot dark background NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/corporate/headshot_woman-black-braids-turtleneck-close-up_studio-portrait_intense-direct_beauty_vertical.jpg" alt="Woman black braids professional portrait closeup NYC" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section class="service-section">
+      <div class="container">
+        <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 24px;">Content Packages</h2>
+        <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto 20px;"><strong style="color: #64748B;">Fixed project pricing, not hourly rates.</strong></p>
+        <p style="text-align: center; font-size: 17px; color: #6B7280; max-width: 700px; margin: 0 auto 60px;">Volume discounts automatically applied. All packages include commercial usage rights.</p>
+
+        <div class="package-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 1100px;">
+          <!-- Headshots Package -->
+          <div class="package-card" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto; width: 100%;">
+            <h3>Team Headshots</h3>
+            <div class="package-price">$1,250 <span style="font-size: 20px; font-weight: 600; color: #6B7280;">(first 5 people)</span></div>
+            <p style="color: #6B7280; margin-bottom: 28px;">Professional headshots with automatic volume discounts</p>
+            <ul class="package-features">
+              <li>On-location or studio</li>
+              <li>3-5 looks per person</li>
+              <li>Professional retouching</li>
+              <li>Web & print ready files</li>
+              <li>2-day delivery</li>
+            </ul>
+
+            <!-- Progressive Pricing Breakdown -->
+            <div style="margin-top: 32px; padding-top: 28px; border-top: 2px solid #E5E7EB;">
+              <h4 style="font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #64748B; margin-bottom: 16px;">Volume Pricing</h4>
+              <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; text-align: center;">
+                <div>
+                  <div style="font-size: 12px; color: #6B7280; margin-bottom: 4px;">First 5</div>
+                  <div style="font-size: 20px; font-weight: 700; color: #0A0A0A;">$250<span style="font-size: 14px; font-weight: 500;">/ea</span></div>
+                </div>
+                <div>
+                  <div style="font-size: 12px; color: #6B7280; margin-bottom: 4px;">Next 5 (6-10)</div>
+                  <div style="font-size: 20px; font-weight: 700; color: #0A0A0A;">$200<span style="font-size: 14px; font-weight: 500;">/ea</span></div>
+                </div>
+                <div>
+                  <div style="font-size: 12px; color: #6B7280; margin-bottom: 4px;">11-20</div>
+                  <div style="font-size: 20px; font-weight: 700; color: #0A0A0A;">$150<span style="font-size: 14px; font-weight: 500;">/ea</span></div>
+                </div>
+                <div>
+                  <div style="font-size: 12px; color: #6B7280; margin-bottom: 4px;">20+</div>
+                  <div style="font-size: 20px; font-weight: 700; color: #0A0A0A;">$125<span style="font-size: 14px; font-weight: 500;">/ea</span></div>
+                </div>
+              </div>
+              <p style="font-size: 14px; color: #6B7280; margin-top: 16px; text-align: center; font-style: italic;">Example: 10 people = $1,250 + $1,000 = $2,250 total</p>
+            </div>
+
+            <a href="contact.html" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 28px; background: #64748B;">Get Quote</a>
+          </div>
+
+          <!-- Office Photography -->
+          <div class="package-card">
+            <h3>Office Photography</h3>
+            <div class="package-price">$2,500</div>
+            <p style="color: #6B7280; margin-bottom: 28px;">Workspace photos that show your culture</p>
+            <ul class="package-features">
+              <li>Half-day on location</li>
+              <li>Team candids & workspace shots</li>
+              <li>100-150 edited images</li>
+              <li>Commercial usage rights</li>
+              <li>5-day delivery</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 20px; background: #64748B;">Get Quote</a>
+          </div>
+
+          <!-- Brand Video Package -->
+          <div class="package-card">
+            <h3>Brand Video</h3>
+            <div class="package-price">$5,500</div>
+            <p style="color: #6B7280; margin-bottom: 28px;">Tell your story with professional video</p>
+            <ul class="package-features">
+              <li>Half-day shoot</li>
+              <li>2-3 minute brand video</li>
+              <li>Interview + B-roll footage</li>
+              <li>Professional editing & graphics</li>
+              <li>20-day delivery</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 20px; background: #64748B;">Get Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="service-section" style="background: #F9FAFB;">
+      <div class="container">
+        <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 24px;">Common Use Cases</h2>
+        <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 800px; margin: 0 auto 60px;">The content you need for your website, LinkedIn, press kits, and marketing materials.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; max-width: 1000px; margin: 0 auto;">
+          <div style="background: #FFFFFF; padding: 32px; border-radius: 12px; border: 2px solid #64748B;">
+            <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 16px; color: #0A0A0A;">Website Updates</h3>
+            <p style="color: #6B7280; line-height: 1.7;">Fresh headshots, office photos, and brand videos to modernize your site and build trust with prospects.</p>
+          </div>
+
+          <div style="background: #FFFFFF; padding: 32px; border-radius: 12px; border: 2px solid #64748B;">
+            <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 16px; color: #0A0A0A;">LinkedIn Presence</h3>
+            <p style="color: #6B7280; line-height: 1.7;">Professional team photos that make your company look legitimate and help your employees' personal brands.</p>
+          </div>
+
+          <div style="background: #FFFFFF; padding: 32px; border-radius: 12px; border: 2px solid #64748B;">
+            <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 16px; color: #0A0A0A;">Recruiting & Culture</h3>
+            <p style="color: #6B7280; line-height: 1.7;">Authentic office content that shows candidates what it's really like to work at your company.</p>
+          </div>
+
+          <div style="background: #FFFFFF; padding: 32px; border-radius: 12px; border: 2px solid #64748B;">
+            <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 16px; color: #0A0A0A;">Press & Marketing</h3>
+            <p style="color: #6B7280; line-height: 1.7;">High-quality founder photos, team shots, and video clips ready for press releases and marketing campaigns.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Embedded Quick Form -->
+    <section style="background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%); padding: 100px 40px;">
+      <div class="container" style="max-width: 700px;">
+        <h2 style="font-size: clamp(28px, 4vw, 36px); color: #FFFFFF; margin-bottom: 16px; text-align: center;">Ready to create your content?</h2>
+        <p style="font-size: 17px; color: #a3a3a3; max-width: 600px; margin: 0 auto 48px; text-align: center;">Quick quote — just 4 questions</p>
+
+        <!-- Progress Bar -->
+        <div style="background: rgba(255,255,255,0.1); height: 6px; border-radius: 10px; margin-bottom: 32px; overflow: hidden;">
+          <div id="progress-bar" style="background: #64748B; height: 100%; width: 25%; transition: width 0.3s ease;"></div>
+        </div>
+
+        <form action="https://formspree.io/f/xjkjkkjg" method="POST" id="service-form" style="background: #FFFFFF; padding: 40px; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+          <input type="hidden" name="service_type" value="corporate-content">
+          <input type="hidden" name="_subject" value="Corporate Content Quote Request">
+
+          <div class="form-question" data-question="1" style="display: block; margin-bottom: 32px;">
+            <label style="display: block; font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #000;">What are you looking to create?</label>
+            <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="content_type" value="brand-story" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #64748B;"> Brand story or company video</label>
+            <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="content_type" value="testimonials" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #64748B;"> Customer testimonial videos</label>
+            <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="content_type" value="team-culture" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #64748B;"> Team/culture content</label>
+            <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="content_type" value="multiple-types" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #64748B;"> Multiple types of content</label>
+            <button type="button" class="next-btn" onclick="nextQuestion(2)" style="width: 100%; padding: 16px; background: #64748B; color: #FFF; font-size: 16px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; margin-top: 16px; transition: all 0.3s;">Next →</button>
+          </div>
+
+          <div class="form-question" data-question="2" style="display: none; margin-bottom: 32px;">
+            <label style="display: block; font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #000;">When do you need this?</label>
+            <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="timeline" value="asap" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #64748B;"> ASAP (within 2 weeks)</label>
+            <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="timeline" value="1-2-months" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #64748B;"> Within the next 1-2 months</label>
+            <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="timeline" value="flexible" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #64748B;"> Flexible timeline</label>
+            <button type="button" class="next-btn" onclick="nextQuestion(3)" style="width: 100%; padding: 16px; background: #64748B; color: #FFF; font-size: 16px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; margin-top: 16px; transition: all 0.3s;">Next →</button>
+          </div>
+
+          <div class="form-question" data-question="3" style="display: none; margin-bottom: 32px;">
+            <label style="display: block; font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #000;">Budget range?</label>
+            <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="budget" value="2k-5k" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #64748B;"> $2,000 - $5,000</label>
+            <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="budget" value="5k-10k" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #64748B;"> $5,000 - $10,000</label>
+            <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="budget" value="10k-plus" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #64748B;"> $10,000+</label>
+            <button type="button" class="next-btn" onclick="nextQuestion(4)" style="width: 100%; padding: 16px; background: #64748B; color: #FFF; font-size: 16px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; margin-top: 16px; transition: all 0.3s;">Next →</button>
+          </div>
+
+          <div class="form-question" data-question="4" style="display: none; margin-bottom: 24px;">
+            <label style="display: block; font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #000;">Contact info</label>
+            <input type="text" name="name" placeholder="Your name *" required style="width: 100%; padding: 14px; margin-bottom: 12px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;">
+            <input type="email" name="email" placeholder="Email *" required style="width: 100%; padding: 14px; margin-bottom: 12px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;">
+            <input type="tel" name="phone" placeholder="Phone (optional)" style="width: 100%; padding: 14px; margin-bottom: 12px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;">
+
+            <button type="submit" style="width: 100%; padding: 18px; background: #64748B; color: #FFF; font-size: 18px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-top: 16px;">Get My Quote →</button>
+            <p style="text-align: center; margin-top: 24px; font-size: 15px; color: #6B7280;">Or call: <a href="tel:+19294450603" style="color: #64748B; text-decoration: none; font-weight: 600;">(929) 445-0603</a></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Core Visuals NYC</h4>
+          <p style="max-width: 320px; line-height: 1.8;">Event video and photography for NYC businesses. Corporate events, conferences, brand content. Professional, transparent, reliable.</p>
+          <p style="margin-top: 32px;">
+            <strong style="font-weight: 700;">99 Wall Street #1751</strong><br>
+            New York, NY 10005
+          </p>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <a href="service-event-coverage.html">Event Video + Photo</a>
+          <a href="service-corporate-content.html">Corporate Content</a>
+          <a href="service-custom-projects.html">Custom Projects</a>
+          <a href="portfolio.html">Portfolio</a>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="tel:+19294450603">(929) 445-0603</a>
+          <a href="mailto:heyvladlevine@gmail.com">Email Us</a>
+        </div>
+
+        <div>
+          <h4>Connect</h4>
+          <a href="https://www.linkedin.com/in/vladlevine/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <p style="margin-top: 32px; font-size: 14px;">
+            <strong style="font-weight: 700;">Hours</strong><br>
+            Mon-Fri: 9am - 6pm EST
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Core Visuals NYC. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 120) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Conversational form navigation
+    function nextQuestion(questionNum) {
+      const questions = document.querySelectorAll('.form-question');
+      questions.forEach(q => q.style.display = 'none');
+
+      const nextQ = document.querySelector(`[data-question="${questionNum}"]`);
+      if (nextQ) {
+        nextQ.style.display = 'block';
+
+        // Update progress bar
+        const progress = (questionNum / 4) * 100;
+        document.getElementById('progress-bar').style.width = progress + '%';
+
+        // Smooth scroll to form
+        nextQ.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  </script>
+
+</body>
+</html>
