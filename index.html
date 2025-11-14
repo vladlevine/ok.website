@@ -143,6 +143,10 @@
 
           <!-- Service 1: Event Coverage (PRIMARY - Video + Photo) -->
           <div class="service-card fade-in">
+            <img src="images/thumbnail_event_group-networking-near-art-exhibit_environmental-candid_social-observational_event-art_horizontal.jpg"
+                 alt="Event Photography and Videography Coverage"
+                 class="service-thumbnail"
+                 loading="lazy">
             <div class="service-icon">🎬</div>
             <span class="eyebrow eyebrow-no-line" style="font-size: 11px; margin-bottom: 16px;">EVENT COVERAGE</span>
             <h3>Video + Photo Packages</h3>
@@ -155,6 +159,10 @@
 
           <!-- Service 2: Corporate Content (SECONDARY) -->
           <div class="service-card fade-in" style="animation-delay: 0.15s;">
+            <img src="images/thumbnail_headshot.png"
+                 alt="Corporate Headshots and Brand Videos"
+                 class="service-thumbnail"
+                 loading="lazy">
             <div class="service-icon">📸</div>
             <span class="eyebrow eyebrow-no-line" style="font-size: 11px; margin-bottom: 16px;">CORPORATE CONTENT</span>
             <h3>Headshots & Brand Videos</h3>
@@ -167,6 +175,10 @@
 
           <!-- Service 3: Custom Projects -->
           <div class="service-card fade-in" style="animation-delay: 0.3s;">
+            <img src="images/thumbnail_personal_branding.png"
+                 alt="Personal Branding and Custom Photography Projects"
+                 class="service-thumbnail"
+                 loading="lazy">
             <div class="service-icon">🎯</div>
             <span class="eyebrow eyebrow-no-line" style="font-size: 11px; margin-bottom: 16px;">CUSTOM PROJECTS</span>
             <h3>Personal Branding & Launches</h3>
@@ -672,24 +684,35 @@
     });
 
     // ============================================
-    // Swipeable Testimonials with Dot Indicators - Mobile Only
+    // Testimonial Slider with Dot Indicators
     // ============================================
-    if (window.innerWidth <= 768) {
-      const testimonialGrid = document.querySelector('.testimonial-grid');
-      const testimonialDots = document.querySelectorAll('.testimonial-dot');
+    const testimonialGrid = document.querySelector('.testimonial-grid');
+    const testimonialDots = document.querySelectorAll('.testimonial-dot');
 
-      if (testimonialGrid && testimonialDots.length > 0) {
-        testimonialGrid.addEventListener('scroll', () => {
-          const scrollLeft = testimonialGrid.scrollLeft;
+    if (testimonialGrid && testimonialDots.length > 0) {
+      // Update active dot on scroll
+      testimonialGrid.addEventListener('scroll', () => {
+        const scrollLeft = testimonialGrid.scrollLeft;
+        const cardWidth = testimonialGrid.querySelector('.testimonial-card').offsetWidth;
+        const gap = window.innerWidth <= 768 ? testimonialGrid.querySelector('.testimonial-card').offsetWidth * 0.1 : testimonialGrid.querySelector('.testimonial-card').offsetWidth * 0.05;
+        const activeIndex = Math.round(scrollLeft / (cardWidth + gap));
+
+        testimonialDots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === activeIndex);
+        });
+      });
+
+      // Click dots to navigate
+      testimonialDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
           const cardWidth = testimonialGrid.querySelector('.testimonial-card').offsetWidth;
-          const gap = 24;
-          const activeIndex = Math.round(scrollLeft / (cardWidth + gap));
-
-          testimonialDots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === activeIndex);
+          const gap = window.innerWidth <= 768 ? cardWidth * 0.1 : cardWidth * 0.05;
+          testimonialGrid.scrollTo({
+            left: index * (cardWidth + gap),
+            behavior: 'smooth'
           });
         });
-      }
+      });
     }
 
     // ============================================
