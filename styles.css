@@ -136,8 +136,8 @@ body {
   --gradient-subtle: linear-gradient(180deg, rgba(212, 175, 55, 0.03) 0%, rgba(232, 197, 71, 0.05) 100%);
 
   /* Spacing - More generous */
-  --spacing-section: 240px;
-  --spacing-section-mobile: 140px;
+  --spacing-section: 200px;
+  --spacing-section-mobile: 120px;
   --spacing-large: 100px;
   --spacing-medium: 60px;
   --spacing-small: 32px;
@@ -281,9 +281,9 @@ a {
     padding: var(--spacing-section-mobile) 0;
   }
 
-  /* Extra top padding for services section on mobile */
+  /* Reduce top padding for services section on mobile */
   #services {
-    padding-top: 120px !important;
+    padding-top: 60px !important;
   }
 }
 
@@ -499,7 +499,7 @@ a {
   overflow: hidden;
   margin-top: 0;
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 200px;
 }
 
 /* Video background support */
@@ -623,7 +623,7 @@ a {
   .hero {
     min-height: auto;
     padding-top: 100px;
-    padding-bottom: 80px;
+    padding-bottom: 160px;
   }
 
   .hero-content {
