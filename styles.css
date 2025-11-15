@@ -136,8 +136,8 @@ body {
   --gradient-subtle: linear-gradient(180deg, rgba(212, 175, 55, 0.03) 0%, rgba(232, 197, 71, 0.05) 100%);
 
   /* Spacing - More generous */
-  --spacing-section: 200px;
-  --spacing-section-mobile: 120px;
+  --spacing-section: 240px;
+  --spacing-section-mobile: 140px;
   --spacing-large: 100px;
   --spacing-medium: 60px;
   --spacing-small: 32px;
@@ -279,6 +279,11 @@ a {
 
   .section {
     padding: var(--spacing-section-mobile) 0;
+  }
+
+  /* Extra top padding for services section on mobile */
+  #services {
+    padding-top: 120px !important;
   }
 }
 
