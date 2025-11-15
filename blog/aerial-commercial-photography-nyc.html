@@ -138,18 +138,44 @@
       font-weight: 800;
       line-height: 1.2;
       margin: 0 0 24px;
-      max-width: 900px;
+      max-width: 60%;
       margin-left: auto;
       margin-right: auto;
       color: #FFFFFF;
     }
 
+    @media (max-width: 1400px) {
+      .article-header h1 {
+        max-width: 80%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .article-header h1 {
+        max-width: 100%;
+        padding: 0 12px;
+      }
+    }
+
     .article-excerpt {
       font-size: 20px;
       color: #a3a3a3;
-      max-width: 700px;
+      max-width: 60%;
       margin: 0 auto 32px;
       line-height: 1.6;
+    }
+
+    @media (max-width: 1400px) {
+      .article-excerpt {
+        max-width: 80%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .article-excerpt {
+        max-width: 100%;
+        padding: 0 12px;
+      }
     }
 
     .article-date {
@@ -158,9 +184,41 @@
     }
 
     .article-content {
-      max-width: 800px;
+      max-width: 60%;
       margin: 80px auto;
       padding: 0 40px;
+    }
+
+    @media (max-width: 1400px) {
+      .article-content {
+        max-width: 80%;
+      }
+    }
+
+    .breadcrumb-nav {
+      max-width: 60%;
+      margin: 0 auto 40px;
+      padding: 0 40px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 1400px) {
+      .breadcrumb-nav {
+        max-width: 80%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .article-content {
+        max-width: 100%;
+        padding: 0 12px;
+        margin: 60px auto;
+      }
+
+      .breadcrumb-nav {
+        max-width: 100%;
+        padding: 0 12px;
+      }
     }
 
     .article-content h2 {
@@ -320,7 +378,7 @@
     </header>
 
     <!-- Breadcrumb -->
-    <nav style="max-width: 800px; margin: 0 auto 40px; padding: 0 40px; font-size: 14px;">
+    <nav class="breadcrumb-nav">
       <a href="../index.html" style="color: #6B7280; text-decoration: none;">Home</a>
       <span style="color: #6B7280; margin: 0 8px;">/</span>
       <a href="../blog.html" style="color: #6B7280; text-decoration: none;">Blog</a>
