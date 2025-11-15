@@ -152,7 +152,34 @@
       }
 
       .service-section {
-        padding: 60px 24px;
+        padding: 60px 16px;
+      }
+
+      /* Fix positioning statement - reduce padding on mobile */
+      .service-section > .container > div[style*="max-width: 900px"] {
+        padding: 24px 16px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      /* Fix form width on mobile */
+      section .container[style*="max-width: 700px"] {
+        max-width: 100% !important;
+        padding: 0 !important;
+      }
+
+      form#service-form {
+        padding: 24px 16px !important;
+      }
+
+      /* Fix video showcase grid on mobile */
+      div[style*="grid-template-columns: repeat(auto-fit"] {
+        gap: 24px !important;
+      }
+
+      /* Fix hourly pricing box on mobile */
+      #packages div[style*="padding: 32px 40px"] {
+        padding: 20px 16px !important;
       }
     }
   </style>
@@ -219,7 +246,7 @@
         <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 16px;">Event Video Examples</h2>
         <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto 48px;">Full event coverage delivered as complete documentation—not just highlights.</p>
 
-        <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 40px;">
+        <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 40px;">
 
           <!-- Video 1: Kelly's Event - Full Coverage -->
           <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid #E5E7EB;">
