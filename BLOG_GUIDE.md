@@ -91,6 +91,106 @@ perspectives for businesses. This comprehensive guide will explore the various
 applications and benefits of drone photography services.
 ```
 
+### Content Accuracy & Risk Management
+
+**CRITICAL: Always verify pricing and statements against actual service pages before publishing.**
+
+#### Before Writing Any Blog Post:
+
+1. **Check Service Pages First**
+   - Read `service-event-coverage.html`, `service-corporate-content.html`, and `service-custom-projects.html`
+   - Note actual package prices, hourly rates, deliverables
+   - Identify how services are positioned and described
+   - Match blog post pricing ranges to actual offerings
+
+2. **Verify Pricing Alignment**
+   - ❌ **BAD**: Blog says "$200-350/hour" when you actually charge $850+/hour
+   - ✅ **GOOD**: Blog pricing tiers position your actual rates in the appropriate category
+   - Blog posts should use pricing RANGES that make your actual prices look reasonable
+   - Never accidentally price yourself out by positioning lower-cost competitors as "premium"
+
+3. **Avoid Future Traps - Sensitive Topics**
+
+   **Pricing Statements:**
+   - ✅ Use: "ranges from $X to $Y depending on..." (gives flexibility)
+   - ❌ Avoid: "always costs exactly $X" (locks you into specific pricing)
+   - ✅ Use: "typically see 3-5x ROI" (reasonable range)
+   - ❌ Avoid: "guaranteed 500% ROI" (impossible promise, legal liability)
+   - ✅ Use: "most conferences budget 5-8% for photography" (industry guidance)
+   - ❌ Avoid: "you should never pay more than $X" (contradicts your own pricing)
+
+   **Financial Claims:**
+   - ✅ Use: "one client secured 2 additional sponsor renewals" (specific example, anecdotal)
+   - ❌ Avoid: "all clients double their sponsors" (measurable claim you can't prove)
+   - ✅ Use: "LinkedIn profiles with photos get 14x more views according to LinkedIn data" (cited source)
+   - ❌ Avoid: "I guarantee your LinkedIn engagement will increase 14x" (promise you can't control)
+
+   **Controversial Statements:**
+   - ❌ Avoid politics, religion, hot-button social issues
+   - ❌ Avoid negative statements about specific competitors or companies
+   - ❌ Avoid absolute claims about industries you don't know deeply
+   - ✅ Stick to photography, events, corporate content, NYC business topics
+
+   **Legal/Regulatory:**
+   - ✅ Link to FAA.gov for drone regulations (authority source)
+   - ❌ Avoid giving definitive legal advice ("you must..." or "it's illegal to...")
+   - ✅ Use: "FAA Part 107 certification is required for commercial drone work"
+   - ❌ Avoid: "you can fly drones anywhere in NYC without permits" (false, liability risk)
+
+4. **Red Flags Checklist - Do NOT Publish If Blog Post Contains:**
+
+   - [ ] Pricing that contradicts service page pricing
+   - [ ] Guaranteed ROI percentages without "typical" or "average" qualifiers
+   - [ ] Absolute statements about competitors ("they always..." or "they never...")
+   - [ ] Legal advice presented as fact without citing sources
+   - [ ] Promises you can't control ("your photos will go viral")
+   - [ ] Industry statistics without sources
+   - [ ] Negative statements about specific companies or people
+   - [ ] Political, religious, or controversial non-business topics
+   - [ ] Claims that could be disproven with simple fact-checking
+
+5. **Self-Protection Language Patterns**
+
+   **Use these qualifiers:**
+   - "In my experience..."
+   - "I've found that..."
+   - "Most clients see..."
+   - "Typical range is..."
+   - "According to [source]..."
+   - "One client example..."
+   - "Industry data suggests..."
+
+   **Avoid these absolutes:**
+   - "Always"
+   - "Never"
+   - "Guaranteed"
+   - "Everyone"
+   - "The only way"
+   - "You must"
+   - "Proven to"
+
+6. **When Discussing Pricing Strategy**
+
+   **Example - Conference Photography:**
+   - Your actual packages: $5,000-10,000
+   - Blog positioning: Place your pricing in "Premium Coverage: $7,500-12,000" tier
+   - Explain value: Multi-photographer teams, fast turnaround, sponsor documentation
+   - Justify with ROI: "$100K conference with $40-60K sponsorships needs $8-10K coverage"
+
+   **This makes readers think:**
+   "Oh, $8K for conference photography makes sense for a serious event" (not "That's overpriced")
+
+7. **Cross-Reference Requirement**
+
+   Before publishing, verify:
+   - [ ] Pricing ranges align with service pages
+   - [ ] Claims match actual deliverables
+   - [ ] No contradictions with existing content
+   - [ ] All statistics have sources
+   - [ ] No legal/financial advice beyond your expertise
+
+**Bottom Line:** Blog posts should make your actual services look like smart investments, not expensive outliers. Always position pricing to make readers think "this makes sense for professional work" rather than "they're charging way more than the market."
+
 ### Structure Template
 
 Every blog post should follow this structure:
