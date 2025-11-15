@@ -265,6 +265,7 @@ a {
 .section {
   padding: var(--spacing-section) 0;
   position: relative;
+  z-index: 1;
 }
 
 .section-compact {
@@ -498,8 +499,10 @@ a {
   color: var(--color-white);
   overflow: hidden;
   margin-top: 0;
+  margin-bottom: 0;
   padding-top: 120px;
-  padding-bottom: 200px;
+  padding-bottom: 280px;
+  z-index: 10;
 }
 
 /* Video background support */
@@ -540,7 +543,7 @@ a {
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 20;
   max-width: 1400px;
   text-align: center;
   padding: 0 80px;
@@ -623,7 +626,7 @@ a {
   .hero {
     min-height: auto;
     padding-top: 100px;
-    padding-bottom: 160px;
+    padding-bottom: 220px;
   }
 
   .hero-content {
