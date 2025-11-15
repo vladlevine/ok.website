@@ -13,7 +13,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Event Photographer NYC | Corporate Video Production | Core Visuals">
   <meta property="og:description" content="NYC event photography and corporate video production. Fixed packages, transparent pricing, fast delivery.">
-  <meta property="og:url" content="https://corevisuals.nyc">
+  <meta property="og:url" content="https://corevisualsnyc.com">
 
   <!-- Local Business Schema -->
   <script type="application/ld+json">
@@ -32,7 +32,7 @@
     },
     "telephone": "+19294450603",
     "priceRange": "$$",
-    "url": "https://corevisuals.nyc",
+    "url": "https://corevisualsnyc.com",
     "serviceArea": {
       "@type": "GeoCircle",
       "geoMidpoint": {
@@ -46,7 +46,7 @@
   </script>
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://corevisuals.nyc">
+  <link rel="canonical" href="https://corevisualsnyc.com">
 
   <!-- Fonts - Updated to include 800 weight -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,11 +78,27 @@
   <!-- Header & Navigation -->
   <header class="header" id="header">
     <div class="container header-container">
-      <a href="/" class="logo">CORE VISUALS NYC</a>
+      <a href="index.html" class="logo">CORE VISUALS NYC</a>
       <nav class="nav" id="nav">
         <a href="#services">Services</a>
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
+        <div class="nav-item">
+          <a href="portfolio.html">Work</a>
+          <div class="dropdown-menu">
+            <a href="service-event-coverage.html">
+              Event Coverage
+              <span>Conferences, galas, networking events, product launches</span>
+            </a>
+            <a href="service-corporate-content.html">
+              Headshots &amp; Brand Videos
+              <span>Office lifestyle, team content, video business cards</span>
+            </a>
+            <a href="service-custom-projects.html">
+              Personal Branding & Launches
+              <span>Thought leadership, founder content, multi-day projects</span>
+            </a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
         <a href="#contact" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
       </nav>
       <div class="hamburger" id="hamburger">
@@ -104,17 +120,19 @@
 
       <div class="hero-content">
         <span class="eyebrow">NYC EVENT PHOTOGRAPHY & CORPORATE VIDEO</span>
-        <h1>Events worth remembering.<br><span class="text-gradient">Prices worth knowing.</span></h1>
-        <p class="lead">NYC event photography and corporate video production for conferences, brand content, and office photography. <strong style="color: var(--color-gold);">Fixed packages. Zero surprises.</strong> Delivered fast.</p>
+        <h1>Event Photography<br>& Video Production<br>in NYC.</h1>
+        <p class="hero-tagline"><strong>No mystery pricing.<br>No missed deadlines.</strong></p>
+        <p class="lead">Corporate events, conferences, brand content.<br>Transparent pricing. Fast delivery.</p>
+        <p class="hero-pricing-anchor">Event coverage starting at $1,700</p>
         <div class="hero-ctas">
           <a href="#services" class="btn btn-white">View Services</a>
-          <a href="#contact" class="btn btn-outline-white">Get Pricing</a>
+          <a href="contact.html" class="btn btn-outline-white">Get Pricing</a>
         </div>
       </div>
     </section>
 
     <!-- Services Section -->
-    <section class="section" id="services" style="background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%);">
+    <section class="section" id="services" style="background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%); padding-top: 80px;">
       <div class="container">
         <div class="text-center mb-4 fade-in">
           <span class="eyebrow">WHAT WE DO</span>
@@ -126,11 +144,15 @@
 
           <!-- Service 1: Event Coverage (PRIMARY - Video + Photo) -->
           <div class="service-card fade-in">
+            <img src="images/thumbnail2_event_group-networking-near-art-exhibit_environmental-candid_social-observational_event-art_horizontal.jpg"
+                 alt="Event Photography and Videography Coverage"
+                 class="service-thumbnail"
+                 loading="lazy">
             <div class="service-icon">🎬</div>
             <span class="eyebrow eyebrow-no-line" style="font-size: 11px; margin-bottom: 16px;">EVENT COVERAGE</span>
             <h3>Video + Photo Packages</h3>
             <p>Corporate events, conferences, galas. Get both video highlights and photo galleries—so you have content that works on LinkedIn, Instagram, and your website. Book together or separately.</p>
-            <a href="#services" class="service-card-link">
+            <a href="service-event-coverage.html" class="service-card-link">
               Explore
               <span>→</span>
             </a>
@@ -138,11 +160,15 @@
 
           <!-- Service 2: Corporate Content (SECONDARY) -->
           <div class="service-card fade-in" style="animation-delay: 0.15s;">
+            <img src="images/thumbnail2_headshot.jpg"
+                 alt="Corporate Headshots and Brand Videos"
+                 class="service-thumbnail"
+                 loading="lazy">
             <div class="service-icon">📸</div>
             <span class="eyebrow eyebrow-no-line" style="font-size: 11px; margin-bottom: 16px;">CORPORATE CONTENT</span>
             <h3>Headshots & Brand Videos</h3>
             <p>Team headshots, office photography, brand videos. The visual content your marketing team actually needs—delivered on time, on budget, without the agency runaround.</p>
-            <a href="#services" class="service-card-link">
+            <a href="service-corporate-content.html" class="service-card-link">
               Explore
               <span>→</span>
             </a>
@@ -150,16 +176,28 @@
 
           <!-- Service 3: Custom Projects -->
           <div class="service-card fade-in" style="animation-delay: 0.3s;">
+            <img src="images/thumbnail2_personal_branding.jpg"
+                 alt="Personal Branding and Custom Photography Projects"
+                 class="service-thumbnail"
+                 loading="lazy">
             <div class="service-icon">🎯</div>
             <span class="eyebrow eyebrow-no-line" style="font-size: 11px; margin-bottom: 16px;">CUSTOM PROJECTS</span>
-            <h3>Product Launches & More</h3>
-            <p>Special events, product launches, multi-day conferences. Need something specific? We'll build a package that fits. Fixed pricing, no surprises.</p>
-            <a href="#services" class="service-card-link">
+            <h3>Personal Branding & Launches</h3>
+            <p>Thought leadership content, product launches, multi-day conferences. Need something specific? We'll build a package that fits. Fixed pricing, no surprises.</p>
+            <a href="service-custom-projects.html" class="service-card-link">
               Explore
               <span>→</span>
             </a>
           </div>
 
+        </div>
+
+        <!-- View Full Portfolio Button -->
+        <div class="text-center fade-in" style="margin-top: 100px; animation-delay: 0.5s;">
+          <a href="portfolio.html" class="btn btn-secondary">
+            View Full Portfolio
+            <span>→</span>
+          </a>
         </div>
       </div>
     </section>
@@ -176,7 +214,7 @@
         <div class="work-grid">
 
           <!-- Work Item 1: Tech Event - Photo & Video -->
-          <div class="work-item fade-in">
+          <a href="case-study-tech-expo.html" class="work-item fade-in">
             <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/w_800,h_600,c_fill,q_auto,f_auto/v1762826235/mlops0052_rkyg1j.jpg"
                  alt="NYC event photography and videography - tech conference photo and video coverage"
                  class="work-item-image"
@@ -187,10 +225,10 @@
               <div class="work-item-type">Photo & Video Coverage</div>
               <div class="work-item-title">Tech Event</div>
             </div>
-          </div>
+          </a>
 
           <!-- Work Item 2: Nonprofit Event - Video -->
-          <div class="work-item fade-in" style="animation-delay: 0.15s;">
+          <a href="case-study-nonprofit-golf.html" class="work-item fade-in" style="animation-delay: 0.15s;">
             <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/w_800,h_600,c_fill,q_auto,f_auto/v1762874514/nonprofit_event_videography_nyc_vxlkur.jpg"
                  alt="Nonprofit event videography NYC - capturing impact and story through video"
                  class="work-item-image"
@@ -201,10 +239,10 @@
               <div class="work-item-type">Video Production</div>
               <div class="work-item-title">Impact & Story</div>
             </div>
-          </div>
+          </a>
 
-          <!-- Work Item 3: Law Firm - Corporate Photography -->
-          <div class="work-item fade-in" style="animation-delay: 0.3s;">
+          <!-- Work Item 3: Law Firm - Headshots &amp; Brand Videos -->
+          <a href="case-study-law-firm-photography.html" class="work-item fade-in" style="animation-delay: 0.3s;">
             <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/w_800,h_600,c_fill,q_auto,f_auto/v1762874804/law_firm_stock_imagery_photography_z0uklj.jpg"
                  alt="Corporate office photography NYC - law firm lifestyle and workplace imagery"
                  class="work-item-image"
@@ -212,15 +250,15 @@
                  width="800"
                  height="600">
             <div class="work-item-overlay">
-              <div class="work-item-type">Corporate Photography</div>
+              <div class="work-item-type">Headshots &amp; Brand Videos</div>
               <div class="work-item-title">Office & Lifestyle</div>
             </div>
-          </div>
+          </a>
 
         </div>
 
         <div class="text-center mt-4 fade-in">
-          <a href="#work" class="btn btn-secondary">
+          <a href="portfolio.html" class="btn btn-secondary">
             View Full Portfolio
             <span>→</span>
           </a>
@@ -251,14 +289,20 @@
 
           <!-- Testimonial 1 -->
           <div class="testimonial-card fade-in">
-            <p>"Vlad showed up on time, captured everything we needed, and delivered the edited photos faster than expected. Exactly what we needed for our quarterly conference."</p>
-            <div class="testimonial-author">— Marketing Director, Tech Company</div>
+            <p>"Vlad is a stud! He took professional photos for me and my team and did an amazing job. The hardest part was picking which pictures we wanted out of the ones he took, which is exactly the problem you want to have."</p>
+            <div class="testimonial-author">— Sean Shoemaker, Business Coach</div>
           </div>
 
           <!-- Testimonial 2 -->
           <div class="testimonial-card fade-in" style="animation-delay: 0.15s;">
-            <p>"No runaround, clear pricing, professional results. We've used Core Visuals NYC for three events now and they're our go-to photographer in NYC."</p>
-            <div class="testimonial-author">— Events Manager, Financial Services</div>
+            <p>"Vlad was prompt, courteous, and very patient with our staff. He had a creative eye when posing them. The headshots were perfect and we were able to make our deadline."</p>
+            <div class="testimonial-author">— Dana Honor, Human Resources</div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card fade-in" style="animation-delay: 0.3s;">
+            <p>"Working with Vlad was a great experience! It was a first 'real' photoshoot I've done as a musician, and he was able to capture my personality and professionalism in the best way! I've recommended him to my friends and colleagues and I'll continue to do so!"</p>
+            <div class="testimonial-author">— Ruben Spencer, Musician</div>
           </div>
 
         </div>
@@ -266,6 +310,7 @@
         <!-- Testimonial Dots Indicator - Mobile Only -->
         <div class="testimonial-dots">
           <div class="testimonial-dot active"></div>
+          <div class="testimonial-dot"></div>
           <div class="testimonial-dot"></div>
         </div>
       </div>
@@ -278,7 +323,7 @@
           <span class="eyebrow eyebrow-no-line" style="color: var(--color-gold); margin-bottom: 24px;">GET IN TOUCH</span>
           <h2>Tell us what you need.</h2>
           <p style="max-width: 700px; margin: 0 auto 48px; font-size: 22px;">No sales pitch. No mystery pricing.<br>Send us the details, we'll send you options.</p>
-          <a href="mailto:contact@corevisuals.nyc" class="btn btn-white">Get in Touch</a>
+          <a href="mailto:heyvladlevine@gmail.com" class="btn btn-white">Get in Touch</a>
           <p style="font-size: 16px; color: rgba(255, 255, 255, 0.6); margin-top: 32px; margin-bottom: 0;">
             Or call: <a href="tel:+19294450603" style="color: var(--color-gold); text-decoration: underline; font-weight: 600;">(929) 445-0603</a>
           </p>
@@ -298,7 +343,7 @@
           <h4>Core Visuals NYC</h4>
           <p style="max-width: 320px; line-height: 1.8;">Event video and photography for NYC businesses. Corporate events, conferences, brand content. Professional, transparent, reliable.</p>
           <p style="margin-top: 32px;">
-            <strong style="color: #0A0A0A; font-weight: 700;">99 Wall Street #1751</strong><br>
+            <strong style="font-weight: 700;">99 Wall Street #1751</strong><br>
             New York, NY 10005
           </p>
         </div>
@@ -306,28 +351,28 @@
         <!-- Column 2: Services -->
         <div>
           <h4>Services</h4>
-          <a href="#services">Event Video + Photo</a>
-          <a href="#services">Corporate Content</a>
-          <a href="#services">Custom Projects</a>
-          <a href="#work">Portfolio</a>
+          <a href="service-event-coverage.html">Event Video + Photo</a>
+          <a href="service-corporate-content.html">Corporate Content</a>
+          <a href="service-custom-projects.html">Custom Projects</a>
+          <a href="portfolio.html">Portfolio</a>
         </div>
 
         <!-- Column 3: Company -->
         <div>
           <h4>Company</h4>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <a href="about.html">About</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
           <a href="tel:+19294450603">(929) 445-0603</a>
-          <a href="mailto:contact@corevisuals.nyc">Email Us</a>
+          <a href="mailto:heyvladlevine@gmail.com">Email Us</a>
         </div>
 
         <!-- Column 4: Connect -->
         <div>
           <h4>Connect</h4>
-          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.linkedin.com/in/vladlevine/" target="_blank" rel="noopener" aria-label="Visit Core Visuals NYC on LinkedIn">LinkedIn</a>
           <p style="margin-top: 32px; font-size: 14px;">
-            <strong style="color: #0A0A0A; font-weight: 700;">Hours</strong><br>
+            <strong style="font-weight: 700;">Hours</strong><br>
             Mon-Fri: 9am - 6pm EST
           </p>
         </div>
@@ -338,13 +383,13 @@
       <div style="border-top: 1px solid #E5E7EB; padding-top: 32px; margin-top: 48px;">
         <h4 style="font-size: 12px; font-weight: 700; color: #0A0A0A; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.1em; text-align: center;">Site Map</h4>
         <div style="display: flex; justify-content: center; flex-wrap: nowrap; gap: 12px; font-size: 13px;">
-          <a href="/" style="color: #6B7280;">Home</a>
+          <a href="index.html" style="color: #6B7280;">Home</a>
           <span style="color: #D1D5DB;">|</span>
           <a href="#services" style="color: #6B7280;">Services</a>
           <span style="color: #D1D5DB;">|</span>
-          <a href="#work" style="color: #6B7280;">Portfolio</a>
+          <a href="portfolio.html" style="color: #6B7280;">Portfolio</a>
           <span style="color: #D1D5DB;">|</span>
-          <a href="#about" style="color: #6B7280;">About</a>
+          <a href="about.html" style="color: #6B7280;">About</a>
           <span style="color: #D1D5DB;">|</span>
           <a href="#contact" style="color: #6B7280;">Contact</a>
         </div>
@@ -423,8 +468,8 @@
                     loadingScreen.classList.add('hidden');
                   }, 300);
                 }
-              }, 200);
-            }, isFirstVisit ? 400 : 250);
+              }, isFirstVisit ? 100 : 150);
+            }, isFirstVisit ? 250 : 180);
           }
         }
 
@@ -640,24 +685,35 @@
     });
 
     // ============================================
-    // Swipeable Testimonials with Dot Indicators - Mobile Only
+    // Testimonial Slider with Dot Indicators
     // ============================================
-    if (window.innerWidth <= 768) {
-      const testimonialGrid = document.querySelector('.testimonial-grid');
-      const testimonialDots = document.querySelectorAll('.testimonial-dot');
+    const testimonialGrid = document.querySelector('.testimonial-grid');
+    const testimonialDots = document.querySelectorAll('.testimonial-dot');
 
-      if (testimonialGrid && testimonialDots.length > 0) {
-        testimonialGrid.addEventListener('scroll', () => {
-          const scrollLeft = testimonialGrid.scrollLeft;
+    if (testimonialGrid && testimonialDots.length > 0) {
+      // Update active dot on scroll
+      testimonialGrid.addEventListener('scroll', () => {
+        const scrollLeft = testimonialGrid.scrollLeft;
+        const cardWidth = testimonialGrid.querySelector('.testimonial-card').offsetWidth;
+        const gap = window.innerWidth <= 768 ? testimonialGrid.querySelector('.testimonial-card').offsetWidth * 0.1 : testimonialGrid.querySelector('.testimonial-card').offsetWidth * 0.05;
+        const activeIndex = Math.round(scrollLeft / (cardWidth + gap));
+
+        testimonialDots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === activeIndex);
+        });
+      });
+
+      // Click dots to navigate
+      testimonialDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
           const cardWidth = testimonialGrid.querySelector('.testimonial-card').offsetWidth;
-          const gap = 24;
-          const activeIndex = Math.round(scrollLeft / (cardWidth + gap));
-
-          testimonialDots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === activeIndex);
+          const gap = window.innerWidth <= 768 ? cardWidth * 0.1 : cardWidth * 0.05;
+          testimonialGrid.scrollTo({
+            left: index * (cardWidth + gap),
+            behavior: 'smooth'
           });
         });
-      }
+      });
     }
 
     // ============================================

@@ -1,0 +1,10 @@
+# Core Visuals NYC - Robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://corevisualsnyc.com/sitemap.xml
+
+# Disallow admin or private directories (if any in future)
+# Disallow: /admin/

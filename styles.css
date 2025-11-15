@@ -78,6 +78,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  scroll-padding-top: 180px;
   overflow-x: hidden;
 }
 
@@ -100,7 +101,7 @@ body {
   /* Primary Palette */
   --color-black: #0A0A0A;
   --color-white: #FFFFFF;
-  --color-gold: #D4AF37; /* Rich, sophisticated gold */
+  --color-gold: #F4D03F; /* Brighter, vibrant gold */
   --color-gold-light: #E8C547;
   --color-gold-dark: #B8941F;
   --color-champagne: #F7E7CE;
@@ -264,6 +265,7 @@ a {
 .section {
   padding: var(--spacing-section) 0;
   position: relative;
+  z-index: 1;
 }
 
 .section-compact {
@@ -273,11 +275,16 @@ a {
 @media (max-width: 768px) {
   .container,
   .container-narrow {
-    padding: 0 32px;
+    padding: 0 12px;
   }
 
   .section {
     padding: var(--spacing-section-mobile) 0;
+  }
+
+  /* Reduce top padding for services section on mobile */
+  #services {
+    padding-top: 60px !important;
   }
 }
 
@@ -361,6 +368,60 @@ a {
   color: var(--color-black);
 }
 
+/* Dropdown Menu */
+.nav-item {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-white);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  padding: 16px;
+  min-width: 280px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+  z-index: 1001;
+}
+
+.nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 16px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--color-gray-800);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  line-height: 1.5;
+}
+
+.dropdown-menu a::after {
+  display: none;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(6, 182, 212, 0.08);
+  color: var(--color-black);
+}
+
+.dropdown-menu a span {
+  display: block;
+  font-size: 12px;
+  color: var(--color-gray-600);
+  margin-top: 4px;
+}
+
 /* Mobile Navigation */
 .hamburger {
   display: none;
@@ -429,7 +490,8 @@ a {
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 600px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -437,8 +499,10 @@ a {
   color: var(--color-white);
   overflow: hidden;
   margin-top: 0;
-  padding-top: 120px; /* Increased spacing between header and hero content */
-  padding-bottom: 120px; /* Prevent next section from overlapping buttons */
+  margin-bottom: 0;
+  padding-top: 120px;
+  padding-bottom: 280px;
+  z-index: 10;
 }
 
 /* Video background support */
@@ -452,7 +516,7 @@ a {
   height: auto;
   transform: translate(-50%, -50%);
   z-index: 0;
-  opacity: 0.4;
+  opacity: 0.55; /* Increased by 15% from 0.4 - video less dark */
   object-fit: cover;
   pointer-events: none; /* Make video non-clickable */
 }
@@ -479,7 +543,7 @@ a {
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 20;
   max-width: 1400px;
   text-align: center;
   padding: 0 80px;
@@ -502,11 +566,34 @@ a {
   background: var(--gradient-primary);
 }
 
+.hero-tagline {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  color: var(--color-gold);
+  margin: 0 auto 48px;
+  max-width: 900px;
+  line-height: 1.3;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-tagline strong {
+  color: var(--color-gold);
+  font-weight: 700;
+}
+
 .hero .lead {
   color: rgba(255, 255, 255, 0.85);
   max-width: 800px;
-  margin: 0 auto 56px;
+  margin: 0 auto 24px;
   animation: fadeInUp 1.2s ease-out;
+}
+
+.hero-pricing-anchor {
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 auto 48px;
+  animation: fadeInUp 1.4s ease-out;
 }
 
 .hero-ctas {
@@ -528,22 +615,39 @@ a {
   }
 }
 
+/* Large desktop - make hero full viewport height */
+@media (min-width: 1400px) {
+  .hero {
+    min-height: 100vh;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
-    min-height: 90vh;
-    padding-top: 120px; /* More space between header and hero text on mobile */
-    padding-bottom: 140px; /* Extra padding for mobile Safari UI */
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: 220px;
   }
 
   .hero-content {
-    padding: 0 32px;
+    padding: 0 12px;
+  }
+
+  .hero-tagline {
+    font-size: clamp(24px, 6vw, 36px);
+    margin: 0 auto 32px;
+  }
+
+  .hero-pricing-anchor {
+    font-size: clamp(16px, 3vw, 18px);
+    margin: 0 auto 32px;
   }
 
   .hero-ctas {
     flex-direction: column;
     width: 100%;
     gap: 16px;
-    margin-bottom: 60px; /* Prevent overlap with Safari bottom bar */
+    margin-bottom: 40px;
   }
 
   .hero-ctas .btn {
@@ -866,6 +970,32 @@ a {
   box-shadow: 0 8px 32px rgba(6, 182, 212, 0.3);
 }
 
+/* Service Thumbnail Images */
+.service-thumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: 24px;
+  transition: all 0.4s ease;
+}
+
+/* Zoom in headshot thumbnail by 25% and move left by 10% */
+.service-card:nth-child(2) .service-thumbnail {
+  object-fit: cover;
+  object-position: 40% center;
+  transform: scale(1.25);
+}
+
+.service-card:hover .service-thumbnail {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-card:nth-child(2):hover .service-thumbnail {
+  transform: scale(1.3);
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-12px); }
@@ -934,6 +1064,11 @@ a {
   .service-card {
     padding: 32px;
   }
+
+  /* Hide service icons on mobile */
+  .service-icon {
+    display: none;
+  }
 }
 
 /* ============================================
@@ -942,10 +1077,13 @@ a {
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
   margin-top: 100px;
   margin-bottom: 80px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .work-item {
@@ -1031,10 +1169,21 @@ a {
    ============================================ */
 
 .testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 48px;
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  gap: 0;
   margin-top: 80px;
+  padding-bottom: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  scroll-behavior: smooth;
+}
+
+.testimonial-grid::-webkit-scrollbar {
+  display: none;
 }
 
 .testimonial-card {
@@ -1045,6 +1194,16 @@ a {
   box-shadow: var(--shadow-md);
   transition: all 0.4s ease;
   position: relative;
+  min-width: 450px;
+  max-width: 450px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  flex-shrink: 0;
+  margin-right: 0;
+}
+
+.testimonial-card:not(:last-child) {
+  margin-right: 5%;
 }
 
 /* Alternate testimonial border colors */
@@ -1088,9 +1247,23 @@ a {
 }
 
 @media (max-width: 768px) {
-  .testimonial-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
+  .testimonial-card {
+    min-width: 90%;
+    max-width: 90%;
+    padding: 32px;
+  }
+
+  .testimonial-card:not(:last-child) {
+    margin-right: 10%;
+  }
+
+  .testimonial-card p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .testimonial-author {
+    font-size: 13px;
   }
 }
 
@@ -1442,53 +1615,10 @@ textarea:focus {
   overflow: hidden;
 }
 
-/* Swipeable Testimonials - Mobile Only */
-@media (max-width: 768px) {
-  .testimonial-grid {
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    gap: 0;
-    margin-top: 60px;
-    padding-bottom: 20px;
-    padding-left: 5%;
-    padding-right: 5%;
-    scroll-behavior: smooth;
-  }
-
-  .testimonial-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  .testimonial-card {
-    min-width: 90%;
-    max-width: 90%;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    flex-shrink: 0;
-    padding: 32px;
-    margin-right: 0;
-  }
-
-  .testimonial-card:not(:last-child) {
-    margin-right: 10%;
-  }
-
-  .testimonial-card p {
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  .testimonial-author {
-    font-size: 13px;
-  }
-}
 
 /* Testimonial Dots Indicator */
 .testimonial-dots {
-  display: none;
+  display: flex;
   justify-content: center;
   gap: 8px;
   margin-top: 24px;
@@ -1500,18 +1630,13 @@ textarea:focus {
   border-radius: 50%;
   background: var(--color-gray-300);
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .testimonial-dot.active {
   background: var(--gradient-cyber);
   width: 24px;
   border-radius: 4px;
-}
-
-@media (max-width: 768px) {
-  .testimonial-dots {
-    display: flex;
-  }
 }
 
 /* Elastic Scroll Bounce */

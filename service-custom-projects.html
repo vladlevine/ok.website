@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Custom Projects - Product Launches & More | Core Visuals NYC</title>
+  <meta name="description" content="Custom video and photography for NYC businesses. Product launches, multi-day conferences, special events. Fixed pricing, no surprises. We'll build a package that fits your specific needs.">
+  <meta name="keywords" content="NYC product launch video, custom video production, multi-day conference coverage, special event photography NYC">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Custom Projects - Product Launches & More | Core Visuals NYC">
+  <meta property="og:description" content="Special events, product launches, multi-day conferences. Need something specific? We'll build a package that fits. Fixed pricing, no surprises.">
+  <meta property="og:url" content="https://corevisualsnyc.com/service-custom-projects">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://corevisualsnyc.com/service-custom-projects">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>">
+
+  <style>
+    .service-hero {
+      background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+      padding: 180px 40px 100px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .service-hero h1 {
+      font-size: clamp(42px, 7vw, 64px);
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0 0 24px;
+      color: #FFFFFF;
+    }
+
+    .service-hero-subtitle {
+      font-size: 22px;
+      color: #a3a3a3;
+      max-width: 800px;
+      margin: 0 auto 48px;
+      line-height: 1.6;
+    }
+
+    .service-section {
+      padding: 100px 40px;
+    }
+
+    .service-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1400px;
+      margin: 80px auto;
+      grid-auto-flow: dense;
+    }
+
+    .service-gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .service-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .service-gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    }
+
+    .gallery-tall {
+      grid-row: span 2;
+    }
+
+    .gallery-wide {
+      grid-column: span 2;
+    }
+
+    .project-types {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 1400px;
+      margin: 80px auto;
+    }
+
+    .project-card {
+      background: #FFFFFF;
+      border: 2px solid #EC4899;
+      border-radius: 16px;
+      padding: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 48px rgba(236, 72, 153, 0.2);
+    }
+
+    .project-card h3 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #0A0A0A;
+    }
+
+    .project-card p {
+      color: #6B7280;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .project-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .project-card ul li {
+      padding: 8px 0;
+      font-size: 16px;
+      color: #0A0A0A;
+    }
+
+    .project-card ul li:before {
+      content: "→ ";
+      color: #EC4899;
+      font-weight: 700;
+      margin-right: 8px;
+    }
+
+    @media (max-width: 968px) {
+      .service-hero {
+        padding: 140px 24px 80px;
+      }
+
+      .service-gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .project-types {
+        grid-template-columns: 1fr;
+      }
+
+      .service-section {
+        padding: 60px 12px;
+      }
+
+      /* Fix positioning statement - reduce padding on mobile */
+      .service-section > .container > div[style*="max-width: 900px"] {
+        padding: 20px 12px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      /* Fix video showcase grid on mobile */
+      div[style*="grid-template-columns: repeat(auto-fit"] {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+
+      /* Fix "How Custom Projects Work" grid on mobile */
+      div[style*="grid-template-columns: repeat(3, 1fr)"] {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+
+      /* Fix "Typical Project Ranges" container on mobile */
+      div[style*="padding: 64px"] {
+        padding: 28px 12px !important;
+        text-align: center !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">CORE VISUALS NYC</a>
+      <nav class="nav" id="nav">
+        <a href="index.html#services">Services</a>
+        <div class="nav-item">
+          <a href="portfolio.html">Work</a>
+          <div class="dropdown-menu">
+            <a href="service-event-coverage.html">
+              Event Coverage
+              <span>Conferences, galas, networking events, product launches</span>
+            </a>
+            <a href="service-corporate-content.html">
+              Headshots &amp; Brand Videos
+              <span>Office lifestyle, team content, video business cards</span>
+            </a>
+            <a href="service-custom-projects.html">
+              Personal Branding & Launches
+              <span>Thought leadership, founder content, multi-day projects</span>
+            </a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section class="service-hero">
+      <h1>Custom Projects<br>Product Launches & More</h1>
+      <p class="service-hero-subtitle">Special events, product launches, multi-day conferences. Need something specific? We'll build a package that fits your exact needs. Fixed pricing, no surprises.</p>
+    </section>
+
+    <!-- Positioning Statement -->
+    <section class="service-section" style="padding: 80px 40px;">
+      <div class="container">
+        <div style="max-width: 900px; margin: 0 auto; text-align: center; background: linear-gradient(135deg, rgba(236, 72, 153, 0.05) 0%, rgba(6, 182, 212, 0.05) 100%); padding: 48px; border-radius: 16px; border: 2px solid #EC4899;">
+          <p style="font-size: 22px; line-height: 1.7; color: #0A0A0A; margin: 0;">
+            <strong style="font-weight: 700; color: #0A0A0A;">Custom projects in NYC that actually make sense.</strong> You tell us what you need (executive portraits, ongoing content, special announcements), we quote a fixed price that includes all deliverables, and you get everything on schedule. <strong style="color: #EC4899;">No surprise add-ons, no agency markup.</strong> Custom projects start at $2,500 because that's what it costs to do this right.
+          </p>
+          <p style="text-align: center; margin-top: 24px;"><a href="service-event-coverage.html#packages" style="font-size: 15px; color: #EC4899; text-decoration: underline; font-weight: 500;">View transparent pricing</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Personal Branding Video -->
+    <section class="service-section">
+      <div class="container">
+        <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 16px;">Personal Branding Intro Videos</h2>
+        <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto 48px;">Professional intro videos that showcase who you are and what you do—perfect for websites, social media, and client presentations.</p>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+          <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid #E5E7EB;">
+            <video controls style="width: 100%; display: block;" poster="">
+              <source src="https://res.cloudinary.com/dtuxu64zp/video/upload/v1763058637/01_-_WEB_Katie_V2_1_jp5uuk.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div style="padding: 32px;">
+              <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; color: #0A0A0A;">Personal Organizer Brand Video</h3>
+              <p style="color: #6B7280; font-size: 17px; line-height: 1.7; margin: 0;">A concise branding intro that communicates personality, expertise, and service offerings. This type of video works for service professionals, consultants, and entrepreneurs who need to make a strong first impression online.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Gallery -->
+    <section class="service-section" style="background: #F9FAFB;">
+      <div class="container">
+        <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 24px;">Personal Branding & Editorial</h2>
+        <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto;">Thought leadership content, founder portraits, creative projects, and performer branding photography.</p>
+
+        <div class="service-gallery">
+          <!-- Row 1 -->
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/editorial_ballerina-red-origami-dress-dancing_conceptual-fashion_energetic-artistic_dance-fashion_vertical.jpg" alt="Ballerina red origami dress dancing editorial fashion NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/editorial/editorial_young-man-drummer-sticks-drums-dark-background_studio-portrait_energetic-musical_music_horizontal.jpg" alt="Young man drummer musical portrait NYC photographer" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/editorial_black-woman-gold-crown_fashion-fine-art_majestic-powerful_fashion_vertical.jpg" alt="Black woman gold crown fashion fine art NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/editorial/editorial_vocal-artist-headphones-around-ears-microphone-close-up_studio-portrait_engaged-focused_music-audio_horizontal.jpg" alt="Vocal artist studio music audio portrait NYC" loading="lazy">
+          </div>
+
+          <!-- Row 2 -->
+          <div class="service-gallery-item gallery-wide">
+            <img src="images/editorial/editorial_man-bagpipes-kilt-dark-background-traditional-dress_studio-portrait_traditional-formal_cultural-music_horizontal.jpg" alt="Man bagpipes kilt traditional cultural music portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/editorial_woman-curly-hair-sheer-fabric_fashion-beauty_intense-dramatic_fine-art_vertical.jpg" alt="Woman curly hair sheer fabric fashion beauty fine art NYC" loading="lazy">
+          </div>
+
+          <!-- Row 3 -->
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/editorial_redhead-woman-black-leather-jacket-seated_studio-portrait_confident-bold_fashion_vertical.jpg" alt="Redhead woman black leather jacket editorial portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/editorial/editorial_woman-white-shirt-wet-hair-dark-moody-lighting_studio-portrait_sensual-moody_fashion-beauty_horizontal.jpg" alt="Woman wet hair dark moody editorial portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/editorial_young-man-gold-jacquard-jacket-holding-bass-guitar_studio-portrait_stylish-musical_fashion-music_vertical.jpg" alt="Young man bass guitar musician portrait NYC branding" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/editorial/lifestyle_redhead-woman-denim-and-tshirt-sitting_studio-portrait_relaxed-moody_fashion_horizontal.jpg" alt="Redhead woman casual lifestyle portrait NYC photographer" loading="lazy">
+          </div>
+
+          <!-- Row 4 -->
+          <div class="service-gallery-item gallery-wide">
+            <img src="images/editorial/lifestyle_female-artist-painter-in-studio_environmental-portrait_artistic-confident_art-creative_horizontal.jpg" alt="Female artist painter in studio NYC creative photography" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/editorial_black-woman-gold-headpiece-smoke-effect_fashion-fine-art_mysterious-powerful_fashion_vertical.jpg" alt="Black woman gold headpiece smoke effect fine art NYC" loading="lazy">
+          </div>
+
+          <!-- Row 5 -->
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/editorial_woman-leather-jacket-lace-top-dramatic-lighting_studio-portrait_intense-stylish_fashion_vertical.jpg" alt="Woman leather jacket dramatic editorial portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/editorial/editorial_young-man-white-shirt-suspenders-arms-crossed_studio-portrait_confident-edgy_fashion_horizontal.jpg" alt="Young man suspenders editorial portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/editorial_redhead-woman-profile-sunlit-dark-background_studio-portrait_serene-pensive_beauty-art_vertical.jpg" alt="Redhead woman profile sunlit editorial beauty portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/editorial/editorial_beautiful-bride-wedding-portrait-soft-focus_beauty-wedding_glamorous-soft_wedding-beauty_horizontal.jpg" alt="Bride wedding portrait beauty photography NYC" loading="lazy">
+          </div>
+
+          <!-- Row 6 -->
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/editorial_woman-white-dress-field-nature-scene-in-frame_conceptual-fine-art_surreal-artistic_fine-art-nature_vertical.jpg" alt="Woman white dress field nature conceptual fine art NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/editorial_man-black-coat-turtleneck-studio_fashion-studio_thoughtful-elegant_fashion_vertical.jpg" alt="Man black coat turtleneck editorial fashion portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/editorial/editorial_redhead-woman-brown-turtleneck-hand-on-hair_studio-portrait_soft-moody_beauty-fashion_horizontal.jpg" alt="Redhead woman editorial beauty portrait NYC photographer" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/editorial_vocal-artist-microphone-headphones-dark-dramatic-light_studio-portrait_intense-focused_music-audio_vertical.jpg" alt="Vocal artist dramatic studio music portrait NYC" loading="lazy">
+          </div>
+
+          <!-- Row 7 -->
+          <div class="service-gallery-item gallery-wide">
+            <img src="images/editorial/lifestyle_woman-white-dress-long-hair-mantel-background_environmental-portrait_pensive-elegant_fashion_horizontal.jpg" alt="Woman white dress elegant lifestyle portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/editorial_woman-beige-blazer-golden-hour-shadow-portrait_studio-environmental_moody-thoughtful_corporate-fashion_vertical.jpg" alt="Woman beige blazer golden hour editorial portrait NYC" loading="lazy">
+          </div>
+
+          <!-- Row 8 -->
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/lifestyle_woman-white-dress-field-outdoors-long-shot_environmental-portrait_serene-natural_fashion-nature_vertical.jpg" alt="Woman white dress field outdoors lifestyle NYC photographer" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/editorial/editorial_black-white-woman-hands-on-head-turtleneck_studio-portrait_intense-emotional_art-fashion_horizontal.jpg" alt="Black and white woman editorial art fashion portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/editorial_black-woman-afro-gold-headpiece_fashion-fine-art_strong-confident_fashion_vertical.jpg" alt="Black woman afro gold headpiece fine art NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/editorial/lifestyle_redhead-woman-denim-and-tshirt-sitting-soft-light_studio-portrait_soft-casual_fashion_vertical.jpg" alt="Redhead woman casual lifestyle portrait soft light NYC" loading="lazy">
+          </div>
+
+          <!-- Row 9 -->
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/editorial_woman-curly-hair-teal-red-lighting_fashion-beauty_intense-dramatic_fine-art_vertical.jpg" alt="Woman curly hair colored lighting fashion fine art NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/editorial_monochrome-woman-curly-hair-sitting-side-view_studio-portrait_pensive-stylish_fashion_vertical.jpg" alt="Monochrome woman curly hair editorial fashion portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/editorial/lifestyle_redhead-woman-denim-tshirt-face-on-knees-closeup_studio-portrait_pensive-authentic_fashion_horizontal.jpg" alt="Redhead woman pensive authentic lifestyle portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/editorial_woman-leather-jacket-dark-background-blue-pink-light_studio-portrait_edgy-moody_fashion_vertical.jpg" alt="Woman leather jacket edgy moody editorial portrait NYC" loading="lazy">
+          </div>
+
+          <!-- Row 10 -->
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/editorial_black-white-woman-turtleneck-pulling-hair-up_studio-portrait_intense-focused_beauty-fashion_vertical.jpg" alt="Black and white woman turtleneck editorial beauty NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/lifestyle_woman-white-dress-seated-in-field-sunlight_environmental-portrait_pensive-soft_fashion-nature_vertical.jpg" alt="Woman white dress field sunlight lifestyle portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="images/editorial/editorial_man-bagpipes-traditional-uniform-dark-background_studio-portrait_traditional-direct_cultural-music_horizontal.jpg" alt="Man bagpipes traditional uniform cultural music NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/editorial_woman-beige-blazer-sunlight-shadow-portrait_studio-environmental_serious-atmospheric_corporate-fashion_vertical.jpg" alt="Woman beige blazer atmospheric editorial portrait NYC" loading="lazy">
+          </div>
+
+          <!-- Row 11 -->
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/editorial_redhead-woman-side-profile-black-outfit_studio-portrait_mysterious-dramatic_fashion-art_vertical.jpg" alt="Redhead woman side profile dramatic editorial portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/lifestyle_black-white-redhead-woman-squatting-denim-boots_studio-portrait_confident-edgy_fashion_vertical.jpg" alt="Black and white woman edgy lifestyle portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/lifestyle_redhead-woman-denim-and-tshirt-sitting-soft-light_studio-portrait_soft-casual_fashion_vertical.jpg" alt="Redhead woman soft casual lifestyle portrait NYC" loading="lazy">
+          </div>
+          <div class="service-gallery-item gallery-tall">
+            <img src="images/editorial/lifestyle_young-woman-green-jumpsuit-seated-stool_studio-portrait_casual-relaxed_fashion_vertical.jpg" alt="Young woman green jumpsuit casual lifestyle portrait NYC" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Types -->
+    <section class="service-section">
+      <div class="container">
+        <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 24px;">Custom Project Types</h2>
+        <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto 20px;"><strong style="color: #EC4899;">Fixed project pricing, not hourly rates.</strong></p>
+        <p style="text-align: center; font-size: 17px; color: #6B7280; max-width: 700px; margin: 0 auto 60px;">These are the most common custom requests. If you need something else, just ask.</p>
+
+        <div class="project-types">
+          <!-- Executive Portrait Sessions -->
+          <div class="project-card">
+            <h3>Executive Portrait Sessions</h3>
+            <p>Half-day creative sessions for C-suite executives, board members, and key leadership. Premium headshots and environmental portraits that command presence.</p>
+            <ul>
+              <li>Half-day creative session</li>
+              <li>Multiple setups & backgrounds</li>
+              <li>Professional styling guidance</li>
+              <li>10-15 final edited portraits</li>
+              <li>Web, print & PR ready files</li>
+            </ul>
+            <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid #E5E7EB;">
+              <p style="font-size: 18px; font-weight: 700; color: #EC4899; margin: 0;">Starting at $2,500</p>
+            </div>
+          </div>
+
+          <!-- Recruitment & Culture Content -->
+          <div class="project-card">
+            <h3>Recruitment & Culture Content</h3>
+            <p>Ongoing monthly packages for companies that need regular fresh content for recruiting, social media, and internal communications.</p>
+            <ul>
+              <li>Monthly on-location shoots</li>
+              <li>Team photos & candid moments</li>
+              <li>Office culture documentation</li>
+              <li>Social media ready content</li>
+              <li>Consistent visual brand</li>
+            </ul>
+            <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid #E5E7EB;">
+              <p style="font-size: 18px; font-weight: 700; color: #EC4899; margin: 0;">Starting at $3,500/month</p>
+            </div>
+          </div>
+
+          <!-- Partnership Announcements -->
+          <div class="project-card">
+            <h3>Partnership Announcements</h3>
+            <p>Merger photos, new office openings, ribbon cuttings, partnership signings. Professional documentation for your major corporate milestones.</p>
+            <ul>
+              <li>Event coverage (2-4 hours)</li>
+              <li>Key moment documentation</li>
+              <li>Executive group photos</li>
+              <li>Press-ready materials</li>
+              <li>Same-day preview delivery</li>
+            </ul>
+            <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid #E5E7EB;">
+              <p style="font-size: 18px; font-weight: 700; color: #EC4899; margin: 0;">Starting at $2,500</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="service-section" style="background: #F9FAFB;">
+      <div class="container">
+        <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 24px;">How Custom Projects Work</h2>
+        <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto 60px;">A simple process. No mystery, no surprises.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1200px; margin: 0 auto;">
+          <div style="text-align: center;">
+            <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #06B6D4 0%, #D4AF37 100%); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 32px; font-weight: 800; color: #FFFFFF;">1</div>
+            <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 12px; color: #0A0A0A;">Tell Us What You Need</h3>
+            <p style="color: #6B7280; line-height: 1.7;">Share your event details, goals, and any specific requirements. The more we know, the better we can help.</p>
+          </div>
+
+          <div style="text-align: center;">
+            <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #D4AF37 0%, #EC4899 100%); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 32px; font-weight: 800; color: #FFFFFF;">2</div>
+            <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 12px; color: #0A0A0A;">We Build a Custom Package</h3>
+            <p style="color: #6B7280; line-height: 1.7;">You'll get a detailed proposal with scope, deliverables, timeline, and fixed pricing within 24-48 hours.</p>
+          </div>
+
+          <div style="text-align: center;">
+            <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #EC4899 0%, #06B6D4 100%); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 32px; font-weight: 800; color: #FFFFFF;">3</div>
+            <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 12px; color: #0A0A0A;">We Execute & Deliver</h3>
+            <p style="color: #6B7280; line-height: 1.7;">We show up, capture everything, and deliver your content on schedule. Simple as that.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Guide -->
+    <section class="service-section">
+      <div class="container">
+        <div style="max-width: 800px; margin: 0 auto; background: #FFFFFF; border: 2px solid #EC4899; border-radius: 16px; padding: 48px; text-align: center;">
+          <h2 style="font-size: clamp(28px, 4vw, 38px); margin-bottom: 20px; color: #0A0A0A;">Typical Project Ranges</h2>
+          <p style="font-size: 19px; color: #6B7280; line-height: 1.7; margin-bottom: 32px;">Most custom projects range from <strong style="color: #0A0A0A;">$2,500 - $15,000</strong> depending on scope, complexity, and deliverables. <strong style="color: #EC4899;">Fixed project pricing, not hourly rates.</strong> You'll always get a fixed quote upfront.</p>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; text-align: center;">
+            <div>
+              <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #EC4899; margin-bottom: 8px;">BASIC</div>
+              <div style="font-size: 28px; font-weight: 800; color: #0A0A0A;">$2.5K-5K</div>
+              <div style="font-size: 14px; color: #6B7280; margin-top: 8px;">Executive portraits<br>Small announcements<br>Short founder story<br>Video business card</div>
+            </div>
+            <div>
+              <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #EC4899; margin-bottom: 8px;">STANDARD</div>
+              <div style="font-size: 28px; font-weight: 800; color: #0A0A0A;">$5K-10K</div>
+              <div style="font-size: 14px; color: #6B7280; margin-top: 8px;">Monthly packages<br>Full-day coverage</div>
+            </div>
+            <div>
+              <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #EC4899; margin-bottom: 8px;">PREMIUM</div>
+              <div style="font-size: 28px; font-weight: 800; color: #0A0A0A;">$10K-15K+</div>
+              <div style="font-size: 14px; color: #6B7280; margin-top: 8px;">Multi-day projects<br>Complex productions</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Embedded Quick Form -->
+    <section style="background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%); padding: 100px 40px;">
+      <div class="container" style="max-width: 700px;">
+        <h2 style="font-size: clamp(28px, 4vw, 36px); color: #FFFFFF; margin-bottom: 16px; text-align: center;">Ready to discuss your custom project?</h2>
+        <p style="font-size: 17px; color: #a3a3a3; max-width: 600px; margin: 0 auto 48px; text-align: center;">Quick quote — just 4 questions</p>
+
+        <!-- Progress Bar -->
+        <div style="background: rgba(255,255,255,0.1); height: 6px; border-radius: 10px; margin-bottom: 32px; overflow: hidden;">
+          <div id="progress-bar" style="background: #EC4899; height: 100%; width: 25%; transition: width 0.3s ease;"></div>
+        </div>
+
+        <form action="https://formspree.io/f/xjkjkkjg" method="POST" id="service-form" style="background: #FFFFFF; padding: 40px; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+          <input type="hidden" name="service_type" value="custom-project">
+          <input type="hidden" name="_subject" value="Custom Project Quote Request">
+
+          <div class="form-question" data-question="1" style="display: block; margin-bottom: 32px;">
+            <label style="display: block; font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #000;">Tell us about your project</label>
+            <textarea name="project_description" rows="4" placeholder="Describe what you're looking to create..." required style="width: 100%; padding: 14px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px; font-family: 'Inter', sans-serif; resize: vertical;"></textarea>
+            <button type="button" class="next-btn" onclick="nextQuestion(2)" style="width: 100%; padding: 16px; background: #EC4899; color: #FFF; font-size: 16px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; margin-top: 16px; transition: all 0.3s;">Next →</button>
+          </div>
+
+          <div class="form-question" data-question="2" style="display: none; margin-bottom: 32px;">
+            <label style="display: block; font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #000;">When do you need this?</label>
+            <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="timeline" value="asap" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #EC4899;"> ASAP (within 2 weeks)</label>
+            <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="timeline" value="1-2-months" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #EC4899;"> Within 1-2 months</label>
+            <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="timeline" value="flexible" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #EC4899;"> Flexible timeline</label>
+            <button type="button" class="next-btn" onclick="nextQuestion(3)" style="width: 100%; padding: 16px; background: #EC4899; color: #FFF; font-size: 16px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; margin-top: 16px; transition: all 0.3s;">Next →</button>
+          </div>
+
+          <div class="form-question" data-question="3" style="display: none; margin-bottom: 32px;">
+            <label style="display: block; font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #000;">Budget range?</label>
+            <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="budget" value="2k-5k" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #EC4899;"> $2,000 - $5,000</label>
+            <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="budget" value="5k-10k" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #EC4899;"> $5,000 - $10,000</label>
+            <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="budget" value="10k-plus" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #EC4899;"> $10,000+</label>
+            <label style="display: block; padding: 14px 16px; margin-bottom: 8px; border: 2px solid #E5E7EB; border-radius: 8px; cursor: pointer;"><input type="radio" name="budget" value="not-sure" required style="margin-right: 12px; width: 18px; height: 18px; accent-color: #EC4899;"> Not sure yet</label>
+            <button type="button" class="next-btn" onclick="nextQuestion(4)" style="width: 100%; padding: 16px; background: #EC4899; color: #FFF; font-size: 16px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; margin-top: 16px; transition: all 0.3s;">Next →</button>
+          </div>
+
+          <div class="form-question" data-question="4" style="display: none; margin-bottom: 24px;">
+            <label style="display: block; font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #000;">Contact info</label>
+            <input type="text" name="name" placeholder="Your name *" required style="width: 100%; padding: 14px; margin-bottom: 12px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;">
+            <input type="email" name="email" placeholder="Email *" required style="width: 100%; padding: 14px; margin-bottom: 12px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;">
+            <input type="tel" name="phone" placeholder="Phone (optional)" style="width: 100%; padding: 14px; margin-bottom: 12px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;">
+
+            <button type="submit" style="width: 100%; padding: 18px; background: #EC4899; color: #FFF; font-size: 18px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-top: 16px;">Get My Custom Quote →</button>
+            <p style="text-align: center; margin-top: 24px; font-size: 15px; color: #6B7280;">Or call: <a href="tel:+19294450603" style="color: #EC4899; text-decoration: none; font-weight: 600;">(929) 445-0603</a></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Core Visuals NYC</h4>
+          <p style="max-width: 320px; line-height: 1.8;">Event video and photography for NYC businesses. Corporate events, conferences, brand content. Professional, transparent, reliable.</p>
+          <p style="margin-top: 32px;">
+            <strong style="font-weight: 700;">99 Wall Street #1751</strong><br>
+            New York, NY 10005
+          </p>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <a href="service-event-coverage.html">Event Video + Photo</a>
+          <a href="service-corporate-content.html">Corporate Content</a>
+          <a href="service-custom-projects.html">Custom Projects</a>
+          <a href="portfolio.html">Portfolio</a>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+          <a href="tel:+19294450603">(929) 445-0603</a>
+          <a href="mailto:heyvladlevine@gmail.com">Email Us</a>
+        </div>
+
+        <div>
+          <h4>Connect</h4>
+          <a href="https://www.linkedin.com/in/vladlevine/" target="_blank" rel="noopener" aria-label="Visit Core Visuals NYC on LinkedIn">LinkedIn</a>
+          <p style="margin-top: 32px; font-size: 14px;">
+            <strong style="font-weight: 700;">Hours</strong><br>
+            Mon-Fri: 9am - 6pm EST
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Core Visuals NYC. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 120) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Conversational form navigation
+    function nextQuestion(questionNum) {
+      const questions = document.querySelectorAll('.form-question');
+      questions.forEach(q => q.style.display = 'none');
+
+      const nextQ = document.querySelector(`[data-question="${questionNum}"]`);
+      if (nextQ) {
+        nextQ.style.display = 'block';
+
+        // Update progress bar
+        const progress = (questionNum / 4) * 100;
+        document.getElementById('progress-bar').style.width = progress + '%';
+
+        // Smooth scroll to form
+        nextQ.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -734,6 +734,52 @@ Home | Event Coverage | Corporate Content | Portfolio | About | Blog | Contact
 
 ---
 
+## 📖 CASE STUDIES
+
+### STRUCTURE: `/case-study-[project-name].html`
+
+**Purpose:** Deep-dive project breakdowns that demonstrate value, build trust, and educate potential clients on ROI
+
+**Law Firm Photography Case Study** (`case-study-law-firm-photography.html`)
+**Keywords:** law firm photography NYC, corporate office photography, professional headshots attorneys
+**Status:** ✅ Live - True case study format (show, don't tell) (Nov 2025)
+
+**Philosophy:** Proof page, not pitch page. Show completed work, minimal explanation, clear next step.
+
+**6-Section Structure (400 words total):**
+1. **Hero** - Project label, headline, one-sentence intro, stats (Manhattan • 9 Attorneys • 1 Shoot Day • 2024)
+2. **The Challenge** - 2 sentences explaining context (why they hired you)
+3. **The Photography** - 3x3 grid (9 slots) combining headshots + lifestyle with hover captions
+4. **The Results** - 2x2 metrics grid (9 attorneys, 65+ images, 10 days, 100% deployment)
+5. **The Investment** - $7,750 ($2,750 headshots + $5,000 lifestyle), commercial rights, 10-day timeline
+6. **The CTA** - Dark section (#2B2B2B), simple copy, phone (786) 901-2172, "Tell Us About Your Project" button
+
+**What Was Removed:**
+- ALL educational content (Stock Photo Problem, Why Both Matter, service explanations)
+- ROI calculations and value diagrams
+- Multiple CTAs and mid-page forms
+- Comparison tables and testimonial placeholders
+- Any section > 3 sentences
+
+**Core Questions Answered:**
+1. Can they do this? → Yes (see photos)
+2. What did it cost? → $7,750 (see Investment)
+3. How do I ask? → Call or email (see CTA)
+
+**Design:**
+- Alternating white (#ffffff) / gray (#f5f5f5) backgrounds
+- 3-col → 2-col → 1-col responsive grid
+- Hover captions on photo grid
+- Gold accent (#f4c542) for CTAs and metrics
+- Clean, minimal, fast-scanning layout
+
+**Template for Future Case Studies:** This structure works for any service - just swap photos, adjust pricing, update stats.
+
+**Nonprofit Golf Event Case Study** (`case-study-nonprofit-golf.html`)
+**Status:** ✅ Live - Video-focused case study
+
+---
+
 ## 📝 NOTES
 
 **This is the final vision.** All pages listed above are what the complete Core Visuals NYC website will include.
@@ -744,9 +790,10 @@ Home | Event Coverage | Corporate Content | Portfolio | About | Blog | Contact
 3. Portfolio page
 4. Contact page
 5. About page
-6. Blog infrastructure
-7. First 3 blog articles
-8. Ongoing: 1-2 articles/month
+6. Case studies (done ✅)
+7. Blog infrastructure
+8. First 3 blog articles
+9. Ongoing: 1-2 articles/month
 
 **Keep Synced With:**
 - CHANGELOG.md (business strategy)

@@ -400,6 +400,24 @@ What boutique ACTUALLY means for clients:
 
 ## 🔄 RECENT CHANGES LOG
 
+**November 12, 2025:**
+- ✅ Law Firm Case Study: Complete page rebuild as true case study (show, don't tell)
+- ✅ Simplified from 8 educational sections to 6 proof-focused sections
+- ✅ **New Philosophy:** Removed ALL selling/educational content, focus purely on showcasing completed work
+- ✅ **New Structure:** Hero (stats) → Challenge (2 sentences) → Photography (9 image grid) → Results (metrics) → Investment ($7,750) → CTA
+- ✅ **Sections DELETED:** "Stock Photo Problem," "Why Both Matter," "What We Did," ROI calculations, all explanatory content
+- ✅ **Hero:** Simplified to project label, headline, one-sentence intro, project stats (Manhattan • 9 Attorneys • 1 Shoot Day • 2024)
+- ✅ **Challenge:** Replaced verbose "Problem" section with 2-sentence context
+- ✅ **The Photography:** Single 3x3 grid combining headshots and lifestyle (9 slots with hover captions)
+- ✅ **Results:** Clean metrics grid (9 attorneys, 65+ images, 10 days, 100% deployment)
+- ✅ **Investment:** Updated to $7,750 ($2,750 headshots + $5,000 lifestyle), added commercial usage rights, 10-day timeline
+- ✅ **CTA:** Simple dark section (#2B2B2B) with phone number (786) 901-2172 and "Tell Us About Your Project" button
+- ✅ **Total Copy:** Reduced to ~400 words (from 1200+), massive simplification
+- ✅ **Design:** Alternating white/gray backgrounds, minimal animations, clean grid layouts
+- ✅ **Mobile-first responsive:** 3-col → 2-col → 1-col grid, full-width buttons
+- ✅ Case study now answers: Can they do this? (photos) What did it cost? (pricing) How do I ask? (CTA)
+- ✅ Updated SITE-STRUCTURE.md with new case study blueprint
+
 **November 10, 2025:**
 - ✅ Rebrand: Lightroom NYC → Core Visuals NYC
 - ✅ New loading animation (CORE → VISUALS → NYC)
