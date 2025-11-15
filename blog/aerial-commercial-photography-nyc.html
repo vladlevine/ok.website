@@ -44,6 +44,67 @@
   }
   </script>
 
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://corevisualsnyc.com/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://corevisualsnyc.com/blog.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Aerial Commercial Photography NYC",
+      "item": "https://corevisualsnyc.com/blog/aerial-commercial-photography-nyc.html"
+    }]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "How much does aerial photography cost in NYC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Basic aerial photography in NYC costs $800-1,500 for 2-3 hours of shooting with 15-25 edited images. Comprehensive aerial + ground-level packages range from $2,500-4,500. Aerial video adds $500-1,000 to any package. Pricing varies based on location and airspace restrictions near airports."
+      }
+    },{
+      "@type": "Question",
+      "name": "Do I need FAA certification for commercial drone photography?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, commercial drone operators must have FAA Part 107 certification. Flying commercially without certification violates federal law, and your insurance won't cover incidents. Always verify your operator is certified and carries minimum $1 million liability insurance."
+      }
+    },{
+      "@type": "Question",
+      "name": "When does aerial photography make sense for businesses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aerial photography makes sense when scale and context matter: real estate and construction projects, large outdoor events, corporate campuses and facilities. It's not useful for indoor events, headshots, product photography, or small storefronts."
+      }
+    },{
+      "@type": "Question",
+      "name": "What are NYC drone photography regulations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "NYC has strict airspace regulations, especially near JFK, LaGuardia, and Teterboro airports. Operators need LAANC (Low Altitude Authorization and Notification Capability) clearance for most areas. Manhattan below 400 feet has additional restrictions. Always work with certified operators who handle airspace clearance."
+      }
+    }]
+  }
+  </script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -258,6 +319,15 @@
       <div class="article-date">Published January 15, 2025</div>
     </header>
 
+    <!-- Breadcrumb -->
+    <nav style="max-width: 800px; margin: 0 auto 40px; padding: 0 40px; font-size: 14px;">
+      <a href="../index.html" style="color: #6B7280; text-decoration: none;">Home</a>
+      <span style="color: #6B7280; margin: 0 8px;">/</span>
+      <a href="../blog.html" style="color: #6B7280; text-decoration: none;">Blog</a>
+      <span style="color: #6B7280; margin: 0 8px;">/</span>
+      <span style="color: #0A0A0A;">Aerial Commercial Photography NYC</span>
+    </nav>
+
     <!-- Article Content -->
     <article class="article-content">
 
@@ -265,9 +335,22 @@
 
       <p>Here's what nobody tells you: <strong>aerial photography works when scale and context matter</strong>. The rest of the time? You're paying extra for a perspective that doesn't actually help your business.</p>
 
+      <!-- Table of Contents -->
+      <div style="background: #F9FAFB; border-left: 4px solid #D4AF37; padding: 32px; margin: 40px 0; border-radius: 8px;">
+        <h3 style="font-size: 18px; font-weight: 700; margin: 0 0 20px; color: #0A0A0A;">Table of Contents</h3>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="margin-bottom: 12px;"><a href="#when-it-makes-sense" style="color: #D4AF37; font-weight: 600; text-decoration: none;">When Aerial Photography Actually Makes Sense</a></li>
+          <li style="margin-bottom: 12px;"><a href="#when-you-dont-need-it" style="color: #D4AF37; font-weight: 600; text-decoration: none;">When You Definitely Don't Need It</a></li>
+          <li style="margin-bottom: 12px;"><a href="#pricing" style="color: #D4AF37; font-weight: 600; text-decoration: none;">What Aerial Photography Actually Costs in NYC</a></li>
+          <li style="margin-bottom: 12px;"><a href="#important-questions" style="color: #D4AF37; font-weight: 600; text-decoration: none;">The Stuff Nobody Mentions</a></li>
+          <li style="margin-bottom: 12px;"><a href="#final-take" style="color: #D4AF37; font-weight: 600; text-decoration: none;">My Take: When It's Worth It</a></li>
+          <li style="margin-bottom: 0;"><a href="#faq" style="color: #D4AF37; font-weight: 600; text-decoration: none;">Frequently Asked Questions</a></li>
+        </ul>
+      </div>
+
       <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/v1763170999/Aerial_photography_for_construction_companies_y1vm1d.png" alt="Aerial drone photography of NYC construction site showing project scale and progress" class="article-image" loading="lazy">
 
-      <h2>When Aerial Photography Actually Makes Sense</h2>
+      <h2 id="when-it-makes-sense">When Aerial Photography Actually Makes Sense</h2>
 
       <p>Let's start with the obvious winners—the situations where drone photography isn't just cool, it's legitimately useful:</p>
 
@@ -299,7 +382,7 @@
         <p><strong>Real talk:</strong> About 40% of the time, clients ask for aerial photography because they think it looks "premium" or "expensive." That's not a strategy. If you can't articulate why the aerial perspective serves your marketing goals better than ground-level shots, you probably don't need it.</p>
       </div>
 
-      <h2>When You Definitely Don't Need Aerial Photography</h2>
+      <h2 id="when-you-dont-need-it">When You Definitely Don't Need Aerial Photography</h2>
 
       <p>Let's save you some money. Here are situations where drone photography is a waste:</p>
 
@@ -311,7 +394,7 @@
         <li><strong>"We want to look corporate."</strong> That's what good <a href="../service-corporate-content.html" style="color: #D4AF37; font-weight: 600;">brand video and office photography</a> are for. Aerial shots don't make you look corporate. They make you look like you hired a drone operator.</li>
       </ul>
 
-      <h2>What Aerial Photography Actually Costs in NYC</h2>
+      <h2 id="pricing">What Aerial Photography Actually Costs in NYC</h2>
 
       <p>Here's the pricing reality, because nobody talks about this honestly:</p>
 
@@ -323,18 +406,18 @@
 
       <p>Why the range? NYC has strict airspace regulations. If you're near airports (JFK, LaGuardia, Teterboro), getting clearance adds time and cost. If you're in Manhattan below 400 feet, you're dealing with even more restrictions. A good drone operator factors this in. A bad one promises things they can't legally deliver.</p>
 
-      <h2>The Stuff Nobody Mentions</h2>
+      <h2 id="important-questions">The Stuff Nobody Mentions</h2>
 
       <p>Before you book aerial photography, ask these questions:</p>
 
       <ol>
-        <li><strong>Is the operator FAA Part 107 certified?</strong> This isn't optional. If they're flying commercially without certification, you're both breaking federal law. Also, your insurance won't cover anything if there's an incident.</li>
+        <li><strong>Is the operator <a href="https://www.faa.gov/uas/commercial_operators/become_a_drone_pilot" target="_blank" rel="noopener" style="color: #D4AF37; font-weight: 600;">FAA Part 107 certified</a>?</strong> This isn't optional. If they're flying commercially without certification, you're both breaking federal law. Also, your insurance won't cover anything if there's an incident.</li>
         <li><strong>Do they carry liability insurance?</strong> Minimum $1 million. Drones crash. Equipment fails. If they don't have insurance, you're liable.</li>
-        <li><strong>Have they secured airspace clearance?</strong> In NYC, this isn't automatic. LAANC (Low Altitude Authorization and Notification Capability) is required for most areas. If your operator doesn't mention this, they're either unlicensed or incompetent.</li>
+        <li><strong>Have they secured airspace clearance?</strong> In NYC, this isn't automatic. <a href="https://www.faa.gov/uas/getting_started/laanc" target="_blank" rel="noopener" style="color: #D4AF37; font-weight: 600;">LAANC (Low Altitude Authorization and Notification Capability)</a> is required for most areas. If your operator doesn't mention this, they're either unlicensed or incompetent.</li>
         <li><strong>What's the weather contingency plan?</strong> Drones don't fly in rain, high winds, or fog. Make sure there's a backup date in the contract.</li>
       </ol>
 
-      <h2>My Take: When It's Worth It</h2>
+      <h2 id="final-take">My Take: When It's Worth It</h2>
 
       <p>After years of doing this, here's my honest recommendation: <strong>Aerial photography is worth it when the perspective itself is the story</strong>. Real estate, large events, construction progress, facility overviews—these are situations where showing scale and context actually matters.</p>
 
@@ -346,6 +429,50 @@
         <h3>Need Help Deciding?</h3>
         <p>Whether it's aerial, ground-level, or both—we can help you figure out what actually makes sense for your project.</p>
         <a href="../contact.html" class="btn btn-white">Get Transparent Pricing</a>
+      </div>
+
+      <!-- FAQ Section -->
+      <div id="faq" style="margin-top: 80px;">
+        <h2 style="margin-bottom: 40px;">Frequently Asked Questions</h2>
+
+        <div style="margin-bottom: 32px;">
+          <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #0A0A0A;">How much does aerial photography cost in NYC?</h3>
+          <p>Basic aerial photography in NYC costs <strong>$800-1,500</strong> for 2-3 hours of shooting with 15-25 edited images. Comprehensive aerial + ground-level packages range from <strong>$2,500-4,500</strong>. Aerial video adds $500-1,000 to any package. Pricing varies based on location and airspace restrictions near airports.</p>
+        </div>
+
+        <div style="margin-bottom: 32px;">
+          <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #0A0A0A;">Do I need FAA certification for commercial drone photography?</h3>
+          <p>Yes, commercial drone operators must have <a href="https://www.faa.gov/uas/commercial_operators/become_a_drone_pilot" target="_blank" rel="noopener" style="color: #D4AF37; font-weight: 600;">FAA Part 107 certification</a>. Flying commercially without certification violates federal law, and your insurance won't cover incidents. Always verify your operator is certified and carries minimum $1 million liability insurance.</p>
+        </div>
+
+        <div style="margin-bottom: 32px;">
+          <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #0A0A0A;">When does aerial photography make sense for businesses?</h3>
+          <p>Aerial photography makes sense when scale and context matter: real estate and construction projects, large outdoor events, corporate campuses and facilities. It's not useful for indoor events, headshots, product photography, or small storefronts.</p>
+        </div>
+
+        <div style="margin-bottom: 32px;">
+          <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #0A0A0A;">What are NYC drone photography regulations?</h3>
+          <p>NYC has strict airspace regulations, especially near JFK, LaGuardia, and Teterboro airports. Operators need <a href="https://www.faa.gov/uas/getting_started/laanc" target="_blank" rel="noopener" style="color: #D4AF37; font-weight: 600;">LAANC</a> clearance for most areas. Manhattan below 400 feet has additional restrictions. Always work with certified operators who handle airspace clearance.</p>
+        </div>
+      </div>
+
+      <!-- Related Topics -->
+      <div style="margin-top: 80px; padding-top: 40px; border-top: 2px solid #E5E7EB;">
+        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px; color: #0A0A0A;">Related Services</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+          <div style="background: #F9FAFB; padding: 24px; border-radius: 8px;">
+            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;"><a href="../service-event-coverage.html" style="color: #D4AF37; text-decoration: none;">Event Photography & Video</a></h4>
+            <p style="font-size: 14px; color: #6B7280; margin: 0;">Professional coverage for conferences, galas, and corporate events across NYC.</p>
+          </div>
+          <div style="background: #F9FAFB; padding: 24px; border-radius: 8px;">
+            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;"><a href="../service-corporate-content.html" style="color: #D4AF37; text-decoration: none;">Corporate Content Production</a></h4>
+            <p style="font-size: 14px; color: #6B7280; margin: 0;">Team headshots, office photography, and brand videos for NYC businesses.</p>
+          </div>
+          <div style="background: #F9FAFB; padding: 24px; border-radius: 8px;">
+            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;"><a href="../service-custom-projects.html" style="color: #D4AF37; text-decoration: none;">Custom Photography Projects</a></h4>
+            <p style="font-size: 14px; color: #6B7280; margin: 0;">Multi-day shoots, founder content, and specialized commercial photography.</p>
+          </div>
+        </div>
       </div>
 
     </article>
