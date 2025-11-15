@@ -822,6 +822,48 @@ Organized by category for maximum SEO impact:
    - **DALL-E 3** via ChatGPT Plus ($20/month): Good alternative
    - **Leonardo.ai** (free tier): Budget option
 
+### Photo Attribution Guidelines
+
+**IMPORTANT**: Clearly distinguish between your own photography and stock photography.
+
+**For blog posts with YOUR photos:**
+- Add attribution section at bottom of article (before "Back to Blog" link)
+- Credit your work while acknowledging stock photos used
+- Link to stock photo sources (Unsplash, Pexels, Pixabay)
+
+**Photo Attribution HTML Template:**
+```html
+<!-- Photo Attribution -->
+<div class="photo-attribution">
+  <p><strong>Photo Credits:</strong> Professional [headshot/event/corporate] images in this article photographed by Core Visuals NYC. Select stock photography sourced from <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>, <a href="https://pexels.com" target="_blank" rel="noopener">Pexels</a>, and <a href="https://pixabay.com" target="_blank" rel="noopener">Pixabay</a> for illustrative purposes.</p>
+</div>
+```
+
+**CSS for Photo Attribution** (already in blog post template):
+```css
+.photo-attribution {
+  margin-top: 80px;
+  padding-top: 24px;
+  border-top: 1px solid #E5E7EB;
+  font-size: 12px;
+  color: #9CA3AF;
+  line-height: 1.6;
+}
+
+.photo-attribution a {
+  color: #6B7280;
+  text-decoration: underline;
+}
+```
+
+**Placement**: Insert photo attribution section after "Related Services" section, before "Back to Blog" link.
+
+**Why this matters**:
+- Maintains credibility (don't take credit for stock photos)
+- Gives proper attribution to free stock sources
+- Highlights your actual photography work
+- Builds trust with readers
+
 ### Cloudinary Upload Process
 
 1. Upload image to Cloudinary dashboard
