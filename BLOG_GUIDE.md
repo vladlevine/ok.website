@@ -1,13 +1,22 @@
 # Core Visuals NYC - Blog Writing Guide
 
-Last Updated: January 15, 2025
+**Last Updated:** January 16, 2025
+**Version:** 2.0 (Flexible & Future-Ready)
+
+---
 
 ## Table of Contents
 1. [Website Overview](#website-overview)
-2. [Blog Post Writing Guidelines](#blog-post-writing-guidelines)
-3. [SEO Optimization Checklist](#seo-optimization-checklist)
-4. [Technical Specifications](#technical-specifications)
-5. [Content Strategy](#content-strategy)
+2. [Development Workflow](#development-workflow)
+3. [Blog Writing Philosophy](#blog-writing-philosophy)
+4. [SEO Requirements (Non-Negotiable)](#seo-requirements-non-negotiable)
+5. [Content Structure Options](#content-structure-options)
+6. [Content Accuracy & Risk Management](#content-accuracy--risk-management)
+7. [Strategic Content Direction](#strategic-content-direction)
+8. [Beyond the Guidelines](#beyond-the-guidelines)
+9. [Image Sourcing & Attribution](#image-sourcing--attribution)
+10. [Technical Specifications](#technical-specifications)
+11. [Publishing Checklist](#publishing-checklist)
 
 ---
 
@@ -18,26 +27,6 @@ Last Updated: January 15, 2025
 - **GitHub Repository**: vladlevine/ok.website
 - **Branch**: `claude/branch-4-01RnBi2WecBgc3KmFy16PVU9`
 - **Image CDN**: Cloudinary (dtuxu64zp account)
-
-### Site Structure
-```
-corevisualsnyc.com/
-├── index.html (Homepage)
-├── about.html
-├── contact.html
-├── portfolio.html
-├── blog.html (Blog index)
-├── blog/
-│   └── aerial-commercial-photography-nyc.html (Example post)
-├── service-event-coverage.html
-├── service-corporate-content.html
-├── service-custom-projects.html
-├── case-study-tech-expo.html
-├── case-study-nonprofit-golf.html
-├── case-study-law-firm-photography.html
-├── sitemap.xml
-└── robots.txt
-```
 
 ### Brand Colors
 - **Gold**: #D4AF37 (primary brand color, links, accents)
@@ -55,28 +44,101 @@ corevisualsnyc.com/
 
 ---
 
-## Blog Post Writing Guidelines
+## Development Workflow
 
-### Voice & Tone
+### Current Workflow (Active)
+**Status:** ✅ In Use
 
-**DO:**
-- Write conversationally, like you're talking to a peer
-- Be direct and honest about pricing, challenges, and trade-offs
-- Use "I" and "we" - speak from experience
-- Call out industry BS when you see it
-- Give actionable, specific advice
-- Use short paragraphs (2-3 sentences max)
-- Break up text with subheadings every 2-3 paragraphs
+Currently, blog posts are created as **standalone HTML files** in the `/blog/` directory.
 
-**DON'T:**
-- Use corporate jargon or marketing speak
-- Make vague promises or use superlatives ("the best," "amazing")
-- Hide pricing or important details
-- Write in passive voice
-- Use long paragraphs or walls of text
-- Over-explain obvious things
+**When creating a new blog post:**
+1. Create complete HTML file with full structure (header, footer, schemas)
+2. Save as `/blog/descriptive-slug.html`
+3. Add entry to `sitemap.xml`
+4. Add card to `blog.html` index page
+5. Commit and push
 
-**Example Opening (Good):**
+**Advantages:**
+- Simple, no build process
+- Direct deployment
+- Full control over every detail
+
+**Disadvantages:**
+- Repetitive code across posts
+- Site-wide style changes require editing multiple files
+- Harder to maintain consistency at scale
+
+### Future Workflow (Planned)
+**Status:** 📋 Documentation Only - Not Yet Implemented
+
+**Golden Rule:** To ensure our website is scalable, maintainable, and high-performing, we will eventually migrate to a **Separation of Concerns** architecture.
+
+**When SSG is implemented, blog posts will be:**
+1. Written as **Markdown (.md) files** with YAML front matter
+2. Saved in `/content/posts/` directory
+3. Automatically wrapped in master templates by static site generator
+4. Built into final HTML files during deployment
+
+**Example Markdown file structure:**
+```markdown
+---
+title: "Professional Headshots ROI: LinkedIn & Recruiting Impact"
+description: "Data-driven breakdown of headshot ROI for LinkedIn, recruiting, and sales"
+date: 2025-01-15
+category: "Corporate Photography"
+heroImage: "https://res.cloudinary.com/dtuxu64zp/image/upload/v1763057059/business_headshot_1.jpg"
+keywords: ["professional headshots NYC", "headshot ROI", "LinkedIn headshots"]
+---
+
+## The LinkedIn Numbers (They're Wild)
+
+LinkedIn's own data shows that profiles with professional photos get 14x more profile views...
+```
+
+**Advantages:**
+- Write content once, templates handle structure
+- Site-wide changes update all posts instantly
+- Cleaner content files, easier to write
+- Better separation of content and presentation
+
+**Migration Requirements (when ready):**
+- Choose SSG (Jekyll, Hugo, Eleventy, etc.)
+- Create layout/template files
+- Set up build process
+- Convert existing posts to Markdown
+- Test and deploy
+
+**Until SSG is implemented:** Continue using current HTML workflow.
+
+---
+
+## Blog Writing Philosophy
+
+### The Core Principle
+**Each post should feel unique and valuable to its specific audience.** The guidelines below provide a framework, not a rigid formula. SEO requirements are essential for visibility, but content should always prioritize genuine helpfulness and your authentic voice.
+
+### Voice & Tone Guidelines
+
+**Consider incorporating these elements:**
+- Conversational writing that speaks directly to peers
+- Honest discussions about pricing, challenges, and trade-offs
+- Personal experience using "I" and "we" when appropriate
+- Calling out industry misconceptions when relevant
+- Actionable, specific advice
+- Short, digestible paragraphs (typically 2-3 sentences)
+- Natural breaking points with subheadings
+
+**Elements to generally avoid:**
+- Corporate jargon or empty marketing speak
+- Vague promises or unnecessary superlatives
+- Hiding important details
+- Passive voice when active would be clearer
+- Walls of text without breaks
+- Over-explaining obvious concepts
+
+### Opening Approaches
+
+**Example of an engaging opening:**
 ```
 Look, I get it. You see those sweeping aerial shots of Manhattan skylines and think
 "we need that for our marketing." And sometimes, you're right. But after shooting
@@ -84,862 +146,446 @@ hundreds of commercial projects in NYC—both aerial and ground-level—I can te
 that drone photography is oversold about 60% of the time.
 ```
 
-**Example Opening (Bad):**
+**Example of a less effective opening:**
 ```
 Aerial photography has become increasingly popular in recent years, offering unique
 perspectives for businesses. This comprehensive guide will explore the various
 applications and benefits of drone photography services.
 ```
 
-### Content Accuracy & Risk Management
+**The key difference:** The first acknowledges the reader's perspective and offers experienced insight. The second feels generic and impersonal.
 
-**CRITICAL: Always verify pricing and statements against actual service pages before publishing.**
+---
 
-#### Before Writing Any Blog Post:
+## SEO Requirements (Non-Negotiable)
 
-1. **Check Service Pages First**
-   - Read `service-event-coverage.html`, `service-corporate-content.html`, and `service-custom-projects.html`
-   - Note actual package prices, hourly rates, deliverables
-   - Identify how services are positioned and described
-   - Match blog post pricing ranges to actual offerings
+These are **strict requirements** for every blog post. SEO is how people find your content.
 
-2. **Verify Pricing Alignment**
-   - ❌ **BAD**: Blog says "$200-350/hour" when you actually charge $850+/hour
-   - ✅ **GOOD**: Blog pricing tiers position your actual rates in the appropriate category
-   - Blog posts should use pricing RANGES that make your actual prices look reasonable
-   - Never accidentally price yourself out by positioning lower-cost competitors as "premium"
+### Essential Elements Checklist
 
-3. **Avoid Future Traps - Sensitive Topics**
+✅ **Title Tag:** 50-60 characters, includes primary keyword and location when relevant
+✅ **Meta Description:** 150-160 characters, compelling benefit statement
+✅ **Keywords:** 3-5 relevant keywords naturally integrated
+✅ **Canonical URL:** Points to correct blog post URL
+✅ **Open Graph Tags:** Complete set (title, description, url, image, type=article)
+✅ **Article Schema:** Complete JSON-LD markup with author, publisher, dates
+✅ **Breadcrumb Schema:** Home > Blog > Post structure
+✅ **FAQ Schema:** When including FAQ section (highly recommended)
+✅ **H1 Tag:** Single H1 (the post title in article-header)
+✅ **H2 Tags:** Section headings with id attributes for anchor links
+✅ **H3 Tags:** Subsection headings as needed
+✅ **Image Alt Text:** Descriptive, includes relevant keywords
+✅ **Image Optimization:** All images via Cloudinary with f_auto, q_auto transformations
+✅ **Lazy Loading:** loading="lazy" on all images except above-fold hero
+✅ **Mobile Responsive:** Proper breakpoints at 768px and 1400px
 
-   **Pricing Statements:**
-   - ✅ Use: "ranges from $X to $Y depending on..." (gives flexibility)
-   - ❌ Avoid: "always costs exactly $X" (locks you into specific pricing)
-   - ✅ Use: "typically see 3-5x ROI" (reasonable range)
-   - ❌ Avoid: "guaranteed 500% ROI" (impossible promise, legal liability)
-   - ✅ Use: "most conferences budget 5-8% for photography" (industry guidance)
-   - ❌ Avoid: "you should never pay more than $X" (contradicts your own pricing)
+### Keyword Placement Strategy
 
-   **Financial Claims:**
-   - ✅ Use: "one client secured 2 additional sponsor renewals" (specific example, anecdotal)
-   - ❌ Avoid: "all clients double their sponsors" (measurable claim you can't prove)
-   - ✅ Use: "LinkedIn profiles with photos get 14x more views according to LinkedIn data" (cited source)
-   - ❌ Avoid: "I guarantee your LinkedIn engagement will increase 14x" (promise you can't control)
+**Primary keyword should naturally appear in:**
+- Title tag
+- H1
+- First paragraph
+- At least one H2
+- Meta description
+- URL slug
+- Image alt text where relevant
 
-   **Controversial Statements:**
-   - ❌ Avoid politics, religion, hot-button social issues
-   - ❌ Avoid negative statements about specific competitors or companies
-   - ❌ Avoid absolute claims about industries you don't know deeply
-   - ✅ Stick to photography, events, corporate content, NYC business topics
+**Secondary keywords throughout:**
+- H2 and H3 tags
+- Body paragraphs (organically, not stuffed)
+- Internal link anchor text
+- Related services section
 
-   **Legal/Regulatory:**
-   - ✅ Link to FAA.gov for drone regulations (authority source)
-   - ❌ Avoid giving definitive legal advice ("you must..." or "it's illegal to...")
-   - ✅ Use: "FAA Part 107 certification is required for commercial drone work"
-   - ❌ Avoid: "you can fly drones anywhere in NYC without permits" (false, liability risk)
+**Avoid:**
+- Keyword stuffing (unnatural repetition)
+- Exact match anchor text for all internal links
+- Forcing keywords where they don't fit naturally
 
-4. **Red Flags Checklist - Do NOT Publish If Blog Post Contains:**
+---
 
-   - [ ] Pricing that contradicts service page pricing
-   - [ ] Guaranteed ROI percentages without "typical" or "average" qualifiers
-   - [ ] Absolute statements about competitors ("they always..." or "they never...")
-   - [ ] Legal advice presented as fact without citing sources
-   - [ ] Promises you can't control ("your photos will go viral")
-   - [ ] Industry statistics without sources
-   - [ ] Negative statements about specific companies or people
-   - [ ] Political, religious, or controversial non-business topics
-   - [ ] Claims that could be disproven with simple fact-checking
+## Content Structure Options
 
-5. **Self-Protection Language Patterns**
+These are **flexible elements** to consider based on post topic and length. Not every post needs every element.
 
-   **Use these qualifiers:**
-   - "In my experience..."
-   - "I've found that..."
-   - "Most clients see..."
-   - "Typical range is..."
-   - "According to [source]..."
-   - "One client example..."
-   - "Industry data suggests..."
+### Table of Contents
+**Consider when:**
+- Post is 1500+ words
+- Multiple distinct sections
+- Reader might want to jump to specific topic
 
-   **Avoid these absolutes:**
-   - "Always"
-   - "Never"
-   - "Guaranteed"
-   - "Everyone"
-   - "The only way"
-   - "You must"
-   - "Proven to"
+**Can skip when:**
+- Short, focused posts (800-1200 words)
+- Single topic exploration
+- Natural flow doesn't require jumping
 
-6. **When Discussing Pricing Strategy**
-
-   **Example - Conference Photography:**
-   - Your actual packages: $5,000-10,000
-   - Blog positioning: Place your pricing in "Premium Coverage: $7,500-12,000" tier
-   - Explain value: Multi-photographer teams, fast turnaround, sponsor documentation
-   - Justify with ROI: "$100K conference with $40-60K sponsorships needs $8-10K coverage"
-
-   **This makes readers think:**
-   "Oh, $8K for conference photography makes sense for a serious event" (not "That's overpriced")
-
-7. **Cross-Reference Requirement**
-
-   Before publishing, verify:
-   - [ ] Pricing ranges align with service pages
-   - [ ] Claims match actual deliverables
-   - [ ] No contradictions with existing content
-   - [ ] All statistics have sources
-   - [ ] No legal/financial advice beyond your expertise
-
-**Bottom Line:** Blog posts should make your actual services look like smart investments, not expensive outliers. Always position pricing to make readers think "this makes sense for professional work" rather than "they're charging way more than the market."
-
-### Structure Template
-
-Every blog post should follow this structure:
-
+**Implementation:**
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO Meta Tags -->
-  <title>[Topic]: [Specific Benefit/Angle] | Core Visuals NYC</title>
-  <meta name="description" content="[150-160 character compelling description with key benefit]">
-  <meta name="keywords" content="[primary keyword NYC, secondary keyword, tertiary keyword]">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="[Post Title]">
-  <meta property="og:description" content="[Social media description]">
-  <meta property="og:url" content="https://corevisualsnyc.com/blog/[slug].html">
-  <meta property="og:image" content="[Hero image URL from Cloudinary]">
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://corevisualsnyc.com/blog/[slug].html">
-
-  <!-- Article Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "[Full Post Title]",
-    "description": "[Post description]",
-    "image": "[Hero image URL]",
-    "author": {
-      "@type": "Organization",
-      "name": "Core Visuals NYC"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Core Visuals NYC",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://corevisualsnyc.com/images/logo.png"
-      }
-    },
-    "datePublished": "YYYY-MM-DD",
-    "dateModified": "YYYY-MM-DD"
-  }
-  </script>
-
-  <!-- Breadcrumb Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [{
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://corevisualsnyc.com/"
-    },{
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Blog",
-      "item": "https://corevisualsnyc.com/blog.html"
-    },{
-      "@type": "ListItem",
-      "position": 3,
-      "name": "[Post Title]",
-      "item": "https://corevisualsnyc.com/blog/[slug].html"
-    }]
-  }
-  </script>
-
-  <!-- FAQ Schema (if applicable) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{
-      "@type": "Question",
-      "name": "[Question text]",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "[Answer text]"
-      }
-    }]
-  }
-  </script>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="../styles.css">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>">
-
-  <style>
-    /* Article-specific styles */
-    .article-header {
-      background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
-      padding: 180px 40px 80px;
-      text-align: center;
-      color: #FFFFFF;
-    }
-
-    .article-meta {
-      font-size: 13px;
-      color: #D4AF37;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 24px;
-    }
-
-    .article-header h1 {
-      font-size: clamp(36px, 6vw, 56px);
-      font-weight: 800;
-      line-height: 1.2;
-      margin: 0 0 24px;
-      max-width: 50%;
-      margin-left: auto;
-      margin-right: auto;
-      color: #FFFFFF;
-    }
-
-    @media (max-width: 1400px) {
-      .article-header h1 {
-        max-width: 70%;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .article-header h1 {
-        max-width: 100%;
-        padding: 0 12px;
-      }
-    }
-
-    .article-excerpt {
-      font-size: 20px;
-      color: #a3a3a3;
-      max-width: 50%;
-      margin: 0 auto 32px;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 1400px) {
-      .article-excerpt {
-        max-width: 70%;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .article-excerpt {
-        max-width: 100%;
-        padding: 0 12px;
-      }
-    }
-
-    .article-date {
-      font-size: 15px;
-      color: #6B7280;
-    }
-
-    .article-content {
-      max-width: 50%;
-      margin: 80px auto;
-      padding: 0 40px;
-    }
-
-    @media (max-width: 1400px) {
-      .article-content {
-        max-width: 70%;
-      }
-    }
-
-    .breadcrumb-nav {
-      max-width: 50%;
-      margin: 0 auto 40px;
-      padding: 0 40px;
-      font-size: 14px;
-    }
-
-    @media (max-width: 1400px) {
-      .breadcrumb-nav {
-        max-width: 70%;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .article-content {
-        max-width: 100%;
-        padding: 0 12px;
-        margin: 60px auto;
-      }
-
-      .breadcrumb-nav {
-        max-width: 100%;
-        padding: 0 12px;
-      }
-    }
-
-    .article-content h2 {
-      font-size: 36px;
-      font-weight: 700;
-      color: #0A0A0A;
-      margin: 64px 0 24px;
-      line-height: 1.2;
-    }
-
-    .article-content h3 {
-      font-size: 28px;
-      font-weight: 700;
-      color: #0A0A0A;
-      margin: 48px 0 20px;
-    }
-
-    .article-content p {
-      font-size: 19px;
-      line-height: 1.8;
-      color: #1F2937;
-      margin-bottom: 24px;
-    }
-
-    .article-content strong {
-      color: #0A0A0A;
-      font-weight: 700;
-    }
-
-    .article-content ul, .article-content ol {
-      margin: 24px 0;
-      padding-left: 32px;
-    }
-
-    .article-content li {
-      font-size: 19px;
-      line-height: 1.8;
-      color: #1F2937;
-      margin-bottom: 12px;
-    }
-
-    .article-image {
-      width: 100%;
-      border-radius: 12px;
-      margin: 40px 0;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-    }
-
-    .article-callout {
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(236, 72, 153, 0.08) 100%);
-      border-left: 4px solid #D4AF37;
-      padding: 32px;
-      margin: 40px 0;
-      border-radius: 8px;
-    }
-
-    .article-cta {
-      background: linear-gradient(135deg, rgba(6, 182, 212, 0.08) 0%, rgba(212, 175, 55, 0.08) 100%);
-      border: 2px solid #D4AF37;
-      padding: 48px;
-      border-radius: 12px;
-      text-align: center;
-      margin: 60px 0;
-    }
-
-    .article-cta h3 {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      color: #0A0A0A;
-    }
-
-    .article-cta p {
-      font-size: 18px;
-      color: #1F2937;
-      margin-bottom: 24px;
-    }
-
-    .btn-white {
-      display: inline-block;
-      padding: 18px 40px;
-      font-size: 18px;
-      font-weight: 700;
-      background: #D4AF37;
-      color: #FFFFFF;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
-    }
-
-    .btn-white:hover {
-      background: #c19b2e;
-      transform: translateY(-2px);
-      box-shadow: 0 12px 32px rgba(212, 175, 55, 0.4);
-    }
-
-    @media (max-width: 768px) {
-      .article-header {
-        padding: 140px 24px 60px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Header & Navigation (copy from existing pages) -->
-
-  <!-- Main Content -->
-  <main id="main-content">
-
-    <!-- Article Header -->
-    <header class="article-header">
-      <div class="article-meta">[Category: Photography/Video/Business]</div>
-      <h1>[Post Title]<br>[Optional Second Line]</h1>
-      <p class="article-excerpt">[2-sentence compelling summary]</p>
-      <div class="article-date">Published [Month Day, Year]</div>
-    </header>
-
-    <!-- Breadcrumb -->
-    <nav class="breadcrumb-nav">
-      <a href="../index.html" style="color: #6B7280; text-decoration: none;">Home</a>
-      <span style="color: #6B7280; margin: 0 8px;">/</span>
-      <a href="../blog.html" style="color: #6B7280; text-decoration: none;">Blog</a>
-      <span style="color: #6B7280; margin: 0 8px;">/</span>
-      <span style="color: #0A0A0A;">[Post Title Short]</span>
-    </nav>
-
-    <!-- Article Content -->
-    <article class="article-content">
-
-      <!-- Opening Hook (2-3 paragraphs) -->
-      <p>[Conversational opening that acknowledges reader's situation]</p>
-
-      <p>[Direct statement of value/what you'll learn]</p>
-
-      <!-- Table of Contents -->
-      <div style="background: #F9FAFB; border-left: 4px solid #D4AF37; padding: 32px; margin: 40px 0; border-radius: 8px;">
-        <h3 style="font-size: 18px; font-weight: 700; margin: 0 0 20px; color: #0A0A0A;">Table of Contents</h3>
-        <ul style="list-style: none; padding: 0; margin: 0;">
-          <li style="margin-bottom: 12px;"><a href="#section-1" style="color: #D4AF37; font-weight: 600; text-decoration: none;">[Section 1 Title]</a></li>
-          <li style="margin-bottom: 12px;"><a href="#section-2" style="color: #D4AF37; font-weight: 600; text-decoration: none;">[Section 2 Title]</a></li>
-          <li style="margin-bottom: 12px;"><a href="#section-3" style="color: #D4AF37; font-weight: 600; text-decoration: none;">[Section 3 Title]</a></li>
-          <li style="margin-bottom: 0;"><a href="#faq" style="color: #D4AF37; font-weight: 600; text-decoration: none;">Frequently Asked Questions</a></li>
-        </ul>
-      </div>
-
-      <!-- Hero Image (if applicable) -->
-      <img src="[Cloudinary URL]" alt="[Descriptive alt text with keywords]" class="article-image" loading="lazy">
-
-      <!-- Main Content Sections -->
-      <h2 id="section-1">[Section Title]</h2>
-
-      <p>[Content paragraphs...]</p>
-
-      <h3>[Subsection Title]</h3>
-
-      <p>[Content...]</p>
-
-      <!-- Include images every 2-3 sections -->
-      <img src="[Cloudinary URL]" alt="[Descriptive alt text]" class="article-image" loading="lazy">
-
-      <!-- Callout boxes for important points -->
-      <div class="article-callout">
-        <p><strong>[Important point or direct advice]</strong></p>
-      </div>
-
-      <!-- More sections... -->
-
-      <!-- CTA Section (before FAQ) -->
-      <div class="article-cta">
-        <h3>[CTA Headline]</h3>
-        <p>[1-2 sentences about how you can help]</p>
-        <a href="../contact.html" class="btn btn-white">[CTA Button Text]</a>
-      </div>
-
-      <!-- FAQ Section -->
-      <div id="faq" style="margin-top: 80px;">
-        <h2 style="margin-bottom: 40px;">Frequently Asked Questions</h2>
-
-        <div style="margin-bottom: 32px;">
-          <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 12px; color: #0A0A0A;">[Question]</h3>
-          <p>[Answer with <strong>bold pricing</strong> if applicable. Include <a href="[authority site]" target="_blank" rel="noopener" style="color: #D4AF37; font-weight: 600;">external links</a> where relevant.]</p>
-        </div>
-
-        <!-- 3-4 FAQ items total -->
-
-      </div>
-
-      <!-- Related Services -->
-      <div style="margin-top: 80px; padding-top: 40px; border-top: 2px solid #E5E7EB;">
-        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 24px; color: #0A0A0A;">Related Services</h3>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-          <div style="background: #F9FAFB; padding: 24px; border-radius: 8px;">
-            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;"><a href="../[service-page].html" style="color: #D4AF37; text-decoration: none;">[Service Name]</a></h4>
-            <p style="font-size: 14px; color: #6B7280; margin: 0;">[Brief service description]</p>
-          </div>
-          <!-- 2-3 related service cards -->
-        </div>
-      </div>
-
-    </article>
-
-    <!-- Back to Blog -->
-    <div style="text-align: center; margin: 60px 0;">
-      <a href="../blog.html" style="color: #D4AF37; font-weight: 600; font-size: 16px;">← Back to Blog</a>
-    </div>
-
-  </main>
-
-  <!-- Footer (copy from existing pages) -->
-
-  <!-- JavaScript (copy from existing pages) -->
-
-</body>
-</html>
-```
-
----
-
-## SEO Optimization Checklist
-
-### Required Elements
-
-- [ ] **Title Tag**: 50-60 characters, includes primary keyword and "NYC" or location
-- [ ] **Meta Description**: 150-160 characters, compelling with benefit statement
-- [ ] **Keywords**: 3-5 relevant keywords, primary keyword appears naturally in first paragraph
-- [ ] **Canonical URL**: Points to correct blog post URL
-- [ ] **Open Graph Tags**: title, description, url, image, type=article
-- [ ] **Article Schema**: Complete JSON-LD with headline, description, author, publisher, dates
-- [ ] **Breadcrumb Schema**: Home > Blog > Post
-- [ ] **FAQ Schema**: If post has FAQ section (recommended)
-- [ ] **H1 Tag**: Only one H1 (the post title in article-header)
-- [ ] **H2 Tags**: Section headings with id attributes for anchor links
-- [ ] **H3 Tags**: Subsection headings
-- [ ] **Table of Contents**: With jump links to H2 sections
-- [ ] **Internal Links**: 3-5 links to service pages (in gold color #D4AF37)
-- [ ] **External Links**: 1-2 links to authority sites (FAA, government, industry associations) with rel="noopener"
-- [ ] **Image Alt Text**: Descriptive, includes relevant keywords
-- [ ] **Image Optimization**: All images via Cloudinary with lazy loading
-- [ ] **FAQ Section**: 3-4 questions with structured markup
-- [ ] **Related Services**: 2-3 internal link cards at bottom
-- [ ] **Breadcrumb Navigation**: Visible at top of content
-- [ ] **Mobile Responsive**: Test on mobile (100% width, 12px padding)
-- [ ] **sitemap.xml**: Add new blog post entry with priority 0.6, changefreq monthly
-- [ ] **blog.html**: Add blog card to index page
-
-### Keyword Placement
-
-1. **Primary keyword must appear in:**
-   - Title tag
-   - H1
-   - First paragraph
-   - At least one H2
-   - Meta description
-   - URL slug
-   - Image alt text
-   - FAQ questions
-
-2. **Secondary keywords should appear in:**
-   - H2 and H3 tags
-   - Body paragraphs (naturally)
-   - Internal link anchor text
-
-### Link Guidelines
-
-**Internal Links (3-5 per post):**
-- Link to relevant service pages
-- Link to related blog posts (when available)
-- Use descriptive anchor text with keywords
-- Style: `<a href="../service-page.html" style="color: #D4AF37; font-weight: 600;">[anchor text]</a>`
-
-**External Links (1-2 per post):**
-- Government sites (FAA.gov, SBA.gov)
-- Industry associations
-- Academic sources
-- News outlets
-- Use rel="noopener" for security
-- Open in new tab with target="_blank"
-
----
-
-## Technical Specifications
-
-### File Naming
-- Format: `[primary-keyword]-[location].html`
-- Example: `aerial-commercial-photography-nyc.html`
-- All lowercase, hyphens for spaces
-- Keep under 60 characters
-
-### Image Requirements
-
-**Cloudinary Upload:**
-```
-Base URL: https://res.cloudinary.com/dtuxu64zp/image/upload/
-Transformations: f_auto,q_auto,w_[width]
-Format: Auto (Cloudinary chooses best format)
-```
-
-**Image Specs:**
-- Hero images: 1200px width minimum
-- In-content images: 800px width minimum
-- File size: < 500KB after Cloudinary optimization
-- Alt text: Descriptive, 10-15 words, includes keywords
-- Loading: `loading="lazy"` on all images except hero
-
-**Alt Text Formula:**
-```
-[Subject] [action/context] [location if relevant] [industry/category]
-
-Example:
-"Aerial drone photography of NYC construction site showing project scale and progress"
-```
-
-### Responsive Width Breakpoints
-
-```css
-/* Large screens (>1400px) */
-.article-content { max-width: 50%; }
-
-/* Medium screens (768-1400px) */
-@media (max-width: 1400px) {
-  .article-content { max-width: 70%; }
-}
-
-/* Mobile (<768px) */
-@media (max-width: 768px) {
-  .article-content {
-    max-width: 100%;
-    padding: 0 12px;
-  }
-}
-```
-
-### Schema Markup
-
-Always include three schema types:
-
-1. **Article Schema** - Basic post metadata
-2. **Breadcrumb Schema** - Navigation structure
-3. **FAQPage Schema** - If post has FAQ section
-
-### Performance
-
-- [ ] All CSS inlined in `<style>` tag (no external CSS for blog posts)
-- [ ] Cloudinary handles image optimization
-- [ ] Lazy loading on all images
-- [ ] Fonts preconnected
-- [ ] Minimal JavaScript (only header/nav)
-
----
-
-## Content Strategy
-
-### 100 Blog Post Topics
-
-Organized by category for maximum SEO impact:
-
-#### Event Photography & Video (20 posts)
-1. Conference Photography NYC: What Actually Matters (2025 Pricing Guide)
-2. How to Prepare Your Team for Event Photography Day
-3. Networking Event Photography: Candid vs. Posed Shots (What Works)
-4. Product Launch Photography Checklist: 15 Shots You Can't Miss
-5. Gala Event Photography: Timeline Breakdown (Reception to Awards)
-6. Corporate Event Video: 3-Minute Highlight Reel vs. Full Coverage
-7. Trade Show Photography Strategy: Booth + Attendee Coverage
-8. Investor Conference Photography: What VCs Actually Want to See
-9. Annual Meeting Photography: Board-Approved Event Documentation
-10. Award Ceremony Photography: Capturing the Moment Without Disruption
-11. Panel Discussion Photography: Lighting Challenges Nobody Mentions
-12. Corporate Retreat Photography: Team-Building Moments That Matter
-13. Industry Summit Photography: Multi-Day Event Coverage Planning
-14. Cocktail Reception Photography: Low-Light Corporate Events
-15. Ribbon Cutting Ceremony Photography: Traditional Business Milestones
-16. Groundbreaking Event Photography: Construction & Real Estate Projects
-17. Partnership Announcement Photography: Press-Ready Business Moments
-18. Corporate Holiday Party Photography: Professional Event Documentation
-19. Client Appreciation Event Photography: Relationship Marketing Content
-20. Executive Speaker Event Photography: Thought Leadership Moments
-
-#### Corporate Headshots & Team Photography (15 posts)
-21. NYC Corporate Headshots Pricing: Why $250/Person is the Real Starting Point
-22. Law Firm Headshots: Traditional vs. Modern (What Actually Works in 2025)
-23. Tech Startup Team Photos: Authentic Culture Over Stock Photography
-24. LinkedIn Headshots NYC: Professional Standards That Actually Get Engagement
-25. On-Location vs. Studio Headshots: What Makes Sense for Your Office
-26. Executive Headshots: C-Suite Photography That Commands Authority
-27. Remote Team Photography: Coordinating Headshots Across Multiple Cities
-28. Seasonal Headshot Updates: When Your Team Should Refresh Photos
-29. Department Team Photos: Beyond the Boring Group Shot
-30. New Hire Headshot Process: Onboarding Photography Logistics
-31. Headshot Retouching: Professional Standards vs. Over-Editing
-32. What to Wear for Corporate Headshots: Practical Wardrobe Guide
-33. Multi-Location Headshots: Fortune 500 Team Photography Coordination
-34. Diversity in Corporate Photography: Authentic Team Representation
-35. Professional Headshots ROI: LinkedIn, Website, and Recruiting Impact
-
-#### Brand Video & Corporate Content (15 posts)
-36. Corporate Brand Video Pricing NYC: $5,500 to $25,000+ (What You Get)
-37. Company Culture Video: Recruiting Content That Actually Works
-38. Customer Testimonial Videos: 5-Question Framework That Gets Results
-39. Founder Story Videos: Personal Branding for C-Suite Executives
-40. Office Tour Videos: Workspace Content for Recruiting & Real Estate
-41. Product Demo Videos: Technical Content Without the Confusion
-42. Team Introduction Videos: New Hire Onboarding Content
-43. Video Business Cards: 60-Second Professional Introductions
-44. Behind-the-Scenes Company Videos: Authenticity in Corporate Content
-45. Explainer Videos for B2B Services: Making Complex Simple
-46. LinkedIn Video Content: Professional Standards for Social Media
-47. Annual Report Videos: Shareholder Communication Beyond PDFs
-48. Corporate Documentary: Long-Form Company Storytelling
-49. Interview-Style Corporate Videos: Executive Communication Format
-50. B-Roll Library Creation: Stockpiling Corporate Video Assets
-
-#### Office & Lifestyle Photography (10 posts)
-51. NYC Office Photography: Workspace Content That Attracts Talent
-52. Architectural Office Photography: Interior Design for Corporate Spaces
-53. Day-in-the-Life Office Photography: Authentic Team Documentation
-54. Coworking Space Photography: Flexible Office Environment Content
-55. Office Renovation Photography: Before, During, After Documentation
-56. Manufacturing Floor Photography: Industrial Corporate Environments
-57. Restaurant Corporate Photography: Hospitality Business Content
-58. Retail Store Photography: Commercial Space Documentation
-59. Lab & Research Facility Photography: Scientific Corporate Environments
-60. Corporate Campus Photography: Multi-Building Business Complexes
-
-#### Industry-Specific Guides (10 posts)
-61. Law Firm Photography Guide: Headshots, Office, and Case Study Content
-62. Tech Startup Photography: Authentic Content Without the Clichés
-63. Financial Services Photography: Corporate Compliance & Professional Standards
-64. Nonprofit Photography: Event + Mission-Driven Storytelling on Budget
-65. Healthcare Corporate Photography: HIPAA-Compliant Professional Content
-66. Real Estate Development Photography: Project Documentation & Marketing
-67. Consulting Firm Photography: Thought Leadership Visual Content
-68. Accounting Firm Photography: Professional Service Provider Standards
-69. Architecture Firm Photography: Showcasing Design + Team Expertise
-70. Advertising Agency Photography: Creative Team + Office Culture Content
-
-#### Pricing, ROI & Business Strategy (10 posts)
-71. Corporate Photography Pricing NYC: Hourly vs. Package (What Works)
-72. Event Photography ROI: How One Client Paid for 5 Years of Content
-73. Photography Budget Planning: What Corporate Marketing Teams Get Wrong
-74. In-House Photographer vs. Professional Service: The Real Cost Comparison
-75. Commercial Usage Rights Explained: What You're Actually Paying For
-76. Corporate Photography Contracts: What to Look For (And Red Flags)
-77. Video Production Timeline: Why Good Corporate Video Takes 3-4 Weeks
-78. Photography Retainer Packages: Monthly Content for Growing Companies
-79. Event Photography Rush Delivery: When (and Why) to Pay for Speed
-80. Corporate Content Calendar: Planning Photography Needs 12 Months Ahead
-
-#### Technical & Educational (10 posts)
-81. Corporate Photography Lighting: Why Professional Gear Actually Matters
-82. 4K vs. 1080p Corporate Video: What Your Business Actually Needs
-83. Photo Editing Turnaround: Why Professional Delivery Takes 5-10 Days
-84. Corporate Photography File Formats: JPG, PNG, RAW Explained
-85. Backup & Delivery: How Professional Photographers Protect Your Content
-86. Corporate Photography Insurance: Why It Matters for Your Business
-87. FAA Part 107: NYC Drone Photography Regulations Explained
-88. NYC Photography Permits: When You Need Them (And When You Don't)
-89. Corporate Photography Equipment: What Professionals Actually Use
-90. Color Correction for Corporate Branding: Matching Your Style Guide
-
-#### NYC-Specific & Local (5 posts)
-91. Best NYC Event Venues for Photography: Lighting & Space Considerations
-92. Manhattan Office Photography: Working in High-Rise Corporate Spaces
-93. Brooklyn Corporate Event Venues: Alternative Spaces for Brand Events
-94. NYC Corporate Photography Challenges: Permits, Logistics, and Solutions
-95. Seasonal NYC Corporate Photography: Weather & Timing Considerations
-
-#### Comparison & Decision-Making (5 posts)
-96. Photographer vs. Videographer vs. Both: What Your Event Needs
-97. Professional vs. iPhone Corporate Content: When to Invest
-98. Event Photographer vs. Marketing Agency: What Makes Sense
-99. Freelance Photographer vs. Production Company: Key Differences
-100. DIY Corporate Photography: When It Works (And When It Doesn't)
-
-### Content Interlinking Strategy
-
-**Each post should link to:**
-- 2-3 related blog posts (as they're published)
-- 1-2 service pages
-- 1 case study (if relevant)
-
-**Cluster Structure:**
-- Topic clusters around Event, Headshots, Video, Industry guides
-- Pillar posts (#1, #21, #36, #61) that link to related sub-topic posts
-- Each sub-topic post links back to its pillar post
-
-### Publishing Schedule
-
-**Recommended cadence:**
-- Week 1-4: 2 posts per week (establish presence)
-- Month 2-3: 1 post per week (steady growth)
-- Month 4+: 2 posts per month (maintenance)
-
-**Priority order:**
-1. High-traffic keywords (headshots, event photography, pricing)
-2. Industry-specific guides (law firms, tech startups)
-3. Educational content (technical, how-to)
-4. Comparison posts (decision-making)
-
----
-
-## Image Sourcing
-
-### Primary Sources (in priority order):
-
-1. **Your Own Photography** (70% of images)
-   - Use client work (with permission/anonymized)
-   - Behind-the-scenes shots
-   - iPhone photos of NYC locations, equipment
-   - Most authentic, builds brand trust
-
-2. **Free Stock Photography** (25% of images)
-   - **Unsplash**: https://unsplash.com (search: office, business, NYC)
-   - **Pexels**: https://pexels.com (search: corporate, team, event)
-   - **Pixabay**: https://pixabay.com (backup option)
-   - All free for commercial use, no attribution required
-
-3. **AI Generation** (5% of images)
-   - For specific concepts you can't photograph
-   - **Midjourney** ($10/month): Best quality
-   - **DALL-E 3** via ChatGPT Plus ($20/month): Good alternative
-   - **Leonardo.ai** (free tier): Budget option
-
-### Photo Attribution Guidelines
-
-**IMPORTANT**: Clearly distinguish between your own photography and stock photography.
-
-**For blog posts with YOUR photos:**
-- Add attribution section at bottom of article (before "Back to Blog" link)
-- Credit your work while acknowledging stock photos used
-- Link to stock photo sources (Unsplash, Pexels, Pixabay)
-
-**Photo Attribution HTML Template:**
-```html
-<!-- Photo Attribution -->
-<div class="photo-attribution">
-  <p><strong>Photo Credits:</strong> Professional [headshot/event/corporate] images in this article photographed by Core Visuals NYC. Select stock photography sourced from <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>, <a href="https://pexels.com" target="_blank" rel="noopener">Pexels</a>, and <a href="https://pixabay.com" target="_blank" rel="noopener">Pixabay</a> for illustrative purposes.</p>
+<div style="background: #F9FAFB; border-left: 4px solid #D4AF37; padding: 32px; margin: 40px 0; border-radius: 8px;">
+  <h3>Table of Contents</h3>
+  <ul>
+    <li><a href="#section-id">Section Title</a></li>
+  </ul>
 </div>
 ```
 
-**CSS for Photo Attribution** (already in blog post template):
+### Images
+**Hero image:**
+- Often works well but not mandatory
+- Should be compelling and relevant
+- 1200px+ width, Cloudinary optimized
+
+**In-content images:**
+- Add every 2-3 sections for visual break
+- Only include if they add value (not decoration)
+- 800px+ width, lazy loaded
+- Always include descriptive alt text
+
+**Quality over quantity:**
+- 2-3 strong images > 10 mediocre stock photos
+- Your own work > generic stock
+- Relevant diagrams/screenshots > random office photos
+
+### Callout Boxes
+**Use for:**
+- Key insights or warnings
+- Real client examples with specific numbers
+- Important caveats or considerations
+
+**Don't overuse:**
+- 1-2 per post typically sufficient
+- Should feel special, not routine
+- Each should deliver genuine value
+
+**Implementation:**
+```html
+<div class="article-callout">
+  <p><strong>Real numbers:</strong> A client running a $50,000 annual conference...</p>
+</div>
+```
+
+### CTA Sections
+**Include when:**
+- Natural service connection exists
+- Reader likely ready to take action
+- Post demonstrates specific expertise
+
+**Position:**
+- Before FAQ section, or
+- At logical conclusion point, or
+- After demonstrating value
+
+**Vary messaging:**
+- Match CTA to post topic
+- Different calls for different content types
+- Don't use identical CTAs in every post
+
+### FAQ Section
+**Highly recommended for SEO:**
+- Excellent for appearing in Google's "People also ask"
+- 3-4 questions typically optimal
+- Questions should reflect actual searches
+- Always include FAQPage schema markup
+
+**FAQ best practices:**
+- Answer concisely (2-3 sentences)
+- Include specific numbers/pricing where appropriate
+- Link to related resources
+- Use <strong> tags for key points
+
+### Related Services
+**Purpose:**
+- Internal linking for SEO
+- Lead readers to relevant services
+- Cross-promote related offerings
+
+**Implementation:**
+- Link to 2-3 relevant service pages
+- Use card format for visual appeal
+- Match services to actual post content
+- Don't force unrelated links
+
+---
+
+## Content Accuracy & Risk Management
+
+**CRITICAL:** Always verify pricing and statements against actual service pages before publishing.
+
+### Before Writing Any Blog Post
+
+**1. Check Service Pages First**
+- Read `service-event-coverage.html`, `service-corporate-content.html`, `service-custom-projects.html`
+- Note actual package prices, hourly rates, deliverables
+- Identify how services are positioned and described
+- Match blog post pricing ranges to actual offerings
+
+**2. Verify Pricing Alignment**
+- ❌ **BAD**: Blog says "$200-350/hour professional tier" when you actually charge $850+/hour
+- ✅ **GOOD**: Blog pricing tiers position your actual rates in the appropriate category
+- Blog posts should use pricing RANGES that make your actual prices look reasonable
+- Never accidentally price yourself out by positioning lower-cost competitors as "premium"
+
+### Avoid Future Traps - Sensitive Topics
+
+**Pricing Statements:**
+- ✅ Use: "ranges from $X to $Y depending on..." (gives flexibility)
+- ❌ Avoid: "always costs exactly $X" (locks you into specific pricing)
+- ✅ Use: "typically see 3-5x ROI" (reasonable range)
+- ❌ Avoid: "guaranteed 500% ROI" (impossible promise, legal liability)
+- ✅ Use: "most conferences budget 5-8% for photography" (industry guidance)
+- ❌ Avoid: "you should never pay more than $X" (contradicts your own pricing)
+
+**Financial Claims:**
+- ✅ Use: "one client secured 2 additional sponsor renewals" (specific example, anecdotal)
+- ❌ Avoid: "all clients double their sponsors" (measurable claim you can't prove)
+- ✅ Use: "LinkedIn profiles with photos get 14x more views according to LinkedIn data" (cited source)
+- ❌ Avoid: "I guarantee your LinkedIn engagement will increase 14x" (promise you can't control)
+
+**Controversial Statements:**
+- ❌ Avoid: politics, religion, hot-button social issues
+- ❌ Avoid: negative statements about specific competitors or companies
+- ❌ Avoid: absolute claims about industries you don't know deeply
+- ✅ Stick to: photography, events, corporate content, NYC business topics
+
+**Legal/Regulatory:**
+- ✅ Link to authority sources (e.g., FAA.gov for drone regulations)
+- ❌ Avoid: giving definitive legal advice ("you must..." or "it's illegal to...")
+- ✅ Use: "FAA Part 107 certification is required for commercial drone work"
+- ❌ Avoid: "you can fly drones anywhere in NYC without permits" (false, liability risk)
+
+### Red Flags Checklist - Do NOT Publish If Post Contains:
+
+- [ ] Pricing that contradicts service page pricing
+- [ ] Guaranteed ROI percentages without "typical" or "average" qualifiers
+- [ ] Absolute statements about competitors ("they always..." or "they never...")
+- [ ] Legal advice presented as fact without citing sources
+- [ ] Promises you can't control ("your photos will go viral")
+- [ ] Industry statistics without sources
+- [ ] Negative statements about specific companies or people
+- [ ] Political, religious, or controversial non-business topics
+- [ ] Claims that could be disproven with simple fact-checking
+
+### Self-Protection Language Patterns
+
+**Use these qualifiers:**
+- "In my experience..."
+- "I've found that..."
+- "Most clients see..."
+- "Typical range is..."
+- "According to [source]..."
+- "One client example..."
+- "Industry data suggests..."
+
+**Avoid these absolutes:**
+- "Always" / "Never"
+- "Guaranteed" / "Everyone"
+- "The only way" / "You must"
+- "Proven to"
+
+### Pricing Strategy Example
+
+**Your actual packages:** $5,000-10,000
+**Blog positioning:** Place in "Premium Coverage: $7,500-12,000" tier
+**Explain value:** Multi-photographer teams, fast turnaround, sponsor documentation
+**Justify with ROI:** "$100K conference with $40-60K sponsorships needs $8-10K coverage"
+
+**This makes readers think:**
+"Oh, $8K for conference photography makes sense for a serious event" (not "That's overpriced")
+
+### Cross-Reference Requirement
+
+Before publishing, verify:
+- [ ] Pricing ranges align with service pages
+- [ ] Claims match actual deliverables
+- [ ] No contradictions with existing content
+- [ ] All statistics have sources
+- [ ] No legal/financial advice beyond your expertise
+
+**Bottom Line:** Blog posts should make your actual services look like smart investments, not expensive outliers. Always position pricing to make readers think "this makes sense for professional work" rather than "they're charging way more than the market."
+
+---
+
+## Strategic Content Direction
+
+While we don't prescribe a rigid content calendar, these strategic principles help ensure posts work together effectively.
+
+### Topic Clusters
+
+**Concept:** Group related posts around core topics to build topical authority.
+
+**Example clusters for Core Visuals NYC:**
+- **Event Photography Cluster:** Conference photography pricing, venue considerations, ROI metrics, sponsor documentation
+- **Corporate Headshots Cluster:** LinkedIn headshots ROI, team photography logistics, executive portraits, personal branding
+- **Video Content Cluster:** Video business cards, brand videos, founder stories, testimonial videos
+- **NYC-Specific Cluster:** Best event venues for photography, NYC photography permits, seasonal considerations
+
+**Benefits:**
+- Google recognizes you as an authority on the topic
+- Readers discover related content
+- Internal linking structure strengthens SEO
+- Creates comprehensive coverage of subject
+
+### Interlinking Strategy
+
+**When you have multiple posts in same cluster:**
+- Link newer posts to older pillar content
+- Update older posts to link to new supporting content
+- Use varied, descriptive anchor text
+- Create "hub" posts that link to all related content
+
+**Avoid:**
+- Writing 10 posts targeting the exact same keyword (cannibalization)
+- Generic anchor text ("click here", "read more")
+- Forcing unrelated links just to increase link count
+
+### Topic Selection Principles
+
+**Good topic indicators:**
+- You have unique insight or experience
+- Keyword has 100-1,000 monthly searches
+- Topic naturally connects to your services
+- You can provide specific, actionable advice
+- Addresses common client questions
+
+**Topics to avoid:**
+- Purely theoretical concepts with no service connection
+- Oversaturated keywords you can't realistically rank for
+- Topics outside your expertise
+- Content that contradicts your positioning
+
+---
+
+## Beyond the Guidelines
+
+Always ask: **"Can we make this post even better?"**
+
+### Consider These Enhancements
+
+**Interactive Elements:**
+- ROI calculators relevant to the topic
+- Before/after image comparisons
+- Budget planning tools
+- Comparison matrices (e.g., photographer types, package tiers)
+
+**Data Visualization:**
+- Charts illustrating pricing ranges
+- Infographics for processes (e.g., "How to Plan Conference Coverage")
+- Timeline graphics
+- Cost breakdown tables
+
+**Social Proof:**
+- Client testimonials relevant to topic
+- Specific case study results
+- Industry recognition
+- Portfolio examples
+
+**Content Depth Variations:**
+- **Quick guides (500-800 words):** Single focused topic, fast read
+- **Comprehensive guides (1500-2500 words):** Deep dive, multiple angles
+- **Series posts:** Multi-part deep exploration
+- **Update posts:** Revisit and refresh older content with new insights
+
+**Engagement Features:**
+- Downloadable checklists or templates
+- Email opt-in for detailed guides
+- Social sharing prompts
+- Question/comment sections
+
+---
+
+## Link Strategy
+
+### Internal Links (3-5 per post)
+
+**Link to:**
+- Relevant service pages (primary goal)
+- Related blog posts (once catalog grows)
+- Case studies when relevant
+- Contact page for CTAs
+
+**Best practices:**
+- Use descriptive anchor text ("conference photography packages" not "click here")
+- Style with brand gold (#D4AF37)
+- Open in same tab (internal navigation)
+- Vary anchor text to avoid repetition
+
+### External Links (1-2 per post)
+
+**Link to authority sources when they add genuine value:**
+
+**Examples might include:**
+- Government resources (FAA.gov for drone regulations, SBA.gov for business guidance)
+- Industry associations (ASMP, PPA when discussing photography standards)
+- Academic research or studies
+- Major news outlets for statistics
+- Official documentation (LinkedIn for LinkedIn data, Google for Google features)
+
+**Implementation:**
+- Always use `rel="noopener"` for security
+- Consider `target="_blank"` for user experience
+- Link text should describe destination
+- Must genuinely enhance understanding
+
+**Don't:**
+- Link to competitors
+- Link to low-quality or questionable sources
+- Include affiliate links without disclosure
+- Link just to have external links
+
+---
+
+## Image Sourcing & Attribution
+
+### Priority Order
+
+**1. Your Own Photography (70% goal)**
+- Actual client work (with permission/anonymized)
+- Behind-the-scenes shots
+- Equipment and setup photos
+- NYC location shots
+- Most authentic, builds brand trust
+
+**2. Free Stock Photography (25%)**
+- **Unsplash**: https://unsplash.com (high-quality, free commercial use)
+- **Pexels**: https://pexels.com (large library, business scenes)
+- **Pixabay**: https://pixabay.com (backup option)
+- All free for commercial use, no attribution required (but we provide it anyway)
+
+**3. AI Generation (5%)**
+- For specific concepts you can't photograph
+- Midjourney, DALL-E 3, Leonardo.ai
+- Use sparingly, only when other options don't work
+
+### Photo Attribution Guidelines
+
+**IMPORTANT:** Clearly distinguish between your photography and stock photography.
+
+**For posts with YOUR photos:**
+Add attribution section at bottom (before "Back to Blog" link):
+
+```html
+<!-- Photo Attribution -->
+<div class="photo-attribution">
+  <p><strong>Photo Credits:</strong> Professional [headshot/event/corporate] images
+  in this article photographed by Core Visuals NYC. Select stock photography sourced
+  from <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>,
+  <a href="https://pexels.com" target="_blank" rel="noopener">Pexels</a>, and
+  <a href="https://pixabay.com" target="_blank" rel="noopener">Pixabay</a> for
+  illustrative purposes.</p>
+</div>
+```
+
+**For posts with ONLY stock photos:**
+```html
+<div class="photo-attribution">
+  <p><strong>Photo Credits:</strong> Stock photography sourced from
+  <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>,
+  <a href="https://pexels.com" target="_blank" rel="noopener">Pexels</a>, and
+  <a href="https://pixabay.com" target="_blank" rel="noopener">Pixabay</a> for
+  illustrative purposes.</p>
+</div>
+```
+
+**CSS (already in posts):**
 ```css
 .photo-attribution {
   margin-top: 80px;
@@ -949,109 +595,274 @@ Organized by category for maximum SEO impact:
   color: #9CA3AF;
   line-height: 1.6;
 }
+```
 
-.photo-attribution a {
-  color: #6B7280;
-  text-decoration: underline;
+**Why this matters:**
+- Maintains credibility (don't take credit for stock photos)
+- Gives proper attribution to free sources
+- Highlights your actual work
+- Builds trust with readers
+
+---
+
+## Technical Specifications
+
+### File Naming
+- Format: `descriptive-keyword-focused-slug.html`
+- Keep URLs readable and under 60 characters
+- All lowercase with hyphens
+- Match primary keyword when possible
+
+**Examples:**
+- ✅ `conference-photography-nyc-pricing.html`
+- ✅ `professional-headshots-roi.html`
+- ❌ `blog-post-1.html`
+- ❌ `my_awesome_photography_article_about_events.html`
+
+### Responsive Width Settings
+
+**Article content widths:**
+```css
+.article-content {
+  max-width: 50%;  /* Large screens >1400px */
+}
+
+@media (max-width: 1400px) {
+  .article-content {
+    max-width: 70%;  /* Medium screens 768-1400px */
+  }
+}
+
+@media (max-width: 768px) {
+  .article-content {
+    max-width: 100%;  /* Mobile <768px */
+    padding: 0 12px;
+  }
 }
 ```
 
-**Placement**: Insert photo attribution section after "Related Services" section, before "Back to Blog" link.
+### Image Handling
 
-**Why this matters**:
-- Maintains credibility (don't take credit for stock photos)
-- Gives proper attribution to free stock sources
-- Highlights your actual photography work
-- Builds trust with readers
+**Cloudinary base URL:**
+```
+https://res.cloudinary.com/dtuxu64zp/image/upload/
+```
 
-### Cloudinary Upload Process
+**Recommended transformations:**
+```
+f_auto,q_auto,w_1200  // Hero images
+f_auto,q_auto,w_800   // In-content images
+```
 
-1. Upload image to Cloudinary dashboard
-2. Use automatic quality/format optimization
-3. Generate responsive URLs:
-   ```
-   https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_1200/[image-name].jpg
-   ```
-4. Use in blog post with descriptive alt text
+**Full example:**
+```html
+<img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto/v1763057059/business_headshot_1.jpg"
+     alt="Professional business headshot NYC - corporate photography"
+     class="article-image"
+     loading="lazy">
+```
+
+**Best practices:**
+- Always use f_auto (automatic format selection)
+- Always use q_auto (automatic quality optimization)
+- Specify width for performance (w_800, w_1200)
+- Descriptive alt text for accessibility and SEO
+- loading="lazy" except hero images
+
+### Schema Markup Requirements
+
+**Always include these three:**
+
+**1. Article Schema**
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Post Title",
+  "description": "Post description",
+  "image": "Hero image URL",
+  "author": {
+    "@type": "Person",
+    "name": "Vlad Levine"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Core Visuals NYC",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://corevisualsnyc.com/images/logo.png"
+    }
+  },
+  "datePublished": "YYYY-MM-DD",
+  "dateModified": "YYYY-MM-DD"
+}
+```
+
+**2. Breadcrumb Schema**
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://corevisualsnyc.com/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://corevisualsnyc.com/blog.html"
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Post Title",
+    "item": "https://corevisualsnyc.com/blog/slug.html"
+  }]
+}
+```
+
+**3. FAQPage Schema (when FAQ section included)**
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Question text?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Answer text with specific details..."
+    }
+  }]
+}
+```
+
+### Performance Considerations
+- Inline critical CSS in `<style>` tags
+- Cloudinary handles image optimization
+- Lazy load all images except above-fold
+- Preconnect to Google Fonts
+- Minimize JavaScript (only essential functionality)
 
 ---
 
-## Checklist: Publishing a New Blog Post
+## Publishing Checklist
 
 ### Pre-Writing
-- [ ] Choose topic from 100-post strategy
-- [ ] Research keyword volume (target 100-1000 monthly searches)
-- [ ] Outline 4-6 main sections
-- [ ] Source 3-5 images (own photos or stock)
-- [ ] Upload images to Cloudinary
+- [ ] Research keyword opportunities (100-1000 monthly searches)
+- [ ] Check service pages for pricing alignment
+- [ ] Outline main points and structure
+- [ ] Gather or identify relevant images
+- [ ] Consider unique angle or insight to offer
 
-### Writing
-- [ ] Write in conversational, honest voice
-- [ ] Include specific pricing examples
-- [ ] Add Table of Contents with 4-6 jump links
-- [ ] Include 1-2 callout boxes
-- [ ] Write 3-4 FAQ items
-- [ ] Add 3-5 internal links to service pages
-- [ ] Add 1-2 external authority links
-- [ ] Target 1,200-1,800 words total
+### Writing Phase
+- [ ] Write conversational, honest content
+- [ ] Include specific examples or case studies
+- [ ] Integrate keywords naturally
+- [ ] Add pricing references that align with service pages
+- [ ] Include data with sources
+- [ ] Write compelling title and meta description
 
-### Technical Setup
+### Technical Implementation
 - [ ] Create HTML file in `/blog/` directory
-- [ ] Copy template structure
-- [ ] Add Article schema with correct dates
-- [ ] Add Breadcrumb schema
-- [ ] Add FAQ schema (if applicable)
-- [ ] Set responsive CSS (50%/70%/100%)
-- [ ] Add all meta tags (title, description, OG)
-- [ ] Add canonical URL
-- [ ] Add anchor IDs to all H2 sections
-- [ ] Add Related Services section (3 cards)
-- [ ] Test mobile responsiveness
+- [ ] Include all required schema markup (Article, Breadcrumb, FAQ)
+- [ ] Optimize images through Cloudinary
+- [ ] Add descriptive alt text to all images
+- [ ] Implement lazy loading
+- [ ] Add internal links to service pages
+- [ ] Add 1-2 external authority links
+- [ ] Include photo attribution if using stock images
+- [ ] Verify responsive behavior on mobile
 
-### SEO
+### SEO Verification
+- [ ] Title tag 50-60 characters
+- [ ] Meta description 150-160 characters
 - [ ] Primary keyword in title, H1, first paragraph
-- [ ] Alt text on all images
-- [ ] Internal links styled with gold color (#D4AF37)
-- [ ] External links have rel="noopener"
-- [ ] FAQ section properly formatted
-- [ ] Breadcrumb navigation visible
+- [ ] All H2 tags have id attributes for anchors
+- [ ] Images have descriptive alt text
+- [ ] Canonical URL correct
+- [ ] Open Graph tags complete
 
-### Publishing
-- [ ] Add post to `sitemap.xml` (priority: 0.6, changefreq: monthly)
-- [ ] Add blog card to `blog.html` with thumbnail
-- [ ] Test all links (internal and external)
-- [ ] Test on mobile device
-- [ ] Commit to git with descriptive message
-- [ ] Push to branch: `claude/branch-4-01RnBi2WecBgc3KmFy16PVU9`
+### Pre-Publish Quality Check
+- [ ] Run red flags checklist (no pricing contradictions, guarantees, etc.)
+- [ ] Verify all links work
+- [ ] Check that claims match actual deliverables
+- [ ] Ensure statistics have sources
+- [ ] Test mobile responsiveness
+- [ ] Proofread for typos and clarity
+
+### Publishing Steps
+- [ ] Add entry to `sitemap.xml` with priority 0.6
+- [ ] Add blog card to `blog.html` index page
+- [ ] Git commit with descriptive message
+- [ ] Git push to branch
 
 ### Post-Publishing
-- [ ] Submit sitemap to Google Search Console
-- [ ] Check for indexing after 3-7 days
-- [ ] Monitor Google Search Console for impressions/clicks
-- [ ] Add internal links from future posts
+- [ ] Submit updated sitemap to Google Search Console
+- [ ] Monitor initial indexing
+- [ ] Consider social media promotion
+- [ ] Update related posts with internal links (as catalog grows)
+- [ ] Track keyword rankings after 2-4 weeks
 
 ---
 
-## Example Blog Post
+## Writing Process Recommendations
 
-See `/blog/aerial-commercial-photography-nyc.html` for complete reference implementation.
+### Start With Value
+Before writing, ask:
+- What unique insight can I offer?
+- What specific problem am I solving?
+- What would actually help someone searching for this?
+- What's my honest take that others might not share?
 
-**Key features demonstrated:**
-- Conversational, honest voice
-- Table of Contents with jump links
-- FAQ section with schema
-- External links to FAA.gov
-- Internal links to service pages
-- Related Services section
-- Responsive width (50%/70%/100%)
-- All required schema markup
-- Cloudinary-optimized images
+### Write Naturally First, Optimize Second
+1. Write the post in your natural voice
+2. Tell the story or make the argument
+3. Then go back and optimize for SEO
+4. Don't let keyword requirements stifle authentic voice
+
+### Vary Your Approach
+- **Short posts (800-1200 words):** Quick, focused, actionable
+- **Long posts (1800-2500 words):** Comprehensive, authoritative, detailed
+- **Data-heavy posts:** Statistics, ROI calculations, pricing breakdowns
+- **Story-driven posts:** Client examples, case studies, personal experience
+- **How-to posts:** Step-by-step guides, checklists, frameworks
+
+### Quality Over Quantity
+**One excellent post per month > Four mediocre posts per month**
+
+Better to publish:
+- Content you're genuinely proud of
+- Posts that showcase your expertise
+- Material that actually helps readers
+- Writing that feels authentic to you
+
+Than to churn out formulaic content just to hit a quota.
 
 ---
 
-## Questions?
+## Remember: The Core Principle
 
-Refer to this guide when writing new blog posts. All posts should follow this structure for consistency and SEO performance.
+**This guide provides a framework, not a formula.**
 
-**Last updated:** January 15, 2025
-**Version:** 1.0
+The SEO requirements are essential for visibility, but the content itself should always prioritize:
+1. **Genuine helpfulness** to the reader
+2. **Your authentic voice** and experience
+3. **Specific, actionable insights** they can't get elsewhere
+4. **Honest perspective** on pricing and trade-offs
+
+The best blog posts combine:
+- ✅ Solid SEO foundations (visibility)
+- ✅ Genuine expertise (credibility)
+- ✅ Authentic personality (memorability)
+- ✅ Strategic positioning (business value)
+
+Don't sacrifice any of these for the others. When in doubt, ask: **"Would I find this helpful if I were searching for this topic?"**
+
+If yes, publish it. If no, keep refining until you can answer yes.
+
+---
+
+**Questions or Suggestions?**
+This is a living document. As we learn what works (and what doesn't), we'll continue refining these guidelines.
