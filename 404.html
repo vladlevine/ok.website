@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Page Not Found | Core Visuals NYC</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Let's get you back on track.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>">
+
+  <style>
+    .error-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 24px;
+      background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+      color: #FFFFFF;
+      text-align: center;
+    }
+
+    .error-code {
+      font-size: clamp(80px, 15vw, 160px);
+      font-weight: 800;
+      line-height: 1;
+      margin: 0 0 24px;
+      background: linear-gradient(135deg, #D4AF37 0%, #06B6D4 50%, #EC4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .error-title {
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 700;
+      margin: 0 0 16px;
+      color: #FFFFFF;
+    }
+
+    .error-message {
+      font-size: 18px;
+      color: #a3a3a3;
+      max-width: 600px;
+      margin: 0 auto 48px;
+      line-height: 1.6;
+    }
+
+    .error-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin-bottom: 48px;
+    }
+
+    .error-link {
+      display: inline-block;
+      padding: 16px 32px;
+      background: #D4AF37;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      font-size: 16px;
+    }
+
+    .error-link:hover {
+      background: #c19b2e;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+    }
+
+    .error-link-secondary {
+      background: transparent;
+      border: 2px solid #06B6D4;
+      color: #06B6D4;
+    }
+
+    .error-link-secondary:hover {
+      background: #06B6D4;
+      color: #FFFFFF;
+      box-shadow: 0 8px 24px rgba(6, 182, 212, 0.3);
+    }
+
+    .error-suggestions {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .error-suggestions h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 16px;
+      color: #FFFFFF;
+    }
+
+    .error-suggestions ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .error-suggestions li {
+      margin-bottom: 12px;
+    }
+
+    .error-suggestions a {
+      color: #06B6D4;
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.2s;
+    }
+
+    .error-suggestions a:hover {
+      color: #EC4899;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .error-links {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .error-link {
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="header" id="header" style="position: absolute; top: 0; left: 0; right: 0; background: rgba(10, 10, 10, 0.8); backdrop-filter: blur(10px);">
+    <div class="container header-container">
+      <a href="index.html" class="logo">CORE VISUALS NYC</a>
+      <nav class="nav" id="nav">
+        <a href="index.html#services">Services</a>
+        <div class="nav-item">
+          <a href="portfolio.html">Work</a>
+          <div class="dropdown-menu">
+            <a href="service-event-coverage.html">
+              Event Coverage
+              <span>Conferences, galas, networking events, product launches</span>
+            </a>
+            <a href="service-corporate-content.html">
+              Headshots &amp; Brand Videos
+              <span>Office lifestyle, team content, video business cards</span>
+            </a>
+            <a href="service-custom-projects.html">
+              Personal Branding & Launches
+              <span>Thought leadership, founder content, multi-day projects</span>
+            </a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Error Content -->
+  <main class="error-container">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Page Not Found</h1>
+    <p class="error-message">The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+
+    <div class="error-links">
+      <a href="index.html" class="error-link">Go to Homepage</a>
+      <a href="contact.html" class="error-link error-link-secondary">Contact Us</a>
+    </div>
+
+    <div class="error-suggestions">
+      <h3>Popular Pages:</h3>
+      <ul>
+        <li><a href="portfolio.html">→ View Our Portfolio</a></li>
+        <li><a href="service-event-coverage.html">→ Event Coverage Services</a></li>
+        <li><a href="service-corporate-content.html">→ Corporate Headshots &amp; Videos</a></li>
+        <li><a href="about.html">→ About Core Visuals NYC</a></li>
+        <li><a href="blog.html">→ Photography Blog &amp; Insights</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
