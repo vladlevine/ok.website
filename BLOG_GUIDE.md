@@ -114,10 +114,97 @@ LinkedIn's own data shows that profiles with professional photos get 14x more pr
 
 ## Blog Writing Philosophy
 
+### ⚠️ CRITICAL CONTENT RULE #1: NO FABRICATED DATA
+
+**THIS IS THE HIGHEST PRIORITY - VIOLATION CAN RUIN THE ENTIRE PROJECT**
+
+**NEVER Include:**
+- ❌ Specific fabricated numbers: "After photographing 150 gallery openings..."
+- ❌ Made-up statistics: "45% of gallery owners struggle..."
+- ❌ Fake biographical facts: "I've been a photographer for 15 years..."
+- ❌ Fabricated client names or case studies
+
+**ALWAYS Use Instead:**
+- ✅ Generic observations: "Many galleries struggle with..."
+- ✅ Non-specific experiences: "From my experience with gallery openings..."
+- ✅ General trends: "Most creatives find that..."
+
+**Rule:** If tempted to write a specific number or personal fact, STOP and rephrase as a general observation.
+
+---
+
+### Blog Post Goals (Priority Order)
+
+1. **SEO** - Rank for target keywords and drive organic traffic
+2. **Natural, Human Feel** - Authentic images and copy, not corporate
+3. **Entertaining & Easy** - Readable, engaging, respects reader's time
+
+---
+
+### Writing Voice & Tone
+
+#### Conversational Authenticity
+- Use casual, approachable language (like a real conversation)
+- Avoid business jargon, buzzwords, corporate speak
+- Use contractions naturally ("I'm," "don't," "we've")
+
+#### Warm Deadpan Humor
+- Subtle, observational humor delivered matter-of-factly
+- Self-aware commentary on creative industry dynamics
+- Example: "I specialize in making camera-shy executives look natural on screen, which is exactly as straightforward as it sounds"
+- Avoid sarcasm or cynicism
+
+#### Respectful Directness
+- Get to the point quickly without unnecessary buildup
+- Acknowledge reader's time and expertise
+- Clear, straightforward language with warmth
+- Avoid flattery or excessive compliments
+
+#### Story-Driven
+- Weave personal narrative into content
+- Use specific examples rather than generic statements
+- Reference real experiences (without fabricated details)
+
+---
+
 ### The Core Principle
+
 **Each post should feel unique and valuable to its specific audience.** The guidelines below provide a framework, not a rigid formula. SEO requirements are essential for visibility, but content should always prioritize genuine helpfulness and your authentic voice.
 
-### Voice & Tone Guidelines
+### Content Structure Approach
+
+**Target Length:** 7-10 minute read (2,000-2,500 words)
+- Posts longer than 2,500 words feel overwhelming
+- Posts shorter than 2,000 words lack SEO depth
+- If you have 4,000+ words, you have two posts
+
+**Content Formula:** Main body of text + FAQ section = Complete article
+- If it's not essential to main narrative or FAQ-worthy, cut it
+
+**Layered Information Architecture:**
+1. **Basic (Opening):** Relatable story/scenario, everyday language
+2. **Intermediate (Core):** Clear definitions, practical examples, how-to guidance
+3. **Advanced (Technical):** Specifications, equipment lists, technical workflows
+
+---
+
+### What NOT to Include
+
+**❌ Excessive Detail Sections:**
+- NO detailed pricing tiers with bullet lists
+- NO unnecessary preparation lists ("Stay hydrated," "Get adequate sleep")
+- NO over-detailed wardrobe sections (separate sections for men/women)
+- NO excessive bullet lists (reads like checklist, not story)
+
+**❌ Fabricated Case Studies:**
+- NEVER invent testimonials or specific data points
+- DON'T create fake "Chelsea Gallery increased sales by $185K"
+- DO use theoretical framing: "If engagement improves from 1.5% to 3%..."
+- DO discuss possibilities in conversational, analytical way
+
+---
+
+### Voice & Tone Guidelines (Detailed)
 
 **Consider incorporating these elements:**
 - Conversational writing that speaks directly to peers
@@ -127,6 +214,7 @@ LinkedIn's own data shows that profiles with professional photos get 14x more pr
 - Actionable, specific advice
 - Short, digestible paragraphs (typically 2-3 sentences)
 - Natural breaking points with subheadings
+- **Use narrative paragraphs instead of bullet lists in most chapters**
 
 **Elements to generally avoid:**
 - Corporate jargon or empty marketing speak
@@ -135,6 +223,7 @@ LinkedIn's own data shows that profiles with professional photos get 14x more pr
 - Passive voice when active would be clearer
 - Walls of text without breaks
 - Over-explaining obvious concepts
+- **Excessive bullet lists in every section** (use sparingly, favor paragraphs)
 
 ### Opening Approaches
 
@@ -282,14 +371,16 @@ These are **flexible elements** to consider based on post topic and length. Not 
 ### FAQ Section
 **Highly recommended for SEO:**
 - Excellent for appearing in Google's "People also ask"
-- 3-4 questions typically optimal
+- 5+ questions recommended (not just 3-4)
 - Questions should reflect actual searches
 - Always include FAQPage schema markup
 
 **FAQ best practices:**
-- Answer concisely (2-3 sentences)
-- Include specific numbers/pricing where appropriate
-- Link to related resources
+- **Answer length: 80-120 words per answer** (not 40-60 words)
+- Front-load keywords in questions and answers
+- Provide specific examples and actionable advice
+- Include reasonable pricing ranges where appropriate (avoid fabricated statistics)
+- Link to related resources when helpful
 - Use <strong> tags for key points
 
 ### Related Services
