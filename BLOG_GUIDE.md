@@ -767,11 +767,14 @@ f_auto,q_auto,w_800   // In-content images
 ### Technical Implementation
 - [ ] Create HTML file in `/blog/` directory
 - [ ] Include all required schema markup (Article, Breadcrumb, FAQ)
+- [ ] **Add "Published: DATE | Last Updated: DATE" to article-date** (NEW - standard feature)
 - [ ] Optimize images through Cloudinary
 - [ ] Add descriptive alt text to all images
 - [ ] Implement lazy loading
 - [ ] Add internal links to service pages
 - [ ] Add 1-2 external authority links
+- [ ] **Add Social Share Buttons section** (Twitter/X, LinkedIn, Email - HTML only, no JavaScript)
+- [ ] **Add Related Posts Widget** (2-3 related articles with thumbnails)
 - [ ] Include photo attribution if using stock images
 - [ ] Verify responsive behavior on mobile
 
@@ -1092,6 +1095,248 @@ When considering new SEO features, follow this decision tree:
 - Review entire SEO strategy
 - Consider new safe features that emerged
 - Update this guide with lessons learned
+
+---
+
+## Standard Blog Post Features (Implementation Guide)
+
+**Last Updated:** January 25, 2025
+
+These features are now **standard** for all blog posts. Include them in every new post you create.
+
+### 1. Last Updated Date Display
+
+**Location:** Article header section, after article title and excerpt
+
+**HTML:**
+```html
+<div class="article-date">Published: January 25, 2025 | Last Updated: January 25, 2025</div>
+```
+
+**Schema Update:**
+```json
+"datePublished": "2025-01-25",
+"dateModified": "2025-01-25"
+```
+
+**Maintenance:** When making significant content updates (not typo fixes), update the "Last Updated" date and `dateModified` in schema.
+
+---
+
+### 2. Social Share Buttons
+
+**Location:** After main article content, before article-cta section
+
+**CSS (add to `<style>` section):**
+```css
+/* Social Share Buttons */
+.social-share {
+  margin: 60px 0 40px;
+  padding: 32px;
+  background: #F9FAFB;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.social-share h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0A0A0A;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #FFFFFF;
+  color: #374151;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid #E5E7EB;
+}
+
+.share-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.share-button.twitter {
+  background: #1DA1F2;
+  color: #FFFFFF;
+  border-color: #1DA1F2;
+}
+
+.share-button.linkedin {
+  background: #0A66C2;
+  color: #FFFFFF;
+  border-color: #0A66C2;
+}
+
+.share-button.email {
+  background: #374151;
+  color: #FFFFFF;
+  border-color: #374151;
+}
+
+@media (max-width: 768px) {
+  .share-buttons {
+    flex-direction: column;
+  }
+
+  .share-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+```
+
+**HTML (replace URL and TITLE):**
+```html
+<!-- Social Share Buttons -->
+<div class="social-share">
+  <h4>Share This Article</h4>
+  <div class="share-buttons">
+    <a href="https://twitter.com/intent/tweet?url=https://corevisualsnyc.com/blog/YOUR-POST-SLUG.html&text=YOUR%20ENCODED%20TITLE" target="_blank" rel="noopener" class="share-button twitter">
+      <span>𝕏</span> Share on Twitter
+    </a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://corevisualsnyc.com/blog/YOUR-POST-SLUG.html" target="_blank" rel="noopener" class="share-button linkedin">
+      <span>in</span> Share on LinkedIn
+    </a>
+    <a href="mailto:?subject=YOUR%20TITLE&body=I%20thought%20you%27d%20find%20this%20article%20interesting%3A%20https://corevisualsnyc.com/blog/YOUR-POST-SLUG.html" class="share-button email">
+      <span>✉</span> Share via Email
+    </a>
+  </div>
+</div>
+```
+
+**URL Encoding:** Use an online URL encoder for title/text parameters (spaces → %20, special chars → encoded equivalents)
+
+---
+
+### 3. Related Posts Widget
+
+**Location:** After social share buttons, before article-cta section
+
+**CSS (add to `<style>` section):**
+```css
+/* Related Posts Widget */
+.related-posts {
+  margin: 60px 0;
+  padding: 40px;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+}
+
+.related-posts h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0A0A0A;
+  margin: 0 0 24px;
+}
+
+.related-posts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.related-post-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: #F9FAFB;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.related-post-item:hover {
+  background: #F3F4F6;
+  transform: translateX(4px);
+}
+
+.related-post-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.related-post-content h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0A0A0A;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.related-post-meta {
+  font-size: 13px;
+  color: #6B7280;
+}
+
+@media (max-width: 768px) {
+  .related-posts {
+    padding: 24px;
+  }
+
+  .related-post-item {
+    flex-direction: column;
+  }
+
+  .related-post-image {
+    width: 100%;
+    height: 120px;
+  }
+}
+```
+
+**HTML (add 2-3 related posts):**
+```html
+<!-- Related Posts -->
+<div class="related-posts">
+  <h4>Related Articles</h4>
+  <div class="related-posts-grid">
+    <a href="related-post-slug.html" class="related-post-item">
+      <img src="CLOUDINARY_IMAGE_URL" alt="Related Post Title" class="related-post-image">
+      <div class="related-post-content">
+        <h5>Related Post Title</h5>
+        <p class="related-post-meta">Category • X min read</p>
+      </div>
+    </a>
+    <a href="another-related-post.html" class="related-post-item">
+      <img src="CLOUDINARY_IMAGE_URL" alt="Another Post Title" class="related-post-image">
+      <div class="related-post-content">
+        <h5>Another Post Title</h5>
+        <p class="related-post-meta">Category • X min read</p>
+      </div>
+    </a>
+  </div>
+</div>
+```
+
+**Choosing Related Posts:**
+- Same category (Corporate Photography, Event Photography, etc.)
+- Similar topics (if about headshots, link to headshot ROI or office photography)
+- Complementary content (if pricing guide, link to ROI or preparation guide)
+- Mix of short and long reads for variety
 
 ---
 
