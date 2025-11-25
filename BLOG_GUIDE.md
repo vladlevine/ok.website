@@ -767,13 +767,14 @@ f_auto,q_auto,w_800   // In-content images
 ### Technical Implementation
 - [ ] Create HTML file in `/blog/` directory
 - [ ] Include all required schema markup (Article, Breadcrumb, FAQ)
-- [ ] **Add "Published: DATE | Last Updated: DATE" to article-date** (NEW - standard feature)
+- [ ] **Add "Published: DATE | Last Updated: DATE" to article-date** (standard feature)
+- [ ] **Add Table of Contents with anchor links to all H2 sections** (manual HTML - standard feature)
 - [ ] Optimize images through Cloudinary
 - [ ] Add descriptive alt text to all images
 - [ ] Implement lazy loading
 - [ ] Add internal links to service pages
 - [ ] Add 1-2 external authority links
-- [ ] **Add Social Share Buttons section** (Twitter/X, LinkedIn, Email - HTML only, no JavaScript)
+- [ ] **Add Social Share Buttons section** (Twitter/X, LinkedIn, Email - HTML only, properly URL-encoded)
 - [ ] **Add Related Posts Widget** (2-3 related articles with thumbnails)
 - [ ] Include photo attribution if using stock images
 - [ ] Verify responsive behavior on mobile
@@ -1100,11 +1101,52 @@ When considering new SEO features, follow this decision tree:
 
 ## Standard Blog Post Features (Implementation Guide)
 
-**Last Updated:** January 25, 2025
+**Last Updated:** November 25, 2025
 
 These features are now **standard** for all blog posts. Include them in every new post you create.
 
-### 1. Last Updated Date Display
+### 1. Table of Contents (Manual HTML)
+
+**Location:** After first image, before first H2 section
+
+**Purpose:** Helps readers navigate long posts and improves SEO with internal anchor links
+
+**HTML:**
+```html
+<!-- Table of Contents -->
+<div class="table-of-contents" style="background: #F9FAFB; padding: 32px; border-radius: 12px; margin: 40px 0;">
+  <h3 style="margin: 0 0 20px; font-size: 18px; font-weight: 700; color: #0A0A0A;">Table of Contents</h3>
+  <ol style="margin: 0; padding-left: 24px; line-height: 2;">
+    <li><a href="#section-1" style="color: #0A66C2; text-decoration: none;">First Section Title</a></li>
+    <li><a href="#section-2" style="color: #0A66C2; text-decoration: none;">Second Section Title</a></li>
+    <li><a href="#section-3" style="color: #0A66C2; text-decoration: none;">Third Section Title</a></li>
+  </ol>
+</div>
+```
+
+**Add ID attributes to each H2:**
+```html
+<h2 id="section-1">First Section Title</h2>
+<h2 id="section-2">Second Section Title</h2>
+<h2 id="section-3">Third Section Title</h2>
+```
+
+**ID naming conventions:**
+- Use lowercase
+- Replace spaces with hyphens
+- Remove special characters
+- Keep it short but descriptive
+- Example: "What to Ask Your Photographer" → `#what-to-ask-photographer`
+
+**When to include:**
+- Posts with 5+ H2 sections
+- Posts over 1,500 words
+- How-to guides and comprehensive guides
+- Any post where navigation would help readers
+
+---
+
+### 2. Last Updated Date Display
 
 **Location:** Article header section, after article title and excerpt
 
