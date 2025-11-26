@@ -90,6 +90,17 @@
     .gallery-container {
       max-width: 1400px;
       margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Default desktop order */
+    .featured-projects-section {
+      order: 1;
+    }
+
+    .browse-category-section {
+      order: 2;
     }
 
     .gallery-grid {
@@ -241,6 +252,17 @@
         aspect-ratio: 16/9;
       }
     }
+
+    /* Mobile-only: Reverse order for Browse by Category and Featured Projects */
+    @media (max-width: 968px) {
+      .featured-projects-section {
+        order: 2;
+      }
+
+      .browse-category-section {
+        order: 1;
+      }
+    }
   </style>
 </head>
 <body>
@@ -291,11 +313,13 @@
     <!-- Featured Projects -->
     <section class="portfolio-gallery">
       <div class="gallery-container">
-        <h2 style="text-align: center; font-size: clamp(32px, 5vw, 42px); margin-bottom: 16px; font-weight: 700; color: var(--portfolio-black);">Featured Projects</h2>
-        <p style="text-align: center; font-size: 18px; color: #6B7280; max-width: 700px; margin: 0 auto 60px;">Real work from real clients. See how we help NYC businesses tell their stories.</p>
+        <!-- Featured Projects Section -->
+        <div class="featured-projects-section">
+          <h2 style="text-align: center; font-size: clamp(32px, 5vw, 42px); margin-bottom: 16px; font-weight: 700; color: var(--portfolio-black);">Featured Projects</h2>
+          <p style="text-align: center; font-size: 18px; color: #6B7280; max-width: 700px; margin: 0 auto 60px;">Real work from real clients. See how we help NYC businesses tell their stories.</p>
 
-        <!-- Featured Project Cards -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; max-width: 1200px; margin: 0 auto 80px;">
+          <!-- Featured Project Cards -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; max-width: 1200px; margin: 0 auto 80px;">
           <!-- Law Firm Photography -->
           <a href="case-study-law-firm-photography.html" style="text-decoration: none; background: #FFFFFF; border: 2px solid var(--portfolio-cyan); border-radius: 12px; overflow: hidden; transition: all 0.3s ease; display: block;">
             <div style="aspect-ratio: 16/10; overflow: hidden;">
@@ -331,10 +355,11 @@
               <span style="color: var(--portfolio-magenta); font-weight: 600; font-size: 15px;">View Case Study →</span>
             </div>
           </a>
+          </div>
         </div>
 
-        <!-- Browse by Category -->
-        <div style="border-top: 2px solid #E5E7EB; padding-top: 60px;">
+        <!-- Browse by Category Section -->
+        <div class="browse-category-section" style="border-top: 2px solid #E5E7EB; padding-top: 60px;">
           <h3 style="text-align: center; font-size: clamp(24px, 4vw, 32px); margin-bottom: 16px; font-weight: 700; color: var(--portfolio-black);">Browse by Category</h3>
           <p style="text-align: center; font-size: 16px; color: #6B7280; max-width: 600px; margin: 0 auto 40px;">Explore more work from each service area.</p>
 
