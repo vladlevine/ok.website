@@ -153,8 +153,14 @@
       }
 
       .service-gallery {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      .service-gallery-item {
+        /* Reset masonry classes on mobile for consistent 2-column grid */
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
       }
 
       .package-grid {
@@ -648,6 +654,21 @@
         // Smooth scroll to form
         nextQ.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
+    }
+  </script>
+
+  <!-- Mobile Portfolio Enhancement -->
+  <script src="js/mobile-portfolio.js"></script>
+  <script>
+    // Initialize mobile portfolio for Event Coverage
+    if (typeof MobilePortfolio !== 'undefined') {
+      MobilePortfolio.initFromURL('.service-gallery', {
+        itemsPerPage: 12,
+        mobileBreakpoint: 968,
+        enableSwipe: true,
+        enableZoom: true,
+        captionMode: 'tap'
+      });
     }
   </script>
 
