@@ -166,13 +166,23 @@
 
       .service-gallery {
         grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+        grid-auto-flow: dense;
+        gap: 12px;
+      }
+
+      /* Masonry-style layout for mobile */
+      .service-gallery-item.gallery-tall {
+        grid-row: span 2;
+      }
+
+      .service-gallery-item.gallery-wide {
+        grid-column: span 2;
       }
 
       .service-gallery-item {
-        /* Reset masonry classes on mobile for consistent 2-column grid */
-        grid-column: span 1 !important;
-        grid-row: span 1 !important;
+        /* Default items span 1 column, 1 row */
+        grid-column: span 1;
+        grid-row: span 1;
       }
 
       .package-grid {

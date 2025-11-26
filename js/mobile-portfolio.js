@@ -28,6 +28,9 @@ class MobilePortfolio {
   }
 
   init() {
+    // Apply masonry classes based on image orientation
+    this.applyMasonryClasses();
+
     // Only activate on mobile
     if (window.innerWidth > this.options.mobileBreakpoint) {
       this.showAllItems();
@@ -39,6 +42,35 @@ class MobilePortfolio {
     this.setupSwipeGestures();
     this.setupZoom();
     this.attachResizeListener();
+  }
+
+  applyMasonryClasses() {
+    // Auto-detect and apply masonry classes based on image filename patterns
+    this.allItems.forEach((item, index) => {
+      const img = item.querySelector('img');
+      if (!img || !img.src) return;
+
+      const src = img.src.toLowerCase();
+
+      // Check if item already has masonry classes
+      const hasMasonryClass = item.classList.contains('gallery-tall') ||
+                               item.classList.contains('gallery-wide');
+
+      // Only auto-apply if no masonry classes exist
+      if (!hasMasonryClass) {
+        if (src.includes('_vertical.jpg') || src.includes('_vertical.png')) {
+          // Vertical images span 2 rows
+          item.classList.add('gallery-tall');
+        } else if (src.includes('_horizontal.jpg') || src.includes('_horizontal.png')) {
+          // Occasionally make horizontal images span 2 columns for variety
+          // Use a pattern to create visual interest (every 5th horizontal image)
+          const horizontalIndex = Math.floor(index / 3);
+          if (horizontalIndex % 5 === 0 && index > 0) {
+            item.classList.add('gallery-wide');
+          }
+        }
+      }
+    });
   }
 
   setupPagination() {
