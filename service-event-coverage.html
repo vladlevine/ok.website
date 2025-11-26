@@ -69,10 +69,10 @@
 
     .service-gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
       gap: 24px;
-      max-width: 1400px;
-      margin: 80px auto;
+      width: 100%;
+      margin: 80px 0;
     }
 
     .service-gallery-item {
