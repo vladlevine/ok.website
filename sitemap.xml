@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://corevisualsnyc.com/blog.html</loc>
-    <lastmod>2025-01-17</lastmod>
+    <lastmod>2025-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -87,6 +87,18 @@
   <url>
     <loc>https://corevisualsnyc.com/blog/aerial-commercial-photography-nyc.html</loc>
     <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://corevisualsnyc.com/blog/nyc-office-photography-attract-talent.html</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://corevisualsnyc.com/blog/professional-headshot-retouching-guide.html</loc>
+    <lastmod>2025-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
