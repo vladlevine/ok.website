@@ -144,18 +144,6 @@
       color: #FFFFFF;
     }
 
-    @media (max-width: 1400px) {
-      .article-header h1 {
-        max-width: 70%;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .article-header h1 {
-        max-width: 100%;
-      }
-    }
-
     .article-excerpt {
       font-size: 20px;
       color: #a3a3a3;
@@ -178,14 +166,29 @@
       font-size: 14px;
     }
 
+    .article-content {
+      max-width: 50%;
+      margin: 100px auto;
+      padding: 0 40px;
+    }
+
     @media (max-width: 1400px) {
+      .article-header h1 {
+        max-width: 70%;
+      }
+
       .breadcrumb-nav {
+        max-width: 70%;
+      }
+
+      .article-content {
         max-width: 70%;
       }
     }
 
     @media (max-width: 768px) {
       .article-header h1 {
+        max-width: 100%;
         padding: 0 24px;
       }
 

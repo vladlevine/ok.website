@@ -119,6 +119,54 @@
 
     gtag('config', 'G-REYC2K415E');
   </script>
+
+  <style>
+    /* Mobile Responsive Fixes */
+    @media (max-width: 768px) {
+      header nav {
+        padding: 16px 24px !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+      }
+
+      header nav > div {
+        flex-direction: column !important;
+        gap: 16px !important;
+      }
+
+      article {
+        padding: 0 24px !important;
+        margin: 40px auto !important;
+      }
+
+      article img {
+        max-width: 100% !important;
+        height: auto !important;
+      }
+
+      h1 {
+        font-size: 32px !important;
+      }
+
+      h2 {
+        font-size: 28px !important;
+      }
+
+      h3 {
+        font-size: 22px !important;
+      }
+
+      /* Fix any div containers that might overflow */
+      article > div,
+      article > section,
+      article > p,
+      article > ul,
+      article > ol {
+        max-width: 100% !important;
+        overflow-wrap: break-word !important;
+      }
+    }
+  </style>
 </head>
 <body>
     <!-- Header -->
