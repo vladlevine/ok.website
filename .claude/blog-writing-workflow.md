@@ -85,25 +85,27 @@ Format:
 @media (max-width: 768px) {
   .article-header h1 {
     max-width: 100%;
-    padding: 0 24px;  /* NOT 12px! */
+    padding: 0 5% !important;  /* USE PERCENTAGE, NOT PIXELS! */
   }
 
   .article-excerpt {
-    padding: 0 24px;  /* NOT 12px! */
+    padding: 0 5% !important;  /* USE PERCENTAGE, NOT PIXELS! */
   }
 
   .article-content {
     max-width: 100%;
-    padding: 0 24px;  /* NOT 12px! Always 24px for readability */
+    padding: 0 5% !important;  /* USE PERCENTAGE, NOT PIXELS! Always 5% for responsive readability */
     margin: 60px auto;
   }
 
   .breadcrumb-nav {
     max-width: 100%;
-    padding: 0 24px;  /* NOT 12px! */
+    padding: 0 5% !important;  /* USE PERCENTAGE, NOT PIXELS! */
   }
 }
 ```
+
+**CRITICAL**: Always use percentage-based padding (5%) for mobile, NEVER pixel values. Percentage-based padding scales properly across all device widths and prevents layout issues.
 
 ### 6. FOOTER (STANDARD - ALWAYS USE THIS)
 ```html
@@ -223,7 +225,7 @@ Start with a specific observation, story, or counterintuitive statement. NOT a g
 - [ ] Table of contents included (if 4+ sections)
 - [ ] All H2 tags have anchor IDs matching ToC
 - [ ] Standard footer-grid footer used
-- [ ] Mobile padding is 24px (NOT 12px)
+- [ ] Mobile padding is percentage-based (5% with !important)
 - [ ] All images have proper alt text
 - [ ] Main image matches OG and Schema
 
@@ -247,7 +249,7 @@ Start with a specific observation, story, or counterintuitive statement. NOT a g
 ## Common Mistakes (AVOID THESE)
 
 1. **Using wrong footer structure** - Always use footer-grid with 4 columns
-2. **12px mobile padding** - Must be 24px for readability
+2. **Pixel-based mobile padding** - MUST use percentage-based padding (5%), NEVER pixels
 3. **Forgetting table of contents** - Add it if 4+ H2 sections
 4. **Mismatched images** - OG image, Schema image, and hero must match
 5. **Missing anchor IDs** - All H2s need IDs if you have a ToC
@@ -322,7 +324,7 @@ Examples:
 - **Reference a good example** to see it in action
 - **Run the quality checklist** before committing
 - **Never deviate from the standard footer structure**
-- **Always use 24px mobile padding**
+- **Always use percentage-based mobile padding (5% with !important), NEVER pixels**
 - **Include table of contents for 4+ sections**
 
 If you're unsure about anything, check the good examples, not your memory.

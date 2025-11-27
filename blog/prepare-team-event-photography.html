@@ -124,7 +124,7 @@
     /* Mobile Responsive Fixes */
     @media (max-width: 768px) {
       header nav {
-        padding: 16px 24px !important;
+        padding: 16px 5% !important;
         flex-direction: column !important;
         gap: 16px !important;
       }
@@ -135,13 +135,19 @@
       }
 
       article {
-        padding: 0 24px !important;
+        padding: 0 5% !important;
         margin: 40px auto !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
       }
 
       article img {
+        width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
       }
 
       h1 {
@@ -164,6 +170,19 @@
       article > ol {
         max-width: 100% !important;
         overflow-wrap: break-word !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Ensure CTA and FAQ sections fit properly */
+      article div[style*="padding"] {
+        padding: 24px 5% !important;
+      }
+
+      /* Fix table of contents and callout boxes */
+      article div[style*="border-left"] {
+        padding: 24px 5% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
       }
     }
   </style>
