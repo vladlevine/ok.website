@@ -197,16 +197,45 @@
       }
 
       .package-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         padding: 0 5% !important;
         gap: 24px;
         max-width: 100% !important;
       }
 
+      /* Override inline grid styles on package-grid */
+      div.package-grid[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+      }
+
       .package-card {
-        padding: 32px 5% !important;
+        padding: 24px !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
+        margin: 0 !important;
+        width: 100% !important;
+      }
+
+      /* Override inline grid-column styles on package-card */
+      .package-card[style*="grid-column"] {
+        grid-column: auto !important;
+        max-width: 100% !important;
+      }
+
+      /* Ensure pricing breakdown grid is also single column on mobile */
+      .package-card div[style*="grid-template-columns: repeat(4"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+
+      /* Make sure list items fit properly */
+      .package-features {
+        margin: 20px 0 !important;
+      }
+
+      .package-features li {
+        padding: 10px 0 !important;
+        font-size: 15px !important;
       }
 
       .service-section {
