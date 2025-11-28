@@ -164,7 +164,7 @@
 
     @media (max-width: 968px) {
       .service-hero {
-        padding: 140px 24px 80px;
+        padding: 140px 5% 80px !important;
       }
 
       /* Mobile: Switch back to Grid for 2-column masonry */
@@ -192,20 +192,62 @@
         margin-bottom: 0; /* Remove bottom margin on mobile since grid gap handles it */
       }
 
+      .service-gallery-item img {
+        height: auto; /* Override height: 100% on mobile for proper aspect ratio */
+      }
+
       .package-grid {
-        grid-template-columns: 1fr;
-        padding: 0 12px;
+        grid-template-columns: 1fr !important;
+        padding: 0 5% !important;
+        gap: 24px;
+        max-width: 100% !important;
+      }
+
+      /* Override inline grid styles on package-grid */
+      div.package-grid[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+      }
+
+      .package-card {
+        padding: 24px !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+        width: 100% !important;
+      }
+
+      /* Override inline grid-column styles on package-card */
+      .package-card[style*="grid-column"] {
+        grid-column: auto !important;
+        max-width: 100% !important;
+      }
+
+      /* Ensure pricing breakdown grid is also single column on mobile */
+      .package-card div[style*="grid-template-columns: repeat(4"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+
+      /* Make sure list items fit properly */
+      .package-features {
+        margin: 20px 0 !important;
+      }
+
+      .package-features li {
+        padding: 10px 0 !important;
+        font-size: 15px !important;
       }
 
       .service-section {
-        padding: 60px 12px;
+        padding: 60px 5% !important;
       }
 
       /* Fix positioning statement - reduce padding on mobile */
       .service-section > .container > div[style*="max-width: 900px"] {
-        padding: 20px 12px !important;
+        padding: 32px 5% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
+        max-width: 100% !important;
       }
 
       /* Fix video showcase grid on mobile */

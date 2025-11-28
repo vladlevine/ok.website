@@ -162,32 +162,38 @@
 
     @media (max-width: 968px) {
       .service-hero {
-        padding: 140px 24px 80px;
+        padding: 140px 5% 80px !important;
       }
 
-      /* Mobile: Switch back to Grid for 2-column masonry */
+      /* Mobile: Simple single-column layout with proper spacing */
       .service-gallery {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-flow: dense;
-        gap: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
         column-count: auto; /* Disable columns on mobile */
-      }
-
-      /* Masonry-style layout for mobile */
-      .service-gallery-item.gallery-tall {
-        grid-row: span 2;
-      }
-
-      .service-gallery-item.gallery-wide {
-        grid-column: span 2;
+        margin: 40px 0 60px 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        overflow: visible !important;
       }
 
       .service-gallery-item {
-        /* Default items span 1 column, 1 row */
-        grid-column: span 1;
-        grid-row: span 1;
-        margin-bottom: 0; /* Remove bottom margin on mobile since grid gap handles it */
+        width: 100% !important;
+        max-width: 100% !important;
+        aspect-ratio: auto;
+        margin-bottom: 0 !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+      }
+
+      .service-gallery-item img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
       }
 
       .project-types {
@@ -195,14 +201,17 @@
       }
 
       .service-section {
-        padding: 60px 12px;
+        padding: 60px 5% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
       }
 
       /* Fix positioning statement - reduce padding on mobile */
       .service-section > .container > div[style*="max-width: 900px"] {
-        padding: 20px 12px !important;
+        padding: 32px 5% !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
+        max-width: 100% !important;
       }
 
       /* Fix video showcase grid on mobile */
@@ -219,7 +228,7 @@
 
       /* Fix "Typical Project Ranges" container on mobile */
       div[style*="padding: 64px"] {
-        padding: 28px 12px !important;
+        padding: 32px 5% !important;
         text-align: center !important;
       }
     }
