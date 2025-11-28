@@ -234,7 +234,7 @@
       }
 
       /* Fix video showcase grid on mobile */
-      div[style*="grid-template-columns: repeat(auto-fit"] {
+      div[style*="grid-template-columns: repeat(2, 1fr)"] {
         grid-template-columns: 1fr !important;
         gap: 20px !important;
       }
@@ -308,11 +308,11 @@
         <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 16px;">Event Video Examples</h2>
         <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto 48px;">Full event coverage delivered as complete documentation—not just highlights.</p>
 
-        <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 40px;">
+        <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px;">
 
           <!-- Video 1: Kelly's Event - Full Coverage -->
           <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid #E5E7EB;">
-            <video controls style="width: 100%; display: block;" poster="">
+            <video controls loop muted style="width: 100%; display: block;" poster="">
               <source src="https://res.cloudinary.com/dtuxu64zp/video/upload/v1763135507/kellys_event_wqgwup.mp4" type="video/mp4">
             </video>
             <div style="padding: 24px;">
@@ -323,12 +323,34 @@
 
           <!-- Video 2: Nonprofit Fashion Show -->
           <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid #E5E7EB;">
-            <video controls style="width: 100%; display: block;" poster="">
+            <video controls loop muted style="width: 100%; display: block;" poster="">
               <source src="https://res.cloudinary.com/dtuxu64zp/video/upload/v1763133157/09_-_web_ver_after_dark_w5a70u.mp4" type="video/mp4">
             </video>
             <div style="padding: 24px;">
-              <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 8px; color: #0A0A0A;">Nonprofit Fashion Show NYC</h3>
-              <p style="color: #6B7280; font-size: 15px; line-height: 1.6; margin: 0;">Nonprofit fashion show raising money for mental health awareness. Event video capturing runway moments, attendee engagement, and cause-driven storytelling.</p>
+              <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 8px; color: #0A0A0A;">Nonprofit Fashion Show - Dallas</h3>
+              <p style="color: #6B7280; font-size: 15px; line-height: 1.6; margin: 0;">Nonprofit fashion show in Dallas raising money for mental health awareness. Event video capturing runway moments, attendee engagement, and cause-driven storytelling. We provide professional event coverage across the US—from Dallas and NYC to Los Angeles and beyond.</p>
+            </div>
+          </div>
+
+          <!-- Video 3: MLOps Tech Conference -->
+          <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid #E5E7EB;">
+            <video controls loop muted style="width: 100%; display: block;" poster="">
+              <source src="https://res.cloudinary.com/dtuxu64zp/video/upload/v1763071182/mlops_REEL_tducpd.mp4" type="video/mp4">
+            </video>
+            <div style="padding: 24px;">
+              <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 8px; color: #0A0A0A;">NYC Tech Conference - MLOps Expo</h3>
+              <p style="color: #6B7280; font-size: 15px; line-height: 1.6; margin: 0;">Multi-day tech conference with 1,000+ attendees, featuring keynote speeches, expo floor coverage, and networking moments. 2-camera professional coverage capturing the energy and scale of a major NYC tech event. Delivered in 5 days for immediate sponsor outreach and next year's marketing.</p>
+            </div>
+          </div>
+
+          <!-- Video 4: Nonprofit Golf Tournament -->
+          <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid #E5E7EB;">
+            <video controls loop muted style="width: 100%; display: block;" poster="">
+              <source src="https://res.cloudinary.com/dtuxu64zp/video/upload/v1762907480/CGE_golf_1080_logos_WEB_yljzcb.mp4" type="video/mp4">
+            </video>
+            <div style="padding: 24px;">
+              <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 8px; color: #0A0A0A;">Nonprofit Golf Event Highlight</h3>
+              <p style="color: #6B7280; font-size: 15px; line-height: 1.6; margin: 0;">Annual charity golf tournament event coverage capturing tournament action, sponsor recognition, and donor engagement. Professional highlight reel showcasing the event's impact and community involvement—perfect for demonstrating ROI to sponsors and promoting next year's tournament.</p>
             </div>
           </div>
 
