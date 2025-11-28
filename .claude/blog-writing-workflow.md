@@ -85,27 +85,31 @@ Format:
 @media (max-width: 768px) {
   .article-header h1 {
     max-width: 100%;
-    padding: 0 5% !important;  /* USE PERCENTAGE, NOT PIXELS! */
+    padding: 0 12px;
   }
 
   .article-excerpt {
-    padding: 0 5% !important;  /* USE PERCENTAGE, NOT PIXELS! */
+    padding: 0 12px;
   }
 
   .article-content {
     max-width: 100%;
-    padding: 0 5% !important;  /* USE PERCENTAGE, NOT PIXELS! Always 5% for responsive readability */
+    padding: 0 12px;
     margin: 60px auto;
   }
 
   .breadcrumb-nav {
     max-width: 100%;
-    padding: 0 5% !important;  /* USE PERCENTAGE, NOT PIXELS! */
+    padding: 0 12px;
   }
 }
 ```
 
-**CRITICAL**: Always use percentage-based padding (5%) for mobile, NEVER pixel values. Percentage-based padding scales properly across all device widths and prevents layout issues.
+**CRITICAL RULES**:
+- Use `padding: 0 12px` for all mobile blog post elements (NOT percentages)
+- NEVER place duplicate `.article-content` CSS rules after this media query
+- Mobile `@media (max-width: 768px)` must be the LAST CSS rule for mobile selectors
+- Reference working posts: aerial-commercial-photography-nyc.html, professional-headshots-roi.html
 
 ### 6. FOOTER (STANDARD - ALWAYS USE THIS)
 ```html
@@ -225,7 +229,9 @@ Start with a specific observation, story, or counterintuitive statement. NOT a g
 - [ ] Table of contents included (if 4+ sections)
 - [ ] All H2 tags have anchor IDs matching ToC
 - [ ] Standard footer-grid footer used
-- [ ] Mobile padding is percentage-based (5% with !important)
+- [ ] Mobile padding is 12px (NOT percentages)
+- [ ] No duplicate CSS rules after mobile media queries
+- [ ] Mobile @media block is LAST for each selector
 - [ ] All images have proper alt text
 - [ ] Main image matches OG and Schema
 
@@ -248,14 +254,23 @@ Start with a specific observation, story, or counterintuitive statement. NOT a g
 
 ## Common Mistakes (AVOID THESE)
 
-1. **Using wrong footer structure** - Always use footer-grid with 4 columns
-2. **Pixel-based mobile padding** - MUST use percentage-based padding (5%), NEVER pixels
-3. **Forgetting table of contents** - Add it if 4+ H2 sections
-4. **Mismatched images** - OG image, Schema image, and hero must match
-5. **Missing anchor IDs** - All H2s need IDs if you have a ToC
-6. **Too many bullet points** - Limit to 2-3 lists maximum per post
-7. **Corporate jargon** - Write conversationally
-8. **Generic examples** - Use specific client stories
+1. **CRITICAL: Duplicate CSS rules after media queries** - NEVER place duplicate `.article-content` or media query blocks after the main `@media (max-width: 768px)` block. This overrides mobile styles and breaks mobile layout (causes 1-2 words per line). Always ensure mobile CSS is the LAST rule for that selector.
+
+2. **Using wrong footer structure** - Always use footer-grid with 4 columns
+
+3. **Wrong mobile padding** - Use `padding: 0 12px` for mobile (NOT 5%, NOT percentages). Check working posts like aerial-commercial-photography-nyc.html for reference.
+
+4. **Forgetting table of contents** - Add it if 4+ H2 sections
+
+5. **Mismatched images** - OG image, Schema image, and hero must match
+
+6. **Missing anchor IDs** - All H2s need IDs if you have a ToC
+
+7. **Too many bullet points** - Limit to 2-3 lists maximum per post
+
+8. **Corporate jargon** - Write conversationally
+
+9. **Generic examples** - Use specific client stories
 
 ---
 
@@ -321,10 +336,11 @@ Examples:
 
 - **Read this ENTIRE file before writing any blog post**
 - **Check the template file** before starting
-- **Reference a good example** to see it in action
+- **Reference a good example** to see it in action (aerial-commercial-photography-nyc.html, professional-headshots-roi.html)
 - **Run the quality checklist** before committing
 - **Never deviate from the standard footer structure**
-- **Always use percentage-based mobile padding (5% with !important), NEVER pixels**
+- **Always use 12px mobile padding (NOT percentages)**
+- **CRITICAL: Never place duplicate CSS rules after mobile media queries**
 - **Include table of contents for 4+ sections**
 
 If you're unsure about anything, check the good examples, not your memory.
