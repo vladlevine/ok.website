@@ -243,6 +243,96 @@
       #packages div[style*="padding: 32px 40px"] {
         padding: 24px 5% !important;
       }
+
+      /* Service page FAQs responsive */
+      .service-faq-question {
+        font-size: 16px !important;
+        padding: 16px 20px !important;
+      }
+
+      .service-faq-answer.active {
+        padding: 20px !important;
+      }
+    }
+
+    /* Service Page FAQ Styles */
+    .service-faq-question {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0A0A0A;
+      padding: 20px 24px;
+      background: #FFFFFF;
+      border: 2px solid #E5E7EB;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .service-faq-question:hover {
+      border-color: #D4AF37;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.15);
+    }
+
+    .service-faq-question::after {
+      content: '+';
+      font-size: 24px;
+      font-weight: 700;
+      color: #D4AF37;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+
+    .service-faq-question.active::after {
+      content: '−';
+    }
+
+    .service-faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      background: #FFFFFF;
+      border-left: 4px solid #D4AF37;
+      border-radius: 0 0 12px 12px;
+      margin-top: -8px;
+    }
+
+    .service-faq-answer.active {
+      max-height: 1500px;
+      padding: 24px;
+      margin-top: 0;
+    }
+
+    .service-faq-answer p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #0A0A0A;
+      margin-bottom: 16px;
+    }
+
+    .service-faq-answer p:last-child {
+      margin-bottom: 0;
+    }
+
+    .service-faq-answer strong {
+      font-weight: 700;
+      color: #0A0A0A;
+    }
+
+    .service-faq-answer a {
+      color: #D4AF37;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .service-faq-answer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -530,6 +620,56 @@
       </div>
     </section>
 
+    <!-- Common Questions -->
+    <section class="service-section" style="background: #F9FAFB; padding: 80px 40px;">
+      <div class="container" style="max-width: 900px; margin: 0 auto;">
+
+        <h2 style="text-align: center; font-size: clamp(28px, 4vw, 36px); margin-bottom: 16px; color: #0A0A0A;">Common Questions</h2>
+        <p style="text-align: center; font-size: 17px; color: #6B7280; margin-bottom: 48px;">Quick answers to help you decide. <a href="faq.html" style="color: #D4AF37; text-decoration: none; font-weight: 600;">See all FAQs →</a></p>
+
+        <!-- FAQ 1 -->
+        <div class="service-faq-item" style="margin-bottom: 16px;">
+          <button class="service-faq-question" aria-expanded="false" aria-controls="service-faq-1">
+            How much does event photography and videography cost in NYC?
+          </button>
+          <div id="service-faq-1" class="service-faq-answer" aria-hidden="true">
+            <p><strong>Event photography and videography in NYC typically starts around $3,500</strong>, though prices vary from a 1-hour panel to a full-day conference. We quote fixed pricing based on deliverables, not hours—so you know exactly what you're paying for.</p>
+            <p>What affects the investment? Coverage time, deliverables, turnaround speed, and whether you need photo, video, or both. A 3-hour cocktail reception with 100 photos delivered in two weeks costs less than an 8-hour conference with 400 photos and a highlight reel delivered in 5 days.</p>
+            <p><a href="faq.html#answer-1">Read full answer on FAQ page →</a></p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="service-faq-item" style="margin-bottom: 16px;">
+          <button class="service-faq-question" aria-expanded="false" aria-controls="service-faq-2">
+            Can I get just photos or just video, or do I need both?
+          </button>
+          <div id="service-faq-2" class="service-faq-answer" aria-hidden="true">
+            <p><strong>You can absolutely get just photos or just video</strong>—you don't need both unless you want both. Our Essential and Professional packages let you choose: either professional photography OR videography at the same price.</p>
+            <p><strong>Choose photography if:</strong> you primarily need social media content, website images, and LinkedIn posts. <strong>Choose video if:</strong> you want event highlights for marketing, sponsor presentations, or next year's promotion. <strong>Choose both (Premium package) if:</strong> you need comprehensive documentation with sponsor ROI proof.</p>
+            <p><a href="faq.html#answer-4">Read full answer on FAQ page →</a></p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="service-faq-item" style="margin-bottom: 16px;">
+          <button class="service-faq-question" aria-expanded="false" aria-controls="service-faq-3">
+            How long does it take to receive photos and videos after the event?
+          </button>
+          <div id="service-faq-3" class="service-faq-answer" aria-hidden="true">
+            <p><strong>Photos are delivered in 5-10 days. Videos are delivered in 7-15 days.</strong> This is significantly faster than the industry standard of 30-60 days.</p>
+            <p>We prioritize fast turnaround because we know you need content while your event is still relevant—whether that's for sponsor follow-up, social media buzz, or planning next year's event. You'll receive a link to your private online gallery where you can view, download, and share everything.</p>
+            <p><a href="faq.html#answer-3">Read full answer on FAQ page →</a></p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="faq.html" style="display: inline-block; padding: 16px 32px; background: #FFFFFF; color: #0A0A0A; border: 2px solid #D4AF37; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">View All FAQs →</a>
+        </div>
+
+      </div>
+    </section>
+
     <!-- Embedded Quick Form -->
     <section style="background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%); padding: 100px 40px;">
       <div class="container" style="max-width: 700px;">
@@ -658,6 +798,7 @@
           <h4>Company</h4>
           <a href="about.html">About</a>
           <a href="blog.html">Blog</a>
+          <a href="faq.html">FAQ</a>
           <a href="contact.html">Contact</a>
           <a href="tel:+19294450603">(929) 445-0603</a>
           <a href="mailto:heyvladlevine@gmail.com">Email Us</a>
@@ -723,6 +864,37 @@
         nextQ.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
     }
+
+    // Service Page FAQ Accordion
+    const serviceFaqQuestions = document.querySelectorAll('.service-faq-question');
+
+    serviceFaqQuestions.forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const isActive = question.classList.contains('active');
+
+        // Toggle current FAQ
+        if (!isActive) {
+          question.classList.add('active');
+          question.setAttribute('aria-expanded', 'true');
+          answer.classList.add('active');
+          answer.setAttribute('aria-hidden', 'false');
+        } else {
+          question.classList.remove('active');
+          question.setAttribute('aria-expanded', 'false');
+          answer.classList.remove('active');
+          answer.setAttribute('aria-hidden', 'true');
+        }
+      });
+
+      // Keyboard accessibility
+      question.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          question.click();
+        }
+      });
+    });
   </script>
 
   <!-- Mobile Portfolio Enhancement -->
