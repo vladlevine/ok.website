@@ -28,8 +28,12 @@
       --wedding-soft-gold: #E5D4A0;
       --wedding-black: #0A0A0A;
       --wedding-white: #FFFFFF;
-      --wedding-light-bg: #F9FAFB;
-      --wedding-border: #E5E7EB;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
@@ -37,36 +41,59 @@
       line-height: 1.7;
       color: var(--wedding-black);
       background: var(--wedding-white);
-      margin: 0;
-      padding: 0;
     }
 
-    /* Hero Section */
+    /* Hero Section with Background Image */
     .wedding-hero {
-      background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 120px 40px 80px;
       text-align: center;
       color: var(--wedding-white);
+      overflow: hidden;
     }
 
-    .wedding-hero h1 {
-      font-size: clamp(36px, 6vw, 56px);
-      font-weight: 700;
-      line-height: 1.2;
-      margin: 0 0 32px;
-      color: var(--wedding-white);
+    .wedding-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('images/wedding/portfolio/main_wedding_portfolioHorizontal - Bride Portrait Neon Blur.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: brightness(0.4);
+      z-index: 0;
     }
 
     .wedding-hero-content {
-      max-width: 800px;
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
       margin: 0 auto;
     }
 
+    .wedding-hero h1 {
+      font-size: clamp(42px, 7vw, 72px);
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0 0 32px;
+      color: var(--wedding-white);
+      letter-spacing: -0.02em;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
     .wedding-hero-content p {
-      font-size: 18px;
+      font-size: clamp(16px, 2vw, 20px);
       line-height: 1.8;
-      color: #d1d5db;
+      color: #f3f4f6;
       margin-bottom: 24px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     }
 
     .wedding-hero-content p:last-of-type {
@@ -75,192 +102,97 @@
 
     /* What I Bring Section */
     .what-i-bring {
-      background: rgba(212, 175, 55, 0.05);
-      padding: 32px;
-      border-radius: 16px;
-      border: 1px solid rgba(212, 175, 55, 0.2);
-      margin-top: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      padding: 32px 40px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      margin-top: 48px;
     }
 
     .what-i-bring h3 {
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 700;
       color: var(--wedding-gold);
-      margin: 0 0 20px;
+      margin: 0 0 24px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     }
 
     .what-i-bring ul {
       list-style: none;
-      padding: 0;
-      margin: 0;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
 
     .what-i-bring li {
       font-size: 16px;
-      line-height: 1.6;
-      color: #d1d5db;
+      line-height: 1.7;
+      color: #f3f4f6;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
     }
 
     .what-i-bring li strong {
       color: var(--wedding-white);
       font-weight: 600;
+      display: block;
+      margin-bottom: 4px;
     }
 
-    /* Main Portfolio Grid */
+    /* Modern Masonry Gallery */
     .portfolio-section {
-      padding: 80px 40px;
-      background: var(--wedding-white);
+      padding: 0;
+      background: var(--wedding-black);
     }
 
-    .portfolio-container {
-      max-width: 1400px;
+    .gallery-masonry {
+      columns: 4;
+      column-gap: 0;
+      max-width: 100%;
       margin: 0 auto;
     }
 
-    .section-title {
-      font-size: 32px;
-      font-weight: 700;
-      color: var(--wedding-black);
-      margin: 0 0 40px;
-      text-align: center;
-    }
-
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
-      margin-bottom: 80px;
-    }
-
-    .portfolio-grid img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 8px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-
-    .portfolio-grid img:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-    }
-
-    /* Featured Projects Section */
-    .featured-projects {
-      padding: 80px 40px;
-      background: var(--wedding-light-bg);
-    }
-
-    .featured-container {
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .featured-intro {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto 60px;
-    }
-
-    .featured-intro h2 {
-      font-size: 36px;
-      font-weight: 700;
-      color: var(--wedding-black);
-      margin: 0 0 16px;
-    }
-
-    .featured-intro p {
-      font-size: 18px;
-      color: #6b7280;
-      margin: 0;
-    }
-
-    /* Featured Project Accordion */
-    .featured-item {
-      margin-bottom: 24px;
-    }
-
-    .featured-header {
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--wedding-black);
-      padding: 28px 32px;
-      background: var(--wedding-white);
-      border: 2px solid var(--wedding-border);
-      border-radius: 12px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      width: 100%;
-      text-align: left;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .gallery-item {
+      break-inside: avoid;
       position: relative;
-    }
-
-    .featured-header:hover {
-      border-color: var(--wedding-gold);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.15);
-    }
-
-    .featured-header::after {
-      content: '+';
-      font-size: 32px;
-      font-weight: 700;
-      color: var(--wedding-gold);
-      transition: transform 0.3s ease;
-      flex-shrink: 0;
-      margin-left: 16px;
-    }
-
-    .featured-header.active::after {
-      content: '−';
-      transform: rotate(180deg);
-    }
-
-    .featured-gallery-wrapper {
-      max-height: 0;
       overflow: hidden;
-      transition: max-height 0.5s ease, padding 0.5s ease;
-      background: var(--wedding-white);
-      border-left: 4px solid var(--wedding-gold);
-      border-radius: 0 0 12px 12px;
-      margin-top: -8px;
-    }
-
-    .featured-gallery-wrapper.active {
-      max-height: 4000px;
-      padding: 32px;
-      margin-top: 0;
-    }
-
-    .featured-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px;
-    }
-
-    .featured-gallery img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
       cursor: pointer;
+      display: block;
     }
 
-    .featured-gallery img:hover {
-      transform: scale(1.02);
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.6s ease;
+      filter: grayscale(0);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+      filter: grayscale(0) brightness(1.1);
+    }
+
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+      opacity: 0;
+      transition: opacity 0.6s ease;
+      pointer-events: none;
+    }
+
+    .gallery-item:hover::after {
+      opacity: 1;
     }
 
     /* Contact CTA */
     .contact-cta {
-      padding: 100px 40px;
+      padding: 120px 40px;
       background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
       text-align: center;
       color: var(--wedding-white);
@@ -272,10 +204,11 @@
     }
 
     .contact-cta h2 {
-      font-size: 36px;
+      font-size: clamp(32px, 5vw, 48px);
       font-weight: 700;
       color: var(--wedding-white);
       margin: 0 0 24px;
+      letter-spacing: -0.02em;
     }
 
     .contact-cta p {
@@ -287,70 +220,27 @@
 
     .contact-button {
       display: inline-block;
-      padding: 18px 48px;
+      padding: 20px 56px;
       background: var(--wedding-gold);
       color: var(--wedding-black);
       font-size: 18px;
       font-weight: 700;
       text-decoration: none;
-      border-radius: 12px;
-      transition: all 0.3s ease;
+      border-radius: 50px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       border: none;
       cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
     .contact-button:hover {
       background: var(--wedding-soft-gold);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 12px 40px rgba(212, 175, 55, 0.4);
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .wedding-hero {
-        padding: 80px 24px 60px;
-      }
-
-      .wedding-hero h1 {
-        font-size: 32px;
-      }
-
-      .wedding-hero-content p {
-        font-size: 16px;
-      }
-
-      .what-i-bring {
-        padding: 24px;
-      }
-
-      .what-i-bring ul {
-        grid-template-columns: 1fr;
-      }
-
-      .portfolio-section, .featured-projects, .contact-cta {
-        padding: 60px 24px;
-      }
-
-      .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
-
-      .featured-gallery {
-        grid-template-columns: 1fr;
-      }
-
-      .section-title, .featured-intro h2 {
-        font-size: 28px;
-      }
-
-      .featured-header {
-        font-size: 20px;
-        padding: 20px 24px;
-      }
-    }
-
-    /* Lightbox for full-screen image viewing */
+    /* Lightbox */
     .lightbox {
       display: none;
       position: fixed;
@@ -359,44 +249,127 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.95);
+      background: rgba(0, 0, 0, 0.97);
       align-items: center;
       justify-content: center;
+      animation: fadeIn 0.3s ease;
     }
 
     .lightbox.active {
       display: flex;
     }
 
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
     .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
+      max-width: 92%;
+      max-height: 92%;
       object-fit: contain;
+      animation: zoomIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
 
     .lightbox-close {
       position: absolute;
-      top: 32px;
-      right: 48px;
+      top: 40px;
+      right: 60px;
       color: var(--wedding-white);
-      font-size: 48px;
+      font-size: 50px;
       font-weight: 300;
       cursor: pointer;
-      transition: color 0.3s ease;
+      transition: all 0.3s ease;
       z-index: 10000;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      backdrop-filter: blur(10px);
     }
 
     .lightbox-close:hover {
       color: var(--wedding-gold);
+      background: rgba(212, 175, 55, 0.2);
+      transform: rotate(90deg);
+    }
+
+    /* Responsive */
+    @media (max-width: 1400px) {
+      .gallery-masonry {
+        columns: 3;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .gallery-masonry {
+        columns: 2;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .wedding-hero {
+        padding: 80px 24px 60px;
+        min-height: 100vh;
+      }
+
+      .wedding-hero h1 {
+        font-size: 36px;
+      }
+
+      .wedding-hero-content p {
+        font-size: 16px;
+      }
+
+      .what-i-bring {
+        padding: 24px;
+        margin-top: 32px;
+      }
+
+      .what-i-bring ul {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .gallery-masonry {
+        columns: 1;
+      }
+
+      .contact-cta {
+        padding: 80px 24px;
+      }
+
+      .lightbox-close {
+        top: 24px;
+        right: 24px;
+        font-size: 40px;
+        width: 50px;
+        height: 50px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Hero Section -->
+  <!-- Hero Section with Background Image -->
   <section class="wedding-hero">
-    <h1>Capturing Love Stories</h1>
     <div class="wedding-hero-content">
+      <h1>Capturing Love Stories</h1>
+
       <p>I'm often asked to photograph weddings, and honestly? I love it. While much of my work focuses on corporate and commercial clients, there's something uniquely special about documenting two people promising forever to each other.</p>
 
       <p>Wedding photography isn't just what I do—it's about being trusted to preserve the fleeting, unrepeatable moments that make your day uniquely yours. The nervous laughter during getting ready. The tear that catches the light during vows. The dance floor chaos that somehow feels like the most important thing in the world.</p>
@@ -406,68 +379,19 @@
       <div class="what-i-bring">
         <h3>What I Bring</h3>
         <ul>
-          <li><strong>Editorial Eye with Personal Touch</strong> - Clean, timeless images with artistic flair</li>
-          <li><strong>Candid + Composed</strong> - I'll capture the authentic moments and create beautiful portraits</li>
-          <li><strong>Stress-Free Process</strong> - You focus on enjoying your day; I'll handle the rest</li>
-          <li><strong>Flexible Approach</strong> - From elopements to full-day celebrations, I adapt to your vision</li>
+          <li><strong>Editorial Eye with Personal Touch</strong>Clean, timeless images with artistic flair</li>
+          <li><strong>Candid + Composed</strong>I'll capture the authentic moments and create beautiful portraits</li>
+          <li><strong>Stress-Free Process</strong>You focus on enjoying your day; I'll handle the rest</li>
+          <li><strong>Flexible Approach</strong>From elopements to full-day celebrations, I adapt to your vision</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- Main Portfolio Section -->
+  <!-- Modern Masonry Gallery -->
   <section class="portfolio-section">
-    <div class="portfolio-container">
-      <h2 class="section-title">Portfolio</h2>
-      <div class="portfolio-grid" id="mainPortfolio">
-        <!-- Portfolio images will be loaded here -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Projects Section -->
-  <section class="featured-projects">
-    <div class="featured-container">
-      <div class="featured-intro">
-        <h2>Featured Weddings</h2>
-        <p>A closer look at some of the couples I've had the privilege to work with.</p>
-      </div>
-
-      <!-- Featured Project 1: Alexis & Aaron -->
-      <div class="featured-item">
-        <button class="featured-header" onclick="toggleFeatured(this)">
-          <span>Alexis & Aaron</span>
-        </button>
-        <div class="featured-gallery-wrapper">
-          <div class="featured-gallery" id="alexisAaronGallery">
-            <!-- Images will be loaded here -->
-          </div>
-        </div>
-      </div>
-
-      <!-- Featured Project 2: Kathy & Daniel -->
-      <div class="featured-item">
-        <button class="featured-header" onclick="toggleFeatured(this)">
-          <span>Kathy & Daniel</span>
-        </button>
-        <div class="featured-gallery-wrapper">
-          <div class="featured-gallery" id="kathyDanielGallery">
-            <!-- Images will be loaded here -->
-          </div>
-        </div>
-      </div>
-
-      <!-- Featured Project 3: Kyle & Aaron -->
-      <div class="featured-item">
-        <button class="featured-header" onclick="toggleFeatured(this)">
-          <span>Kyle & Aaron</span>
-        </button>
-        <div class="featured-gallery-wrapper">
-          <div class="featured-gallery" id="kyleAaronGallery">
-            <!-- Images will be loaded here -->
-          </div>
-        </div>
-      </div>
+    <div class="gallery-masonry" id="galleryMasonry">
+      <!-- Images will be loaded here -->
     </div>
   </section>
 
@@ -487,12 +411,11 @@
   </div>
 
   <script>
-    // Portfolio images data
-    const portfolioImages = [
+    // All wedding images combined
+    const allImages = [
       'images/wedding/portfolio/main_wedding_portfolioAlexisAaron0013.jpg',
       'images/wedding/portfolio/main_wedding_portfolioAlexisAaron0190.jpg',
       'images/wedding/portfolio/main_wedding_portfolioHorizontal - Bride Looking In Mirror.jpg',
-      'images/wedding/portfolio/main_wedding_portfolioHorizontal - Bride Portrait Neon Blur.jpg',
       'images/wedding/portfolio/main_wedding_portfolioHorizontal - Bride Sitting Chair Over Shoulder.jpg',
       'images/wedding/portfolio/main_wedding_portfolioHorizontal - Couple Forehead Touch Neon.jpg',
       'images/wedding/portfolio/main_wedding_portfolioHorizontal - Couple Sitting Floor Hard Light.jpg',
@@ -525,10 +448,7 @@
       'images/wedding/portfolio/main_wedding_portfoliovertical_Kyle_Aaron0064.jpg',
       'images/wedding/portfolio/main_wedding_portfoliovertical_Kyle_Aaron0141.jpg',
       'images/wedding/portfolio/main_wedding_portfoliovertical_Kyle_Aaron0221.jpg',
-      'images/wedding/portfolio/main_wedding_portfoliovertical_carolinewesley0006__.jpg'
-    ];
-
-    const alexisAaronImages = [
+      'images/wedding/portfolio/main_wedding_portfoliovertical_carolinewesley0006__.jpg',
       'images/wedding/featured/alexis-aaron/project_highlight_alexis_aaronAlexisAaron00011.jpg',
       'images/wedding/featured/alexis-aaron/project_highlight_alexis_aaronAlexisAaron0013.jpg',
       'images/wedding/featured/alexis-aaron/project_highlight_alexis_aaronAlexisAaron0021.jpg',
@@ -537,10 +457,7 @@
       'images/wedding/featured/alexis-aaron/project_highlight_alexis_aaronAlexisAaron0190.jpg',
       'images/wedding/featured/alexis-aaron/project_highlight_alexis_aaronAlexisAaron0210.jpg',
       'images/wedding/featured/alexis-aaron/project_highlight_alexis_aaronAlexisAaron0221.jpg',
-      'images/wedding/featured/alexis-aaron/project_highlight_alexis_aaronAlexisAaron0239.jpg'
-    ];
-
-    const kathyDanielImages = [
+      'images/wedding/featured/alexis-aaron/project_highlight_alexis_aaronAlexisAaron0239.jpg',
       'images/wedding/featured/kathy-daniel/project_highlight_Daniel_kathyKathy and Daniel0003.jpg',
       'images/wedding/featured/kathy-daniel/project_highlight_Daniel_kathyKathy and Daniel0016.jpg',
       'images/wedding/featured/kathy-daniel/project_highlight_Daniel_kathyKathy and Daniel0023.jpg',
@@ -551,10 +468,7 @@
       'images/wedding/featured/kathy-daniel/project_highlight_Daniel_kathyKathy and Daniel0196.jpg',
       'images/wedding/featured/kathy-daniel/project_highlight_Daniel_kathyKathy and Daniel0215.jpg',
       'images/wedding/featured/kathy-daniel/project_highlight_Daniel_kathyvertical_Kathy and Daniel0009.jpg',
-      'images/wedding/featured/kathy-daniel/project_highlight_Daniel_kathyvertical_Kathy and Daniel0109.jpg'
-    ];
-
-    const kyleAaronImages = [
+      'images/wedding/featured/kathy-daniel/project_highlight_Daniel_kathyvertical_Kathy and Daniel0109.jpg',
       'images/wedding/featured/kyle-aaron/project_highlight_kyle_aaronKyle_Aaron0077.jpg',
       'images/wedding/featured/kyle-aaron/project_highlight_kyle_aaronKyle_Aaron0119.jpg',
       'images/wedding/featured/kyle-aaron/project_highlight_kyle_aaronKyle_Aaron0186.jpg',
@@ -568,71 +482,34 @@
       'images/wedding/featured/kyle-aaron/project_highlight_kyle_aaronvertical_Kyle_Aaron0221.jpg'
     ];
 
-    // Load main portfolio
-    function loadPortfolio() {
-      const grid = document.getElementById('mainPortfolio');
-      portfolioImages.forEach(src => {
+    // Shuffle array function
+    function shuffleArray(array) {
+      const shuffled = [...array];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
+
+    // Load gallery
+    function loadGallery() {
+      const gallery = document.getElementById('galleryMasonry');
+      const shuffledImages = shuffleArray(allImages);
+
+      shuffledImages.forEach(src => {
+        const item = document.createElement('div');
+        item.className = 'gallery-item';
+
         const img = document.createElement('img');
         img.src = src;
         img.alt = 'Wedding photography';
         img.loading = 'lazy';
-        img.onclick = () => openLightbox(src);
-        grid.appendChild(img);
+
+        item.appendChild(img);
+        item.onclick = () => openLightbox(src);
+        gallery.appendChild(item);
       });
-    }
-
-    // Load featured galleries
-    function loadFeaturedGalleries() {
-      // Alexis & Aaron
-      const alexisGallery = document.getElementById('alexisAaronGallery');
-      alexisAaronImages.forEach(src => {
-        const img = document.createElement('img');
-        img.src = src;
-        img.alt = 'Alexis & Aaron wedding';
-        img.loading = 'lazy';
-        img.onclick = () => openLightbox(src);
-        alexisGallery.appendChild(img);
-      });
-
-      // Kathy & Daniel
-      const kathyGallery = document.getElementById('kathyDanielGallery');
-      kathyDanielImages.forEach(src => {
-        const img = document.createElement('img');
-        img.src = src;
-        img.alt = 'Kathy & Daniel wedding';
-        img.loading = 'lazy';
-        img.onclick = () => openLightbox(src);
-        kathyGallery.appendChild(img);
-      });
-
-      // Kyle & Aaron
-      const kyleGallery = document.getElementById('kyleAaronGallery');
-      kyleAaronImages.forEach(src => {
-        const img = document.createElement('img');
-        img.src = src;
-        img.alt = 'Kyle & Aaron wedding';
-        img.loading = 'lazy';
-        img.onclick = () => openLightbox(src);
-        kyleGallery.appendChild(img);
-      });
-    }
-
-    // Toggle featured project accordion
-    function toggleFeatured(button) {
-      const wrapper = button.nextElementSibling;
-      const isActive = button.classList.contains('active');
-
-      // Close all accordions
-      document.querySelectorAll('.featured-header').forEach(header => {
-        header.classList.remove('active');
-        header.nextElementSibling.classList.remove('active');
-      });
-
-      // Open clicked accordion if it wasn't already active
-      if (!isActive) {
-        button.classList.add('active');
-        wrapper.classList.add('active');
-      }
     }
 
     // Lightbox functions
@@ -650,18 +527,15 @@
       document.body.style.overflow = 'auto';
     }
 
-    // Keyboard navigation for lightbox
+    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         closeLightbox();
       }
     });
 
-    // Load all images on page load
-    window.addEventListener('DOMContentLoaded', () => {
-      loadPortfolio();
-      loadFeaturedGalleries();
-    });
+    // Load gallery on page load
+    window.addEventListener('DOMContentLoaded', loadGallery);
   </script>
 
 </body>
