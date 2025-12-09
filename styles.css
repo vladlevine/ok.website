@@ -1688,3 +1688,30 @@ body {
 .phone-reveal-btn:active {
   transform: translateY(0);
 }
+
+/* Text-only variant for footer links */
+.phone-reveal-text {
+  display: inline;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.phone-reveal-text:hover {
+  background: none;
+  border: none;
+  transform: none;
+  opacity: 0.7;
+}
+
+.phone-reveal-text:active {
+  transform: none;
+}

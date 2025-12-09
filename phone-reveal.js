@@ -18,7 +18,7 @@ function revealPhone(button) {
   // On desktop, reveal the number
   button.innerHTML = phoneNumber;
   button.href = phoneLink;
-  button.style.pointerEvents = 'none'; // Prevent further clicks
+  button.style.pointerEvents = 'auto'; // Allow clicking the revealed number
   button.onclick = null; // Remove click handler
 
   // Add a subtle fade-in effect
