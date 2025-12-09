@@ -765,7 +765,7 @@
 
             <button type="submit" style="width: 100%; padding: 18px; background: #D4AF37; color: #000; font-size: 18px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3); margin-top: 16px;">Get My Quote →</button>
 
-            <p style="text-align: center; margin-top: 24px; font-size: 15px; color: #6B7280;">We respond within 24 hours with transparent pricing. Or call: <a href="tel:+19294450603" style="color: #D4AF37; text-decoration: none; font-weight: 600;">(929) 445-0603</a></p>
+            <p style="text-align: center; margin-top: 24px; font-size: 15px; color: #6B7280;">We respond within 24 hours with transparent pricing. Or: <a href="#" onclick="revealPhone(this); return false;" class="phone-reveal-btn" style="display: inline-flex;">📞 Click to Call</a></p>
           </div>
         </form>
       </div>
@@ -800,7 +800,7 @@
           <a href="blog.html">Blog</a>
           <a href="faq.html">FAQ</a>
           <a href="contact.html">Contact</a>
-          <a href="tel:+19294450603">(929) 445-0603</a>
+          <a href="#" onclick="revealPhone(this); return false;" class="phone-reveal-btn">📞 Click to Call</a>
           <a href="mailto:heyvladlevine@gmail.com">Email Us</a>
         </div>
 
@@ -911,6 +911,9 @@
       });
     }
   </script>
+
+  <!-- Phone Reveal Script -->
+  <script src="phone-reveal.js"></script>
 
 </body>
 </html>

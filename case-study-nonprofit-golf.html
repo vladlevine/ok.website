@@ -1075,7 +1075,7 @@
         <p>Most videographers film your event, edit a recap, call it done.</p>
         <p>We build content libraries that keep working long after the event ends.</p>
         <a href="contact.html" class="cs-cta-button">Tell us about your event →</a>
-        <p class="cs-cta-phone">Or call: <a href="tel:+19294450603">(929) 445-0603</a></p>
+        <p class="cs-cta-phone">Or call: <a href="#" onclick="revealPhone(this); return false;" class="phone-reveal-btn">📞 Click to Call</a></p>
       </div>
     </section>
 
@@ -1113,7 +1113,7 @@
           <a href="blog.html">Blog</a>
           <a href="faq.html">FAQ</a>
           <a href="contact.html">Contact</a>
-          <a href="tel:+19294450603">(929) 445-0603</a>
+          <a href="#" onclick="revealPhone(this); return false;" class="phone-reveal-btn">📞 Click to Call</a>
           <a href="mailto:heyvladlevine@gmail.com">Email Us</a>
         </div>
 
@@ -1185,6 +1185,9 @@
       observer.observe(section);
     });
   </script>
+
+  <!-- Phone Reveal Script -->
+  <script src="phone-reveal.js"></script>
 
 </body>
 </html>

@@ -469,9 +469,9 @@
           <span>✉</span>
           heyvladlevine@gmail.com
         </a>
-        <a href="tel:+19294450603">
+        <a href="#" onclick="revealPhone(this); return false;" class="phone-reveal-btn">
           <span>📞</span>
-          (929) 445-0603
+          Click to Call
         </a>
         <a href="https://www.linkedin.com/in/vladlevine/" target="_blank" rel="noopener">
           <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="social-icon-small">
@@ -513,7 +513,7 @@
           <a href="blog.html">Blog</a>
           <a href="faq.html">FAQ</a>
           <a href="contact.html">Contact</a>
-          <a href="tel:+19294450603">(929) 445-0603</a>
+          <a href="#" onclick="revealPhone(this); return false;" class="phone-reveal-btn">📞 Click to Call</a>
           <a href="mailto:heyvladlevine@gmail.com"><img src="https://res.cloudinary.com/dtuxu64zp/image/upload/w_20,h_20,q_auto,f_auto/v1762915229/email_icon_letter_ccwutp.png" alt="Email icon" style="width: 16px; height: 16px; margin-right: 8px; vertical-align: middle;">Email Us</a>
         </div>
 
@@ -564,6 +564,9 @@
       }
     });
   </script>
+
+  <!-- Phone Reveal Script -->
+  <script src="phone-reveal.js"></script>
 
 </body>
 </html>
