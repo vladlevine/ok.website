@@ -779,7 +779,7 @@
             <input type="tel" name="phone" placeholder="Phone (optional)" style="width: 100%; padding: 14px; margin-bottom: 12px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px;">
 
             <button type="submit" style="width: 100%; padding: 18px; background: #64748B; color: #FFF; font-size: 18px; font-weight: 700; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s; margin-top: 16px;">Get My Quote →</button>
-            <p style="text-align: center; margin-top: 24px; font-size: 15px; color: #6B7280;">Or call: <a href="tel:+19294450603" style="color: #64748B; text-decoration: none; font-weight: 600;">(929) 445-0603</a></p>
+            <p style="text-align: center; margin-top: 24px; font-size: 15px; color: #6B7280;">Or: <a href="#" onclick="revealPhone(this); return false;" class="phone-reveal-btn" style="display: inline-flex;">📞 Call Us</a></p>
           </div>
         </form>
       </div>
@@ -814,7 +814,7 @@
           <a href="blog.html">Blog</a>
           <a href="faq.html">FAQ</a>
           <a href="contact.html">Contact</a>
-          <a href="tel:+19294450603">(929) 445-0603</a>
+          <a href="#" onclick="revealPhone(this); return false;" class="phone-reveal-text">Phone</a>
           <a href="mailto:heyvladlevine@gmail.com">Email Us</a>
         </div>
 
@@ -925,6 +925,9 @@
       });
     }
   </script>
+
+  <!-- Phone Reveal Script -->
+  <script src="phone-reveal.js"></script>
 
 </body>
 </html>
