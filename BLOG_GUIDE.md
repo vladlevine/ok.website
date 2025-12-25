@@ -225,6 +225,80 @@ LinkedIn's own data shows that profiles with professional photos get 14x more pr
 - Over-explaining obvious concepts
 - **Excessive bullet lists in every section** (use sparingly, favor paragraphs)
 
+---
+
+### Narrative Flow (CRITICAL for Human Feel)
+
+**The Problem:** AI models default to bullet points because they're trained to optimize for "readability," which they interpret as "lists." This makes content feel robotic and formulaic.
+
+**The Solution:** Force narrative mode with specific structural instructions.
+
+#### Required Narrative Techniques
+
+**1. Use Continuous Narrative Flow**
+- Write in long-form paragraphs that connect ideas
+- Each paragraph should flow naturally into the next
+- Use transitional phrases: "Think about what happens next," "Here's why that matters," "But there's more to it"
+- Treat the post as a cohesive essay/article, not a summary or outline
+
+**2. Vary Sentence Length (Burstiness)**
+- Mix short punchy sentences with longer descriptive ones
+- Example: "Speed matters. When you send photos while the event is fresh in clients' minds, it keeps momentum going and shows you're responsive—not just another vendor who disappears after the invoice is paid."
+- Avoid robotic rhythm where every sentence is the same length
+
+**3. Avoid Subheadings for Every Single Point**
+- Don't break every idea into its own H3
+- Let ideas breathe within paragraph groups
+- Use subheadings only for major topic shifts
+- Example: Instead of "What to Avoid" → "1. Logos" → "2. Patterns" → "3. Colors" as separate H3s, write it as flowing paragraphs
+
+**4. Write in Conversational, Organic Tone**
+- Use natural language patterns: "Here's the thing," "Think about it this way," "Let me explain"
+- Include rhetorical questions that create dialogue feel
+- Use em-dashes and parenthetical asides for conversational rhythm
+
+#### When Bullet Lists ARE Appropriate
+
+Bullet lists work well for:
+- **Checklists and action items** ("Bring these items to your shoot")
+- **Comparison lists** (pricing tiers, package options)
+- **Technical specifications** (equipment lists, file formats)
+- **Quick reference guides** (FAQ answers, troubleshooting steps)
+
+Bullet lists DON'T work for:
+- **Explaining concepts** (use narrative paragraphs)
+- **Telling stories** (use flowing prose)
+- **Making arguments** (use connected paragraphs)
+- **Describing processes with nuance** (use paragraph form)
+
+#### Example: Bullet-Heavy (BAD) vs. Narrative Flow (GOOD)
+
+**❌ Bullet-Heavy (Feels AI-Generated):**
+```
+### Relationship Marketing Value of Professional Event Photos
+
+- **Personalized follow-up content**—Send clients their photos with a thank-you message
+- **Social proof for future clients**—Shows you invest in relationships
+- **Content clients want to share**—Gets your brand visibility
+- **Ongoing engagement touchpoints**—Keeps relationships active
+```
+
+**✅ Narrative Flow (Feels Human):**
+```
+Think about what happens after the event. You send clients their photos with a thank-you message—it's a natural reason to reach out that feels personal, not transactional. Those same high-quality event photos become social proof for prospective clients, showing that you invest in relationships beyond just closing deals. When you give clients professional photos they actually want to share, they'll post them on LinkedIn or use them internally. Your brand gets visibility without you having to ask for it.
+
+The real value compounds over time. Feature those client photos (with permission) in newsletters, case studies, or anniversary posts months later—it keeps the relationship active long after the champagne glasses are cleared.
+```
+
+**Why the second works better:**
+- Flows like someone talking to you
+- Uses transitional phrases ("Think about," "The real value")
+- Varies sentence length (short and long)
+- Feels organic, not templated
+- Same information, more engaging delivery
+
+---
+
 ### Opening Approaches
 
 **Example of an engaging opening:**
