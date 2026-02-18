@@ -358,22 +358,33 @@
 
     /* Alternative Contact */
     .alt-contact {
-      text-align: center;
       padding: 60px 40px;
       background: var(--contact-light-bg);
     }
 
-    .alt-contact h3 {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--contact-black);
-      margin-bottom: 16px;
+    .alt-contact-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      text-align: center;
     }
 
-    .alt-contact p {
-      font-size: 17px;
+    .alt-contact-item h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--contact-black);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .alt-contact-item p {
+      font-size: 16px;
+      line-height: 1.7;
       color: var(--contact-text-secondary);
-      margin-bottom: 8px;
+      margin: 0;
     }
 
     .alt-contact a {
@@ -384,6 +395,13 @@
 
     .alt-contact a:hover {
       text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .alt-contact-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
     }
 
     /* Responsive */
@@ -421,6 +439,138 @@
 
     .hidden {
       display: none !important;
+    }
+
+    /* Contact Options Section */
+    .contact-options {
+      background: #FFFFFF;
+      padding: 80px 40px;
+    }
+
+    .contact-options-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-option {
+      background: #F9FAFB;
+      border: 2px solid #E5E7EB;
+      border-radius: 16px;
+      padding: 48px 40px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .contact-option:hover {
+      border-color: var(--contact-cyan);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+    }
+
+    .contact-option-icon {
+      font-size: 48px;
+      margin-bottom: 24px;
+    }
+
+    .contact-option h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--contact-black);
+    }
+
+    .contact-option p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--contact-text-secondary);
+      margin-bottom: 28px;
+    }
+
+    .contact-option .btn {
+      display: inline-block;
+      padding: 16px 32px;
+      font-size: 16px;
+    }
+
+    .contact-option-email .btn-secondary {
+      background: transparent;
+      color: var(--contact-cyan);
+      border: 2px solid var(--contact-cyan);
+      word-break: break-all;
+    }
+
+    .contact-option-email .btn-secondary:hover {
+      background: var(--contact-cyan);
+      color: var(--contact-white);
+    }
+
+    /* No Phone Section */
+    .no-phone-section {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.03) 0%, rgba(236, 72, 153, 0.03) 100%);
+      padding: 60px 40px;
+    }
+
+    .no-phone-content {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .no-phone-content p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--contact-black);
+      margin-bottom: 16px;
+    }
+
+    .no-phone-content strong {
+      font-weight: 700;
+      color: var(--contact-black);
+    }
+
+    /* Quote Form Section Header */
+    .form-section-header {
+      text-align: center;
+      padding: 60px 40px 0;
+      background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%);
+    }
+
+    .form-section-header h2 {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      color: var(--contact-black);
+      margin-bottom: 12px;
+    }
+
+    .form-section-header p {
+      font-size: 18px;
+      color: var(--contact-text-secondary);
+    }
+
+    @media (max-width: 768px) {
+      .contact-options {
+        padding: 60px 24px;
+      }
+
+      .contact-options-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .contact-option {
+        padding: 32px 24px;
+      }
+
+      .no-phone-section {
+        padding: 48px 24px;
+      }
+
+      .no-phone-content p {
+        font-size: 16px;
+      }
     }
 
     .date-field-wrapper {
@@ -480,12 +630,47 @@
 
   <!-- Hero Section -->
   <section class="contact-hero">
-    <h1>Tell Us What You Need</h1>
+    <h1>Let's Talk</h1>
     <p>No sales pitch, just transparent pricing.</p>
   </section>
 
+  <!-- Contact Options Section -->
+  <section class="contact-options">
+    <div class="contact-options-container">
+      <!-- Option 1: Form -->
+      <div class="contact-option contact-option-form">
+        <div class="contact-option-icon">📋</div>
+        <h2>Use the Quote Form</h2>
+        <p>Quick 6-question form. Takes 2 minutes.<br>We'll respond within 24 hours with options.</p>
+        <a href="#quote-form" class="btn btn-primary" onclick="document.getElementById('quote-form').scrollIntoView({behavior: 'smooth'}); return false;">Start Form →</a>
+      </div>
+
+      <!-- Option 2: Email -->
+      <div class="contact-option contact-option-email">
+        <div class="contact-option-icon">✉️</div>
+        <h2>Email Directly</h2>
+        <p>Prefer to just send an email? Many of our corporate clients do. Write us what you need, and we'll get back to you.</p>
+        <a href="mailto:contact@thelightroomstudios.com" class="btn btn-secondary">contact@thelightroomstudios.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why No Phone Section -->
+  <section class="no-phone-section">
+    <div class="no-phone-content">
+      <p><strong>You might notice there's no phone number.</strong> That's intentional.</p>
+      <p>Here's the thing: most initial conversations involve sharing event details, reviewing options, and discussing scope—stuff that works better in writing than in a 20-minute phone call where you're trying to take notes while I talk. Email lets me send you a real proposal you can review with your team, forward to your boss, or sleep on without pressure.</p>
+      <p>Once we're working together? I'm absolutely available for calls when they make sense. But for initial quotes, email and this form give you a better experience and get you faster answers.</p>
+      <p style="margin-top: 24px; font-style: italic; color: #6B7280;">— Vlad</p>
+    </div>
+  </section>
+
   <!-- Form Section -->
-  <div class="form-wrapper">
+  <div class="form-section-header" id="quote-form">
+    <h2>Get a Quote</h2>
+    <p>6 quick questions. Takes about 2 minutes.</p>
+  </div>
+  <div class="form-wrapper" style="background: linear-gradient(180deg, #F9FAFB 0%, #FFFFFF 100%);">
     <div class="form-container">
 
       <!-- Progress Bar -->
@@ -813,8 +998,20 @@
 
   <!-- Alternative Contact Methods -->
   <section class="alt-contact">
-    <h3>Prefer Email?</h3>
-    <p><a href="mailto:heyvladlevine@gmail.com">heyvladlevine@gmail.com</a></p>
+    <div class="alt-contact-grid">
+      <div class="alt-contact-item">
+        <h3>Email</h3>
+        <p><a href="mailto:contact@thelightroomstudios.com">contact@thelightroomstudios.com</a></p>
+      </div>
+      <div class="alt-contact-item">
+        <h3>Office</h3>
+        <p>99 Wall Street #1751<br>New York, NY 10005</p>
+      </div>
+      <div class="alt-contact-item">
+        <h3>Response Time</h3>
+        <p>We respond to all inquiries within 24 hours during business days (Mon-Fri, 9am-6pm EST).</p>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -844,7 +1041,7 @@
           <a href="blog.html">Blog</a>
           <a href="faq.html">FAQ</a>
           <a href="contact.html">Contact</a>
-          <a href="mailto:heyvladlevine@gmail.com">Email Us</a>
+          <a href="mailto:contact@thelightroomstudios.com">Email Us</a>
         </div>
 
         <div>
@@ -1091,12 +1288,12 @@
             document.querySelector('.progress-container').style.display = 'none';
             successScreen.classList.add('active');
           } else {
-            alert('There was a problem submitting your request. Please try again or email us directly at heyvladlevine@gmail.com');
+            alert('There was a problem submitting your request. Please try again or email us directly at contact@thelightroomstudios.com');
             nextBtn.disabled = false;
             nextBtn.textContent = 'Send My Request →';
           }
         }).catch(error => {
-          alert('There was a problem submitting your request. Please try again or email us directly at heyvladlevine@gmail.com');
+          alert('There was a problem submitting your request. Please try again or email us directly at contact@thelightroomstudios.com');
           nextBtn.disabled = false;
           nextBtn.textContent = 'Send My Request →';
         });
