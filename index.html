@@ -30,7 +30,7 @@
       "postalCode": "10005",
       "addressCountry": "US"
     },
-    "telephone": "+19294450603",
+
     "priceRange": "$$",
     "url": "https://corevisualsnyc.com",
     "serviceArea": {
@@ -82,8 +82,6 @@
   <!-- Skip to content for accessibility -->
   <a href="#main-content" class="skip-to-content">Skip to content</a>
 
-  <!-- Floating Call Button - Mobile Only -->
-  <a href="tel:+19294450603" class="floating-call-button" aria-label="Call us now">📞</a>
 
   <!-- Header & Navigation -->
   <header class="header" id="header">
@@ -340,9 +338,6 @@
           <h2>Tell us what you need.</h2>
           <p style="max-width: 700px; margin: 0 auto 48px; font-size: 22px;">No sales pitch. No mystery pricing.<br>Send us the details, we'll send you options.</p>
           <a href="contact.html" class="btn btn-white">Get in Touch</a>
-          <p style="font-size: 16px; color: rgba(255, 255, 255, 0.6); margin-top: 32px; margin-bottom: 0;">
-            Or: <a href="#" onclick="revealPhone(this); return false;" class="phone-reveal-btn" style="display: inline-flex;">📞 Call Us</a>
-          </p>
         </div>
       </div>
     </section>
@@ -380,7 +375,7 @@
           <a href="blog.html">Blog</a>
           <a href="faq.html">FAQ</a>
           <a href="contact.html">Contact</a>
-          <a href="#" onclick="revealPhone(this); return false;" class="phone-reveal-text">Phone</a>
+
           <a href="mailto:heyvladlevine@gmail.com">Email Us</a>
         </div>
 
@@ -779,11 +774,6 @@
       button.addEventListener('click', () => triggerHaptic('medium'));
     });
 
-    // Add haptic to floating call button
-    const floatingCallButton = document.querySelector('.floating-call-button');
-    if (floatingCallButton) {
-      floatingCallButton.addEventListener('click', () => triggerHaptic('strong'));
-    }
 
     // Add haptic to swipe gestures on testimonials
     if (window.innerWidth <= 768) {
@@ -850,8 +840,6 @@
     })();
   </script>
 
-  <!-- Phone Reveal Script -->
-  <script src="phone-reveal.js"></script>
 
 </body>
 </html>
