@@ -794,50 +794,6 @@
       }
     }
 
-    // ============================================
-    // Elastic Scroll Bounce Effect
-    // ============================================
-    (function() {
-      let startY = 0;
-      let isOverscrolling = false;
-
-      document.addEventListener('touchstart', (e) => {
-        startY = e.touches[0].pageY;
-      }, { passive: true });
-
-      document.addEventListener('touchmove', (e) => {
-        const currentY = e.touches[0].pageY;
-        const scrollTop = window.pageYOffset;
-        const scrollHeight = document.documentElement.scrollHeight;
-        const clientHeight = document.documentElement.clientHeight;
-
-        // At top of page
-        if (scrollTop === 0 && currentY > startY) {
-          isOverscrolling = true;
-          document.body.style.transform = `translateY(${Math.min((currentY - startY) * 0.3, 50)}px)`;
-        }
-
-        // At bottom of page
-        if (scrollTop + clientHeight >= scrollHeight && currentY < startY) {
-          isOverscrolling = true;
-          document.body.style.transform = `translateY(${Math.max((currentY - startY) * 0.3, -50)}px)`;
-        }
-      }, { passive: true });
-
-      document.addEventListener('touchend', () => {
-        if (isOverscrolling) {
-          document.body.style.transition = 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
-          document.body.style.transform = 'translateY(0)';
-
-          setTimeout(() => {
-            document.body.style.transition = '';
-            isOverscrolling = false;
-          }, 400);
-
-          triggerHaptic('light');
-        }
-      }, { passive: true });
-    })();
   </script>
 
 
