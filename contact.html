@@ -358,22 +358,33 @@
 
     /* Alternative Contact */
     .alt-contact {
-      text-align: center;
       padding: 60px 40px;
       background: var(--contact-light-bg);
     }
 
-    .alt-contact h3 {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--contact-black);
-      margin-bottom: 16px;
+    .alt-contact-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      text-align: center;
     }
 
-    .alt-contact p {
-      font-size: 17px;
+    .alt-contact-item h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--contact-black);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .alt-contact-item p {
+      font-size: 16px;
+      line-height: 1.7;
       color: var(--contact-text-secondary);
-      margin-bottom: 8px;
+      margin: 0;
     }
 
     .alt-contact a {
@@ -384,6 +395,13 @@
 
     .alt-contact a:hover {
       text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .alt-contact-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
     }
 
     /* Responsive */
@@ -423,6 +441,138 @@
       display: none !important;
     }
 
+    /* Contact Options Section */
+    .contact-options {
+      background: #FFFFFF;
+      padding: 80px 40px;
+    }
+
+    .contact-options-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-option {
+      background: #F9FAFB;
+      border: 2px solid #E5E7EB;
+      border-radius: 16px;
+      padding: 48px 40px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .contact-option:hover {
+      border-color: var(--contact-cyan);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+    }
+
+    .contact-option-icon {
+      font-size: 48px;
+      margin-bottom: 24px;
+    }
+
+    .contact-option h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--contact-black);
+    }
+
+    .contact-option p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--contact-text-secondary);
+      margin-bottom: 28px;
+    }
+
+    .contact-option .btn {
+      display: inline-block;
+      padding: 16px 32px;
+      font-size: 16px;
+    }
+
+    .contact-option-email .btn-secondary {
+      background: transparent;
+      color: var(--contact-cyan);
+      border: 2px solid var(--contact-cyan);
+      word-break: break-all;
+    }
+
+    .contact-option-email .btn-secondary:hover {
+      background: var(--contact-cyan);
+      color: var(--contact-white);
+    }
+
+    /* No Phone Section */
+    .no-phone-section {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.03) 0%, rgba(236, 72, 153, 0.03) 100%);
+      padding: 60px 40px;
+    }
+
+    .no-phone-content {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .no-phone-content p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--contact-black);
+      margin-bottom: 16px;
+    }
+
+    .no-phone-content strong {
+      font-weight: 700;
+      color: var(--contact-black);
+    }
+
+    /* Quote Form Section Header */
+    .form-section-header {
+      text-align: center;
+      padding: 60px 40px 0;
+      background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%);
+    }
+
+    .form-section-header h2 {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      color: var(--contact-black);
+      margin-bottom: 12px;
+    }
+
+    .form-section-header p {
+      font-size: 18px;
+      color: var(--contact-text-secondary);
+    }
+
+    @media (max-width: 768px) {
+      .contact-options {
+        padding: 60px 24px;
+      }
+
+      .contact-options-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .contact-option {
+        padding: 32px 24px;
+      }
+
+      .no-phone-section {
+        padding: 48px 24px;
+      }
+
+      .no-phone-content p {
+        font-size: 16px;
+      }
+    }
+
     .date-field-wrapper {
       display: none;
       margin-top: 16px;
@@ -439,6 +589,174 @@
 
     .other-field-wrapper.active {
       display: block;
+    }
+
+    /* Modal Styles */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      z-index: 9999;
+      overflow-y: auto;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      animation: modalFadeIn 0.3s ease;
+    }
+
+    @keyframes modalFadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .modal-container {
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+      margin: 40px auto;
+      animation: modalSlideUp 0.4s ease;
+    }
+
+    @keyframes modalSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: -50px;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      border: 2px solid #E5E7EB;
+      background: #FFFFFF;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: #6B7280;
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    .modal-close:hover {
+      border-color: #0A0A0A;
+      color: #0A0A0A;
+    }
+
+    /* Contact Options - Equal Buttons */
+    .contact-options-container {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .contact-buttons-row {
+      display: flex;
+      gap: 24px;
+      width: 100%;
+      max-width: 620px;
+    }
+
+    .contact-btn {
+      flex: 1 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 20px 20px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      white-space: nowrap;
+    }
+
+    .contact-btn-primary {
+      background: var(--contact-gold);
+      color: var(--contact-white);
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
+    }
+
+    .contact-btn-primary:hover {
+      background: #c19b2e;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    }
+
+    .contact-btn-secondary {
+      background: transparent;
+      color: var(--contact-black);
+      border: 2px solid var(--contact-border);
+    }
+
+    .contact-btn-secondary:hover {
+      border-color: var(--contact-cyan);
+      color: var(--contact-cyan);
+    }
+
+    .contact-btn-icon {
+      font-size: 20px;
+    }
+
+    .contact-intro {
+      text-align: center;
+      max-width: 600px;
+      margin-bottom: 16px;
+    }
+
+    .contact-intro p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--contact-text-secondary);
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .contact-buttons-row {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .modal-overlay {
+        padding: 20px 16px;
+      }
+
+      .modal-container {
+        margin: 60px auto 20px;
+      }
+
+      .modal-close {
+        top: -45px;
+        right: 0;
+      }
     }
   </style>
 </head>
@@ -480,13 +798,44 @@
 
   <!-- Hero Section -->
   <section class="contact-hero">
-    <h1>Tell Us What You Need</h1>
+    <h1>Let's Talk</h1>
     <p>No sales pitch, just transparent pricing.</p>
   </section>
 
-  <!-- Form Section -->
-  <div class="form-wrapper">
-    <div class="form-container">
+  <!-- Contact Options Section -->
+  <section class="contact-options">
+    <div class="contact-options-container">
+      <div class="contact-intro">
+        <p>Quick 6-question form or send us an email directly.<br>We'll respond within 24 hours with transparent pricing.</p>
+      </div>
+      <div class="contact-buttons-row">
+        <button type="button" class="contact-btn contact-btn-primary" id="open-form-btn">
+          <span class="contact-btn-icon">📋</span>
+          Get a Quote
+        </button>
+        <button type="button" class="contact-btn contact-btn-secondary" id="reveal-email-btn">
+          <span class="contact-btn-icon">✉️</span>
+          <span id="email-btn-text">Email Us</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why No Phone Section -->
+  <section class="no-phone-section">
+    <div class="no-phone-content">
+      <p><strong>You might notice there's no phone number.</strong> That's intentional.</p>
+      <p>Here's the thing: most initial conversations involve sharing event details, reviewing options, and discussing scope—stuff that works better in writing than in a 20-minute phone call where you're trying to take notes while I talk. Email lets me send you a real proposal you can review with your team, forward to your boss, or sleep on without pressure.</p>
+      <p>Once we're working together? I'm absolutely available for calls when they make sense. But for initial quotes, email and this form give you a better experience and get you faster answers.</p>
+      <p style="margin-top: 24px; font-style: italic; color: #6B7280;">— Vlad</p>
+    </div>
+  </section>
+
+  <!-- Form Modal -->
+  <div class="modal-overlay" id="form-modal">
+    <div class="modal-container">
+      <button type="button" class="modal-close" id="close-modal-btn" aria-label="Close form">✕</button>
+      <div class="form-container">
 
       <!-- Progress Bar -->
       <div class="progress-container">
@@ -809,12 +1158,21 @@
       </div>
 
     </div>
+    </div>
   </div>
 
   <!-- Alternative Contact Methods -->
   <section class="alt-contact">
-    <h3>Prefer Email?</h3>
-    <p><a href="mailto:heyvladlevine@gmail.com">heyvladlevine@gmail.com</a></p>
+    <div class="alt-contact-grid" style="grid-template-columns: repeat(2, 1fr);">
+      <div class="alt-contact-item">
+        <h3>Mail</h3>
+        <p>99 Wall Street #1751<br>New York, NY 10005</p>
+      </div>
+      <div class="alt-contact-item">
+        <h3>Response Time</h3>
+        <p>We respond to all inquiries within 24 hours during business days (Mon-Fri, 9am-6pm EST).</p>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -844,7 +1202,7 @@
           <a href="blog.html">Blog</a>
           <a href="faq.html">FAQ</a>
           <a href="contact.html">Contact</a>
-          <a href="mailto:heyvladlevine@gmail.com">Email Us</a>
+          <a href="mailto:contact@thelightroomstudios.com">Email Us</a>
         </div>
 
         <div>
@@ -1091,12 +1449,12 @@
             document.querySelector('.progress-container').style.display = 'none';
             successScreen.classList.add('active');
           } else {
-            alert('There was a problem submitting your request. Please try again or email us directly at heyvladlevine@gmail.com');
+            alert('There was a problem submitting your request. Please try again or email us directly at contact@thelightroomstudios.com');
             nextBtn.disabled = false;
             nextBtn.textContent = 'Send My Request →';
           }
         }).catch(error => {
-          alert('There was a problem submitting your request. Please try again or email us directly at heyvladlevine@gmail.com');
+          alert('There was a problem submitting your request. Please try again or email us directly at contact@thelightroomstudios.com');
           nextBtn.disabled = false;
           nextBtn.textContent = 'Send My Request →';
         });
@@ -1212,6 +1570,46 @@
         header.classList.add('scrolled');
       } else {
         header.classList.remove('scrolled');
+      }
+    });
+
+    // Modal functionality
+    const modal = document.getElementById('form-modal');
+    const openFormBtn = document.getElementById('open-form-btn');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+
+    function openModal() {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    openFormBtn.addEventListener('click', openModal);
+    closeModalBtn.addEventListener('click', closeModal);
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+
+    // Reveal email on click
+    const revealEmailBtn = document.getElementById('reveal-email-btn');
+    const emailBtnText = document.getElementById('email-btn-text');
+    let emailRevealed = false;
+
+    revealEmailBtn.addEventListener('click', () => {
+      if (!emailRevealed) {
+        emailBtnText.textContent = 'contact@thelightroomstudios.com';
+        emailRevealed = true;
+      } else {
+        // On second click, open email client
+        window.location.href = 'mailto:contact@thelightroomstudios.com';
       }
     });
   </script>

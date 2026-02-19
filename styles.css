@@ -1654,15 +1654,6 @@ textarea:focus {
   border-radius: 4px;
 }
 
-/* Elastic Scroll Bounce */
-html {
-  overscroll-behavior-y: contain;
-}
-
-body {
-  overscroll-behavior-y: contain;
-}
-
 /* Phone Reveal Button Styling */
 .phone-reveal-btn {
   display: inline-flex;
