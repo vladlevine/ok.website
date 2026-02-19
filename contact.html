@@ -590,6 +590,173 @@
     .other-field-wrapper.active {
       display: block;
     }
+
+    /* Modal Styles */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      z-index: 9999;
+      overflow-y: auto;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      animation: modalFadeIn 0.3s ease;
+    }
+
+    @keyframes modalFadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .modal-container {
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+      margin: 40px auto;
+      animation: modalSlideUp 0.4s ease;
+    }
+
+    @keyframes modalSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: -50px;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      border: 2px solid #E5E7EB;
+      background: #FFFFFF;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: #6B7280;
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    .modal-close:hover {
+      border-color: #0A0A0A;
+      color: #0A0A0A;
+    }
+
+    /* Contact Options - Equal Buttons */
+    .contact-options-container {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .contact-buttons-row {
+      display: flex;
+      gap: 24px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .contact-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 20px 32px;
+      border-radius: 12px;
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+    }
+
+    .contact-btn-primary {
+      background: var(--contact-gold);
+      color: var(--contact-white);
+      box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
+    }
+
+    .contact-btn-primary:hover {
+      background: #c19b2e;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    }
+
+    .contact-btn-secondary {
+      background: transparent;
+      color: var(--contact-black);
+      border: 2px solid var(--contact-border);
+    }
+
+    .contact-btn-secondary:hover {
+      border-color: var(--contact-cyan);
+      color: var(--contact-cyan);
+    }
+
+    .contact-btn-icon {
+      font-size: 20px;
+    }
+
+    .contact-intro {
+      text-align: center;
+      max-width: 600px;
+      margin-bottom: 16px;
+    }
+
+    .contact-intro p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--contact-text-secondary);
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .contact-buttons-row {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .modal-overlay {
+        padding: 20px 16px;
+      }
+
+      .modal-container {
+        margin: 60px auto 20px;
+      }
+
+      .modal-close {
+        top: -45px;
+        right: 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -637,20 +804,18 @@
   <!-- Contact Options Section -->
   <section class="contact-options">
     <div class="contact-options-container">
-      <!-- Option 1: Form -->
-      <div class="contact-option contact-option-form">
-        <div class="contact-option-icon">📋</div>
-        <h2>Use the Quote Form</h2>
-        <p>Quick 6-question form. Takes 2 minutes.<br>We'll respond within 24 hours with options.</p>
-        <a href="#quote-form" class="btn btn-primary" onclick="document.getElementById('quote-form').scrollIntoView({behavior: 'smooth'}); return false;">Start Form →</a>
+      <div class="contact-intro">
+        <p>Quick 6-question form or send us an email directly.<br>We'll respond within 24 hours with transparent pricing.</p>
       </div>
-
-      <!-- Option 2: Email -->
-      <div class="contact-option contact-option-email">
-        <div class="contact-option-icon">✉️</div>
-        <h2>Email Directly</h2>
-        <p>Prefer to just send an email? Many of our corporate clients do. Write us what you need, and we'll get back to you.</p>
-        <a href="mailto:contact@thelightroomstudios.com" class="btn btn-secondary">contact@thelightroomstudios.com</a>
+      <div class="contact-buttons-row">
+        <button type="button" class="contact-btn contact-btn-primary" id="open-form-btn">
+          <span class="contact-btn-icon">📋</span>
+          Get a Quote
+        </button>
+        <a href="mailto:contact@thelightroomstudios.com" class="contact-btn contact-btn-secondary">
+          <span class="contact-btn-icon">✉️</span>
+          Email Us
+        </a>
       </div>
     </div>
   </section>
@@ -665,13 +830,11 @@
     </div>
   </section>
 
-  <!-- Form Section -->
-  <div class="form-section-header" id="quote-form">
-    <h2>Get a Quote</h2>
-    <p>6 quick questions. Takes about 2 minutes.</p>
-  </div>
-  <div class="form-wrapper" style="background: linear-gradient(180deg, #F9FAFB 0%, #FFFFFF 100%);">
-    <div class="form-container">
+  <!-- Form Modal -->
+  <div class="modal-overlay" id="form-modal">
+    <div class="modal-container">
+      <button type="button" class="modal-close" id="close-modal-btn" aria-label="Close form">✕</button>
+      <div class="form-container">
 
       <!-- Progress Bar -->
       <div class="progress-container">
@@ -994,17 +1157,14 @@
       </div>
 
     </div>
+    </div>
   </div>
 
   <!-- Alternative Contact Methods -->
   <section class="alt-contact">
-    <div class="alt-contact-grid">
+    <div class="alt-contact-grid" style="grid-template-columns: repeat(2, 1fr);">
       <div class="alt-contact-item">
-        <h3>Email</h3>
-        <p><a href="mailto:contact@thelightroomstudios.com">contact@thelightroomstudios.com</a></p>
-      </div>
-      <div class="alt-contact-item">
-        <h3>Office</h3>
+        <h3>Mail</h3>
         <p>99 Wall Street #1751<br>New York, NY 10005</p>
       </div>
       <div class="alt-contact-item">
@@ -1409,6 +1569,31 @@
         header.classList.add('scrolled');
       } else {
         header.classList.remove('scrolled');
+      }
+    });
+
+    // Modal functionality
+    const modal = document.getElementById('form-modal');
+    const openFormBtn = document.getElementById('open-form-btn');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+
+    function openModal() {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    openFormBtn.addEventListener('click', openModal);
+    closeModalBtn.addEventListener('click', closeModal);
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
       }
     });
   </script>
