@@ -812,10 +812,10 @@
           <span class="contact-btn-icon">📋</span>
           Get a Quote
         </button>
-        <a href="mailto:contact@thelightroomstudios.com" class="contact-btn contact-btn-secondary">
+        <button type="button" class="contact-btn contact-btn-secondary" id="reveal-email-btn">
           <span class="contact-btn-icon">✉️</span>
-          Email Us
-        </a>
+          <span id="email-btn-text">Email Us</span>
+        </button>
       </div>
     </div>
   </section>
@@ -1594,6 +1594,21 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && modal.classList.contains('active')) {
         closeModal();
+      }
+    });
+
+    // Reveal email on click
+    const revealEmailBtn = document.getElementById('reveal-email-btn');
+    const emailBtnText = document.getElementById('email-btn-text');
+    let emailRevealed = false;
+
+    revealEmailBtn.addEventListener('click', () => {
+      if (!emailRevealed) {
+        emailBtnText.textContent = 'contact@thelightroomstudios.com';
+        emailRevealed = true;
+      } else {
+        // On second click, open email client
+        window.location.href = 'mailto:contact@thelightroomstudios.com';
       }
     });
   </script>
