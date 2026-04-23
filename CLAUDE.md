@@ -40,6 +40,15 @@ Switch to it at session start with: `git checkout claude/add-video-project-prici
 
 ---
 
+## How I Work With Vlad
+
+- **Act, build, deliver → short summary.** Don't generate review loops or large output files when I can assess quality myself.
+- **Be one step ahead** — if something is missing or obviously better, do it without asking.
+- **Conversational, direct, concise.** No corporate speak, no fluff. Respect his time.
+- **A brief check-in is fine when pivoting** from the original prompt — not as a review of outputs I can evaluate myself.
+
+---
+
 ## Sub-Files — Load These When Relevant
 
 | File | Load when... |
@@ -60,3 +69,22 @@ Switch to it at session start with: `git checkout claude/add-video-project-prici
 - **New page or SEO change?** → Read `.claude/seo-rules.md` first
 - **Design or layout change?** → Read `.claude/brand.md` first
 - **Not sure what's been done before?** → Check `CHANGELOG.md`
+
+---
+
+## Skills — Load These When Relevant
+
+| Skill | Load when... |
+|-------|-------------|
+| `.claude/skills/hook-writing/SKILL.md` | Writing any blog opening, headline, CTA, or page hero copy that needs to draw the reader in |
+| `.claude/skills/editorial-jeopardy/SKILL.md` | Writing blog posts, page sections, or any content where reader retention matters |
+| `.claude/skills/self-critique/SKILL.md` | Any high-stakes output: blog posts going live, client-facing copy, service page rewrites |
+| `.claude/skills/multi-judge/SKILL.md` | Strategic decisions: SEO strategy, new page planning, positioning changes, pricing copy |
+| `.claude/skills/investigation-gate/SKILL.md` | Any bug, broken layout, SEO issue, or "why isn't X working" question |
+
+### Skill Quick Rules
+- **Writing a blog opening or hero headline?** → Load `hook-writing`
+- **Writing a blog post or long page?** → Load `editorial-jeopardy` for retention structure
+- **Publishing anything client-facing?** → Run `self-critique` before delivering
+- **Making a strategic recommendation?** → Run `multi-judge`
+- **Debugging anything?** → Run `investigation-gate` — gather evidence before proposing any fix
