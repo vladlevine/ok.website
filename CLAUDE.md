@@ -24,14 +24,6 @@
 - `blog/` — 13 HTML articles
 - `sitemap.xml`, `robots.txt` — SEO files, update sitemap when adding pages
 
-## Key Docs in This Repo
-- `SITE-STRUCTURE.md` — full information architecture
-- `BLOG_GUIDE.md` — blog writing standards (follow this for all blog posts)
-- `KEYWORD-STRATEGY.md` — SEO keyword research
-- `CHANGELOG.md` — history of changes and planned work
-- `.claude/blog-writing-workflow.md` — step-by-step blog workflow
-- `.claude/blog-post-template.html` — starter template for new blog posts
-
 ## Deployment Workflow
 1. Edit HTML files directly (no build needed)
 2. When adding a page: add it to `sitemap.xml` and link it from `blog.html` or nav
@@ -43,5 +35,28 @@ This branch has open PR #31. Always continue work here unless told otherwise.
 Switch to it at session start with: `git checkout claude/add-video-project-pricing-v1C3H`
 
 ## Known Issues
-- `corerevisualsnyc.com` (note: with extra "re") shows SSL error `NET::ERR_CERT_COMMON_NAME_INVALID` — cert mismatch, needs fixing at the hosting/DNS level
+- `corerevisualsnyc.com` (note: with extra "re") — SSL cert mismatch error, needs fixing at DNS/hosting level
 - The canonical domain is `corevisuals.nyc` (no "re")
+
+---
+
+## Sub-Files — Load These When Relevant
+
+| File | Load when... |
+|------|-------------|
+| `.claude/writing-style.md` | Writing or editing ANY copy: blog posts, page copy, CTAs, headlines, case studies |
+| `.claude/seo-rules.md` | Working on meta tags, page titles, keyword strategy, new pages, blog topics |
+| `.claude/brand.md` | Touching design, colors, layout, positioning copy, or adding new UI components |
+| `.claude/blog-writing-workflow.md` | Creating a new blog post — follow this step by step |
+| `.claude/blog-post-template.html` | Starting a new blog post — use as the HTML base |
+| `KEYWORD-STRATEGY.md` | Deep SEO work, keyword research questions, competitive analysis |
+| `SITE-STRUCTURE.md` | Planning new pages, navigation changes, IA questions |
+| `CHANGELOG.md` | Understanding past decisions, what's been built, what's planned |
+| `BLOG_GUIDE.md` | Full blog standards reference — detailed version of writing-style.md |
+
+### Quick Rules
+- **Writing anything?** → Read `.claude/writing-style.md` first
+- **New blog post?** → Read `.claude/blog-writing-workflow.md` AND `.claude/blog-post-template.html`
+- **New page or SEO change?** → Read `.claude/seo-rules.md` first
+- **Design or layout change?** → Read `.claude/brand.md` first
+- **Not sure what's been done before?** → Check `CHANGELOG.md`
