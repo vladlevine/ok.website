@@ -10,7 +10,7 @@
 
 ## The Website
 - **Stack:** Pure HTML5 / CSS3 / Vanilla JS — no framework, no build step, no package.json
-- **Hosting:** GitHub Pages — auto-deploys 1–2 min after push to `main`
+- **Hosting:** Netlify — auto-deploys on push to `main`, custom domains with automatic HTTPS
 - **Repo:** `vladlevine/ok.website` on GitHub
 - **Image CDN:** Cloudinary account `dtuxu64zp` — use `f_auto,q_auto` in transform URLs
 - **Analytics:** Google Analytics 4 — ID `G-REYC2K415E` (in `<head>` of every page)

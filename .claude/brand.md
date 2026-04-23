@@ -140,3 +140,4 @@
 
 - **Google Analytics 4:** G-REYC2K415E (in `<head>` of every page — already implemented)
 - **Google Search Console:** Set up, sitemap needs submission
+- **Hosting:** Netlify (app.netlify.com) — connected to GitHub repo, auto-deploys on push to `main`
