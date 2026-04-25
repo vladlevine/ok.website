@@ -140,7 +140,7 @@ Format:
         <a href="../blog.html">Blog</a>
         <a href="../contact.html">Contact</a>
         <a href="tel:+19294450603">(929) 445-0603</a>
-        <a href="mailto:heyvladlevine@gmail.com">Email Us</a>
+        <a href="mailto:vlad@corevisuals.nyc">Email Us</a>
       </div>
 
       <div>

@@ -363,7 +363,7 @@ Each includes:
 - **Submit Button:** "Send Message"
 
 **Direct Contact**
-- **Email:** contact@corevisuals.nyc (clickable)
+- **Email:** vlad@corevisuals.nyc (clickable)
 - **Phone:** (929) 445-0603 (tap to call on mobile)
 - **Address:** 99 Wall Street #1751, New York, NY 10005
 - **Hours:** Mon-Fri 9am-6pm EST

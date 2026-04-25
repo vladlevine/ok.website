@@ -31,7 +31,7 @@
 
 **Brand:** Core Visuals NYC
 **Phone:** (929) 445-0603
-**Email:** contact@corevisuals.nyc
+**Email:** vlad@corevisuals.nyc
 **Domain:** corevisuals.nyc
 **Address:** 99 Wall Street #1751, New York, NY 10005
 

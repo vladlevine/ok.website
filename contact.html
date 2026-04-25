@@ -1202,7 +1202,7 @@
           <a href="blog.html">Blog</a>
           <a href="faq.html">FAQ</a>
           <a href="contact.html">Contact</a>
-          <a href="mailto:contact@thelightroomstudios.com">Email Us</a>
+          <a href="mailto:vlad@corevisuals.nyc">Email Us</a>
         </div>
 
         <div>
@@ -1449,12 +1449,12 @@
             document.querySelector('.progress-container').style.display = 'none';
             successScreen.classList.add('active');
           } else {
-            alert('There was a problem submitting your request. Please try again or email us directly at contact@thelightroomstudios.com');
+            alert('There was a problem submitting your request. Please try again or email us directly at vlad@corevisuals.nyc');
             nextBtn.disabled = false;
             nextBtn.textContent = 'Send My Request →';
           }
         }).catch(error => {
-          alert('There was a problem submitting your request. Please try again or email us directly at contact@thelightroomstudios.com');
+          alert('There was a problem submitting your request. Please try again or email us directly at vlad@corevisuals.nyc');
           nextBtn.disabled = false;
           nextBtn.textContent = 'Send My Request →';
         });
@@ -1605,11 +1605,11 @@
 
     revealEmailBtn.addEventListener('click', () => {
       if (!emailRevealed) {
-        emailBtnText.textContent = 'contact@thelightroomstudios.com';
+        emailBtnText.textContent = 'vlad@corevisuals.nyc';
         emailRevealed = true;
       } else {
         // On second click, open email client
-        window.location.href = 'mailto:contact@thelightroomstudios.com';
+        window.location.href = 'mailto:vlad@corevisuals.nyc';
       }
     });
   </script>

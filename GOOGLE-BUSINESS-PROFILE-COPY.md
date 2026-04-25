@@ -26,7 +26,7 @@ New York, NY 10005
 
 **Website:** https://corevisualsnyc.com
 
-**Email:** contact@corevisuals.nyc
+**Email:** vlad@corevisuals.nyc
 
 **Hours:**
 - Monday: 9:00 AM – 6:00 PM

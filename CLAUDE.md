@@ -3,7 +3,7 @@
 ## The Business
 **Core Visuals NYC** — NYC event photography & videography studio.
 - Owner: Vlad Levine (founder & lead shooter)
-- Phone: (929) 445-0603 | Email: contact@corevisuals.nyc
+- Phone: (929) 445-0603 | Email: vlad@corevisuals.nyc
 - Address: 99 Wall Street #1751, New York, NY 10005
 - Domain: **corevisuals.nyc**
 - Services: event video+photo coverage, corporate content (headshots, brand video), custom projects
