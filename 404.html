@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles.css">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>">
@@ -30,13 +30,46 @@
   </script>
 
   <style>
+    body {
+      background: #0a0a0a;
+    }
+
+    /* Header overrides for dark error page */
+    .header {
+      background: rgba(10, 10, 10, 0.85) !important;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 3px solid transparent;
+      border-image: linear-gradient(90deg, #D4AF37 0%, #06B6D4 50%, #EC4899 100%) 1;
+    }
+
+    .header .logo {
+      color: #FFFFFF;
+    }
+
+    .header .logo:hover {
+      color: #D4AF37;
+    }
+
+    .header .nav a {
+      color: #E5E7EB;
+    }
+
+    .header .nav a:hover {
+      color: #FFFFFF;
+    }
+
+    .header .hamburger span {
+      background-color: #FFFFFF;
+    }
+
     .error-container {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 40px 24px;
+      padding: 140px 24px 80px;
       background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
       color: #FFFFFF;
       text-align: center;
@@ -141,6 +174,16 @@
       text-decoration: underline;
     }
 
+    @media (max-width: 768px) {
+      .header .nav {
+        background: #0a0a0a;
+      }
+
+      .header .nav a {
+        color: #FFFFFF;
+      }
+    }
+
     @media (max-width: 640px) {
       .error-links {
         flex-direction: column;
@@ -157,30 +200,30 @@
 <body>
 
   <!-- Header & Navigation -->
-  <header class="header" id="header" style="position: absolute; top: 0; left: 0; right: 0; background: rgba(10, 10, 10, 0.8); backdrop-filter: blur(10px);">
+  <header class="header" id="header">
     <div class="container header-container">
-      <a href="index.html" class="logo">CORE VISUALS NYC</a>
+      <a href="/index.html" class="logo">CORE VISUALS NYC</a>
       <nav class="nav" id="nav">
-        <a href="index.html#services">Services</a>
+        <a href="/index.html#services">Services</a>
         <div class="nav-item">
-          <a href="portfolio.html">Work</a>
+          <a href="/portfolio.html">Work</a>
           <div class="dropdown-menu">
-            <a href="service-event-coverage.html">
+            <a href="/service-event-coverage.html">
               Event Coverage
               <span>Conferences, galas, networking events, product launches</span>
             </a>
-            <a href="service-corporate-content.html">
+            <a href="/service-corporate-content.html">
               Headshots &amp; Brand Videos
               <span>Office lifestyle, team content, video business cards</span>
             </a>
-            <a href="service-custom-projects.html">
+            <a href="/service-custom-projects.html">
               Personal Branding & Launches
               <span>Thought leadership, founder content, multi-day projects</span>
             </a>
           </div>
         </div>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
       </nav>
       <div class="hamburger" id="hamburger">
         <span></span>
@@ -197,18 +240,18 @@
     <p class="error-message">The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
 
     <div class="error-links">
-      <a href="index.html" class="error-link">Go to Homepage</a>
-      <a href="contact.html" class="error-link error-link-secondary">Contact Us</a>
+      <a href="/index.html" class="error-link">Go to Homepage</a>
+      <a href="/contact.html" class="error-link error-link-secondary">Contact Us</a>
     </div>
 
     <div class="error-suggestions">
       <h3>Popular Pages:</h3>
       <ul>
-        <li><a href="portfolio.html">→ View Our Portfolio</a></li>
-        <li><a href="service-event-coverage.html">→ Event Coverage Services</a></li>
-        <li><a href="service-corporate-content.html">→ Corporate Headshots &amp; Videos</a></li>
-        <li><a href="about.html">→ About Core Visuals NYC</a></li>
-        <li><a href="blog.html">→ Photography Blog &amp; Insights</a></li>
+        <li><a href="/portfolio.html">→ View Our Portfolio</a></li>
+        <li><a href="/service-event-coverage.html">→ Event Coverage Services</a></li>
+        <li><a href="/service-corporate-content.html">→ Corporate Headshots &amp; Videos</a></li>
+        <li><a href="/about.html">→ About Core Visuals NYC</a></li>
+        <li><a href="/blog.html">→ Photography Blog &amp; Insights</a></li>
       </ul>
     </div>
   </main>
