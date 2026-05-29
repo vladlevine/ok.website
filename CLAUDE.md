@@ -21,8 +21,12 @@
 - `about.html`, `contact.html`, `portfolio.html`, `faq.html`, `blog.html`, `404.html`
 - `service-event-coverage.html`, `service-corporate-content.html`, `service-custom-projects.html`
 - `case-study-law-firm-photography.html`, `case-study-nonprofit-golf.html`
-- `blog/` — 13 HTML articles
+- `blog/` — HTML articles
 - `sitemap.xml`, `robots.txt` — SEO files, update sitemap when adding pages
+- `_redirects` — Netlify redirects for legacy Wix URLs (`/post/*`) and shorthand paths (`/about`, `/contact`, etc.)
+
+### Hidden pages (intentional — do not flag)
+- `food.html` and `wedding.html` exist in the repo but are intentionally NOT linked from nav, NOT in the sitemap, and NOT in the blog grid. They are private/unlisted landing pages used for specific outreach. **Do not add them to sitemap, nav, or blog. Do not flag them as orphans.**
 
 ## Deployment Workflow
 1. Edit HTML files directly (no build needed)
