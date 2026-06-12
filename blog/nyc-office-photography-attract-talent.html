@@ -13,11 +13,12 @@
   <meta property="og:type" content="article">
   <meta property="og:title" content="NYC Office Photography: Creating Workspace Content That Attracts Top Talent">
   <meta property="og:description" content="Office photography that attracts top talent in NYC's competitive job market. How workspace visuals impact recruiting and employer branding.">
-  <meta property="og:url" content="https://corevisualsnyc.com/blog/nyc-office-photography-attract-talent.html">
+  <meta property="og:url" content="https://corevisuals.nyc/blog/nyc-office-photography-attract-talent.html">
   <meta property="og:image" content="https://res.cloudinary.com/dtuxu64zp/image/upload/v1764094975/Core_52_diverse_team_collaboration_business_meeting_office_desk_laptops_tablet_by_fauxels_from_Pexels_3184360_qyf169.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://corevisualsnyc.com/blog/nyc-office-photography-attract-talent.html">
+  <link rel="canonical" href="https://corevisuals.nyc/blog/nyc-office-photography-attract-talent.html">
 
   <!-- Article Schema -->
   <script type="application/ld+json">
@@ -36,7 +37,7 @@
       "name": "Core Visuals NYC",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://corevisualsnyc.com/images/logo.png"
+        "url": "https://corevisuals.nyc/images/logo.png"
       }
     },
     "datePublished": "2025-11-27",
@@ -53,17 +54,17 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://corevisualsnyc.com/"
+      "item": "https://corevisuals.nyc/"
     },{
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://corevisualsnyc.com/blog.html"
+      "item": "https://corevisuals.nyc/blog.html"
     },{
       "@type": "ListItem",
       "position": 3,
       "name": "NYC Office Photography for Talent Attraction",
-      "item": "https://corevisualsnyc.com/blog/nyc-office-photography-attract-talent.html"
+      "item": "https://corevisuals.nyc/blog/nyc-office-photography-attract-talent.html"
     }]
   }
   </script>
@@ -106,6 +107,7 @@
   </script>
 
   <!-- Fonts -->
+  <link rel="preconnect" href="https://res.cloudinary.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -333,7 +335,7 @@
         <a href="../about.html">About</a>
         <a href="../contact.html" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
       </nav>
-      <div class="hamburger" id="hamburger">
+      <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav">
         <span></span>
         <span></span>
         <span></span>
@@ -508,9 +510,14 @@
     const nav = document.getElementById('nav');
     const header = document.getElementById('header');
 
-    hamburger.addEventListener('click', () => {
+    function toggleMenu() {
       nav.classList.toggle('active');
       hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', nav.classList.contains('active'));
+    }
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
     });
 
     // Header scroll effect

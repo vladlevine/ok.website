@@ -13,11 +13,12 @@
   <meta property="og:type" content="article">
   <meta property="og:title" content="The Psychology of Color: How It Affects Your Corporate Branding Videos">
   <meta property="og:description" content="Color in corporate videos isn't about being trendy—it's about not accidentally telling your audience the wrong story.">
-  <meta property="og:url" content="https://corevisualsnyc.com/blog/color-psychology-corporate-branding-videos.html">
+  <meta property="og:url" content="https://corevisuals.nyc/blog/color-psychology-corporate-branding-videos.html">
   <meta property="og:image" content="https://res.cloudinary.com/dtuxu64zp/image/upload/v1764211842/Image%20by%20TheArkow%20from%20Pixabay%20image%20of%20a%20coloris%20editing%20color%20grading%20footage%20at%20large%20monitor%20horizontal.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://corevisualsnyc.com/blog/color-psychology-corporate-branding-videos.html">
+  <link rel="canonical" href="https://corevisuals.nyc/blog/color-psychology-corporate-branding-videos.html">
 
   <!-- Article Schema -->
   <script type="application/ld+json">
@@ -36,7 +37,7 @@
       "name": "Core Visuals NYC",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://corevisualsnyc.com/images/logo.png"
+        "url": "https://corevisuals.nyc/images/logo.png"
       }
     },
     "datePublished": "2025-11-27",
@@ -53,17 +54,17 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://corevisualsnyc.com/"
+      "item": "https://corevisuals.nyc/"
     },{
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://corevisualsnyc.com/blog.html"
+      "item": "https://corevisuals.nyc/blog.html"
     },{
       "@type": "ListItem",
       "position": 3,
       "name": "Color Psychology in Corporate Videos",
-      "item": "https://corevisualsnyc.com/blog/color-psychology-corporate-branding-videos.html"
+      "item": "https://corevisuals.nyc/blog/color-psychology-corporate-branding-videos.html"
     }]
   }
   </script>
@@ -106,6 +107,7 @@
   </script>
 
   <!-- Fonts -->
+  <link rel="preconnect" href="https://res.cloudinary.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -333,7 +335,7 @@
         <a href="../about.html">About</a>
         <a href="../contact.html" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
       </nav>
-      <div class="hamburger" id="hamburger">
+      <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav">
         <span></span>
         <span></span>
         <span></span>
@@ -527,9 +529,14 @@
     const nav = document.getElementById('nav');
     const header = document.getElementById('header');
 
-    hamburger.addEventListener('click', () => {
+    function toggleMenu() {
       nav.classList.toggle('active');
       hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', nav.classList.contains('active'));
+    }
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
     });
 
     // Header scroll effect

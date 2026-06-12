@@ -13,15 +13,23 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Event Photographer NYC | Corporate Video Production | Core Visuals">
   <meta property="og:description" content="NYC event photography and corporate video production. Fixed packages, transparent pricing, fast delivery.">
-  <meta property="og:url" content="https://corevisualsnyc.com">
+  <meta property="og:url" content="https://corevisuals.nyc">
+  <meta property="og:image" content="https://res.cloudinary.com/dtuxu64zp/image/upload/w_1200,h_630,c_fill,q_auto,f_auto/v1762826235/mlops0052_rkyg1j.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Local Business Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://corevisuals.nyc/#business",
     "name": "Core Visuals NYC",
     "description": "NYC event photography and corporate video production. Conferences, brand content, office photography.",
+    "url": "https://corevisuals.nyc",
+    "telephone": "+1-929-445-0603",
+    "email": "vlad@corevisuals.nyc",
+    "image": "https://res.cloudinary.com/dtuxu64zp/image/upload/w_1200,h_630,c_fill,q_auto,f_auto/v1762826235/mlops0052_rkyg1j.jpg",
+    "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "99 Wall Street #1751",
@@ -30,9 +38,26 @@
       "postalCode": "10005",
       "addressCountry": "US"
     },
-
-    "priceRange": "$$",
-    "url": "https://corevisualsnyc.com",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.7053",
+      "longitude": "-74.0072"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Vlad Levine",
+      "jobTitle": "Founder & Lead Photographer",
+      "sameAs": "https://www.linkedin.com/in/vladlevine/"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/vladlevine/"
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
     "serviceArea": {
       "@type": "GeoCircle",
       "geoMidpoint": {
@@ -41,14 +66,24 @@
         "longitude": "-74.0060"
       },
       "geoRadius": "30000"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Photography & Video Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Event Video + Photo Coverage", "url": "https://corevisuals.nyc/service-event-coverage.html"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Corporate Headshots & Brand Videos", "url": "https://corevisuals.nyc/service-corporate-content.html"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Personal Branding & Custom Projects", "url": "https://corevisuals.nyc/service-custom-projects.html"}}
+      ]
     }
   }
   </script>
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://corevisualsnyc.com">
+  <link rel="canonical" href="https://corevisuals.nyc">
 
   <!-- Fonts - Updated to include 800 weight -->
+  <link rel="preconnect" href="https://res.cloudinary.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -109,7 +144,7 @@
         <a href="about.html">About</a>
         <a href="#contact" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
       </nav>
-      <div class="hamburger" id="hamburger">
+      <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav">
         <span></span>
         <span></span>
         <span></span>
@@ -435,7 +470,7 @@
 
         // Animate percentage from 0 to 100
         const percentageInterval = setInterval(() => {
-          currentPercentage += Math.random() * 8 + 2; // Random increment 2-10
+          currentPercentage += Math.random() * 18 + 8; // Random increment 8-26
           if (currentPercentage >= 100) {
             currentPercentage = 100;
             percentageEl.textContent = '100%';
@@ -452,7 +487,7 @@
           } else {
             percentageEl.textContent = Math.floor(currentPercentage) + '%';
           }
-        }, 80);
+        }, 45);
 
       } else {
         // REFRESH: Skip percentage, show only brand words
@@ -480,8 +515,8 @@
                     loadingScreen.classList.add('hidden');
                   }, 300);
                 }
-              }, isFirstVisit ? 100 : 150);
-            }, isFirstVisit ? 250 : 180);
+              }, isFirstVisit ? 70 : 100);
+            }, isFirstVisit ? 160 : 130);
           }
         }
 
@@ -495,9 +530,14 @@
     const hamburger = document.getElementById('hamburger');
     const nav = document.getElementById('nav');
 
-    hamburger.addEventListener('click', () => {
+    function toggleMenu() {
       nav.classList.toggle('active');
       hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', nav.classList.contains('active'));
+    }
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
     });
 
     // Close menu when clicking on a link

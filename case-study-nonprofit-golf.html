@@ -13,12 +13,15 @@
   <meta property="og:type" content="article">
   <meta property="og:title" content="Nonprofit Event Video Case Study | $200K Fundraiser">
   <meta property="og:description" content="How event video became infrastructure for a nonprofit's annual fundraiser. Real ROI, real impact.">
-  <meta property="og:url" content="https://corevisualsnyc.com/case-study-nonprofit-golf">
+  <meta property="og:url" content="https://corevisuals.nyc/case-study-nonprofit-golf">
+  <meta property="og:image" content="https://res.cloudinary.com/dtuxu64zp/image/upload/w_1200,h_630,c_fill,q_auto,f_auto/v1762874514/nonprofit_event_videography_nyc_vxlkur.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://corevisualsnyc.com/case-study-nonprofit-golf">
+  <link rel="canonical" href="https://corevisuals.nyc/case-study-nonprofit-golf">
 
   <!-- Fonts -->
+  <link rel="preconnect" href="https://res.cloudinary.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -778,6 +781,39 @@
       }
     }
   </style>
+  <!-- Article & Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Nonprofit Event Video Case Study",
+    "description": "How a nonprofit golf tournament video created $20K+ fundraising potential. See the strategy, deliverables, and ROI math for event video production.",
+    "image": "https://res.cloudinary.com/dtuxu64zp/image/upload/w_1200,h_630,c_fill,q_auto,f_auto/v1762874514/nonprofit_event_videography_nyc_vxlkur.jpg",
+    "url": "https://corevisuals.nyc/case-study-nonprofit-golf.html",
+    "author": {
+      "@type": "Person",
+      "name": "Vlad Levine",
+      "url": "https://corevisuals.nyc/about.html",
+      "sameAs": "https://www.linkedin.com/in/vladlevine/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Core Visuals NYC",
+      "url": "https://corevisuals.nyc"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://corevisuals.nyc/"},
+      {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://corevisuals.nyc/portfolio.html"},
+      {"@type": "ListItem", "position": 3, "name": "Nonprofit Event Video Case Study", "item": "https://corevisuals.nyc/case-study-nonprofit-golf.html"}
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -807,7 +843,7 @@
         <a href="about.html">About</a>
         <a href="contact.html" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
       </nav>
-      <div class="hamburger" id="hamburger">
+      <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav">
         <span></span>
         <span></span>
         <span></span>
@@ -1118,9 +1154,14 @@
     const hamburger = document.getElementById('hamburger');
     const nav = document.getElementById('nav');
 
-    hamburger.addEventListener('click', () => {
+    function toggleMenu() {
       nav.classList.toggle('active');
       hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', nav.classList.contains('active'));
+    }
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
     });
 
     const navLinks = nav.querySelectorAll('a');

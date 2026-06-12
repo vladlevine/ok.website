@@ -13,10 +13,12 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="FAQ - Event Photography & Video Pricing | Core Visuals NYC">
   <meta property="og:description" content="Honest answers about event photography pricing, packages, and what you're actually paying for.">
-  <meta property="og:url" content="https://corevisualsnyc.com/faq">
+  <meta property="og:url" content="https://corevisuals.nyc/faq">
+  <meta property="og:image" content="https://res.cloudinary.com/dtuxu64zp/image/upload/w_1200,h_630,c_fill,q_auto,f_auto/v1762826235/mlops0052_rkyg1j.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://corevisualsnyc.com/faq">
+  <link rel="canonical" href="https://corevisuals.nyc/faq">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -379,7 +381,7 @@
         <a href="about.html">About</a>
         <a href="contact.html" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
       </nav>
-      <div class="hamburger" id="hamburger">
+      <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav">
         <span></span>
         <span></span>
         <span></span>
@@ -673,9 +675,14 @@
     const hamburger = document.getElementById('hamburger');
     const nav = document.getElementById('nav');
 
-    hamburger.addEventListener('click', () => {
+    function toggleMenu() {
       nav.classList.toggle('active');
       hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', nav.classList.contains('active'));
+    }
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
     });
 
     const navLinks = nav.querySelectorAll('a');

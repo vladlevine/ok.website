@@ -13,11 +13,12 @@
   <meta property="og:type" content="article">
   <meta property="og:title" content="A Guide to Professional and Tasteful Corporate Holiday Party Photography">
   <meta property="og:description" content="Holiday party photography that doesn't make your team cringe. How to document the event professionally without awkward poses or forced smiles.">
-  <meta property="og:url" content="https://corevisualsnyc.com/blog/corporate-holiday-party-photography.html">
+  <meta property="og:url" content="https://corevisuals.nyc/blog/corporate-holiday-party-photography.html">
   <meta property="og:image" content="https://res.cloudinary.com/dtuxu64zp/image/upload/v1765637365/Core_78_corporate_holiday_party_confetti_champagne_toast_celebration_by_Pavel_Danilyuk_from_Pexels_6405769_ahfl7j.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://corevisualsnyc.com/blog/corporate-holiday-party-photography.html">
+  <link rel="canonical" href="https://corevisuals.nyc/blog/corporate-holiday-party-photography.html">
 
   <!-- Article Schema -->
   <script type="application/ld+json">
@@ -36,7 +37,7 @@
       "name": "Core Visuals NYC",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://corevisualsnyc.com/images/logo.png"
+        "url": "https://corevisuals.nyc/images/logo.png"
       }
     },
     "datePublished": "2025-01-13",
@@ -53,17 +54,17 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://corevisualsnyc.com/"
+      "item": "https://corevisuals.nyc/"
     },{
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://corevisualsnyc.com/blog.html"
+      "item": "https://corevisuals.nyc/blog.html"
     },{
       "@type": "ListItem",
       "position": 3,
       "name": "Corporate Holiday Party Photography Guide",
-      "item": "https://corevisualsnyc.com/blog/corporate-holiday-party-photography.html"
+      "item": "https://corevisuals.nyc/blog/corporate-holiday-party-photography.html"
     }]
   }
   </script>
@@ -106,6 +107,7 @@
   </script>
 
   <!-- Fonts -->
+  <link rel="preconnect" href="https://res.cloudinary.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -325,7 +327,7 @@
         <a href="../about.html">About</a>
         <a href="../contact.html" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
       </nav>
-      <div class="hamburger" id="hamburger">
+      <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav">
         <span></span>
         <span></span>
         <span></span>
@@ -531,9 +533,14 @@
     const hamburger = document.getElementById('hamburger');
     const nav = document.getElementById('nav');
 
-    hamburger.addEventListener('click', () => {
+    function toggleMenu() {
       nav.classList.toggle('active');
       hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', nav.classList.contains('active'));
+    }
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
     });
 
     const navLinks = nav.querySelectorAll('a');
