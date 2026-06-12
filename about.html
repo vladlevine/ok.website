@@ -13,10 +13,12 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="About Core Visuals NYC | Event Photographer Vlad Levine">
   <meta property="og:description" content="Professional event photography and video production for NYC businesses. Direct communication, transparent pricing, fast delivery.">
-  <meta property="og:url" content="https://corevisualsnyc.com/about">
+  <meta property="og:url" content="https://corevisuals.nyc/about">
+  <meta property="og:image" content="https://res.cloudinary.com/dtuxu64zp/image/upload/w_1200,h_630,c_fill,q_auto,f_auto/v1762826235/mlops0052_rkyg1j.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://corevisualsnyc.com/about">
+  <link rel="canonical" href="https://corevisuals.nyc/about">
 
   <!-- Person Schema -->
   <script type="application/ld+json">
@@ -28,9 +30,9 @@
     "worksFor": {
       "@type": "Organization",
       "name": "Core Visuals NYC",
-      "url": "https://corevisualsnyc.com"
+      "url": "https://corevisuals.nyc"
     },
-    "url": "https://corevisualsnyc.com/about",
+    "url": "https://corevisuals.nyc/about",
     "sameAs": ["https://www.linkedin.com/in/vladlevine/"],
     "address": {
       "@type": "PostalAddress",
@@ -45,6 +47,7 @@
   </script>
 
   <!-- Fonts -->
+  <link rel="preconnect" href="https://res.cloudinary.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -53,7 +56,9 @@
   <link rel="stylesheet" href="styles.css">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-REYC2K415E"></script>
@@ -393,7 +398,7 @@
         <a href="about.html">About</a>
         <a href="contact.html" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
       </nav>
-      <div class="hamburger" id="hamburger">
+      <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav">
         <span></span>
         <span></span>
         <span></span>
@@ -511,7 +516,7 @@
 
         <!-- Column 1: About -->
         <div>
-          <h4>Core Visuals NYC</h4>
+          <h3>Core Visuals NYC</h3>
           <p style="max-width: 320px; line-height: 1.8;">Event video and photography for NYC businesses. Corporate events, conferences, brand content. Professional, transparent, reliable.</p>
           <p style="margin-top: 32px;">
             <strong style="font-weight: 700;">99 Wall Street #1751</strong><br>
@@ -521,7 +526,7 @@
 
         <!-- Column 2: Services -->
         <div>
-          <h4>Services</h4>
+          <h3>Services</h3>
           <a href="index.html#services">Event Video + Photo</a>
           <a href="index.html#services">Corporate Content</a>
           <a href="index.html#services">Custom Projects</a>
@@ -530,7 +535,7 @@
 
         <!-- Column 3: Company -->
         <div>
-          <h4>Company</h4>
+          <h3>Company</h3>
           <a href="about.html">About</a>
           <a href="blog.html">Blog</a>
           <a href="faq.html">FAQ</a>
@@ -540,7 +545,7 @@
 
         <!-- Column 4: Connect -->
         <div>
-          <h4>Connect</h4>
+          <h3>Connect</h3>
           <a href="https://www.linkedin.com/in/vladlevine/" target="_blank" rel="noopener" aria-label="Visit Core Visuals NYC on LinkedIn">LinkedIn</a>
           <p style="margin-top: 32px; font-size: 14px;">
             <strong style="font-weight: 700;">Hours</strong><br>
@@ -562,9 +567,14 @@
     const hamburger = document.getElementById('hamburger');
     const nav = document.getElementById('nav');
 
-    hamburger.addEventListener('click', () => {
+    function toggleMenu() {
       nav.classList.toggle('active');
       hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', nav.classList.contains('active'));
+    }
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
     });
 
     const navLinks = nav.querySelectorAll('a');

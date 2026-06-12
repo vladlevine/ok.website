@@ -13,10 +13,12 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Get a Quote | Core Visuals NYC">
   <meta property="og:description" content="Tell us what you need. No sales pitch, just transparent pricing.">
-  <meta property="og:url" content="https://corevisualsnyc.com/contact">
+  <meta property="og:url" content="https://corevisuals.nyc/contact">
+  <meta property="og:image" content="https://res.cloudinary.com/dtuxu64zp/image/upload/w_1200,h_630,c_fill,q_auto,f_auto/v1762826235/mlops0052_rkyg1j.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://corevisualsnyc.com/contact">
+  <link rel="canonical" href="https://corevisuals.nyc/contact">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +29,9 @@
   <link rel="stylesheet" href="styles.css">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-REYC2K415E"></script>
@@ -758,6 +762,16 @@
         right: 0;
       }
     }
+    .form-error {
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+      color: #B91C1C;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
   </style>
 </head>
 <body>
@@ -788,7 +802,7 @@
         <a href="about.html">About</a>
         <a href="contact.html" class="btn btn-primary" style="padding: 14px 28px;">Let's Talk</a>
       </nav>
-      <div class="hamburger" id="hamburger">
+      <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav">
         <span></span>
         <span></span>
         <span></span>
@@ -833,7 +847,7 @@
 
   <!-- Form Modal -->
   <div class="modal-overlay" id="form-modal">
-    <div class="modal-container">
+    <div class="modal-container" role="dialog" aria-modal="true" aria-label="Request a quote" tabindex="-1">
       <button type="button" class="modal-close" id="close-modal-btn" aria-label="Close form">✕</button>
       <div class="form-container">
 
@@ -847,6 +861,8 @@
 
       <!-- Form -->
       <form action="https://formspree.io/f/xjkjkkjg" method="POST" id="conversational-form">
+        <input type="hidden" name="_subject" value="New quote request — corevisuals.nyc">
+        <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off" aria-hidden="true">
 
         <!-- Question 1: Service Type -->
         <div class="question active" id="q1" data-question="1">
@@ -880,37 +896,37 @@
 
           <label class="option">
             <input type="checkbox" name="event_type[]" value="conference">
-            ☑️ Corporate conference or summit
+            Corporate conference or summit
           </label>
 
           <label class="option">
             <input type="checkbox" name="event_type[]" value="party">
-            ☑️ Company party or celebration
+            Company party or celebration
           </label>
 
           <label class="option">
             <input type="checkbox" name="event_type[]" value="networking">
-            ☑️ Networking event
+            Networking event
           </label>
 
           <label class="option">
             <input type="checkbox" name="event_type[]" value="gala">
-            ☑️ Gala or fundraiser
+            Gala or fundraiser
           </label>
 
           <label class="option">
             <input type="checkbox" name="event_type[]" value="product-launch">
-            ☑️ Product launch
+            Product launch
           </label>
 
           <label class="option">
             <input type="checkbox" name="event_type[]" value="multiple">
-            ☑️ Multiple events (ongoing coverage)
+            Multiple events (ongoing coverage)
           </label>
 
           <label class="option">
             <input type="checkbox" name="event_type[]" value="other" id="event-other-check">
-            ☑️ Other:
+            Other:
           </label>
           <div class="other-field-wrapper" id="event-other-wrapper">
             <input type="text" name="event_type_other" class="text-input" placeholder="Tell us about your event type">
@@ -991,32 +1007,32 @@
 
           <label class="option">
             <input type="checkbox" name="photo_use[]" value="website">
-            ☑️ Website refresh
+            Website refresh
           </label>
 
           <label class="option">
             <input type="checkbox" name="photo_use[]" value="social">
-            ☑️ Social media content
+            Social media content
           </label>
 
           <label class="option">
             <input type="checkbox" name="photo_use[]" value="recruiting">
-            ☑️ Recruiting/careers page
+            Recruiting/careers page
           </label>
 
           <label class="option">
             <input type="checkbox" name="photo_use[]" value="marketing">
-            ☑️ Marketing materials
+            Marketing materials
           </label>
 
           <label class="option">
             <input type="checkbox" name="photo_use[]" value="linkedin">
-            ☑️ LinkedIn team updates
+            LinkedIn team updates
           </label>
 
           <label class="option">
             <input type="checkbox" name="photo_use[]" value="all">
-            ☑️ All of the above (we need everything)
+            All of the above (we need everything)
           </label>
 
           <p class="question-hint" style="margin-top: 24px;">Knowing how you'll use them helps us shoot for the right vibe—professional but not stiff.</p>
@@ -1109,23 +1125,26 @@
           <label class="question-label">How should we reach you?</label>
 
           <div style="margin-bottom: 20px;">
-            <label style="display: block; font-size: 15px; font-weight: 600; margin-bottom: 8px; color: var(--contact-black);">Your name *</label>
-            <input type="text" name="name" class="text-input" required>
+            <label for="contact-name" style="display: block; font-size: 15px; font-weight: 600; margin-bottom: 8px; color: var(--contact-black);">Your name *</label>
+            <input type="text" name="name" id="contact-name" class="text-input" autocomplete="name" required>
           </div>
 
           <div style="margin-bottom: 20px;">
-            <label style="display: block; font-size: 15px; font-weight: 600; margin-bottom: 8px; color: var(--contact-black);">Email *</label>
-            <input type="email" name="email" class="text-input" required>
+            <label for="contact-email" style="display: block; font-size: 15px; font-weight: 600; margin-bottom: 8px; color: var(--contact-black);">Email *</label>
+            <input type="email" name="email" id="contact-email" class="text-input" autocomplete="email" inputmode="email" required>
           </div>
 
 
           <div style="margin-bottom: 20px;">
-            <label style="display: block; font-size: 15px; font-weight: 600; margin-bottom: 8px; color: var(--contact-black);">Company name <span style="font-weight: 400; color: var(--contact-text-secondary);">(optional)</span></label>
-            <input type="text" name="company" class="text-input">
+            <label for="contact-company" style="display: block; font-size: 15px; font-weight: 600; margin-bottom: 8px; color: var(--contact-black);">Company name <span style="font-weight: 400; color: var(--contact-text-secondary);">(optional)</span></label>
+            <input type="text" name="company" id="contact-company" class="text-input" autocomplete="organization">
           </div>
 
           <p class="question-hint">We respond within 24 hours with transparent pricing. No sales pitch, just a clear quote.</p>
         </div>
+
+        <!-- Validation message -->
+        <div class="form-error" id="form-error" role="alert" hidden></div>
 
         <!-- Form Actions -->
         <div class="form-actions">
@@ -1180,7 +1199,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h4>Core Visuals NYC</h4>
+          <h3>Core Visuals NYC</h3>
           <p style="max-width: 320px; line-height: 1.8;">Event video and photography for NYC businesses. Corporate events, conferences, brand content. Professional, transparent, reliable.</p>
           <p style="margin-top: 32px;">
             <strong style="font-weight: 700;">99 Wall Street #1751</strong><br>
@@ -1189,7 +1208,7 @@
         </div>
 
         <div>
-          <h4>Services</h4>
+          <h3>Services</h3>
           <a href="index.html#services">Event Video + Photo</a>
           <a href="index.html#services">Corporate Content</a>
           <a href="index.html#services">Custom Projects</a>
@@ -1197,7 +1216,7 @@
         </div>
 
         <div>
-          <h4>Company</h4>
+          <h3>Company</h3>
           <a href="about.html">About</a>
           <a href="blog.html">Blog</a>
           <a href="faq.html">FAQ</a>
@@ -1206,7 +1225,7 @@
         </div>
 
         <div>
-          <h4>Connect</h4>
+          <h3>Connect</h3>
           <a href="https://www.linkedin.com/in/vladlevine/" target="_blank" rel="noopener" aria-label="Visit Core Visuals NYC on LinkedIn">LinkedIn</a>
           <p style="margin-top: 32px; font-size: 14px;">
             <strong style="font-weight: 700;">Hours</strong><br>
@@ -1238,6 +1257,31 @@
     const formContainer = document.querySelector('.form-container > form');
     const detailsTextarea = document.getElementById('details-textarea');
     const charCount = document.getElementById('char-count');
+    const formError = document.getElementById('form-error');
+
+    function showError(message) {
+      formError.textContent = message;
+      formError.hidden = false;
+    }
+    function clearError() {
+      formError.hidden = true;
+    }
+    form.addEventListener('input', clearError);
+    form.addEventListener('change', clearError);
+
+    // Enter advances to the next step instead of submitting natively
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      nextBtn.click();
+    });
+
+    // Auto-advance on single-choice questions (Typeform-style)
+    document.querySelectorAll('#conversational-form input[type="radio"]').forEach(radio => {
+      radio.addEventListener('change', () => {
+        if (radio.name === 'timeline' && radio.value === 'specific-date') return;
+        setTimeout(() => nextBtn.click(), 350);
+      });
+    });
 
     // Character counter
     if (detailsTextarea) {
@@ -1298,7 +1342,7 @@
         // Validate Q1
         const serviceType = document.querySelector('input[name="service_type"]:checked');
         if (!serviceType) {
-          alert('Please select an option');
+          showError('Please select an option to continue.');
           return;
         }
         selectedServicePath = serviceType.value;
@@ -1336,7 +1380,7 @@
         }
 
         if (!isValid) {
-          alert('Please select at least one option or fill in the field');
+          showError('Please select at least one option or fill in the field.');
           return;
         }
 
@@ -1361,7 +1405,7 @@
         // Validate event duration question
         const duration = document.querySelector('input[name="event_duration"]:checked');
         if (!duration) {
-          alert('Please select an event duration');
+          showError('Please select an event duration.');
           return;
         }
 
@@ -1375,7 +1419,11 @@
         // Validate Q3
         const timeline = document.querySelector('input[name="timeline"]:checked');
         if (!timeline) {
-          alert('Please select when you need this');
+          showError('Please select when you need this.');
+          return;
+        }
+        if (timeline.value === 'specific-date' && !document.querySelector('input[name="specific_date"]').value) {
+          showError('Please pick your date — or choose another timeline option.');
           return;
         }
 
@@ -1389,7 +1437,7 @@
         // Validate Q4
         const budget = document.querySelector('input[name="budget"]:checked');
         if (!budget) {
-          alert('Please select a budget range');
+          showError('Please select a budget range.');
           return;
         }
 
@@ -1403,7 +1451,7 @@
         // Validate Q5
         const details = document.querySelector('textarea[name="project_details"]');
         if (!details || details.value.trim().length === 0) {
-          alert('Please tell us about your project');
+          showError('Please tell us a bit about your project.');
           return;
         }
 
@@ -1420,12 +1468,16 @@
         const email = document.querySelector('input[name="email"]');
 
         if (!name || name.value.trim().length === 0) {
-          alert('Please enter your name');
+          showError('Please enter your name.');
           return;
         }
 
         if (!email || email.value.trim().length === 0) {
-          alert('Please enter your email');
+          showError('Please enter your email.');
+          return;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+          showError('That email doesn\'t look right — mind double-checking it?');
           return;
         }
 
@@ -1449,12 +1501,12 @@
             document.querySelector('.progress-container').style.display = 'none';
             successScreen.classList.add('active');
           } else {
-            alert('There was a problem submitting your request. Please try again or email us directly at vlad@corevisuals.nyc');
+            showError('There was a problem sending your request. Please try again, or email us directly at vlad@corevisuals.nyc');
             nextBtn.disabled = false;
             nextBtn.textContent = 'Send My Request →';
           }
         }).catch(error => {
-          alert('There was a problem submitting your request. Please try again or email us directly at vlad@corevisuals.nyc');
+          showError('There was a problem sending your request. Please try again, or email us directly at vlad@corevisuals.nyc');
           nextBtn.disabled = false;
           nextBtn.textContent = 'Send My Request →';
         });
@@ -1529,15 +1581,22 @@
     });
 
     function updateProgress() {
-      const percentage = (currentQuestion / totalQuestions) * 100;
-      progressFill.style.width = percentage + '%';
-      progressText.textContent = `Question ${currentQuestion} of ${totalQuestions}`;
+      const steps = selectedServicePath === 'event-coverage'
+        ? [1, 2, 2.5, 3, 4, 5, 6]
+        : [1, 2, 3, 4, 5, 6];
+      const stepNumber = steps.indexOf(currentQuestion) + 1;
+      progressFill.style.width = (stepNumber / steps.length) * 100 + '%';
+      progressText.textContent = `Question ${stepNumber} of ${steps.length}`;
+      clearError();
+      const container = document.querySelector('.modal-container');
+      if (container) container.scrollTop = 0;
     }
 
     function updateButtonText() {
       const buttonTexts = {
         1: 'Continue →',
         2: 'Next →',
+        2.5: 'Next →',
         3: 'Almost there →',
         4: 'Last few questions →',
         5: 'One more step →',
@@ -1550,9 +1609,14 @@
     const hamburger = document.getElementById('hamburger');
     const nav = document.getElementById('nav');
 
-    hamburger.addEventListener('click', () => {
+    function toggleMenu() {
       nav.classList.toggle('active');
       hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', nav.classList.contains('active'));
+    }
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
     });
 
     const navLinks = nav.querySelectorAll('a');
@@ -1581,11 +1645,13 @@
     function openModal() {
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
+      document.querySelector('.modal-container').focus();
     }
 
     function closeModal() {
       modal.classList.remove('active');
       document.body.style.overflow = '';
+      openFormBtn.focus();
     }
 
     openFormBtn.addEventListener('click', openModal);
