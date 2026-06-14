@@ -257,6 +257,16 @@ Format:
 - Use `loading="lazy"` for all images except hero
 - Class: `article-image`
 
+### Image Dimensions (REQUIRED — never guess)
+**Always set `width` and `height` attributes that match the image's TRUE intrinsic dimensions.** Wrong values cause layout shift (CLS). Do NOT eyeball them.
+
+How to get real dimensions, in order of preference:
+1. If the image was supplied in a source file (e.g. a reference HTML the user uploaded), copy the `width`/`height` from there — the owner already set them.
+2. Fetch the actual pixel size. For Cloudinary, append `fl_getinfo` to the transform — e.g. `…/image/upload/fl_getinfo/v123/asset.jpg` returns JSON with `width`/`height`. Or download the delivered asset (matching the `w_` transform in the `src`) and read its size with PIL/`identify`.
+3. If `res.cloudinary.com` is blocked by the environment's network egress (403), say so explicitly, fall back to source-file dimensions, and tell the user they can add the host to the egress allowlist for live measurement. Never silently invent numbers.
+
+Note: when the `src` uses a `w_N` transform, the delivered width is `N`; the height is `N × (true_height / true_width)`. Set the attributes to the delivered pair.
+
 ---
 
 ## Content Structure
