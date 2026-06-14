@@ -93,26 +93,59 @@
 
   <style>
     .service-hero {
-      background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
-      padding: 180px 40px 100px;
+      background: linear-gradient(180deg, #F9FAFB 0%, #FFFFFF 100%);
+      padding: 160px 40px 72px;
       text-align: center;
-      color: #FFFFFF;
+      color: #0A0A0A;
     }
 
     .service-hero h1 {
-      font-size: clamp(42px, 7vw, 64px);
+      font-size: clamp(40px, 6.5vw, 68px);
       font-weight: 800;
-      line-height: 1.1;
-      margin: 0 0 24px;
-      color: #FFFFFF;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin: 0 auto 24px;
+      max-width: 16ch;
+      color: #0A0A0A;
     }
 
     .service-hero-subtitle {
-      font-size: 22px;
-      color: #a3a3a3;
-      max-width: 800px;
-      margin: 0 auto 48px;
-      line-height: 1.6;
+      font-size: 21px;
+      color: #4B5563;
+      max-width: 760px;
+      margin: 0 auto 36px;
+      line-height: 1.65;
+    }
+
+    .service-hero-facts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin: 0 auto;
+    }
+
+    .service-hero-facts span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #1F2937;
+      background: #FFFFFF;
+      border: 1px solid #E5E7EB;
+      border-radius: 999px;
+      padding: 9px 18px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+
+    .service-hero-facts span::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--color-gold);
+      flex-shrink: 0;
     }
 
     .service-section {
@@ -214,7 +247,7 @@
 
     @media (max-width: 968px) {
       .service-hero {
-        padding: 140px 5% 80px !important;
+        padding: 120px 24px 56px !important;
       }
 
       /* Mobile: Simple single-column layout with proper spacing */
@@ -374,6 +407,76 @@
     .service-faq-answer a:hover {
       text-decoration: underline;
     }
+    /* Gallery reveal / show-more */
+    .gallery-reveal {
+      position: relative;
+      max-height: 1500px;
+      overflow: hidden;
+      transition: max-height 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .gallery-reveal.expanded {
+      max-height: 8000px;
+    }
+
+    .gallery-fade {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 220px;
+      background: linear-gradient(to bottom, rgba(249, 250, 251, 0) 0%, #F9FAFB 92%);
+      pointer-events: none;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+
+    .gallery-reveal.expanded .gallery-fade {
+      opacity: 0;
+    }
+
+    .gallery-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #0A0A0A;
+      background: #FFFFFF;
+      border: 2px solid #D4AF37;
+      border-radius: 999px;
+      padding: 13px 32px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-toggle:hover {
+      background: #FCF7E8;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
+    }
+
+    .gallery-toggle::after {
+      content: "\2193";
+      font-size: 14px;
+      line-height: 1;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-toggle.expanded::after {
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: 968px) {
+      .gallery-reveal { max-height: 1700px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .gallery-reveal,
+      .gallery-fade,
+      .gallery-toggle,
+      .gallery-toggle::after { transition: none; }
+    }
   </style>
 </head>
 <body>
@@ -417,8 +520,14 @@
 
     <!-- Hero -->
     <section class="service-hero">
+      <span class="eyebrow eyebrow-no-line">NYC Personal Branding &amp; Launch Content</span>
       <h1>Custom Projects<br>Product Launches & More</h1>
       <p class="service-hero-subtitle">Special events, product launches, multi-day conferences. Need something specific? We'll build a package that fits your exact needs. Fixed pricing, no surprises.</p>
+      <div class="service-hero-facts">
+        <span>Fixed pricing</span>
+        <span>Photo + video</span>
+        <span>Built around your goals</span>
+      </div>
     </section>
 
     <!-- Positioning Statement -->
@@ -441,7 +550,7 @@
 
         <div style="max-width: 900px; margin: 0 auto;">
           <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid #E5E7EB;">
-            <video controls loop muted autoplay playsinline style="width: 100%; display: block;" poster="">
+            <video class="showcase-video" controls loop muted playsinline preload="metadata" poster="https://res.cloudinary.com/dtuxu64zp/video/upload/so_0,f_auto,q_auto,w_800/v1763058637/01_-_WEB_Katie_V2_1_jp5uuk.jpg" style="width: 100%; display: block;">
               <source src="https://res.cloudinary.com/dtuxu64zp/video/upload/v1763058637/01_-_WEB_Katie_V2_1_jp5uuk.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -460,6 +569,7 @@
         <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 24px;">Personal Branding & Editorial</h2>
         <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto;">Thought leadership content, founder portraits, creative projects, and performer branding photography.</p>
 
+        <div class="gallery-reveal" id="galleryReveal">
         <div class="service-gallery">
           <!-- Row 1 -->
           <div class="service-gallery-item gallery-tall">
@@ -563,6 +673,11 @@
           <div class="service-gallery-item gallery-tall">
             <img src="images/editorial/lifestyle_young-woman-green-jumpsuit-seated-stool_studio-portrait_casual-relaxed_fashion_vertical.jpg" alt="Young woman green jumpsuit casual lifestyle portrait NYC" loading="lazy">
           </div>
+        </div>
+          <div class="gallery-fade" aria-hidden="true"></div>
+        </div>
+        <div style="text-align: center; margin-top: 36px;">
+          <button type="button" class="gallery-toggle" id="galleryToggle" aria-expanded="false"><span>Show more work</span></button>
         </div>
       </div>
     </section>
@@ -914,5 +1029,35 @@
   </script>
 
 
+  <script>
+    (function() {
+      const reveal = document.getElementById('galleryReveal');
+      const toggle = document.getElementById('galleryToggle');
+      if (!reveal || !toggle) return;
+      const label = toggle.querySelector('span');
+      toggle.addEventListener('click', function() {
+        const expanded = reveal.classList.toggle('expanded');
+        toggle.classList.toggle('expanded', expanded);
+        toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        label.textContent = expanded ? 'Show less' : 'Show more work';
+        if (!expanded) {
+          reveal.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    })();
+  </script>
+
+  <script>
+    (function() {
+      if (window.matchMedia('(min-width: 969px)').matches) {
+        document.querySelectorAll('.showcase-video').forEach(function(v) {
+          v.muted = true;
+          v.setAttribute('autoplay', '');
+          var p = v.play();
+          if (p && p.catch) p.catch(function() {});
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

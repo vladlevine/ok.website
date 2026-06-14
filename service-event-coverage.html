@@ -577,7 +577,7 @@
 
           <!-- Video 1: Kelly's Event - Full Coverage -->
           <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid #E5E7EB;">
-            <video controls loop muted autoplay playsinline style="width: 100%; display: block;" poster="">
+            <video class="showcase-video" controls loop muted playsinline preload="metadata" poster="https://res.cloudinary.com/dtuxu64zp/video/upload/so_0,f_auto,q_auto,w_800/v1763135507/kellys_event_wqgwup.jpg" style="width: 100%; display: block;">
               <source src="https://res.cloudinary.com/dtuxu64zp/video/upload/v1763135507/kellys_event_wqgwup.mp4" type="video/mp4">
             </video>
             <div style="padding: 24px;">
@@ -588,7 +588,7 @@
 
           <!-- Video 2: Nonprofit Fashion Show -->
           <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid #E5E7EB;">
-            <video controls loop muted autoplay playsinline style="width: 100%; display: block;" poster="">
+            <video class="showcase-video" controls loop muted playsinline preload="metadata" poster="https://res.cloudinary.com/dtuxu64zp/video/upload/so_0,f_auto,q_auto,w_800/v1763133157/09_-_web_ver_after_dark_w5a70u.jpg" style="width: 100%; display: block;">
               <source src="https://res.cloudinary.com/dtuxu64zp/video/upload/v1763133157/09_-_web_ver_after_dark_w5a70u.mp4" type="video/mp4">
             </video>
             <div style="padding: 24px;">
@@ -599,7 +599,7 @@
 
           <!-- Video 3: MLOps Tech Conference -->
           <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid #E5E7EB;">
-            <video controls loop muted autoplay playsinline style="width: 100%; display: block;" poster="">
+            <video class="showcase-video" controls loop muted playsinline preload="metadata" poster="https://res.cloudinary.com/dtuxu64zp/video/upload/so_0,f_auto,q_auto,w_800/v1763071182/mlops_REEL_tducpd.jpg" style="width: 100%; display: block;">
               <source src="https://res.cloudinary.com/dtuxu64zp/video/upload/v1763071182/mlops_REEL_tducpd.mp4" type="video/mp4">
             </video>
             <div style="padding: 24px;">
@@ -610,7 +610,7 @@
 
           <!-- Video 4: Nonprofit Golf Tournament -->
           <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid #E5E7EB;">
-            <video controls loop muted autoplay playsinline style="width: 100%; display: block;" poster="">
+            <video class="showcase-video" controls loop muted playsinline preload="metadata" poster="https://res.cloudinary.com/dtuxu64zp/video/upload/so_0,f_auto,q_auto,w_800/v1762907480/CGE_golf_1080_logos_WEB_yljzcb.jpg" style="width: 100%; display: block;">
               <source src="https://res.cloudinary.com/dtuxu64zp/video/upload/v1762907480/CGE_golf_1080_logos_WEB_yljzcb.mp4" type="video/mp4">
             </video>
             <div style="padding: 24px;">
@@ -632,13 +632,13 @@
         <div class="gallery-reveal" id="galleryReveal">
         <div class="service-gallery">
           <div class="service-gallery-item">
-            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1781452008/NEDAP1726_qbtcjz_h2gqk7.jpg" alt="Professional event coverage in NYC — corporate event captured by Core Visuals" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1781452008/NEDAP1726_qbtcjz_h2gqk7.jpg" alt="Attendees seated at a corporate conference session in NYC, lanyards and laptops on the table — Core Visuals event coverage" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
           </div>
           <div class="service-gallery-item">
-            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1781452009/NEDAP1804_yhku6n_iczt80.jpg" alt="NYC event photography and videography — live corporate event moment by Core Visuals" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1781452009/NEDAP1804_yhku6n_iczt80.jpg" alt="Two professionals networking at an NYC corporate event, one gesturing mid-conversation — Core Visuals event coverage" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
           </div>
           <div class="service-gallery-item">
-            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1781452011/NEDAP1711_ueuqik_updjvp.jpg" alt="Core Visuals NYC event coverage — candid professional event photograph" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1781452011/NEDAP1711_ueuqik_updjvp.jpg" alt="Attendee in conversation at a corporate networking event in NYC, badge lanyard visible — Core Visuals event photography" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
           </div>
           <div class="service-gallery-item">
             <img src="images/event/event_page/event_page_commercial_speaker-presenting-to-large-audience_conference-informative_engaging-professional_event-conference_horizontal.jpg" alt="NYC conference speaker presenting to large audience professional event photography" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
@@ -1132,6 +1132,18 @@
           reveal.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
+    })();
+  </script>
+  <script>
+    (function() {
+      if (window.matchMedia('(min-width: 969px)').matches) {
+        document.querySelectorAll('.showcase-video').forEach(function(v) {
+          v.muted = true;
+          v.setAttribute('autoplay', '');
+          var p = v.play();
+          if (p && p.catch) p.catch(function() {});
+        });
+      }
     })();
   </script>
 </body>
