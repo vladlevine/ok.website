@@ -433,6 +433,76 @@
     .service-faq-answer a:hover {
       text-decoration: underline;
     }
+    /* Gallery reveal / show-more */
+    .gallery-reveal {
+      position: relative;
+      max-height: 1500px;
+      overflow: hidden;
+      transition: max-height 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .gallery-reveal.expanded {
+      max-height: 8000px;
+    }
+
+    .gallery-fade {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 220px;
+      background: linear-gradient(to bottom, rgba(249, 250, 251, 0) 0%, #F9FAFB 92%);
+      pointer-events: none;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+
+    .gallery-reveal.expanded .gallery-fade {
+      opacity: 0;
+    }
+
+    .gallery-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #0A0A0A;
+      background: #FFFFFF;
+      border: 2px solid #D4AF37;
+      border-radius: 999px;
+      padding: 13px 32px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-toggle:hover {
+      background: #FCF7E8;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
+    }
+
+    .gallery-toggle::after {
+      content: "↓";
+      font-size: 14px;
+      line-height: 1;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-toggle.expanded::after {
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: 968px) {
+      .gallery-reveal { max-height: 1700px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .gallery-reveal,
+      .gallery-fade,
+      .gallery-toggle,
+      .gallery-toggle::after { transition: none; }
+    }
   </style>
 </head>
 <body>
@@ -559,6 +629,7 @@
         <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 24px;">Event Photography Portfolio</h2>
         <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto 48px;">Professional event coverage across conferences, galas, networking events, and art exhibitions in NYC.</p>
 
+        <div class="gallery-reveal" id="galleryReveal">
         <div class="service-gallery">
           <div class="service-gallery-item">
             <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1781452008/NEDAP1726_qbtcjz_h2gqk7.jpg" alt="Professional event coverage in NYC — corporate event captured by Core Visuals" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
@@ -659,6 +730,11 @@
           <div class="service-gallery-item">
             <img src="images/event/event_page/event_page_editorial_close-up-of-street-art-pink-frame_detail-artistic_vibrant-edgy_event-art_vertical.jpg" alt="NYC street art exhibition detail vibrant event photography" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
           </div>
+        </div>
+          <div class="gallery-fade" aria-hidden="true"></div>
+        </div>
+        <div style="text-align: center; margin-top: 36px;">
+          <button type="button" class="gallery-toggle" id="galleryToggle" aria-expanded="false"><span>Show more work</span></button>
         </div>
       </div>
     </section>
@@ -1041,5 +1117,22 @@
   </script>
 
 
+  <script>
+    (function() {
+      const reveal = document.getElementById('galleryReveal');
+      const toggle = document.getElementById('galleryToggle');
+      if (!reveal || !toggle) return;
+      const label = toggle.querySelector('span');
+      toggle.addEventListener('click', function() {
+        const expanded = reveal.classList.toggle('expanded');
+        toggle.classList.toggle('expanded', expanded);
+        toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        label.textContent = expanded ? 'Show less' : 'Show more work';
+        if (!expanded) {
+          reveal.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
