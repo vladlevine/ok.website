@@ -70,6 +70,13 @@
         "@type": "Answer",
         "text": "Photos are delivered in 5-10 days. Videos are delivered in 7-15 days—significantly faster than the industry standard of 30-60 days. You'll receive a link to a private online gallery where you can view, download, and share everything while your event is still relevant."
       }
+    },{
+      "@type": "Question",
+      "name": "How far in advance should I book event coverage in NYC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sooner is better, but we're used to moving fast. For most corporate events, two to four weeks of notice lets us lock the date and plan coverage properly—shot list, timing, and the right gear for the room. We also take last-minute bookings when the calendar allows, so if your event is next week, ask anyway. NYC dates in the fall and the December holiday season fill up first, so book those earlier."
+      }
     }]
   }
   </script>
@@ -100,26 +107,59 @@
 
   <style>
     .service-hero {
-      background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
-      padding: 180px 40px 100px;
+      background: linear-gradient(180deg, #F9FAFB 0%, #FFFFFF 100%);
+      padding: 160px 40px 72px;
       text-align: center;
-      color: #FFFFFF;
+      color: #0A0A0A;
     }
 
     .service-hero h1 {
-      font-size: clamp(42px, 7vw, 64px);
+      font-size: clamp(40px, 6.5vw, 68px);
       font-weight: 800;
-      line-height: 1.1;
-      margin: 0 0 24px;
-      color: #FFFFFF;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin: 0 auto 24px;
+      max-width: 16ch;
+      color: #0A0A0A;
     }
 
     .service-hero-subtitle {
-      font-size: 22px;
-      color: #a3a3a3;
-      max-width: 800px;
-      margin: 0 auto 48px;
-      line-height: 1.6;
+      font-size: 21px;
+      color: #4B5563;
+      max-width: 760px;
+      margin: 0 auto 36px;
+      line-height: 1.65;
+    }
+
+    .service-hero-facts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin: 0 auto;
+    }
+
+    .service-hero-facts span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #1F2937;
+      background: #FFFFFF;
+      border: 1px solid #E5E7EB;
+      border-radius: 999px;
+      padding: 9px 18px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+
+    .service-hero-facts span::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--color-gold);
+      flex-shrink: 0;
     }
 
     .service-section {
@@ -225,7 +265,7 @@
 
     @media (max-width: 968px) {
       .service-hero {
-        padding: 140px 5% 80px !important;
+        padding: 120px 24px 56px !important;
       }
 
       /* Mobile: Simple single-column layout with proper spacing */
@@ -393,6 +433,76 @@
     .service-faq-answer a:hover {
       text-decoration: underline;
     }
+    /* Gallery reveal / show-more */
+    .gallery-reveal {
+      position: relative;
+      max-height: 1500px;
+      overflow: hidden;
+      transition: max-height 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .gallery-reveal.expanded {
+      max-height: 8000px;
+    }
+
+    .gallery-fade {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 220px;
+      background: linear-gradient(to bottom, rgba(249, 250, 251, 0) 0%, #F9FAFB 92%);
+      pointer-events: none;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+
+    .gallery-reveal.expanded .gallery-fade {
+      opacity: 0;
+    }
+
+    .gallery-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #0A0A0A;
+      background: #FFFFFF;
+      border: 2px solid #D4AF37;
+      border-radius: 999px;
+      padding: 13px 32px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-toggle:hover {
+      background: #FCF7E8;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
+    }
+
+    .gallery-toggle::after {
+      content: "↓";
+      font-size: 14px;
+      line-height: 1;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-toggle.expanded::after {
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: 968px) {
+      .gallery-reveal { max-height: 1700px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .gallery-reveal,
+      .gallery-fade,
+      .gallery-toggle,
+      .gallery-toggle::after { transition: none; }
+    }
   </style>
 </head>
 <body>
@@ -436,8 +546,14 @@
 
     <!-- Hero -->
     <section class="service-hero">
+      <span class="eyebrow eyebrow-no-line">NYC Event Photography &amp; Videography</span>
       <h1>Event Coverage<br>Video + Photo</h1>
       <p class="service-hero-subtitle">Corporate events, conferences, galas. Get both video highlights and photo galleries—so you have content that works on LinkedIn, Instagram, and your website. Book together or separately.</p>
+      <div class="service-hero-facts">
+        <span>Fixed pricing</span>
+        <span>Photo + video</span>
+        <span>5–15 day delivery</span>
+      </div>
     </section>
 
     <!-- Positioning Statement -->
@@ -461,7 +577,7 @@
 
           <!-- Video 1: Kelly's Event - Full Coverage -->
           <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid #E5E7EB;">
-            <video controls loop muted autoplay playsinline style="width: 100%; display: block;" poster="">
+            <video class="showcase-video" controls loop muted playsinline preload="metadata" poster="https://res.cloudinary.com/dtuxu64zp/video/upload/so_0,f_auto,q_auto,w_800/v1763135507/kellys_event_wqgwup.jpg" style="width: 100%; display: block;">
               <source src="https://res.cloudinary.com/dtuxu64zp/video/upload/v1763135507/kellys_event_wqgwup.mp4" type="video/mp4">
             </video>
             <div style="padding: 24px;">
@@ -472,7 +588,7 @@
 
           <!-- Video 2: Nonprofit Fashion Show -->
           <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid #E5E7EB;">
-            <video controls loop muted autoplay playsinline style="width: 100%; display: block;" poster="">
+            <video class="showcase-video" controls loop muted playsinline preload="metadata" poster="https://res.cloudinary.com/dtuxu64zp/video/upload/so_0,f_auto,q_auto,w_800/v1763133157/09_-_web_ver_after_dark_w5a70u.jpg" style="width: 100%; display: block;">
               <source src="https://res.cloudinary.com/dtuxu64zp/video/upload/v1763133157/09_-_web_ver_after_dark_w5a70u.mp4" type="video/mp4">
             </video>
             <div style="padding: 24px;">
@@ -483,7 +599,7 @@
 
           <!-- Video 3: MLOps Tech Conference -->
           <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid #E5E7EB;">
-            <video controls loop muted autoplay playsinline style="width: 100%; display: block;" poster="">
+            <video class="showcase-video" controls loop muted playsinline preload="metadata" poster="https://res.cloudinary.com/dtuxu64zp/video/upload/so_0,f_auto,q_auto,w_800/v1763071182/mlops_REEL_tducpd.jpg" style="width: 100%; display: block;">
               <source src="https://res.cloudinary.com/dtuxu64zp/video/upload/v1763071182/mlops_REEL_tducpd.mp4" type="video/mp4">
             </video>
             <div style="padding: 24px;">
@@ -494,7 +610,7 @@
 
           <!-- Video 4: Nonprofit Golf Tournament -->
           <div style="background: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); border: 1px solid #E5E7EB;">
-            <video controls loop muted autoplay playsinline style="width: 100%; display: block;" poster="">
+            <video class="showcase-video" controls loop muted playsinline preload="metadata" poster="https://res.cloudinary.com/dtuxu64zp/video/upload/so_0,f_auto,q_auto,w_800/v1762907480/CGE_golf_1080_logos_WEB_yljzcb.jpg" style="width: 100%; display: block;">
               <source src="https://res.cloudinary.com/dtuxu64zp/video/upload/v1762907480/CGE_golf_1080_logos_WEB_yljzcb.mp4" type="video/mp4">
             </video>
             <div style="padding: 24px;">
@@ -513,7 +629,17 @@
         <h2 style="text-align: center; font-size: clamp(32px, 5vw, 48px); margin-bottom: 24px;">Event Photography Portfolio</h2>
         <p style="text-align: center; font-size: 19px; color: #6B7280; max-width: 700px; margin: 0 auto 48px;">Professional event coverage across conferences, galas, networking events, and art exhibitions in NYC.</p>
 
+        <div class="gallery-reveal" id="galleryReveal">
         <div class="service-gallery">
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1781452008/NEDAP1726_qbtcjz_h2gqk7.jpg" alt="Attendees seated at a corporate conference session in NYC, lanyards and laptops on the table — Core Visuals event coverage" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1781452009/NEDAP1804_yhku6n_iczt80.jpg" alt="Two professionals networking at an NYC corporate event, one gesturing mid-conversation — Core Visuals event coverage" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+          </div>
+          <div class="service-gallery-item">
+            <img src="https://res.cloudinary.com/dtuxu64zp/image/upload/f_auto,q_auto,w_800/v1781452011/NEDAP1711_ueuqik_updjvp.jpg" alt="Attendee in conversation at a corporate networking event in NYC, badge lanyard visible — Core Visuals event photography" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+          </div>
           <div class="service-gallery-item">
             <img src="images/event/event_page/event_page_commercial_speaker-presenting-to-large-audience_conference-informative_engaging-professional_event-conference_horizontal.jpg" alt="NYC conference speaker presenting to large audience professional event photography" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
           </div>
@@ -604,6 +730,11 @@
           <div class="service-gallery-item">
             <img src="images/event/event_page/event_page_editorial_close-up-of-street-art-pink-frame_detail-artistic_vibrant-edgy_event-art_vertical.jpg" alt="NYC street art exhibition detail vibrant event photography" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
           </div>
+        </div>
+          <div class="gallery-fade" aria-hidden="true"></div>
+        </div>
+        <div style="text-align: center; margin-top: 36px;">
+          <button type="button" class="gallery-toggle" id="galleryToggle" aria-expanded="false"><span>Show more work</span></button>
         </div>
       </div>
     </section>
@@ -719,6 +850,17 @@
             <p><strong>Photos are delivered in 5-10 days. Videos are delivered in 7-15 days.</strong> This is significantly faster than the industry standard of 30-60 days.</p>
             <p>We prioritize fast turnaround because we know you need content while your event is still relevant—whether that's for sponsor follow-up, social media buzz, or planning next year's event. You'll receive a link to your private online gallery where you can view, download, and share everything.</p>
             <p><a href="faq.html#answer-3">Read full answer on FAQ page →</a></p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="service-faq-item" style="margin-bottom: 16px;">
+          <button class="service-faq-question" aria-expanded="false" aria-controls="service-faq-4">
+            How far in advance should I book event coverage?
+          </button>
+          <div id="service-faq-4" class="service-faq-answer" aria-hidden="true">
+            <p><strong>Sooner is better, but we're used to moving fast.</strong> For most corporate events, two to four weeks of notice lets us lock the date and plan the coverage properly—shot list, timing, the right gear for the room.</p>
+            <p>That said, we take last-minute bookings when the calendar allows. If your event is next week, ask anyway. NYC dates in the fall and the December holiday stretch fill up first, so book those earlier if you can.</p>
           </div>
         </div>
 
@@ -975,5 +1117,34 @@
   </script>
 
 
+  <script>
+    (function() {
+      const reveal = document.getElementById('galleryReveal');
+      const toggle = document.getElementById('galleryToggle');
+      if (!reveal || !toggle) return;
+      const label = toggle.querySelector('span');
+      toggle.addEventListener('click', function() {
+        const expanded = reveal.classList.toggle('expanded');
+        toggle.classList.toggle('expanded', expanded);
+        toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        label.textContent = expanded ? 'Show less' : 'Show more work';
+        if (!expanded) {
+          reveal.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    })();
+  </script>
+  <script>
+    (function() {
+      if (window.matchMedia('(min-width: 969px)').matches) {
+        document.querySelectorAll('.showcase-video').forEach(function(v) {
+          v.muted = true;
+          v.setAttribute('autoplay', '');
+          var p = v.play();
+          if (p && p.catch) p.catch(function() {});
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

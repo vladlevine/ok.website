@@ -257,6 +257,16 @@ Format:
 - Use `loading="lazy"` for all images except hero
 - Class: `article-image`
 
+### Image Dimensions (CRITICAL — wrong values STRETCH the image)
+**Never put `width`/`height` attributes on an image unless you have VERIFIED its true dimensions.** With `width:100%` in CSS, the browser derives the aspect-ratio box from the `width`/`height` attributes and scales the bitmap to fill it (`object-fit: fill`). If the attribute ratio is wrong, the image is visibly **stretched/distorted** — not just a CLS issue. Guessing here is worse than omitting.
+
+Rules:
+1. **Always set `.article-figure img { width:100%; height:auto; }`** (or equivalent). `height:auto` is what lets the natural ratio win.
+2. **If you can verify true dimensions, set matching `width`/`height` attributes** (reserves space, prevents CLS, still no distortion because the ratio is correct). Sources, in order: (a) a source file the user supplied — but only if you trust those numbers; (b) Cloudinary `fl_getinfo` — `…/image/upload/fl_getinfo/v123/asset.jpg` returns JSON with `width`/`height`; (c) download the delivered asset (matching the `w_` transform) and read it with PIL/`identify`.
+3. **If you CANNOT verify (e.g. `res.cloudinary.com` returns 403 — blocked by network egress), OMIT the `width`/`height` attributes entirely** and rely on `height:auto`. Say so to the user and note they can add the host to the egress allowlist for exact dimensions + CLS reservation later. A tiny reflow beats a stretched image.
+
+Note: when the `src` uses a `w_N` transform, the delivered width is `N`; the height is `N × (true_height / true_width)`. Only set attributes once you know that pair.
+
 ---
 
 ## Content Structure

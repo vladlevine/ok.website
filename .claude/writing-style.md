@@ -56,6 +56,8 @@ Write like you're talking to an event planner or marketing manager over coffee i
 - **Name real brands when linking** — adds credibility and SEO value
 - **End each section with a transition thought** — pull the reader forward
 - **CTAs should be conversational** — "Let's talk about your next event" not "Contact us today!"
+- **Get the facts of the story exactly right** — a good story is precise about what actually happened. Don't dramatize a detail into something it wasn't. Example: a renewal we signed up for that quietly raised its price is a *price hike*, not a *surprise invoice* — the bill was expected, the number wasn't. When in doubt about a real-life detail, ask rather than embellish.
+- **Name our own projects clearly** — Vlad also runs **The Lightroom Studio** (NYC art-documentation studio for galleries and artists). When it comes up, identify it plainly as our other studio; don't assume the reader knows the two are connected.
 
 ---
 
